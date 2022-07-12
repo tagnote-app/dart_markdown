@@ -1,0 +1,54 @@
+>>> Invalid, reference does not have content
+foo[^1]
+
+[^1]:
+<<<
+<p>foo[^1]</p>
+<p>[^1]:</p>
+>>> Invalid label
+foo[^one two]
+
+[^one two]: reference
+<<<
+<p>foo[^one two]</p>
+<p>[^one two]: reference</p>
+>>> Ignore the references are not connected to note
+foo[^one]
+
+[^note]: ignore me.
+[^one]: bar
+<<<
+<p>foo<sup id="fnref:one" class="footnote"><a href="#fn:one">1</a></sup></p>
+<div class="footnotes">
+<ol>
+<li id="fn:one">
+<p>bar</p><a class="footnote-reverse" href="#fnref:one">↩</a></li>
+</ol>
+</div>
+>>> A complex one
+foo[^1] bar[^note].
+
+[^note]: note reference.
+[^baz]: > bar
+---
+
+
+A new paragrah[^baz]
+
+ [^1]: one reference.
+<<<
+<p>foo<sup id="fnref:1" class="footnote"><a href="#fn:1">1</a></sup> bar<sup id="fnref:note" class="footnote"><a href="#fn:note">2</a></sup>.</p>
+<p>A new paragrah<sup id="fnref:baz" class="footnote"><a href="#fn:baz">3</a></sup></p>
+<div class="footnotes">
+<ol>
+<li id="fn:1">
+<p>one reference.</p><a class="footnote-reverse" href="#fnref:1">↩</a></li>
+<li id="fn:note">
+<p>note reference.</p><a class="footnote-reverse" href="#fnref:note">↩</a></li>
+<li id="fn:baz">
+<blockquote>
+<p>bar</p>
+</blockquote>
+<hr /><a class="footnote-reverse" href="#fnref:baz">↩</a></li>
+</ol>
+</div>
