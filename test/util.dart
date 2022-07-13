@@ -64,6 +64,7 @@ void testFile(
   bool enableHighlight = false,
   bool enableFootnote = false,
   bool enableLinkReferenceDefinition = true,
+  bool enableTaskList = false,
 }) async {
   final directory = p.join(await markdownPackageRoot, 'test');
   for (final dataCase in dataCasesInFile(path: p.join(directory, file))) {
@@ -80,6 +81,7 @@ void testFile(
       enableHighlight: enableHighlight,
       enableFootnote: enableFootnote,
       enableLinkReferenceDefinition: enableLinkReferenceDefinition,
+      enableTaskList: enableTaskList,
     );
   }
 }
@@ -97,6 +99,7 @@ void validateCore(
   bool enableHighlight = false,
   bool enableFootnote = false,
   bool enableLinkReferenceDefinition = true,
+  bool enableTaskList = false,
 }) {
   test(description, () {
     final result = markdownToHtml(
@@ -110,6 +113,7 @@ void validateCore(
       enableHighlight: enableHighlight,
       enableFootnote: enableFootnote,
       enableLinkReferenceDefinition: enableLinkReferenceDefinition,
+      enableTaskList: enableTaskList,
     );
 
     markdownPrintOnFailure(markdown, html, result);

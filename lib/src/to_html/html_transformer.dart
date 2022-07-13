@@ -128,6 +128,7 @@ class HtmlTransformer implements NodeVisitor {
           node.attributes['start'] = attributes['start']!;
         } else if (type == 'listItem' && attributes['taskListItem'] != null) {
           final checkboxInput = HtmlElement.empty('input');
+          node.attributes['class'] = 'task-list-item';
           checkboxInput.attributes.addAll({
             'type': 'checkbox',
             if (attributes['taskListItem'] == 'checked') 'checked': '',

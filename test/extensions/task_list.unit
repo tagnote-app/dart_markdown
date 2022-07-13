@@ -1,0 +1,62 @@
+>>> not a task list item, no whitespace after "]"
+- [ ]Foo
+<<<
+<ul>
+<li>[ ]Foo</li>
+</ul>
+>>> not a task list item, no whitespace between "[" and "]"
+- [] Foo
+<<<
+<ul>
+<li>[] Foo</li>
+</ul>
+>>> not a task list item, invalid check symbol
+- [Y] Foo
+<<<
+<ul>
+<li>[Y] Foo</li>
+</ul>
+>>> unchecked status
+- [ ] Foo
+<<<
+<ul>
+<li class="task-list-item"><input type="checkbox" /> Foo</li>
+</ul>
+>>> checked status
+- [X] Foo
+<<<
+<ul>
+<li class="task-list-item"><input type="checkbox" checked="" /> Foo</li>
+</ul>
+>>> has a leading blank line
+-
+  [ ] Foo
+<<<
+<ul>
+<li class="task-list-item"><input type="checkbox" /> Foo</li>
+</ul>
+>>> nested
+- [x] foo
+  - [ ] bar
+  - [x] baz
+- [ ] bim
+<<<
+<ul>
+<li class="task-list-item"><input type="checkbox" checked="" /> foo
+<ul>
+<li class="task-list-item"><input type="checkbox" /> bar</li>
+<li class="task-list-item"><input type="checkbox" checked="" /> baz</li>
+</ul>
+</li>
+<li class="task-list-item"><input type="checkbox" /> bim</li>
+</ul>
+>>> task list items mixed with regular list item
++ [x] foo
++ bar
++ [ ] baz
+<<<
+<ul>
+<li class="task-list-item"><input type="checkbox" checked="" /> foo</li>
+<li>bar</li>
+<li class="task-list-item"><input type="checkbox" /> baz</li>
+</ul>
