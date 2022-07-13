@@ -51,6 +51,10 @@ void main() async {
     enableFootnote: true,
     enableLinkReferenceDefinition: false,
   );
+  testFile(
+    'extensions/task_list.unit',
+    enableTaskList: true,
+  );
 
   await testDirectory('common_mark');
   await testDirectory('gfm');
