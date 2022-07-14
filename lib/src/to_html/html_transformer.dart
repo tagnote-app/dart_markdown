@@ -40,8 +40,8 @@ class HtmlTransformer implements NodeVisitor {
     entries.sort((a, b) => a.key.compareTo(b.key));
     final items = entries.map((e) => e.value).toList();
     return HtmlElement(
-      'div',
-      [HtmlElement('ol', items)],
+      'ol',
+      items,
       attributes: {'class': 'footnotes'},
     );
   }
