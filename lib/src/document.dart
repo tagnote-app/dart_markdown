@@ -104,7 +104,8 @@ class Document {
       if (enableFencedCodeBlock) const FencedCodeBlockSyntax(),
       if (enableTable) const TableSyntax(),
       if (enableHtmlBlock) const HtmlBlockSyntax(),
-      if (enableFootnote) const FootnoteReferenceSyntax(),
+      if (enableFootnote)
+        FootnoteReferenceSyntax(enableParagraph: enableParagraph),
       if (enableLinkReferenceDefinition) LinkReferenceDefinitionSyntax(),
       ParagraphSyntax(disable: enableParagraph == false),
     ]);

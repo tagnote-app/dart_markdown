@@ -28,7 +28,11 @@ class FootnoteReferenceSyntax extends BlockSyntax {
     return parser.current.hasMatch(pattern);
   }
 
-  const FootnoteReferenceSyntax();
+  final bool enableParagraph;
+
+  const FootnoteReferenceSyntax({
+    this.enableParagraph = true,
+  });
 
   @override
   Node? parse(BlockParser parser) {
@@ -114,6 +118,10 @@ class FootnoteReferenceSyntax extends BlockSyntax {
   }
 
   List<Node> _parseChildren(List<Line> lines) {
+    if (!enableParagraph) {
+      return _toUnparsedContent(lines);
+    }
+
     final paragraphs = <Element>[];
     final paragraphLines = <Line>[];
 
@@ -124,14 +132,7 @@ class FootnoteReferenceSyntax extends BlockSyntax {
       paragraphs.add(
         Element(
           'paragraph',
-          children: paragraphLines
-              .toNodes(
-                (e) => UnparsedContent.fromSpan(e),
-                trimLeft: true,
-                trimTrailing: true,
-                popLineEnding: true,
-              )
-              .nodes,
+          children: _toUnparsedContent(paragraphLines),
         ),
       );
       paragraphLines.clear();
@@ -152,4 +153,13 @@ class FootnoteReferenceSyntax extends BlockSyntax {
 
     return paragraphs;
   }
+
+  List<Node> _toUnparsedContent(List<Line> lines) => lines
+      .toNodes(
+        (e) => UnparsedContent.fromSpan(e),
+        trimLeft: true,
+        trimTrailing: true,
+        popLineEnding: true,
+      )
+      .nodes;
 }

@@ -170,5 +170,30 @@ void main() {
         equals('# Hello **Markdown&lt;em&gt;!&lt;/em&gt;**\n***'),
       );
     });
+
+    test('Footnote reference when paragraph is disabled', () {
+      const text = '''
+Foo[^1]
+
+[^1]: Bar
+
+  Biz
+''';
+      final result = markdownToHtml(
+        text,
+        enableParagraph: false,
+        enableFootnote: true,
+      );
+      expect(
+        result,
+        equals('''
+Foo<sup id="fnref:1" class="footnote"><a href="#fn:1">1</a></sup>
+<ol class="footnotes">
+<li id="fn:1">Bar
+
+Biz<a class="footnote-reverse" href="#fnref:1">↩</a></li>
+</ol>'''),
+      );
+    });
   });
 }

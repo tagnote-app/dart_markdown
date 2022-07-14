@@ -55,7 +55,6 @@ final dummyPattern = RegExp('');
 final linkReferenceDefinitionPattern = RegExp(r'[ ]{0,3}\[');
 
 /// A pattern matches a footnote reference.
-// Ideally, should handle the tab remaining as ListSyntax does.
 final footnoteReferencePattern = RegExp(r'([ ]{0,3})\[\^([^\s\]]+?)\]:\s?');
 
 final htmlBlockPattern = RegExp(
