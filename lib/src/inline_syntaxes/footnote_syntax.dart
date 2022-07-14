@@ -10,9 +10,11 @@ import '../syntax.dart';
 
 // See https://www.markdownguide.org/extended-syntax/#footnotes
 class FootnoteSyntax extends InlineSyntax {
-  static const _pattern = r'\[\^([^\s\]]+?)\]';
+  // The pattern needs to start with an optional (!), otherwise the footnote has
+  // a (!) before ([) will be caputured by `ImageSyntax`.
+  static const _pattern = r'!?\[\^([^\s\]]+?)\]';
 
-  FootnoteSyntax() : super(RegExp(_pattern), startCharacter: $lbracket);
+  FootnoteSyntax() : super(RegExp(_pattern));
 
   @override
   Node? parse(InlineParser parser, Match match) {
@@ -22,9 +24,18 @@ class FootnoteSyntax extends InlineSyntax {
       return null;
     }
 
+    var markerLength = match.match.length;
+    // Write (!) back.
+    if (parser.charAt() == $exclamation) {
+      parser
+        ..advance()
+        ..writeText();
+      markerLength -= 1;
+    }
+
     return Element(
       'footnote',
-      markers: [parser.consumeBy(match.match.length).single],
+      markers: [parser.consumeBy(markerLength).single],
       attributes: {'number': number, 'label': label},
     );
   }

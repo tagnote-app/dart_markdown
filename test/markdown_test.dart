@@ -47,9 +47,12 @@ void main() async {
     enableHighlight: true,
   );
   testFile(
+    'extensions/footnote_reference.unit',
+    enableFootnote: true,
+  );
+  testFile(
     'extensions/footnote.unit',
     enableFootnote: true,
-    enableLinkReferenceDefinition: false,
   );
   testFile(
     'extensions/task_list.unit',

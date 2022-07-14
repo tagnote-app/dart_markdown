@@ -1,0 +1,179 @@
+>>> There cannot be whitespaces between (]) and (:)
+Foo[^1]
+
+[^1] : not a note
+<<<
+<p>Foo[^1]</p>
+<p>[^1] : not a note</p>
+>>> The whitespaces between (:) and content is optional
+Foo[^1]
+
+[^1]:this is a note
+<<<
+<p>Foo<sup id="fnref:1" class="footnote"><a href="#fn:1">1</a></sup></p>
+<ol class="footnotes">
+<li id="fn:1">this is a note<a class="footnote-reverse" href="#fnref:1">↩</a></li>
+</ol>
+>>> The leading whitespaces and trailing whitespaces will be removed from note content
+Foo[^1]
+
+[^1]:    bar    
+<<<
+<p>Foo<sup id="fnref:1" class="footnote"><a href="#fn:1">1</a></sup></p>
+<ol class="footnotes">
+<li id="fn:1">bar<a class="footnote-reverse" href="#fnref:1">↩</a></li>
+</ol>
+>>> The leading whitespaces and trailing whitespaces test two
+Foo[^1]
+
+[^1]:    bar    
+baz  
+<<<
+<p>Foo<sup id="fnref:1" class="footnote"><a href="#fn:1">1</a></sup></p>
+<ol class="footnotes">
+<li id="fn:1">bar<br />
+baz<a class="footnote-reverse" href="#fnref:1">↩</a></li>
+</ol>
+>>> A footnote reference cannot interrupt a paragraph
+Foo[^1]
+
+Bar
+[^1]: This is not a footnote reference.
+<<<
+<p>Foo[^1]</p>
+<p>Bar
+[^1]: This is not a footnote reference.</p>
+>>> The continuation after a blank line needs to have an indentation with at least two whitespaces or with a tab
+Foo[^1]
+
+[^1]: line 1
+
+  this is a continuation of line 1
+<<<
+<p>Foo<sup id="fnref:1" class="footnote"><a href="#fn:1">1</a></sup></p>
+<ol class="footnotes">
+<li id="fn:1">
+<p>line 1</p>
+<p>this is a continuation of line 1</p><a class="footnote-reverse" href="#fnref:1">↩</a></li>
+</ol>
+>>> The continuation after a blank line case 2
+Foo[^1]
+
+[^1]: line 1
+
+Not part of the note
+<<<
+<p>Foo<sup id="fnref:1" class="footnote"><a href="#fn:1">1</a></sup></p>
+<p>Not part of the note</p>
+<ol class="footnotes">
+<li id="fn:1">line 1<a class="footnote-reverse" href="#fnref:1">↩</a></li>
+</ol>
+>>> The indention of each line will be removed from note content
+Foo[^1]
+
+[^1]:
+  bar
+  baz
+
+  zoo
+<<<
+<p>Foo<sup id="fnref:1" class="footnote"><a href="#fn:1">1</a></sup></p>
+<ol class="footnotes">
+<li id="fn:1">
+<p>bar
+baz</p>
+<p>zoo</p><a class="footnote-reverse" href="#fnref:1">↩</a></li>
+</ol>
+>>> A note can start with one blank line, but the indentation is also required
+Foo[^1]
+
+[^1]:
+  bar
+<<<
+<p>Foo<sup id="fnref:1" class="footnote"><a href="#fn:1">1</a></sup></p>
+<ol class="footnotes">
+<li id="fn:1">bar<a class="footnote-reverse" href="#fnref:1">↩</a></li>
+</ol>
+>>> Starts with a blank line case 2
+Foo[^1]
+
+[^1]:
+not a note
+<<<
+<p>Foo[^1]</p>
+<p>[^1]:
+not a note</p>
+>>> Starts with a blank line case 3
+Foo[^1]
+
+[^1]:
+
+  not a note
+<<<
+<p>Foo[^1]</p>
+<p>[^1]:</p>
+<p>not a note</p>
+>>> Several link reference definitions can occur one after another, without intervening blank lines
+Foo[^one]bar[^2]
+
+[^one]: note 1
+[^2]: note 2
+<<<
+<p>Foo<sup id="fnref:one" class="footnote"><a href="#fn:one">1</a></sup>bar<sup id="fnref:2" class="footnote"><a href="#fn:2">2</a></sup></p>
+<ol class="footnotes">
+<li id="fn:one">note 1<a class="footnote-reverse" href="#fnref:one">↩</a></li>
+<li id="fn:2">note 2<a class="footnote-reverse" href="#fnref:2">↩</a></li>
+</ol>
+>>> Directly followed block elements cannot interrupt a footnote reference
+Foo[^1]
+
+[^1]: foo
+1. bar
+> biz
+***
+    note is continue
+<<<
+<p>Foo<sup id="fnref:1" class="footnote"><a href="#fn:1">1</a></sup></p>
+<ol class="footnotes">
+<li id="fn:1">foo
+1. bar
+&gt; biz
+***
+note is continue<a class="footnote-reverse" href="#fnref:1">↩</a></li>
+</ol>
+>>> A footnote reference cannot be nested in other elements
+Foo[^1]
+
+> [^1]: not a note
+<<<
+<p>Foo[^1]</p>
+<blockquote>
+<p>[^1]: not a note</p>
+</blockquote>
+>>> It does not matter whether the footnote references have the same order as footnotes
+Foo[^1]bar[^2]
+
+[^2]: note 2
+[^3]: note 3
+
+Biz[^3]
+
+[^1]: note 1
+<<<
+<p>Foo<sup id="fnref:1" class="footnote"><a href="#fn:1">1</a></sup>bar<sup id="fnref:2" class="footnote"><a href="#fn:2">2</a></sup></p>
+<p>Biz<sup id="fnref:3" class="footnote"><a href="#fn:3">3</a></sup></p>
+<ol class="footnotes">
+<li id="fn:1">note 1<a class="footnote-reverse" href="#fnref:1">↩</a></li>
+<li id="fn:2">note 2<a class="footnote-reverse" href="#fnref:2">↩</a></li>
+<li id="fn:3">note 3<a class="footnote-reverse" href="#fnref:3">↩</a></li>
+</ol>
+>>> The footnote references do not match a footnote will be ignored
+Foo[^1]
+
+[^2]: biz
+[^1]: bar
+<<<
+<p>Foo<sup id="fnref:1" class="footnote"><a href="#fn:1">1</a></sup></p>
+<ol class="footnotes">
+<li id="fn:1">bar<a class="footnote-reverse" href="#fnref:1">↩</a></li>
+</ol>
