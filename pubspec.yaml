@@ -1,5 +1,5 @@
 name: dart_markdown
-version: 1.0.1
+version: 1.0.2
 
 description: A portable Markdown library written in Dart that can parse
   Markdown into HTML.
