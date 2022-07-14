@@ -68,6 +68,7 @@ class ListSyntax extends BlockSyntax {
           lines: childLines,
           markers: [listMarker!]..addIfNotNull(taskListMarker),
         ));
+        taskListMarker = null;
         childLines = <Line>[];
       }
     }
