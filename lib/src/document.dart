@@ -32,6 +32,7 @@ import 'inline_syntaxes/image_syntax.dart';
 import 'inline_syntaxes/link_syntax.dart';
 import 'inline_syntaxes/raw_html_syntax.dart';
 import 'inline_syntaxes/soft_line_break_syntax.dart';
+import 'inline_syntaxes/superscript.dart';
 import 'inline_syntaxes/text_syntax.dart';
 import 'inline_syntaxes/tilde_syntax.dart';
 import 'parsers/block_parser.dart';
@@ -77,6 +78,7 @@ class Document {
     bool enableSoftLineBreak = true,
     bool enableStrikethrough = true,
     bool enableSubscript = false,
+    bool enableSupscript = false,
     bool enableHighlight = false,
     bool enableFootnote = false,
     bool enableTaskList = false,
@@ -147,6 +149,7 @@ class Document {
           enableStrikethrough: enableStrikethrough,
           enableSubscript: enableSubscript,
         ),
+      if (enableSupscript) CaretSyntax(enableSupscript: enableSupscript),
       if (enableHighlight) HighlightSyntax(),
       if (enableEmoji) EmojiSyntax(),
       if (enableLink) LinkSyntax(linkResolver: linkResolver),

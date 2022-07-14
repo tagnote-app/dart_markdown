@@ -48,6 +48,12 @@ void main() async {
     enableStrikethrough: true,
   );
   testFile(
+    'extensions/supscript.unit',
+    enableSubscript: true,
+    enableSupscript: true,
+    enableStrikethrough: true,
+  );
+  testFile(
     'extensions/highlight.unit',
     enableHighlight: true,
   );

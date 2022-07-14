@@ -1,0 +1,8 @@
+>>> A simple one
+foo^bar^
+<<<
+<p>foo<sup>bar</sup></p>
+>>> A complex
+foo ^***~~~bar~~~***^ biz
+<<<
+<p>foo <sup><em><strong><sub><del>bar</del></sub></strong></em></sup> biz</p>

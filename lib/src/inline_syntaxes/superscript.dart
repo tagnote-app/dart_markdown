@@ -5,18 +5,16 @@
 import '../charcode.dart';
 import 'delimiter_syntax.dart';
 
-class TildeSyntax extends DelimiterSyntax {
-  TildeSyntax({
-    bool enableStrikethrough = false,
-    bool enableSubscript = false,
+class CaretSyntax extends DelimiterSyntax {
+  CaretSyntax({
+    bool enableSupscript = false,
   }) : super(
-          '~+',
+          r'\^+',
           requiresDelimiterRun: true,
           allowIntraWord: true,
-          startCharacter: $tilde,
+          startCharacter: $caret,
           tags: [
-            if (enableSubscript) DelimiterTag('subscript', 1),
-            if (enableStrikethrough) DelimiterTag('strikethrough', 2),
+            if (enableSupscript) DelimiterTag('supscript', 1),
           ],
         );
 }
