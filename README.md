@@ -2,10 +2,12 @@ _This library is refactored from
 [dart-lang/markdown(5.0)](https://pub.dev/packages/markdown/versions/5.0.0)_
 
 ### About
+
 A portable Markdown library written in Dart. It can parse Markdown into HTML on
 both the client and server.
 
 ### Live demo
+
 https://chenzhiguang.github.io/dart_markdown_demo/
 
 ### Usage
@@ -50,6 +52,8 @@ void main() {
     enableHighlight: false,
     enableFootnote: false,
     enableTaskList: false,
+    enableSubscript: false,
+    enableSupscript: false,
 
     // Customised syntaxes.
     extensions: const <Syntax>[],
