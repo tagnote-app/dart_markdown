@@ -76,6 +76,7 @@ class Document {
     bool enableRawHtml = true,
     bool enableSoftLineBreak = true,
     bool enableStrikethrough = true,
+    bool enableSubscript = false,
     bool enableHighlight = false,
     bool enableFootnote = false,
     bool enableTaskList = false,
@@ -141,7 +142,11 @@ class Document {
       if (enableAutolink) AutolinkSyntax(),
       if (enableAutolinkExtension) AutolinkExtensionSyntax(),
       if (enableCodeSpan) CodeSpanSyntax(),
-      if (enableStrikethrough) TildeSyntax(),
+      if (enableStrikethrough || enableSubscript)
+        TildeSyntax(
+          enableStrikethrough: enableStrikethrough,
+          enableSubscript: enableSubscript,
+        ),
       if (enableHighlight) HighlightSyntax(),
       if (enableEmoji) EmojiSyntax(),
       if (enableLink) LinkSyntax(linkResolver: linkResolver),

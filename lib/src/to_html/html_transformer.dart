@@ -244,6 +244,7 @@ const _htmlTagMap = {
   'strikethrough': 'del',
   'link': 'a',
   'image': 'img',
+  'subscript': 'sub',
   'highlight': 'mark',
   'footnote': 'sup',
   'footnoteReference': 'li',
