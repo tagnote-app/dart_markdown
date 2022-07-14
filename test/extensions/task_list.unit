@@ -60,3 +60,11 @@
 <li>bar</li>
 <li class="task-list-item"><input type="checkbox" /> baz</li>
 </ul>
+>>> a task list item followed with an empty list item
+1. [ ] Foo
+2.
+<<<
+<ol>
+<li class="task-list-item"><input type="checkbox" /> Foo</li>
+<li></li>
+</ol>
