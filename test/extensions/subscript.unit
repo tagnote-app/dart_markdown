@@ -1,0 +1,8 @@
+>>> A subscript
+H~2~O
+<<<
+<p>H<sub>2</sub>O</p>
+>>> Mix with strikethrought
+H~~~2~~~O
+<<<
+<p>H<sub><del>2</del></sub>O</p>

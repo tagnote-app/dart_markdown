@@ -5,14 +5,18 @@
 import '../charcode.dart';
 import 'delimiter_syntax.dart';
 
-/// Matches strikethrough syntax according to the GFM spec.
-class StrikethroughSyntax extends DelimiterSyntax {
-  StrikethroughSyntax()
-      : super(
+class TildeSyntax extends DelimiterSyntax {
+  TildeSyntax({
+    bool enableStrikethrough = false,
+    bool enableSubscript = false,
+  }) : super(
           '~+',
           requiresDelimiterRun: true,
           allowIntraWord: true,
           startCharacter: $tilde,
-          tags: [DelimiterTag('strikethrough', 2)],
+          tags: [
+            if (enableSubscript) DelimiterTag('subscript', 1),
+            if (enableStrikethrough) DelimiterTag('strikethrough', 2),
+          ],
         );
 }
