@@ -5,25 +5,13 @@
 import 'package:source_span/source_span.dart';
 
 import '../ast.dart';
-import '../extensions.dart';
 import '../line.dart';
 import '../parsers/block_parser.dart';
 import '../patterns.dart';
 import '../syntax.dart';
 
-// See https://www.markdownguide.org/extended-syntax/#footnotes
-
-// A footnote definition consists of a label, optionally preceded by up to three
-// spaces of indentation, followed by a colon (:), optional spaces or tabs
-// (including up to one line ending), followed by a note content.
-//
-// A footnote reference can be interrupted by two blank lines or another
-// footnote reference.
-//
-// A footnote reference can contain any elements excpet footnote references.
-//
-// A footnote definition can not be nested in any other elements other than
-// the paragraph.
+// See
+// https://github.com/chenzhiguang/dart_markdown/wiki/footnote-reference-specification
 class FootnoteReferenceSyntax extends BlockSyntax {
   @override
   RegExp get pattern => footnoteReferencePattern;
@@ -45,24 +33,76 @@ class FootnoteReferenceSyntax extends BlockSyntax {
   @override
   Node? parse(BlockParser parser) {
     final position = parser.position;
-    final lines = <Line>[parser.current];
+    final matchedLine = parser.current;
+    final match = matchedLine.firstMatch(pattern)!;
+    final lines = _parseLines(parser, match);
+
+    if (lines.isEmpty) {
+      parser.setLine(position);
+      return null;
+    }
+
+    // Parse the marker
+    final indention = match[1]!.length;
+    final labelString = match[2]!;
+    final marker = matchedLine.content.subspan(
+      indention,
+      indention + labelString.length + 4,
+    );
+
+    final element = Element(
+      'footnoteReference',
+      markers: [marker],
+      attributes: {'label': labelString},
+      children: _parseChildren(lines),
+    );
+    parser.document.addFootnoteReference(labelString, element);
+    return element;
+  }
+
+  List<Line> _parseLines(BlockParser parser, Match match) {
+    // `matchedLength` includes leading whitespaces, a marker sequence and
+    // an optional whitespace.
+    final matchedLength = match[0]!.length;
+    final lines = [
+      Line(
+        // removes the matched content from the first line.
+        parser.current.content.subspan(matchedLength),
+        lineEnding: parser.current.lineEnding,
+      ),
+    ];
     parser.advance();
 
-    int hitBlankLine = 0;
+    // The first line can be a blank line.
+    var hitBlankLine = lines.first.content.text.trim().isEmpty ? 1 : 0;
     while (!parser.isDone) {
-      if (parser.current.hasMatch(footnoteReferencePattern)) {
+      // Hit another footnote reference.
+      if (parser.current.hasMatch(pattern)) {
         break;
       }
-      if (parser.current.isBlankLine) {
-        hitBlankLine++;
-        if (hitBlankLine == 2) {
-          break;
-        }
-      } else {
+      // An indention is required if follows a blank line.
+      if (hitBlankLine == 1 &&
+          !parser.current.hasMatch(RegExp('^(?:\t|[ ]{2,})'))) {
+        break;
+      }
+
+      if (!parser.current.isBlankLine) {
         hitBlankLine = 0;
+      } else if (++hitBlankLine == 2) {
+        // Only one blank line is allowed.
+        break;
       }
       lines.add(parser.current);
       parser.advance();
+    }
+
+    // Remove the first blank line.
+    if (lines.first.isBlankLine) {
+      lines.removeAt(0);
+    }
+
+    if (lines.isEmpty) {
+      return [];
     }
 
     // Remove the last blank line.
@@ -70,43 +110,46 @@ class FootnoteReferenceSyntax extends BlockSyntax {
       lines.removeLast();
     }
 
-    final markers = <SourceSpan>[];
-    final match = lines.first.firstMatch(footnoteReferencePattern);
+    return lines;
+  }
 
-    // `matchedLength` includes the preceding whitespace, a marker sequence and
-    // an optional whitespace.
-    final matchedLength = match![0]!.length;
+  List<Node> _parseChildren(List<Line> lines) {
+    final paragraphs = <Element>[];
+    final paragraphLines = <Line>[];
 
-    if (lines.length == 1 &&
-        lines.first.content.text.trimRight().length <= matchedLength) {
-      parser.setLine(position);
-      return null;
+    void addToParagraphs() {
+      if (paragraphLines.isEmpty) {
+        return;
+      }
+      paragraphs.add(
+        Element(
+          'paragraph',
+          children: paragraphLines
+              .toNodes(
+                (e) => UnparsedContent.fromSpan(e),
+                trimLeft: true,
+                trimTrailing: true,
+                popLineEnding: true,
+              )
+              .nodes,
+        ),
+      );
+      paragraphLines.clear();
     }
 
-    final indention = match[1]!.length;
-    final labelString = match[2]!;
-    markers.add(lines.first.content.subspan(
-      indention,
-      indention + labelString.length + 4,
-    ));
+    for (final line in lines) {
+      if (line.isBlankLine) {
+        addToParagraphs();
+      } else {
+        paragraphLines.add(line);
+      }
+    }
+    addToParagraphs();
 
-    lines[0] = Line(
-      lines[0].content.subspan(matchedLength),
-      lineEnding: lines[0].lineEnding,
-    );
+    if (paragraphs.length == 1) {
+      return paragraphs.single.children;
+    }
 
-    // Recursively parse the content.
-    final children = BlockParser(lines, parser.document).parseLines(
-      fromSyntax: this,
-    );
-
-    final element = Element(
-      'footnoteReference',
-      markers: markers.concatWhilePossible(),
-      attributes: {'label': labelString},
-      children: children,
-    );
-    parser.document.addFootnoteReference(labelString, element);
-    return element;
+    return paragraphs;
   }
 }

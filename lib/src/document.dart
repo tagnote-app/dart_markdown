@@ -195,6 +195,7 @@ class Document {
               inlineNodes.replaceRange(j, j + 1, inlineNode.children);
             }
           }
+          // TODO(Zhiguang): double check the logic here.
           nodes.replaceRange(
             i - unparsedSegments.length + 1,
             i + 1,
