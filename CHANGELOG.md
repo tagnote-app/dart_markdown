@@ -1,3 +1,10 @@
+## 1.0.3
+
+1. Add sup script and sub script support
+   [#3](https://github.com/chenzhiguang/dart_markdown/issues/3).
+2. Fix the conflict between footnote and image
+   [#17](https://github.com/chenzhiguang/dart_markdown/pull/17).
+
 ## 1.0.2
 
 1. Do not produce paragraph element in footnote reference when the paragraph is
