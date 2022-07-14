@@ -32,8 +32,8 @@ import 'inline_syntaxes/image_syntax.dart';
 import 'inline_syntaxes/link_syntax.dart';
 import 'inline_syntaxes/raw_html_syntax.dart';
 import 'inline_syntaxes/soft_line_break_syntax.dart';
-import 'inline_syntaxes/strikethrough_syntax.dart';
 import 'inline_syntaxes/text_syntax.dart';
+import 'inline_syntaxes/tilde_syntax.dart';
 import 'parsers/block_parser.dart';
 import 'parsers/inline_parser.dart';
 import 'syntax.dart';
@@ -141,7 +141,7 @@ class Document {
       if (enableAutolink) AutolinkSyntax(),
       if (enableAutolinkExtension) AutolinkExtensionSyntax(),
       if (enableCodeSpan) CodeSpanSyntax(),
-      if (enableStrikethrough) StrikethroughSyntax(),
+      if (enableStrikethrough) TildeSyntax(),
       if (enableHighlight) HighlightSyntax(),
       if (enableEmoji) EmojiSyntax(),
       if (enableLink) LinkSyntax(linkResolver: linkResolver),

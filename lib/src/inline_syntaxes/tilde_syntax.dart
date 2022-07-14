@@ -6,8 +6,8 @@ import '../charcode.dart';
 import 'delimiter_syntax.dart';
 
 /// Matches strikethrough syntax according to the GFM spec.
-class StrikethroughSyntax extends DelimiterSyntax {
-  StrikethroughSyntax()
+class TildeSyntax extends DelimiterSyntax {
+  TildeSyntax()
       : super(
           '~+',
           requiresDelimiterRun: true,
