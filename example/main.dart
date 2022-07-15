@@ -38,7 +38,7 @@ void main() {
     enableFootnote: false,
     enableTaskList: false,
     enableSubscript: false,
-    enableSupscript: false,
+    enableSuperscript: false,
 
     // Customised syntaxes.
     extensions: const <Syntax>[],

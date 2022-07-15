@@ -50,7 +50,7 @@ void main() async {
   testFile(
     'extensions/supscript.unit',
     enableSubscript: true,
-    enableSupscript: true,
+    enableSuperscript: true,
     enableStrikethrough: true,
   );
   testFile(

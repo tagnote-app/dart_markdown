@@ -7,14 +7,14 @@ import 'delimiter_syntax.dart';
 
 class CaretSyntax extends DelimiterSyntax {
   CaretSyntax({
-    bool enableSupscript = false,
+    bool enableSuperscript = false,
   }) : super(
           r'\^+',
           requiresDelimiterRun: true,
           allowIntraWord: true,
           startCharacter: $caret,
           tags: [
-            if (enableSupscript) DelimiterTag('superscript', 1),
+            if (enableSuperscript) DelimiterTag('superscript', 1),
           ],
         );
 }
