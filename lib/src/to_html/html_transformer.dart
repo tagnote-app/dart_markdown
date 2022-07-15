@@ -199,9 +199,13 @@ class HtmlTransformer implements NodeVisitor {
     final decodeHtmlCharacter =
         parentType != 'inlineCode' && parentType != 'codeBlock';
 
-    final content = !encodeHtml
+    var content = !encodeHtml
         ? text.textContent
         : text.htmlText(decodeHtmlCharacter: decodeHtmlCharacter);
+
+    if (parentType == 'kbd') {
+      content = content.replaceAll('\n', '<br />');
+    }
 
     if (text is! UnparsedContent) {
       parent.children.add(HtmlText(content));

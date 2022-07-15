@@ -54,6 +54,7 @@ void main() {
     enableTaskList: false,
     enableSubscript: false,
     enableSuperscript: false,
+    enableKbd: false,
 
     // Customised syntaxes.
     extensions: const <Syntax>[],

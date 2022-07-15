@@ -30,6 +30,7 @@ import 'inline_syntaxes/footnote_syntax.dart';
 import 'inline_syntaxes/hard_line_break_syntax.dart';
 import 'inline_syntaxes/highlight_syntax.dart';
 import 'inline_syntaxes/image_syntax.dart';
+import 'inline_syntaxes/kbd_syntax.dart';
 import 'inline_syntaxes/link_syntax.dart';
 import 'inline_syntaxes/raw_html_syntax.dart';
 import 'inline_syntaxes/soft_line_break_syntax.dart';
@@ -74,6 +75,7 @@ class Document {
     bool enableHardLineBreak = true,
     bool enableImage = true,
     bool enableLink = true,
+    bool enableKbd = false,
     bool enableRawHtml = true,
     bool enableSoftLineBreak = true,
     bool enableStrikethrough = true,
@@ -154,6 +156,7 @@ class Document {
       if (enableEmoji) EmojiSyntax(),
       if (enableLink) LinkSyntax(linkResolver: linkResolver),
       if (enableImage) ImageSyntax(linkResolver: imageLinkResolver),
+      if (enableKbd) KbdSyntax(),
       if (enableRawHtml) RawHtmlSyntax(),
     ]);
   }
