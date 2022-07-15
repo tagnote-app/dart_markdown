@@ -1,3 +1,10 @@
+## 1.0.5
+
+1. Add `kbd` support
+   [PR#25](https://github.com/chenzhiguang/dart_markdown/pull/25).
+2. **BREAKING**: Rename `enableSupscript` to `enableSuperscript`
+   [PR#24](https://github.com/chenzhiguang/dart_markdown/pull/24).
+
 ## 1.0.4
 
 1. Change element type `supscript` to `superscript`
