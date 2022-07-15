@@ -14,7 +14,7 @@ class CaretSyntax extends DelimiterSyntax {
           allowIntraWord: true,
           startCharacter: $caret,
           tags: [
-            if (enableSupscript) DelimiterTag('supscript', 1),
+            if (enableSupscript) DelimiterTag('superscript', 1),
           ],
         );
 }
