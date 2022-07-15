@@ -245,7 +245,7 @@ const _htmlTagMap = {
   'link': 'a',
   'image': 'img',
   'subscript': 'sub',
-  'supscript': 'sup',
+  'superscript': 'sup',
   'highlight': 'mark',
   'footnote': 'sup',
   'footnoteReference': 'li',
