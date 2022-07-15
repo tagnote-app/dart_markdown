@@ -1,0 +1,17 @@
+>>> A simple one
+Type <kbd>Enter</kbd>
+<<<
+<p>Type <kbd>Enter</kbd></p>
+>>> Remove leading and trailing whitespace
+<kbd> Enter </kbd>
+<<<
+<p><kbd>Enter</kbd></p>
+>>> Multiline
+<kbd>Ctrl +
+Alt + ></kbd>
+<<<
+<p><kbd>Ctrl +<br />Alt + &gt;</kbd></p>
+>>> Mix with uppercase
+<Kbd>M</KBD>
+<<<
+<p><kbd>M</kbd></p>

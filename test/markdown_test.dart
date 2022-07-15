@@ -69,6 +69,12 @@ void main() async {
     'extensions/task_list.unit',
     enableTaskList: true,
   );
+  testFile(
+    'extensions/kbd.unit',
+    enableKbd: true,
+    enableHtmlBlock: false,
+    enableRawHtml: false,
+  );
 
   await testDirectory('common_mark');
   await testDirectory('gfm');

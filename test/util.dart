@@ -65,6 +65,9 @@ void testFile(
   bool enableHeadingId = false,
   bool enableHighlight = false,
   bool enableFootnote = false,
+  bool enableKbd = false,
+  bool enableRawHtml = true,
+  bool enableHtmlBlock = true,
   bool enableLinkReferenceDefinition = true,
   bool enableTaskList = false,
 }) async {
@@ -84,6 +87,9 @@ void testFile(
       enableHeadingId: enableHeadingId,
       enableHighlight: enableHighlight,
       enableFootnote: enableFootnote,
+      enableKbd: enableKbd,
+      enableRawHtml: enableRawHtml,
+      enableHtmlBlock: enableHtmlBlock,
       enableLinkReferenceDefinition: enableLinkReferenceDefinition,
       enableTaskList: enableTaskList,
     );
@@ -104,6 +110,9 @@ void validateCore(
   bool enableHeadingId = false,
   bool enableHighlight = false,
   bool enableFootnote = false,
+  bool enableKbd = false,
+  bool enableRawHtml = true,
+  bool enableHtmlBlock = true,
   bool enableLinkReferenceDefinition = true,
   bool enableTaskList = false,
 }) {
@@ -120,6 +129,9 @@ void validateCore(
       enableHeadingId: enableHeadingId,
       enableHighlight: enableHighlight,
       enableFootnote: enableFootnote,
+      enableKbd: enableKbd,
+      enableRawHtml: enableRawHtml,
+      enableHtmlBlock: enableHtmlBlock,
       enableLinkReferenceDefinition: enableLinkReferenceDefinition,
       enableTaskList: enableTaskList,
     );
