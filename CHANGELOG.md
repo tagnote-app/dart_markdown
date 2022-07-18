@@ -1,3 +1,18 @@
+## 2.0.0
+
+1. **BREAKING**: Add stricter rules to element parsers
+   [Issue#29](https://github.com/chenzhiguang/dart_markdown/issues/29).
+
+   _New rules:_
+
+   - `BlockParser` can only return `BlockElement`.
+   - `InlineParser` can only return `InlineObject`, which could be
+     `InlineElement`, `Text` or `UnparsedContent`.
+   - `InlineElement` can only have `InlineObject` as `children` elements.
+
+2. Fix an issue when paragraph is disabled
+   [Issue#27](https://github.com/chenzhiguang/dart_markdown/issues/27).
+
 ## 1.0.5
 
 1. Add `kbd` support
