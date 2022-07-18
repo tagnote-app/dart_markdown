@@ -46,6 +46,7 @@ class Document {
   final _blockSyntaxes = <BlockSyntax>{};
   final _inlineSyntaxes = <InlineSyntax>{};
   final bool hasCustomInlineSyntaxes;
+  final bool _paragraphDisabled;
 
   Iterable<BlockSyntax> get blockSyntaxes => _blockSyntaxes;
 
@@ -60,6 +61,8 @@ class Document {
     bool enableFencedBlockquote = true,
     bool enableFencedCodeBlock = true,
     bool enableList = true,
+    // Disable paragraph wont skip running `ParagraphSyntax`, but it will not
+    // output the paragraph element.
     bool enableParagraph = true,
     bool enableSetextHeading = true,
     bool enableTable = true,
@@ -87,7 +90,8 @@ class Document {
     Resolver? linkResolver,
     Resolver? imageLinkResolver,
     Iterable<Syntax> extensions = const [],
-  }) : hasCustomInlineSyntaxes = extensions.any((e) => e is InlineSyntax) {
+  })  : _paragraphDisabled = enableParagraph == false,
+        hasCustomInlineSyntaxes = extensions.any((e) => e is InlineSyntax) {
     for (final syntax in extensions) {
       if (syntax is BlockSyntax) {
         _blockSyntaxes.add(syntax);
@@ -112,7 +116,7 @@ class Document {
       if (enableFootnote)
         FootnoteReferenceSyntax(enableParagraph: enableParagraph),
       if (enableLinkReferenceDefinition) LinkReferenceDefinitionSyntax(),
-      ParagraphSyntax(disable: enableParagraph == false),
+      ParagraphSyntax(),
     ]);
 
     _inlineSyntaxes.addAll([
@@ -216,6 +220,11 @@ class Document {
           i -= unparsedSegments.length - inlineNodes.length;
         }
       } else if (node is Element) {
+        if (_paragraphDisabled && node.type == 'paragraph') {
+          nodes.replaceRange(i, i + 1, node.children);
+          i -= 1;
+          continue;
+        }
         _parseInlineContent(node.children, node);
       }
     }

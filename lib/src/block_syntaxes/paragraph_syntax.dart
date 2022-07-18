@@ -17,11 +17,7 @@ class ParagraphSyntax extends BlockSyntax {
   @override
   bool canInterrupt(BlockParser parser) => false;
 
-  const ParagraphSyntax({
-    bool disable = false,
-  }) : _disabled = disable;
-
-  final bool _disabled;
+  const ParagraphSyntax();
 
   @override
   bool canParse(BlockParser parser) => true;
@@ -56,20 +52,12 @@ class ParagraphSyntax extends BlockSyntax {
       popLineEnding: true,
     );
 
-    if (!_disabled) {
-      return Element(
-        'paragraph',
-        children: content.nodes,
-        // Add an empty modifiable markers here, in case a paragraph has
-        // `_backslashEscape` children.
-        markers: [],
-      );
-    }
-
-    if (content.nodes.isEmpty) {
-      return null;
-    }
-    assert(content.nodes.length == 1);
-    return content.nodes.first;
+    return Element(
+      'paragraph',
+      children: content.nodes,
+      // Add an empty modifiable markers here, in case a paragraph has
+      // `_backslashEscape` children.
+      markers: [],
+    );
   }
 }
