@@ -171,6 +171,24 @@ void main() {
       );
     });
 
+    test('paragraph is disabled', () {
+      const text = '''
+> Hello
+> Markdown!
+''';
+      final result = markdownToHtml(
+        text,
+        enableParagraph: false,
+      );
+      expect(
+        result,
+        equals('''
+<blockquote>Hello
+Markdown!
+</blockquote>'''),
+      );
+    });
+
     test('Footnote reference when paragraph is disabled', () {
       const text = '''
 Foo[^1]
