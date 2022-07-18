@@ -12,7 +12,7 @@ class SoftLineBreakSyntax extends InlineSyntax {
   SoftLineBreakSyntax() : super(RegExp(' \n'), startCharacter: $space);
 
   @override
-  Node? parse(InlineParser parser, Match match) {
+  InlineElement? parse(InlineParser parser, Match match) {
     parser.skipWhitespace();
     return null;
   }

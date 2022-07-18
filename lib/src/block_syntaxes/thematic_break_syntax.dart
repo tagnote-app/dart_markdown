@@ -16,12 +16,12 @@ class ThematicBreakSyntax extends BlockSyntax {
   const ThematicBreakSyntax();
 
   @override
-  Node parse(BlockParser parser) {
+  BlockElement parse(BlockParser parser) {
     final marker = parser.current.content;
 
     parser.advance();
 
-    return Element(
+    return BlockElement(
       'thematicBreak',
       markers: [marker.trim()],
     );

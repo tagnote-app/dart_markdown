@@ -205,7 +205,7 @@ class Document {
           final inlineNodes = InlineParser(unparsedSegments, this).parse();
           for (var j = 0; j < inlineNodes.length; j++) {
             final inlineNode = inlineNodes[j];
-            if (inlineNode is Element &&
+            if (inlineNode is InlineElement &&
                 inlineNode.type == '_backslashEscape') {
               parentElement!.markers.addWithOrder(inlineNode.markers.first);
               inlineNodes.replaceRange(j, j + 1, inlineNode.children);

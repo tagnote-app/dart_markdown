@@ -43,7 +43,7 @@ class DelimiterSyntax extends InlineSyntax {
   }) : super(RegExp(pattern), startCharacter: startCharacter);
 
   @override
-  Node? parse(InlineParser parser, Match match) {
+  InlineObject? parse(InlineParser parser, Match match) {
     final delimiterLength = match.match.length;
     final startPosition = parser.position;
     final endPosition = parser.position + delimiterLength;
@@ -92,16 +92,16 @@ class DelimiterSyntax extends InlineSyntax {
   ///
   /// If a tag can be closed at the current position, then this method calls
   /// [getChildren], in which [parser] parses any nested text into child nodes.
-  /// The returned [Node] incorpororates these child nodes.
-  Node? close(
+  /// The returned [InlineObject] incorpororates these child nodes.
+  InlineObject? close(
     InlineParser parser,
     int startPosition, {
     required String type,
     required SourceSpan openMarker,
     required SourceSpan closeMarker,
-    required List<Node> Function() getChildren,
+    required List<InlineObject> Function() getChildren,
   }) =>
-      Element(
+      InlineElement(
         type,
         children: getChildren(),
         markers: [openMarker, closeMarker],

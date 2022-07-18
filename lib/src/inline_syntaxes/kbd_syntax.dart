@@ -18,7 +18,7 @@ class KbdSyntax extends InlineSyntax {
         );
 
   @override
-  Node? parse(InlineParser parser, Match match) {
+  InlineElement? parse(InlineParser parser, Match match) {
     final matchedLength = match.match.length;
     final markers = [
       parser.consumeBy(5).single,
@@ -31,10 +31,11 @@ class KbdSyntax extends InlineSyntax {
 
     markers.add(parser.consumeBy(6).single);
 
-    return Element(
+    return InlineElement(
       'kbd',
       markers: markers,
-      children: contentSpans.map<Node>((e) => Text.fromSpan(e)).toList(),
+      children:
+          contentSpans.map<InlineObject>((e) => Text.fromSpan(e)).toList(),
     );
   }
 }

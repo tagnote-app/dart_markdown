@@ -66,7 +66,7 @@ class IndentedCodeBlockSyntax extends BlockSyntax {
   }
 
   @override
-  Node parse(BlockParser parser) {
+  BlockElement parse(BlockParser parser) {
     final childSource = parseChildLines(parser);
 
     final codeLines = childSource.lines.map<Node>((line) {
@@ -81,7 +81,7 @@ class IndentedCodeBlockSyntax extends BlockSyntax {
       );
     }).toList();
 
-    return Element(
+    return BlockElement(
       'codeBlock',
       children: codeLines,
     );

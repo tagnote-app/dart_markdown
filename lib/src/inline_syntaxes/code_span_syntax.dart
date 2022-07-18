@@ -43,7 +43,7 @@ class CodeSpanSyntax extends InlineSyntax {
   }
 
   @override
-  Node parse(InlineParser parser, Match match) {
+  InlineElement parse(InlineParser parser, Match match) {
     final markerLength = match[1]!.length;
     final contentLength = match.match.length - markerLength * 2;
     final markers = parser.consumeBy(markerLength);
@@ -61,7 +61,7 @@ class CodeSpanSyntax extends InlineSyntax {
 
     markers.add(parser.consumeBy(markerLength).first);
 
-    return Element(
+    return InlineElement(
       'inlineCode',
       children: contentSpans
           .map((span) => Text.fromSpan(span, lineEndingToWhitespace: true))

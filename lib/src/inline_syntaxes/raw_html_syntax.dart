@@ -20,10 +20,10 @@ class RawHtmlSyntax extends InlineSyntax {
   RawHtmlSyntax() : super(rawHtmlPattern, startCharacter: $lt);
 
   @override
-  Node? parse(InlineParser parser, Match match) {
+  InlineElement? parse(InlineParser parser, Match match) {
     final spans = parser.consumeBy(match[0]!.length);
 
-    return Element(
+    return InlineElement(
       'inlineHtml',
       children: spans.map((span) => Text.fromSpan(span)).toList(),
     );

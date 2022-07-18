@@ -54,7 +54,7 @@ class AutolinkExtensionSyntax extends InlineSyntax {
         ));
 
   @override
-  Node? parse(InlineParser parser, Match match) {
+  InlineElement? parse(InlineParser parser, Match match) {
     final text = match.match;
 
     int consumeLength;
@@ -74,7 +74,7 @@ class AutolinkExtensionSyntax extends InlineSyntax {
       destination = 'http://$destination';
     }
 
-    return Element(
+    return InlineElement(
       'link',
       children: [Text.fromSpan(span)],
       attributes: {'destination': destination},

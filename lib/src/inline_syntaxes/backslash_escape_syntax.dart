@@ -23,11 +23,11 @@ class BackslashEscapeSyntax extends InlineSyntax {
   BackslashEscapeSyntax() : super(_pattern, startCharacter: $backslash);
 
   @override
-  Node parse(InlineParser parser, Match match) {
+  InlineElement parse(InlineParser parser, Match match) {
     final markers = [parser.consume()];
     final text = Text.fromSpan(parser.consume());
 
-    return Element(
+    return InlineElement(
       '_backslashEscape',
       children: [text],
       markers: markers,

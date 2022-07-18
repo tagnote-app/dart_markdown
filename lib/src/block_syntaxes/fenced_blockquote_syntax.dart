@@ -40,7 +40,7 @@ class FencedBlockquoteSyntax extends BlockSyntax {
   }
 
   @override
-  Node? parse(BlockParser parser) {
+  BlockElement? parse(BlockParser parser) {
     final childSource = parseChildLines(parser);
 
     // Recursively parse the contents of the blockquote.
@@ -49,7 +49,7 @@ class FencedBlockquoteSyntax extends BlockSyntax {
       parser.document,
     ).parseLines();
 
-    return Element(
+    return BlockElement(
       'blockquote',
       children: children,
       markers: childSource.markers,

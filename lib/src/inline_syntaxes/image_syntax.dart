@@ -20,7 +20,7 @@ class ImageSyntax extends LinkSyntax {
         );
 
   @override
-  Element createNode(
+  InlineObject createNode(
     String destination,
     String? title, {
     required List<SourceSpan> markers,
@@ -32,7 +32,7 @@ class ImageSyntax extends LinkSyntax {
       // See https://spec.commonmark.org/0.30/#image-description.
       // An image description may contain links. Fetch text from the description
       // attribute if this nested link is an image.
-      if (node is Element && node.type == 'image') {
+      if (node is InlineElement && node.type == 'image') {
         return node.attributes['description'];
       }
       return node.textContent;
@@ -47,7 +47,7 @@ class ImageSyntax extends LinkSyntax {
       attributes['title'] = title.toHtmlText();
     }
 
-    return Element(
+    return InlineElement(
       'image',
       attributes: attributes,
       markers: markers,

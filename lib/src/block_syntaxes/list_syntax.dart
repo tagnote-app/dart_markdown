@@ -51,7 +51,7 @@ class ListSyntax extends BlockSyntax {
       : _taskListEnabled = enableTaskList;
 
   @override
-  Node parse(BlockParser parser) {
+  BlockElement parse(BlockParser parser) {
     var match = parser.current.firstMatch(listPattern);
     final ordered = match![1] != null;
 
@@ -223,7 +223,7 @@ class ListSyntax extends BlockSyntax {
     // End the last list item.
     endItem();
 
-    final itemNodes = <Element>[];
+    final itemNodes = <BlockElement>[];
 
     _removeLeadingBlankLines(listItems);
     final anyBlankLines = _removeTrailingBlankLines(listItems);
@@ -234,7 +234,7 @@ class ListSyntax extends BlockSyntax {
       final itemParser = BlockParser(item.lines, parser.document);
       final children = itemParser.parseLines(fromSyntax: this);
 
-      itemNodes.add(Element(
+      itemNodes.add(BlockElement(
         'listItem',
         children: children,
         markers: item.markers,
@@ -260,7 +260,7 @@ class ListSyntax extends BlockSyntax {
         final children = item.children;
         for (var i = 0; i < children.length; i++) {
           final child = children[i];
-          if (child is Element && child.type == 'paragraph') {
+          if (child is BlockElement && child.type == 'paragraph') {
             children
               ..removeAt(i)
               ..insertAll(i, child.children);
@@ -269,7 +269,7 @@ class ListSyntax extends BlockSyntax {
       }
     }
 
-    return Element(
+    return BlockElement(
       ordered ? 'orderedList' : 'bulletList',
       children: itemNodes,
       attributes: {

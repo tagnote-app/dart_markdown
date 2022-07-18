@@ -13,11 +13,11 @@ class HardLineBreakSyntax extends InlineSyntax {
 
   /// Create a void <br> element.
   @override
-  Node parse(InlineParser parser, Match match) {
+  InlineElement parse(InlineParser parser, Match match) {
     final marker = parser.consumeBy(match.match.length - 1).first;
     parser.advance();
 
-    return Element(
+    return InlineElement(
       'hardLineBreak',
       markers: [if (marker.text == r'\') marker],
     );
