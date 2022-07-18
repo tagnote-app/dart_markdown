@@ -13,13 +13,13 @@ class DelimiterProcessor {
   final InlineParser _parser;
 
   /// The tree of parsed Markdown nodes.
-  final List<Node> _tree;
+  final List<InlineObject> _tree;
 
   /// The delimiter stack tracking possible opening delimiters and closing
   /// delimiters for [DelimiterSyntax] nodes.
   final _delimiterStack = <Delimiter>[];
 
-  DelimiterProcessor(InlineParser parser, List<Node> tree)
+  DelimiterProcessor(InlineParser parser, List<InlineObject> tree)
       : _parser = parser,
         _tree = tree;
 

@@ -22,7 +22,7 @@ class EmojiSyntax extends InlineSyntax {
   EmojiSyntax() : super(RegExp(':([a-z0-9_+-]+):'), startCharacter: $colon);
 
   @override
-  Node? parse(InlineParser parser, Match match) {
+  InlineElement? parse(InlineParser parser, Match match) {
     final alias = match[1]!;
     final emoji = emojis[alias];
     final markers = <SourceSpan>[];
@@ -33,7 +33,7 @@ class EmojiSyntax extends InlineSyntax {
 
     markers.addAll(parser.consumeBy(match.match.length));
 
-    return Element(
+    return InlineElement(
       'emoji',
       markers: markers,
       attributes: {'emoji': emoji},

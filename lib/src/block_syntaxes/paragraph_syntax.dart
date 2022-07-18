@@ -23,7 +23,7 @@ class ParagraphSyntax extends BlockSyntax {
   bool canParse(BlockParser parser) => true;
 
   @override
-  Node? parse(BlockParser parser) {
+  BlockElement? parse(BlockParser parser) {
     final List<Line> lines = [parser.current];
     parser.advance();
 
@@ -52,7 +52,7 @@ class ParagraphSyntax extends BlockSyntax {
       popLineEnding: true,
     );
 
-    return Element(
+    return BlockElement(
       'paragraph',
       children: content.nodes,
       // Add an empty modifiable markers here, in case a paragraph has

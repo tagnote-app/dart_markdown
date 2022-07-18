@@ -87,7 +87,7 @@ class BlockquoteSyntax extends BlockSyntax {
   }
 
   @override
-  Node parse(BlockParser parser) {
+  BlockElement parse(BlockParser parser) {
     final childSource = parseChildLines(parser);
 
     // Recursively parse the contents of the blockquote.
@@ -104,7 +104,7 @@ class BlockquoteSyntax extends BlockSyntax {
       fromSyntax: this,
     );
 
-    return Element(
+    return BlockElement(
       'blockquote',
       children: children,
       markers: childSource.markers,

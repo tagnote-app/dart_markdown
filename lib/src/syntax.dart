@@ -24,7 +24,7 @@ abstract class BlockSyntax extends Syntax {
 
   bool canParse(BlockParser parser) => parser.current.hasMatch(pattern);
 
-  Node? parse(BlockParser parser);
+  BlockElement? parse(BlockParser parser);
 
   /// Returns the block which interrupts current syntax parsing if there is one,
   /// otherwise returns `null`.
@@ -79,7 +79,7 @@ abstract class InlineSyntax extends Syntax {
   }
 
   /// Possibly creating a [Node] and advancing [parser].
-  Node? parse(InlineParser parser, Match match);
+  InlineObject? parse(InlineParser parser, Match match);
 }
 
 class BlockSyntaxChildSource {

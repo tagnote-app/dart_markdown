@@ -104,7 +104,7 @@ void main() async {
   });
 
   group('Resolver', () {
-    Node? nyanResolver(String text, [_]) => text.isEmpty
+    InlineObject? nyanResolver(String text, [_]) => text.isEmpty
         ? null
         : Text.fromSpan(SourceFile.fromString(('~=[,,_${text}_,,]:3')).span(0));
     validateCore(
@@ -161,7 +161,7 @@ resolve [[]] thing
       'dart custom links',
       'links [are<foo>] awesome',
       '<p>links <a>are&lt;foo&gt;</a> awesome</p>',
-      linkResolver: (String text, [String? _]) => Element(
+      linkResolver: (String text, [String? _]) => InlineElement(
         'link',
         children: [
           Text.fromSpan(

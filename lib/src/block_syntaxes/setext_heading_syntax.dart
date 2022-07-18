@@ -32,7 +32,7 @@ class SetextHeadingSyntax extends BlockSyntax {
   }
 
   @override
-  Node? parse(BlockParser parser) {
+  BlockElement? parse(BlockParser parser) {
     final lines = parser.linesToConsume;
     if (lines.length < 2) {
       return null;
@@ -52,7 +52,7 @@ class SetextHeadingSyntax extends BlockSyntax {
 
     parser.advance();
 
-    return Element(
+    return BlockElement(
       'headline',
       children: content.nodes,
       attributes: {

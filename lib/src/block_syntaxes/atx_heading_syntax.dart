@@ -23,7 +23,7 @@ class AtxHeadingSyntax extends BlockSyntax {
   final bool _headingIdEnabled;
 
   @override
-  Node parse(BlockParser parser) {
+  BlockElement parse(BlockParser parser) {
     final line = parser.current;
     final match = line.firstMatch(pattern)!;
     final lineString = match.match;
@@ -64,7 +64,7 @@ class AtxHeadingSyntax extends BlockSyntax {
         ? UnparsedContent.fromSpan(contentSpan.trim())
         : null);
 
-    return Element(
+    return BlockElement(
       'headline',
       markers: markers,
       children: children,

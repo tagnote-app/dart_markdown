@@ -64,7 +64,7 @@ class FencedCodeBlockSyntax extends BlockSyntax {
   }
 
   @override
-  Node parse(BlockParser parser) {
+  BlockElement parse(BlockParser parser) {
     final match = _FenceMatch.fromMatch(pattern.firstMatch(
       BackslashParser.parseString(parser.current.content.text),
     )!);
@@ -80,7 +80,7 @@ class FencedCodeBlockSyntax extends BlockSyntax {
       });
     }
 
-    return Element(
+    return BlockElement(
       'codeBlock',
       children: codeLines,
       attributes: attributes,

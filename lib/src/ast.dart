@@ -6,7 +6,7 @@ import 'package:source_span/source_span.dart';
 
 import 'extensions.dart';
 
-typedef Resolver = Node? Function(String name, [String? title]);
+typedef Resolver = InlineObject? Function(String name, [String? title]);
 
 /// Base class for Markdown AST item such as [Element] and [Text].
 abstract class Node {
@@ -18,25 +18,27 @@ abstract class Node {
 }
 
 /// An AST node that can contain other nodes.
-class Element implements Node {
+abstract class Element<T extends Node> implements Node {
   /// Such as `headline`
   final String type;
 
   final List<SourceSpan> markers;
 
-  final List<Node> children;
+  final List<T> children;
   final Map<String, String> attributes;
+  final bool isBlock;
 
   @override
   String get textContent {
     return children.map((child) => child.textContent).join();
   }
 
-  Element(
+  const Element(
     this.type, {
-    this.markers = const [],
-    this.children = const [],
-    this.attributes = const {},
+    required this.isBlock,
+    required this.markers,
+    required this.children,
+    required this.attributes,
   });
 
   @override
@@ -71,8 +73,43 @@ class Element implements Node {
   String toString() => toMap().toPrettyString();
 }
 
+/// A block element which should be created by [BlockParser].
+class BlockElement extends Element {
+  const BlockElement(
+    String type, {
+    List<SourceSpan> markers = const [],
+    List<Node> children = const [],
+    Map<String, String> attributes = const {},
+  }) : super(
+          type,
+          isBlock: true,
+          markers: markers,
+          children: children,
+          attributes: attributes,
+        );
+}
+
+/// A base type for [InlineElement] and [Text].
+abstract class InlineObject implements Node {}
+
+/// A inline element which should be created by [InlineParser].
+class InlineElement extends Element<InlineObject> implements InlineObject {
+  const InlineElement(
+    String type, {
+    List<SourceSpan> markers = const [],
+    List<InlineObject> children = const [],
+    Map<String, String> attributes = const {},
+  }) : super(
+          type,
+          isBlock: false,
+          markers: markers,
+          children: children,
+          attributes: attributes,
+        );
+}
+
 /// A plain text element.
-class Text extends SourceSpanBase implements Node {
+class Text extends SourceSpanBase implements InlineObject {
   /// How many spaces of a tab that remains after part of it has been consumed.
   // See: https://spec.commonmark.org/0.30/#example-6
   final int? _tabRemaining;

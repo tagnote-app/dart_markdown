@@ -25,14 +25,14 @@ class InlineParser extends SourceParser {
   late final DelimiterProcessor _delimiterProcessor;
 
   /// The tree of parsed Markdown nodes.
-  final _tree = <Node>[];
+  final _tree = <InlineObject>[];
 
   InlineParser(List<UnparsedContent> source, this.document) : super(source) {
     // User specified syntaxes are the first syntaxes to be evaluated.
     syntaxes.addAll(document.inlineSyntaxes);
   }
 
-  List<Node> parse() {
+  List<InlineObject> parse() {
     _delimiterProcessor = DelimiterProcessor(this, _tree);
     final neverMatch = <InlineSyntax>[];
     final hasLinkSyntax = (syntaxes.any(((e) => e is LinkSyntax)));
@@ -99,7 +99,7 @@ class InlineParser extends SourceParser {
   }
 
   /// Combine all the adjacent [Text] nodes.
-  void _combineAdjacentText(List<Node> nodes) {
+  void _combineAdjacentText(List<InlineObject> nodes) {
     if (nodes.isEmpty) {
       return;
     }
@@ -115,7 +115,7 @@ class InlineParser extends SourceParser {
         text = null;
       }
 
-      if (node is Element) {
+      if (node is InlineElement) {
         _combineAdjacentText(node.children);
         continue;
       }

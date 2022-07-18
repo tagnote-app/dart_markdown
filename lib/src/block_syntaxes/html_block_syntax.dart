@@ -77,7 +77,7 @@ class HtmlBlockSyntax extends BlockSyntax {
   }
 
   @override
-  Node parse(BlockParser parser) {
+  BlockElement parse(BlockParser parser) {
     final childSource = parseChildLines(parser);
 
     final content = childSource.lines.toNodes(
@@ -85,7 +85,7 @@ class HtmlBlockSyntax extends BlockSyntax {
       popLineEnding: true,
     );
 
-    return Element(
+    return BlockElement(
       'htmlBlock',
       children: content.nodes,
     );

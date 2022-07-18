@@ -35,7 +35,7 @@ class FootnoteReferenceSyntax extends BlockSyntax {
   });
 
   @override
-  Node? parse(BlockParser parser) {
+  BlockElement? parse(BlockParser parser) {
     final position = parser.position;
     final matchedLine = parser.current;
     final match = matchedLine.firstMatch(pattern)!;
@@ -54,7 +54,7 @@ class FootnoteReferenceSyntax extends BlockSyntax {
       indention + labelString.length + 4,
     );
 
-    final element = Element(
+    final element = BlockElement(
       'footnoteReference',
       markers: [marker],
       attributes: {'label': labelString},
@@ -122,7 +122,7 @@ class FootnoteReferenceSyntax extends BlockSyntax {
       return _toUnparsedContent(lines);
     }
 
-    final paragraphs = <Element>[];
+    final paragraphs = <BlockElement>[];
     final paragraphLines = <Line>[];
 
     void addToParagraphs() {
@@ -130,7 +130,7 @@ class FootnoteReferenceSyntax extends BlockSyntax {
         return;
       }
       paragraphs.add(
-        Element(
+        BlockElement(
           'paragraph',
           children: _toUnparsedContent(paragraphLines),
         ),
