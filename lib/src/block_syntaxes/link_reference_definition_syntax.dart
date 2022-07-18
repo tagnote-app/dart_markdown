@@ -21,7 +21,7 @@ class LinkReferenceDefinitionSyntax extends BlockSyntax {
   const LinkReferenceDefinitionSyntax();
 
   @override
-  Node? parse(BlockParser parser) {
+  BlockElement? parse(BlockParser parser) {
     final position = parser.position;
     final List<Line> lines = [parser.current];
     parser.advance();
@@ -40,7 +40,10 @@ class LinkReferenceDefinitionSyntax extends BlockSyntax {
     return defNode;
   }
 
-  Node? _parseLinkReferenceDefinition(List<Line> lines, BlockParser parser) {
+  BlockElement? _parseLinkReferenceDefinition(
+    List<Line> lines,
+    BlockParser parser,
+  ) {
     final linkParser = LinkParser(lines.toSourceSpans())..parseDefinition();
     if (!linkParser.valid) {
       return null;
@@ -69,20 +72,20 @@ class LinkReferenceDefinitionSyntax extends BlockSyntax {
       ),
     );
 
-    return Element(
+    return BlockElement(
       'linkReferenceDefinition',
       markers: linkParser.markers,
       children: [
-        Element(
+        InlineElement(
           'linkReferenceDefinitionLabel',
           children: label.map((span) => Text.fromSpan(span)).toList(),
         ),
-        Element(
+        InlineElement(
           'linkReferenceDefinitionDestination',
           children: destination.map((span) => Text.fromSpan(span)).toList(),
         ),
         if (title != null)
-          Element(
+          InlineElement(
             'linkReferenceDefinitionTitle',
             children: title.map((span) => Text.fromSpan(span)).toList(),
           ),

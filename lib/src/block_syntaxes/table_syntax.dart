@@ -35,7 +35,7 @@ class TableSyntax extends BlockSyntax {
   /// * a divider of hyphens and pipes (not rendered)
   /// * many body rows of body cells
   @override
-  Node? parse(BlockParser parser) {
+  BlockElement? parse(BlockParser parser) {
     final markers = [parser.next!.content.trim()];
 
     final alignments = _parseDelimiterRow(parser.next!.content.text);
@@ -52,13 +52,13 @@ class TableSyntax extends BlockSyntax {
     }
 
     markers.insertAll(0, parsedRow.markers);
-    final head = Element('tableHead', children: [parsedRow.row]);
+    final head = BlockElement('tableHead', children: [parsedRow.row]);
     parser.advance();
 
     // Advance past the divider of hyphens.
     parser.advance();
 
-    final rows = <Element>[];
+    final rows = <BlockElement>[];
     while (!shouldEnd(parser)) {
       final parsedRow = _parseRow(
         parser.current.content,
@@ -71,11 +71,11 @@ class TableSyntax extends BlockSyntax {
       parser.advance();
     }
 
-    Element? body;
+    BlockElement? body;
     if (rows.isNotEmpty) {
-      body = Element('tableBody', children: rows);
+      body = BlockElement('tableBody', children: rows);
     }
-    return Element(
+    return BlockElement(
       'table',
       children: [head, if (body != null) body],
       markers: markers,
@@ -106,7 +106,7 @@ class TableSyntax extends BlockSyntax {
     required List<String?> alignments,
   }) {
     final markers = <SourceSpan>[];
-    final cells = <List<Node>>[];
+    final cells = <List<InlineObject>>[];
     final spanParser = SourceParser([content.trimRight()]);
 
     /// Walks through the opening pipe and any whitespace that surrounds it.
@@ -166,7 +166,9 @@ class TableSyntax extends BlockSyntax {
           segments.last = segments.last.trimRight();
         }
         cells.add(
-          segments.map<Node>((span) => UnparsedContent.fromSpan(span)).toList(),
+          segments
+              .map<InlineObject>((span) => UnparsedContent.fromSpan(span))
+              .toList(),
         );
         segments.clear();
         if (!isLastChar) {
@@ -182,14 +184,14 @@ class TableSyntax extends BlockSyntax {
       return null;
     }
 
-    final rowChildren = <Element>[];
+    final rowChildren = <InlineElement>[];
     for (var i = 0; i < cells.length; i++) {
       String? textAlign;
       if (i < alignments.length && alignments[i] != null) {
         textAlign = '${alignments[i]}';
       }
 
-      rowChildren.add(Element(
+      rowChildren.add(InlineElement(
         inTableHead ? 'tableHeadCell' : 'tableBodyCell',
         children: cells[i],
         attributes: textAlign == null ? {} : {'textAlign': textAlign},
@@ -199,16 +201,19 @@ class TableSyntax extends BlockSyntax {
     if (!inTableHead) {
       while (rowChildren.length < expectedColumns) {
         // Insert synthetic empty cells.
-        rowChildren.add(Element('tableBodyCell'));
+        rowChildren.add(InlineElement('tableBodyCell'));
       }
     }
 
-    return _RowElements(Element('tableRow', children: rowChildren), markers);
+    return _RowElements(
+      BlockElement('tableRow', children: rowChildren),
+      markers,
+    );
   }
 }
 
 class _RowElements {
-  final Element row;
+  final BlockElement row;
   final List<SourceSpan> markers;
   _RowElements(this.row, this.markers);
 }

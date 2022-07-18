@@ -17,7 +17,7 @@ class BlankLineSyntax extends BlockSyntax {
   const BlankLineSyntax();
 
   @override
-  Node? parse(BlockParser parser) {
+  BlockElement? parse(BlockParser parser) {
     parser
       ..encounteredBlankLine = true
       ..advance();

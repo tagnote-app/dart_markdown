@@ -17,7 +17,7 @@ class FootnoteSyntax extends InlineSyntax {
   FootnoteSyntax() : super(RegExp(_pattern));
 
   @override
-  Node? parse(InlineParser parser, Match match) {
+  InlineElement? parse(InlineParser parser, Match match) {
     final label = match[1]!;
     final number = parser.document.markFootnoteReference(label);
     if (number == null) {
@@ -33,7 +33,7 @@ class FootnoteSyntax extends InlineSyntax {
       markerLength -= 1;
     }
 
-    return Element(
+    return InlineElement(
       'footnote',
       markers: [parser.consumeBy(markerLength).single],
       attributes: {'number': number, 'label': label},

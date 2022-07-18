@@ -33,7 +33,7 @@ class AutolinkSyntax extends InlineSyntax {
         );
 
   @override
-  Node? parse(InlineParser parser, Match match) {
+  InlineElement? parse(InlineParser parser, Match match) {
     final markers = [parser.consume()];
     final span = parser.consumeBy(match.match.length - 2).first;
     markers.add(parser.consume());
@@ -45,7 +45,7 @@ class AutolinkSyntax extends InlineSyntax {
       destination = 'mailto:${span.text.toHtmlText()}';
     }
 
-    return Element(
+    return InlineElement(
       'link',
       children: [Text.fromSpan(span)],
       markers: markers,

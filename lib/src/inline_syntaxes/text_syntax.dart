@@ -13,7 +13,7 @@ class TextSyntax extends InlineSyntax {
       : super(RegExp(pattern, multiLine: true), startCharacter: startCharacter);
 
   @override
-  Node? parse(InlineParser parser, Match match) {
+  InlineElement? parse(InlineParser parser, Match match) {
     parser.advanceBy(match.match.length);
     return null;
   }

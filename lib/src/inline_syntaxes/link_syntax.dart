@@ -24,13 +24,13 @@ class LinkSyntax extends DelimiterSyntax {
         super(pattern, startCharacter: startCharacter);
 
   @override
-  Node? close(
+  InlineObject? close(
     InlineParser parser,
     int startPosition, {
     required SourceSpan openMarker,
     required SourceSpan closeMarker,
     String? type,
-    required List<Node> Function() getChildren,
+    required List<InlineObject> Function() getChildren,
   }) {
     // The content between openMarker and closeMarker.
     final plainTextChildren = parser.subspan(
@@ -56,7 +56,7 @@ class LinkSyntax extends DelimiterSyntax {
 
     // Tries to create a reference link node.
     // Returns the link if it was successfully created, `null` otherwise.
-    Node? _tryCreateReferenceLink() {
+    InlineObject? _tryCreateReferenceLink() {
       final link = _resolveReferenceLink(
         label,
         parser.document.linkReferences,
@@ -156,18 +156,18 @@ class LinkSyntax extends DelimiterSyntax {
   /// Resolve a possible reference link.
   ///
   /// Uses [linkReferences], [linkResolver], and [createNode] to try to
-  /// resolve [label] into a [Node]. If [label] is defined in
-  /// [linkReferences] or can be resolved by [linkResolver], returns a [Node]
-  /// that links to the resolved URL.
+  /// resolve [label] into a [InlineObject]. If [label] is defined in
+  /// [linkReferences] or can be resolved by [linkResolver], returns a
+  /// [InlineObject] that links to the resolved URL.
   ///
   /// Otherwise, returns `null`.
   ///
   /// [label] does not need to be normalized.
-  Node? _resolveReferenceLink(
+  InlineObject? _resolveReferenceLink(
     String label,
     Map<String, LinkReference> linkReferences, {
     required List<SourceSpan> markers,
-    required List<Node> Function() getChildren,
+    required List<InlineObject> Function() getChildren,
     required List<SourceSpan> plainTextChildren,
   }) {
     final linkReference = linkReferences[normalizeLinkLabel(label)];
@@ -200,11 +200,11 @@ class LinkSyntax extends DelimiterSyntax {
   }
 
   /// Create the node represented by a Markdown link.
-  Node createNode(
+  InlineObject createNode(
     String destination,
     String? title, {
     required List<SourceSpan> markers,
-    required List<Node> Function() getChildren,
+    required List<InlineObject> Function() getChildren,
     required List<SourceSpan> plainTextChildren,
   }) {
     final children = getChildren();
@@ -216,7 +216,7 @@ class LinkSyntax extends DelimiterSyntax {
       attributes['title'] = title;
     }
 
-    return Element(
+    return InlineElement(
       'link',
       children: children,
       attributes: attributes,
