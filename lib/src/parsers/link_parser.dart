@@ -30,7 +30,7 @@ class LinkParser extends SourceParser {
   ///
   final markers = <SourceSpan>[];
 
-  LinkParser(List<SourceSpan> source) : super(source);
+  LinkParser(super.source);
 
   /// Parses [source] to a link reference definition.
   void parseDefinition() {

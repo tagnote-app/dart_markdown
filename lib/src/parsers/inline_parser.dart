@@ -27,7 +27,7 @@ class InlineParser extends SourceParser {
   /// The tree of parsed Markdown nodes.
   final _tree = <InlineObject>[];
 
-  InlineParser(List<UnparsedContent> source, this.document) : super(source) {
+  InlineParser(List<UnparsedContent> super.source, this.document) {
     // User specified syntaxes are the first syntaxes to be evaluated.
     syntaxes.addAll(document.inlineSyntaxes);
   }

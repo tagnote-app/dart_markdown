@@ -98,8 +98,8 @@ extension LineListExtensions on List<Line> {
   /// remove the final line ending).
   ///
   /// Set [popLineEnding] to `true` to remove the line ending of the last [Line]
-  /// and return this lineEnding in [_SourceFromLineList].
-  _SourceFromLineList toNodes(
+  /// and return this lineEnding in [SourceFromLineList].
+  SourceFromLineList toNodes(
     Node Function(SourceSpan span) transfer, {
     bool trimLeft = false,
     bool trimLeading = false,
@@ -107,7 +107,7 @@ extension LineListExtensions on List<Line> {
     bool popLineEnding = false,
   }) {
     if (isEmpty) {
-      return _SourceFromLineList(<Node>[], null);
+      return SourceFromLineList(<Node>[], null);
     }
     var spans = toSourceSpans();
 
@@ -137,7 +137,7 @@ extension LineListExtensions on List<Line> {
     }
 
     final nodes = spans.concatWhilePossible().map<Node>(transfer).toList();
-    return _SourceFromLineList(nodes, popLineEnding ? lineEnding : null);
+    return SourceFromLineList(nodes, popLineEnding ? lineEnding : null);
   }
 
   List<Line> fromString() {
@@ -145,9 +145,9 @@ extension LineListExtensions on List<Line> {
   }
 }
 
-class _SourceFromLineList {
+class SourceFromLineList {
   final List<Node> nodes;
   final SourceSpan? lineEnding;
 
-  _SourceFromLineList(this.nodes, this.lineEnding);
+  SourceFromLineList(this.nodes, this.lineEnding);
 }
