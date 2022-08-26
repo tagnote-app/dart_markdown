@@ -1,3 +1,10 @@
+## 2.1.0
+
+1. Add `enableTagfilter` option
+   [PR#34](https://github.com/chenzhiguang/dart_markdown/pull/34).
+2. Update to Dart 2.17, update lints to 2.0.0
+   [PR#35](https://github.com/chenzhiguang/dart_markdown/pull/35).
+
 ## 2.0.0
 
 1. **BREAKING**: Add stricter rules to element parsers
