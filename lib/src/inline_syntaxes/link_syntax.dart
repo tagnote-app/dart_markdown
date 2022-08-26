@@ -56,7 +56,7 @@ class LinkSyntax extends DelimiterSyntax {
 
     // Tries to create a reference link node.
     // Returns the link if it was successfully created, `null` otherwise.
-    InlineObject? _tryCreateReferenceLink() {
+    InlineObject? tryCreateReferenceLink() {
       final link = _resolveReferenceLink(
         label,
         parser.document.linkReferences,
@@ -75,7 +75,7 @@ class LinkSyntax extends DelimiterSyntax {
     // The `]` is at the end of the document, this may be a valid shortcut
     // reference link.
     if (parser.isDone) {
-      return _tryCreateReferenceLink();
+      return tryCreateReferenceLink();
     }
 
     final char = parser.charAt();
@@ -102,7 +102,7 @@ class LinkSyntax extends DelimiterSyntax {
       // be an inline link. We must now check if `[...]` is simply a shortcut
       // reference link.
 
-      return _tryCreateReferenceLink();
+      return tryCreateReferenceLink();
     }
 
     // At this point, we've matched `[...][`. Maybe a *full* reference link,
@@ -117,7 +117,7 @@ class LinkSyntax extends DelimiterSyntax {
         // Add `]` to markers;
         markers.add(parser.spanAt());
         parser.advance();
-        return _tryCreateReferenceLink();
+        return tryCreateReferenceLink();
       }
 
       // Maybe a *full* reference link, like [text][label].
@@ -129,7 +129,7 @@ class LinkSyntax extends DelimiterSyntax {
           ..insertAll(markers.length - 1, linkParser.label);
 
         label = linkParser.label.map((e) => e.text).join();
-        return _tryCreateReferenceLink();
+        return tryCreateReferenceLink();
       }
 
       return null;
@@ -137,7 +137,7 @@ class LinkSyntax extends DelimiterSyntax {
 
     // The link text (inside `[...]`) was not followed with a opening `(` nor
     // an opening `[`. Perhaps just a simple shortcut reference link (`[...]`).
-    final node = _tryCreateReferenceLink();
+    final node = tryCreateReferenceLink();
     if (node != null) {
       // As with full reference links, spaces, tabs, or line endings are not
       // allowed between the two sets of brackets, see
