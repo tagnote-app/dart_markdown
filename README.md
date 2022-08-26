@@ -1,16 +1,74 @@
 _This library is refactored from
 [dart-lang/markdown(5.0)](https://pub.dev/packages/markdown/versions/5.0.0)_
 
-### About
+## About
 
-A portable Markdown library written in Dart. It can parse Markdown into HTML on
-both the client and server.
+A portable Markdown library written in Dart. It can parse Markdown to AST and
+render to HTML on both the client and server.
 
-### Live demo
+## Live demo
 
 https://chenzhiguang.github.io/dart_markdown_demo/
 
-### Usage
+## Highlights
+
+- [100% conform to CommonMark](https://spec.commonmark.org/0.30/)
+- [100% conform to GFM](https://github.github.com/gfm/)
+- [Output AST with the location informaion of each text and marker](#syntax-tree)
+
+## Syntax tree
+
+_Input:_
+
+```Markdown
+Hello **Markdown**!,
+```
+
+_Output:_
+
+```json
+[
+  {
+    "type": "paragraph",
+    "children": [
+      {
+        "text": "Hello ",
+        "start": { "line": 0, "column": 0, "offset": 0 },
+        "end": { "line": 0, "column": 6, "offset": 6 }
+      },
+      {
+        "type": "strongEmphasis",
+        "markers": [
+          {
+            "text": "**",
+            "start": { "line": 0, "column": 6, "offset": 6 },
+            "end": { "line": 0, "column": 8, "offset": 8 }
+          },
+          {
+            "text": "**",
+            "start": { "line": 0, "column": 16, "offset": 16 },
+            "end": { "line": 0, "column": 18, "offset": 18 }
+          }
+        ],
+        "children": [
+          {
+            "text": "Markdown",
+            "start": { "line": 0, "column": 8, "offset": 8 },
+            "end": { "line": 0, "column": 16, "offset": 16 }
+          }
+        ]
+      },
+      {
+        "text": "!",
+        "start": { "line": 0, "column": 18, "offset": 18 },
+        "end": { "line": 0, "column": 19, "offset": 19 }
+      }
+    ]
+  }
+]
+```
+
+## Usage
 
 ```dart
 import 'package:dart_markdown/dart_markdown.dart';
@@ -61,5 +119,32 @@ void main() {
     extensions: const <Syntax>[],
   ));
   //=> <p>Hello <strong>Markdown</strong>!</p>
+}
+```
+
+## Custom syntax extension example
+
+```dart
+markdownToHtml(
+  'a #hashtag',
+  extensions: [
+    ExampleSyntax(),
+  ],
+);
+
+class ExampleSyntax extends InlineSyntax {
+  ExampleSyntax() : super(RegExp(r'#[^#]+?(?=\s+|$)'));
+
+  @override
+  MdInlineObject? parse(MdInlineParser parser, Match match) {
+    final markers = [parser.consume()];
+    final content = parser.consumeBy(match[0]!.length - 1);
+
+    return MdInlineElement(
+      'hashtag',
+      markers: markers,
+      children: content.map((e) => MdText.fromSpan(e)).toList(),
+    );
+  }
 }
 ```
