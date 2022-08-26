@@ -105,7 +105,7 @@ extension SourceSpanExtensions on SourceSpan {
 
   /// Removes leading whitespace by the length of [length].
   // The way of handling tabs: https://spec.commonmark.org/0.30/#tabs
-  _IndentedSourceSpan indent([int length = 4]) {
+  IndentedSourceSpan indent([int length = 4]) {
     final whitespaceMatch = RegExp('^[ \t]{0,$length}').firstMatch(text);
     const tabSize = 4;
 
@@ -136,7 +136,7 @@ extension SourceSpanExtensions on SourceSpan {
         }
       }
     }
-    return _IndentedSourceSpan(subspan(start), tabRemaining);
+    return IndentedSourceSpan(subspan(start), tabRemaining);
   }
 }
 
@@ -204,7 +204,7 @@ extension SourceSpanListExtensions on List<SourceSpan> {
   }
 }
 
-class _IndentedSourceSpan {
+class IndentedSourceSpan {
   final SourceSpan span;
 
   /// How many spaces of a tab that remains after part of it has been consumed.
@@ -212,5 +212,5 @@ class _IndentedSourceSpan {
   /// `null` means it did not hit a `tab`.
   final int? tabRemaining;
 
-  _IndentedSourceSpan(this.span, this.tabRemaining);
+  IndentedSourceSpan(this.span, this.tabRemaining);
 }

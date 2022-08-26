@@ -76,17 +76,11 @@ abstract class Element<T extends Node> implements Node {
 /// A block element which should be created by [BlockParser].
 class BlockElement extends Element {
   const BlockElement(
-    String type, {
-    List<SourceSpan> markers = const [],
-    List<Node> children = const [],
-    Map<String, String> attributes = const {},
-  }) : super(
-          type,
-          isBlock: true,
-          markers: markers,
-          children: children,
-          attributes: attributes,
-        );
+    super.type, {
+    super.markers = const [],
+    super.children = const [],
+    super.attributes = const {},
+  }) : super(isBlock: true);
 }
 
 /// A base type for [InlineElement] and [Text].
@@ -95,17 +89,11 @@ abstract class InlineObject implements Node {}
 /// A inline element which should be created by [InlineParser].
 class InlineElement extends Element<InlineObject> implements InlineObject {
   const InlineElement(
-    String type, {
-    List<SourceSpan> markers = const [],
-    List<InlineObject> children = const [],
-    Map<String, String> attributes = const {},
-  }) : super(
-          type,
-          isBlock: false,
-          markers: markers,
-          children: children,
-          attributes: attributes,
-        );
+    super.type, {
+    super.markers = const [],
+    super.children = const [],
+    super.attributes = const {},
+  }) : super(isBlock: false);
 }
 
 /// A plain text element.
@@ -214,13 +202,13 @@ class Text extends SourceSpanBase implements InlineObject {
 /// definitions.
 class UnparsedContent extends Text {
   UnparsedContent(
-    String text, {
-    required SourceLocation start,
-    required SourceLocation end,
-  }) : super(text, start: start, end: end);
+    super.text, {
+    required super.start,
+    required super.end,
+  });
 
   /// Instantiates a [UnparsedContent] from [span].
-  UnparsedContent.fromSpan(SourceSpan span) : super.fromSpan(span);
+  UnparsedContent.fromSpan(super.span) : super.fromSpan();
 }
 
 /// Visitor pattern for the AST.

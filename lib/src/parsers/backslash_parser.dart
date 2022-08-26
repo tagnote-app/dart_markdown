@@ -11,9 +11,8 @@ import 'source_parser.dart';
 class BackslashParser extends SourceParser {
   final bool _outputString;
 
-  BackslashParser(List<SourceSpan> source, {bool outputString = true})
-      : _outputString = outputString,
-        super(source) {
+  BackslashParser(super.source, {bool outputString = true})
+      : _outputString = outputString {
     _parse();
   }
 

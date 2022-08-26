@@ -76,7 +76,7 @@ class ListSyntax extends BlockSyntax {
     // Task list should not be a separated extension, instead it should be
     // an additional processing step is performed on list items. See
     // https://github.github.com/gfm/#task-list-items-extension-
-    SourceSpan _parseTastListItem(SourceSpan span) {
+    SourceSpan parseTastListItem(SourceSpan span) {
       if (!_taskListEnabled ||
           !RegExp(r'^\s*\[[ xX]\][ \t]').hasMatch(span.text)) {
         taskListMarker = null;
@@ -124,7 +124,7 @@ class ListSyntax extends BlockSyntax {
         childLines.add(Line(
           blankLines == null
               ? indentedLine.span
-              : _parseTastListItem(indentedLine.span),
+              : parseTastListItem(indentedLine.span),
           lineEnding: parser.current.lineEnding,
           tabRemaining: indentedLine.tabRemaining,
         ));
@@ -195,7 +195,7 @@ class ListSyntax extends BlockSyntax {
         }
 
         final content = contentBlockStart != null && !isBlank
-            ? _parseTastListItem(spanParser.subspan(contentBlockStart).first)
+            ? parseTastListItem(spanParser.subspan(contentBlockStart).first)
             : spanParser.emptySpan();
 
         childLines.add(Line(
