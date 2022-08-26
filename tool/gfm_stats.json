@@ -123,7 +123,7 @@
   "359": "strict"
  },
  "Disallowed Raw HTML (extension)": {
-  "653": "fail"
+  "653": "strict"
  },
  "Emphasis and strong emphasis": {
   "360": "strict",

@@ -23,6 +23,7 @@ Future<void> testDirectory(String name) async {
     bool enableTable = false;
     bool enableStrikethrough = false;
     bool enableAutolinkExtension = false;
+    bool enableTagfilter = false;
 
     if (dataCase.file.endsWith('_extension')) {
       final syntaxName = dataCase.file.substring(
@@ -35,6 +36,8 @@ Future<void> testDirectory(String name) async {
         enableStrikethrough = true;
       } else if (syntaxName == 'autolinks') {
         enableAutolinkExtension = true;
+      } else if (syntaxName == 'disallowed_raw_html') {
+        enableTagfilter = true;
       }
     }
 
@@ -45,6 +48,7 @@ Future<void> testDirectory(String name) async {
       enableTable: enableTable,
       enableStrikethrough: enableStrikethrough,
       enableAutolinkExtension: enableAutolinkExtension,
+      enableTagfilter: enableTagfilter,
     );
   }
 }
@@ -66,6 +70,7 @@ void testFile(
   bool enableHighlight = false,
   bool enableFootnote = false,
   bool enableKbd = false,
+  bool enableTagfilter = false,
   bool enableRawHtml = true,
   bool enableHtmlBlock = true,
   bool enableLinkReferenceDefinition = true,
@@ -88,6 +93,7 @@ void testFile(
       enableHighlight: enableHighlight,
       enableFootnote: enableFootnote,
       enableKbd: enableKbd,
+      enableTagfilter: enableTagfilter,
       enableRawHtml: enableRawHtml,
       enableHtmlBlock: enableHtmlBlock,
       enableLinkReferenceDefinition: enableLinkReferenceDefinition,
@@ -111,6 +117,7 @@ void validateCore(
   bool enableHighlight = false,
   bool enableFootnote = false,
   bool enableKbd = false,
+  bool enableTagfilter = false,
   bool enableRawHtml = true,
   bool enableHtmlBlock = true,
   bool enableLinkReferenceDefinition = true,
@@ -130,6 +137,7 @@ void validateCore(
       enableHighlight: enableHighlight,
       enableFootnote: enableFootnote,
       enableKbd: enableKbd,
+      enableTagfilter: enableTagfilter,
       enableRawHtml: enableRawHtml,
       enableHtmlBlock: enableHtmlBlock,
       enableLinkReferenceDefinition: enableLinkReferenceDefinition,

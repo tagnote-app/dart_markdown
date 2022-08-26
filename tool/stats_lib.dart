@@ -124,6 +124,7 @@ CompareResult compareResult(
   bool enableTable = false;
   bool enableStrikethrough = false;
   bool enableAutolinkExtension = false;
+  bool enableTagfilter = false;
 
   if (extensions != null && extensions.isNotEmpty) {
     for (final extension in extensions) {
@@ -133,6 +134,8 @@ CompareResult compareResult(
         enableStrikethrough = true;
       } else if (extension == 'autolink') {
         enableAutolinkExtension = true;
+      } else if (extension == 'tagfilter') {
+        enableTagfilter = true;
       }
     }
   }
@@ -144,6 +147,7 @@ CompareResult compareResult(
       enableTable: enableTable,
       enableStrikethrough: enableStrikethrough,
       enableAutolinkExtension: enableAutolinkExtension,
+      enableTagfilter: enableTagfilter,
     );
 
     // Add a line feed to each line if it is not an emplty line.

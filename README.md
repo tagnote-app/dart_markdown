@@ -55,6 +55,7 @@ void main() {
     enableSubscript: false,
     enableSuperscript: false,
     enableKbd: false,
+    enableTagfilter: false,
 
     // Customised syntaxes.
     extensions: const <Syntax>[],
