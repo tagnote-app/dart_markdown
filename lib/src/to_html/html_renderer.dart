@@ -36,6 +36,7 @@ String markdownToHtml(
   bool enableHardLineBreak = true,
   bool enableImage = true,
   bool enableLink = true,
+  bool enableTagfilter = false,
   bool enableRawHtml = true,
   bool enableSoftLineBreak = true,
   bool enableStrikethrough = true,
@@ -89,16 +90,21 @@ String markdownToHtml(
   );
   final nodes = document.parseLines(markdown);
 
-  return renderToHtml(nodes, encodeHtml: encodeHtml);
+  return renderToHtml(
+    nodes,
+    encodeHtml: encodeHtml,
+    enableTagfilter: enableTagfilter,
+  );
 }
 
 /// Renders [nodes] to HTML.
 String renderToHtml(
   List<Node> nodes, {
   bool encodeHtml = true,
+  bool enableTagfilter = false,
 }) {
   final htmlNodes = HtmlTransformer(encodeHtml: encodeHtml).transform(nodes);
-  return HtmlRenderer().render(htmlNodes);
+  return HtmlRenderer(enableTagfilter: enableTagfilter).render(htmlNodes);
 }
 
 const _blockTags = [
@@ -146,8 +152,11 @@ class HtmlRenderer implements HtmlNodeVisitor {
 
   final _elementStack = <HtmlElement>[];
   String? _lastVisitedTag;
+  final bool _tagfilterEnabled;
 
-  HtmlRenderer();
+  HtmlRenderer({
+    bool enableTagfilter = false,
+  }) : _tagfilterEnabled = enableTagfilter;
 
   String render(List<HtmlNode> nodes) {
     buffer = StringBuffer();
@@ -163,6 +172,11 @@ class HtmlRenderer implements HtmlNodeVisitor {
   @override
   void visitText(HtmlText text) {
     var content = text.text;
+
+    if (_tagfilterEnabled) {
+      content = _filterTags(content);
+    }
+
     if (const ['br', 'p', 'li'].contains(_lastVisitedTag)) {
       final lines = LineSplitter.split(content);
       content = content.contains('<pre>') ? lines.join('\n') : lines.join('\n');
@@ -252,4 +266,18 @@ class HtmlRenderer implements HtmlNodeVisitor {
     uniqueIds.add(suffixedId);
     return suffixedId;
   }
+
+  /// Filters some particular tags, see: \
+  /// https://github.github.com/gfm/#disallowed-raw-html-extension-
+  // As said in the specification, this process should happen when rendering
+  // HTML output, so there should not be a dedicated syntax for this extension.
+  String _filterTags(String content) => content.replaceAll(
+      RegExp(
+        '<(?=(?:'
+        'title|textarea|style|xmp|iframe|noembed|noframes|script|plaintext'
+        ')>)',
+        caseSensitive: false,
+        multiLine: true,
+      ),
+      '&lt;');
 }
