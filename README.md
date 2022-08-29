@@ -1,6 +1,9 @@
 _This library is refactored from
 [dart-lang/markdown(5.0)](https://pub.dev/packages/markdown/versions/5.0.0)_
 
+[![Build Status](https://github.com/chenzhiguang/dart_markdown/actions/workflows/test-package.yml/badge.svg)](https://github.com/chenzhiguang/dart_markdown/actions/workflows/test-package.yml)
+[![Pub](https://img.shields.io/pub/v/dart_markdown.svg)](https://pub.dev/packages/markdown)
+
 ## About
 
 A portable Markdown library written in Dart. It can parse Markdown to AST and
@@ -14,7 +17,7 @@ https://chenzhiguang.github.io/dart_markdown_demo/
 
 - [100% conform to CommonMark](https://spec.commonmark.org/0.30/)
 - [100% conform to GFM](https://github.github.com/gfm/)
-- [Output AST with the location informaion of each text and marker](#syntax-tree)
+- [Output AST with the location information of each text and marker](#syntax-tree)
 
 ## Syntax tree
 
