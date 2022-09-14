@@ -28,15 +28,6 @@ class ListSyntax extends BlockSyntax {
   }
 
   @override
-  bool canParse(BlockParser parser) {
-    if (parser.current.hasMatch(hrPattern)) {
-      return false;
-    }
-
-    return super.canParse(parser);
-  }
-
-  @override
   RegExp get pattern => listPattern;
 
   @override
