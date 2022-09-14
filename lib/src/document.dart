@@ -87,6 +87,7 @@ class Document {
     bool enableHighlight = false,
     bool enableFootnote = false,
     bool enableTaskList = false,
+    bool forceTightList = false,
     Resolver? linkResolver,
     Resolver? imageLinkResolver,
     Iterable<Syntax> extensions = const [],
@@ -106,7 +107,11 @@ class Document {
       if (enableSetextHeading)
         SetextHeadingSyntax(enableHeadingId: enableHeadingId),
       if (enableThematicBreak) const ThematicBreakSyntax(),
-      if (enableList) ListSyntax(enableTaskList: enableTaskList),
+      if (enableList)
+        ListSyntax(
+          enableTaskList: enableTaskList,
+          forceTightList: forceTightList,
+        ),
       if (enableFencedBlockquote) const FencedBlockquoteSyntax(),
       if (enableBlockquote) const BlockquoteSyntax(),
       if (enableIndentedCodeBlock) const IndentedCodeBlockSyntax(),

@@ -117,6 +117,7 @@ void main() {
     enableSuperscript: false,
     enableKbd: false,
     enableTagfilter: false,
+    forceTightList: false,
 
     // Customised syntaxes.
     extensions: const <Syntax>[],
