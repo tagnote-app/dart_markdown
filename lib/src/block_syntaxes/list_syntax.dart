@@ -16,6 +16,7 @@ import '../syntax.dart';
 /// For both ordered and unordered lists.
 class ListSyntax extends BlockSyntax {
   final bool _taskListEnabled;
+  final bool _forceTightListEnabled;
 
   @override
   RegExp get pattern => listPattern;
@@ -47,8 +48,9 @@ class ListSyntax extends BlockSyntax {
     return match[2]?.isNotEmpty ?? false;
   }
 
-  const ListSyntax({bool enableTaskList = false})
-      : _taskListEnabled = enableTaskList;
+  const ListSyntax({bool enableTaskList = false, bool forceTightList = false})
+      : _taskListEnabled = enableTaskList,
+        _forceTightListEnabled = forceTightList;
 
   @override
   BlockElement parse(BlockParser parser) {
@@ -251,7 +253,8 @@ class ListSyntax extends BlockSyntax {
 
     // Must strip paragraph tags if the list is "tight".
     // http://spec.commonmark.org/0.30/#lists
-    final listIsTight = !anyBlankLines && !anyBlankLinesBetweenBlocks;
+    final listIsTight = (!anyBlankLines && !anyBlankLinesBetweenBlocks) ||
+        _forceTightListEnabled;
 
     if (listIsTight) {
       // We must post-process the list items, converting any top-level paragraph
@@ -273,6 +276,7 @@ class ListSyntax extends BlockSyntax {
       ordered ? 'orderedList' : 'bulletList',
       children: itemNodes,
       attributes: {
+        'isTight': listIsTight ? 'true' : 'false',
         if (ordered && startNumber != 1) 'start': '$startNumber',
       },
     );
