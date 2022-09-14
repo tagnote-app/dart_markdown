@@ -1,3 +1,8 @@
+## 2.1.1
+
+1. Add `forceTightList` option
+   [PR#39](https://github.com/chenzhiguang/dart_markdown/pull/39).
+
 ## 2.1.0
 
 1. Add `enableTagfilter` option
