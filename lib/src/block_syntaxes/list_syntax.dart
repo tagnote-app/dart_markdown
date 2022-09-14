@@ -19,6 +19,15 @@ class ListSyntax extends BlockSyntax {
   final bool _forceTightListEnabled;
 
   @override
+  bool canParse(BlockParser parser) {
+    if (parser.current.hasMatch(hrPattern)) {
+      return false;
+    }
+
+    return super.canParse(parser);
+  }
+
+  @override
   RegExp get pattern => listPattern;
 
   @override
@@ -78,7 +87,7 @@ class ListSyntax extends BlockSyntax {
     // Task list should not be a separated extension, instead it should be
     // an additional processing step is performed on list items. See
     // https://github.github.com/gfm/#task-list-items-extension-
-    SourceSpan parseTastListItem(SourceSpan span) {
+    SourceSpan parseTaskListItem(SourceSpan span) {
       if (!_taskListEnabled ||
           !RegExp(r'^\s*\[[ xX]\][ \t]').hasMatch(span.text)) {
         taskListMarker = null;
@@ -126,7 +135,7 @@ class ListSyntax extends BlockSyntax {
         childLines.add(Line(
           blankLines == null
               ? indentedLine.span
-              : parseTastListItem(indentedLine.span),
+              : parseTaskListItem(indentedLine.span),
           lineEnding: parser.current.lineEnding,
           tabRemaining: indentedLine.tabRemaining,
         ));
@@ -197,7 +206,7 @@ class ListSyntax extends BlockSyntax {
         }
 
         final content = contentBlockStart != null && !isBlank
-            ? parseTastListItem(spanParser.subspan(contentBlockStart).first)
+            ? parseTaskListItem(spanParser.subspan(contentBlockStart).first)
             : spanParser.emptySpan();
 
         childLines.add(Line(
