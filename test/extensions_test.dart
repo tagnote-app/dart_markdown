@@ -9,18 +9,18 @@ import 'package:test/test.dart';
 void main() {
   group('for String', () {
     test('indentation()', () {
-      expect("\tFoo".indentation(), 4);
-      expect("\tFoo".indentation(2), 2);
-      expect("\tFoo".indentation(8), 8);
-      expect(" \tFoo".indentation(), 4);
-      expect("  \tFoo".indentation(), 4);
-      expect("   \tFoo".indentation(), 4);
-      expect("    \tFoo".indentation(), 8);
-      expect("\t Foo".indentation(), 5);
-      expect(" \t Foo".indentation(), 5);
-      expect("  \t Foo".indentation(), 5);
-      expect("   \t Foo".indentation(), 5);
-      expect("    \t Foo".indentation(), 9);
+      expect('\tFoo'.indentation(), 4);
+      expect('\tFoo'.indentation(2), 2);
+      expect('\tFoo'.indentation(8), 8);
+      expect(' \tFoo'.indentation(), 4);
+      expect('  \tFoo'.indentation(), 4);
+      expect('   \tFoo'.indentation(), 4);
+      expect('    \tFoo'.indentation(), 8);
+      expect('\t Foo'.indentation(), 5);
+      expect(' \t Foo'.indentation(), 5);
+      expect('  \t Foo'.indentation(), 5);
+      expect('   \t Foo'.indentation(), 5);
+      expect('    \t Foo'.indentation(), 9);
     });
   });
   group('for SourceSpan', () {

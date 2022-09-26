@@ -22,7 +22,7 @@ class FencedCodeBlockSyntax extends BlockSyntax {
   const FencedCodeBlockSyntax();
 
   SourceSpan _removeIndentation(SourceSpan content, int length) {
-    final text = content.text.replaceFirst(RegExp("^\\s{0,$length}"), '');
+    final text = content.text.replaceFirst(RegExp('^\\s{0,$length}'), '');
     return content.subspan(content.length - text.length);
   }
 

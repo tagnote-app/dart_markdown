@@ -173,7 +173,7 @@ fg
       });
 
       test('works for the ending position', () {
-        final position = 25;
+        const position = 25;
 
         expect(
           parser
@@ -218,9 +218,9 @@ fg
 
         expect(segments.length, 1);
         expect(segments[0].toMap(), {
-          "start": {"line": 3, "column": 2, "offset": 20},
-          "end": {"line": 3, "column": 4, "offset": 22},
-          "text": "89"
+          'start': {'line': 3, 'column': 2, 'offset': 20},
+          'end': {'line': 3, 'column': 4, 'offset': 22},
+          'text': '89'
         });
       }));
 
@@ -235,21 +235,21 @@ fg
         final segments = parser.subspan(6, 15);
 
         expect(segments[0].toMap(), {
-          "start": {"line": 3, "column": 2, "offset": 20},
-          "end": {"line": 3, "column": 4, "offset": 22},
-          "text": "89"
+          'start': {'line': 3, 'column': 2, 'offset': 20},
+          'end': {'line': 3, 'column': 4, 'offset': 22},
+          'text': '89'
         });
 
         expect(segments[1].toMap(), {
-          "start": {"line": 5, "column": 0, "offset": 26},
-          "end": {"line": 5, "column": 4, "offset": 30},
-          "text": "  ab"
+          'start': {'line': 5, 'column': 0, 'offset': 26},
+          'end': {'line': 5, 'column': 4, 'offset': 30},
+          'text': '  ab'
         });
 
         expect(segments[2].toMap(), {
-          "start": {"line": 5, "column": 4, "offset": 30},
-          "end": {"line": 5, "column": 7, "offset": 33},
-          "text": "c d",
+          'start': {'line': 5, 'column': 4, 'offset': 30},
+          'end': {'line': 5, 'column': 7, 'offset': 33},
+          'text': 'c d',
         });
 
         expect(segments.map((e) => e.text).join(), '89  abc d');
@@ -259,9 +259,9 @@ fg
         final segments = parser.subspan(14, 21);
 
         expect(segments[0].toMap(), {
-          "start": {"line": 5, "column": 6, "offset": 32},
-          "end": {"line": 6, "column": 3, "offset": 39},
-          "text": "de \nfg "
+          'start': {'line': 5, 'column': 6, 'offset': 32},
+          'end': {'line': 6, 'column': 3, 'offset': 39},
+          'text': 'de \nfg '
         });
       }));
     });

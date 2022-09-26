@@ -21,7 +21,7 @@ void main() {
   }
 
   final outputPath = '$root/lib/assets/html_entities.dart';
-  final stringMap = JsonEncoder.withIndent("  ")
+  final stringMap = JsonEncoder.withIndent('  ')
       .convert(result)
       .replaceAll(r'"$"', r'r"$"')
       .replaceAll(r'"\\"', r'r"\"');
@@ -30,6 +30,7 @@ void main() {
 //
 // Source: tool/entities.json (https://html.spec.whatwg.org/entities.json)
 // Script: tool/update_entities.dart
+// ignore_for_file: prefer_single_quotes
 
 const htmlEntitiesMap = $stringMap;
 ''';

@@ -3,6 +3,7 @@
 // Source: tool/case_folding.txt
 // (http://www.unicode.org/Public/14.0.0/ucd/CaseFolding.txt)
 // Script: tool/update_case_folding.dart
+// ignore_for_file: prefer_single_quotes
 
 const caseFoldingMap = {
   "A": "a",
