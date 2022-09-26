@@ -41,7 +41,7 @@ class InlineParser extends SourceParser {
     while (!isDone) {
       // A right bracket (']') is special. Hitting this character triggers the
       // "look for link or image" procedure.
-      // See https://spec.commonmark.org/0.29/#an-algorithm-for-parsing-nested-emphasis-and-links.
+      // See https://spec.commonmark.org/0.30/#an-algorithm-for-parsing-nested-emphasis-and-links.
       if (hasLinkSyntax && charAt() == $rbracket) {
         writeText();
         if (_delimiterProcessor.buildLinkOrImage()) {
