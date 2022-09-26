@@ -6,100 +6,100 @@ import 'package:dart_markdown/src/util.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group("for stringToLines()", () {
+  group('for stringToLines()', () {
     test('a single line without a line ending', () {
-      final text = 'Foo';
+      const text = 'Foo';
       final lines = stringToLines(text);
       expect(lines.map((e) => e.toMap()), [
         {
-          "text": "Foo",
-          "content": {
-            "start": {"line": 0, "column": 0, "offset": 0},
-            "end": {"line": 0, "column": 3, "offset": 3},
-            "text": "Foo"
+          'text': 'Foo',
+          'content': {
+            'start': {'line': 0, 'column': 0, 'offset': 0},
+            'end': {'line': 0, 'column': 3, 'offset': 3},
+            'text': 'Foo'
           },
-          "lineEnding": null,
-          "start": {"line": 0, "column": 0, "offset": 0},
-          "end": {"line": 0, "column": 3, "offset": 3},
-          "isBlankLine": false,
-          "tabRemaining": null,
+          'lineEnding': null,
+          'start': {'line': 0, 'column': 0, 'offset': 0},
+          'end': {'line': 0, 'column': 3, 'offset': 3},
+          'isBlankLine': false,
+          'tabRemaining': null,
         }
       ]);
     });
 
     test('a single line with a line ending', () {
-      final text = 'Foo\n';
+      const text = 'Foo\n';
       final lines = stringToLines(text);
       expect(lines.map((e) => e.toMap()), [
         {
-          "text": "Foo\n",
-          "content": {
-            "start": {"line": 0, "column": 0, "offset": 0},
-            "end": {"line": 0, "column": 3, "offset": 3},
-            "text": "Foo"
+          'text': 'Foo\n',
+          'content': {
+            'start': {'line': 0, 'column': 0, 'offset': 0},
+            'end': {'line': 0, 'column': 3, 'offset': 3},
+            'text': 'Foo'
           },
-          "lineEnding": {
-            "start": {"line": 0, "column": 3, "offset": 3},
-            "end": {"line": 1, "column": 0, "offset": 4},
-            "text": "\n"
+          'lineEnding': {
+            'start': {'line': 0, 'column': 3, 'offset': 3},
+            'end': {'line': 1, 'column': 0, 'offset': 4},
+            'text': '\n'
           },
-          "start": {"line": 0, "column": 0, "offset": 0},
-          "end": {"line": 1, "column": 0, "offset": 4},
-          "isBlankLine": false,
-          "tabRemaining": null,
+          'start': {'line': 0, 'column': 0, 'offset': 0},
+          'end': {'line': 1, 'column': 0, 'offset': 4},
+          'isBlankLine': false,
+          'tabRemaining': null,
         },
       ]);
     });
     test('multiple lines with a blank line in between', () {
-      final text = 'Foo\r\n\nBar';
+      const text = 'Foo\r\n\nBar';
       final lines = stringToLines(text);
       expect(lines.map((e) => e.toMap()), [
         {
-          "text": "Foo\r\n",
-          "content": {
-            "start": {"line": 0, "column": 0, "offset": 0},
-            "end": {"line": 0, "column": 3, "offset": 3},
-            "text": "Foo"
+          'text': 'Foo\r\n',
+          'content': {
+            'start': {'line': 0, 'column': 0, 'offset': 0},
+            'end': {'line': 0, 'column': 3, 'offset': 3},
+            'text': 'Foo'
           },
-          "lineEnding": {
-            "start": {"line": 0, "column": 3, "offset": 3},
-            "end": {"line": 1, "column": 0, "offset": 5},
-            "text": "\r\n"
+          'lineEnding': {
+            'start': {'line': 0, 'column': 3, 'offset': 3},
+            'end': {'line': 1, 'column': 0, 'offset': 5},
+            'text': '\r\n'
           },
-          "start": {"line": 0, "column": 0, "offset": 0},
-          "end": {"line": 1, "column": 0, "offset": 5},
-          "isBlankLine": false,
-          "tabRemaining": null
+          'start': {'line': 0, 'column': 0, 'offset': 0},
+          'end': {'line': 1, 'column': 0, 'offset': 5},
+          'isBlankLine': false,
+          'tabRemaining': null
         },
         {
-          "text": "\n",
-          "content": {
-            "start": {"line": 1, "column": 0, "offset": 5},
-            "end": {"line": 1, "column": 0, "offset": 5},
-            "text": ""
+          'text': '\n',
+          'content': {
+            'start': {'line': 1, 'column': 0, 'offset': 5},
+            'end': {'line': 1, 'column': 0, 'offset': 5},
+            'text': ''
           },
-          "lineEnding": {
-            "start": {"line": 1, "column": 0, "offset": 5},
-            "end": {"line": 2, "column": 0, "offset": 6},
-            "text": "\n"
+          'lineEnding': {
+            'start': {'line': 1, 'column': 0, 'offset': 5},
+            'end': {'line': 2, 'column': 0, 'offset': 6},
+            'text': '\n'
           },
-          "start": {"line": 1, "column": 0, "offset": 5},
-          "end": {"line": 2, "column": 0, "offset": 6},
-          "isBlankLine": true,
-          "tabRemaining": null
+          'start': {'line': 1, 'column': 0, 'offset': 5},
+          'end': {'line': 2, 'column': 0, 'offset': 6},
+          'isBlankLine': true,
+          'tabRemaining': null
         },
         {
-          "text": "Bar",
-          "content": {
-            "start": {"line": 2, "column": 0, "offset": 6},
-            "end": {"line": 2, "column": 3, "offset": 9},
-            "text": "Bar"
+          'text': 'Bar',
+          'content': {
+            'start': {'line': 2, 'column': 0, 'offset': 6},
+            'end': {'line': 2, 'column': 3, 'offset': 9},
+            'text': 'Bar'
           },
-          "lineEnding": null,
-          "start": {"line": 2, "column": 0, "offset": 6},
-          "end": {"line": 2, "column": 3, "offset": 9},
-          "isBlankLine": false,
-          "tabRemaining": null
+          'lineEnding': null,
+          'start': {'line': 2, 'column': 0, 'offset': 6},
+          'end': {'line': 2, 'column': 3, 'offset': 9},
+          'isBlankLine': false,
+          'tabRemaining': null
         }
       ]);
     });

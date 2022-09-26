@@ -9,9 +9,9 @@ import 'dart:io';
 // TODO(srawlins): Switch to https://github.com/muan/unicode-emoji-json. This
 // is definitely a breaking change; the emoji names are not necessarily the
 // same.
-final _emojisJsonRawUrl =
+const _emojisJsonRawUrl =
     'https://raw.githubusercontent.com/muan/emojilib/v2.4.0/emojis.json';
-final _emojisFilePath = 'lib/assets/emojis.dart';
+const _emojisFilePath = 'lib/assets/emojis.dart';
 
 Future<void> main() async {
   final client = HttpClient();

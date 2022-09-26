@@ -66,7 +66,7 @@ void main() {
 
     test('encodeHtml spaces are preserved in text', () {
       // Example to get a <p> tag rendered before a text node.
-      final content = 'Sample\n\n<pre>\n A\n B\n</pre>';
+      const content = 'Sample\n\n<pre>\n A\n B\n</pre>';
       final lines = stringToLines(content);
       final nodes = BlockParser(lines, document).parseLines();
       final htmlNodes = HtmlTransformer(encodeHtml: true).transform(nodes);

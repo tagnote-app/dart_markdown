@@ -117,7 +117,7 @@ final rawHtmlPattern = RegExp(
 );
 
 /// A [String] pattern to match a named tag like `<table>` or `</table>`.
-final _namedTagDefinition =
+const _namedTagDefinition =
     // Open tag begins.
     '<'
 
@@ -194,13 +194,13 @@ const asciiPunctuationEscaped = r'''!"#$%&'()*+,\-./:;<=>?@\[\\\]^_`{|}~''';
 
 /// Whitespace character.
 // See https://github.github.com/gfm/#whitespace-character.
-final String whitespaceCharacters = '\u0020\u0009\u000A\u000C\u000D\u000B';
+const String whitespaceCharacters = '\u0020\u0009\u000A\u000C\u000D\u000B';
 
 // final String asciiPunctuationCharacters = '!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~';
 
 /// Unicode whitespace.
 // See https://spec.commonmark.org/0.30/#unicode-whitespace-character.
 // Unicode Zs: https://www.compart.com/en/unicode/category.
-final String unicodeWhitespaceCharacters = '\u0020\u0009\u000A\u000C\u000D'
+const String unicodeWhitespaceCharacters = '\u0020\u0009\u000A\u000C\u000D'
     '\u00A0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008'
     '\u2009\u200A\u202F\u205F\u3000';
