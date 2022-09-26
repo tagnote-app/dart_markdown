@@ -1,3 +1,8 @@
+## 2.1.2
+
+1. Update some links.
+2. Update lint.
+
 ## 2.1.1
 
 1. Add `forceTightList` option
