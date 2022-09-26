@@ -30,7 +30,7 @@ class DelimiterProcessor {
   /// image.
   ///
   /// This is the "look for link or image" routine from the CommonMark spec:
-  /// https://spec.commonmark.org/0.29/#-look-for-link-or-image-.
+  /// https://spec.commonmark.org/0.30/#look-for-link-or-image.
   bool buildLinkOrImage() {
     final index = _delimiterStack
         .lastIndexWhere((d) => d.char == $lbracket || d.char == $exclamation);
