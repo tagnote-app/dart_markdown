@@ -81,7 +81,6 @@ List<Line> stringToLines(String text) {
 String decodeHtmlCharacters(String input) {
   final pattern = RegExp(
     '&(?:([a-z0-9]+)|#([0-9]{1,7})|#x([a-f0-9]{1,6}));',
-    multiLine: true,
     caseSensitive: false,
   );
 
