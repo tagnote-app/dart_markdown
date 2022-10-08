@@ -1,3 +1,8 @@
+## 2.1.3
+
+1. Fix a crash
+   [Issue#45](https://github.com/chenzhiguang/dart_markdown/issues/45).
+
 ## 2.1.2
 
 1. Update some links.
