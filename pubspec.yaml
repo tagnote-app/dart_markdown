@@ -1,5 +1,5 @@
 name: dart_markdown
-version: 2.1.2
+version: 2.1.3
 
 description: A portable Markdown library written in Dart that can parse
   Markdown into AST and HTML.
