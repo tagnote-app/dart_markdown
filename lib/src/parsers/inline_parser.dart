@@ -116,7 +116,7 @@ class InlineParser extends SourceParser {
       }
 
       if (node is InlineElement) {
-        _combineAdjacentText(node.children);
+        _combineAdjacentText(List<InlineObject>.from(node.children));
         continue;
       }
 
