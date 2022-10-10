@@ -5,7 +5,7 @@
 import 'dart:convert';
 
 import '../ast.dart';
-import '../document.dart';
+import '../markdown.dart';
 import '../syntax.dart';
 import 'html_ast.dart';
 import 'html_transformer.dart';
