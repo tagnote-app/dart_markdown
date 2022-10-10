@@ -1,6 +1,7 @@
 ## 3.0.0-dev
 
 1. Add `start` and `end` locations to AST `Element`.
+   [PR#50](https://github.com/chenzhiguang/dart_markdown/pull/50).
 
 ## 2.1.3
 
