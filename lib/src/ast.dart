@@ -14,6 +14,13 @@ abstract class Node {
 
   void accept(NodeVisitor visitor);
 
+  /// The start location of this node.
+  SourceLocation get start;
+
+  /// The end location of this node.
+  SourceLocation get end;
+
+  /// Outputs the attributes as a `Map`.
   Map<String, dynamic> toMap();
 }
 
@@ -32,6 +39,18 @@ abstract class Element<T extends Node> implements Node {
   String get textContent {
     return children.map((child) => child.textContent).join();
   }
+
+  @override
+  SourceLocation get start => [
+        ...markers.map((e) => e.start),
+        ...children.map((e) => e.start),
+      ].smallest();
+
+  @override
+  SourceLocation get end => [
+        ...markers.map((e) => e.end),
+        ...children.map((e) => e.end),
+      ].largest();
 
   const Element(
     this.type, {
@@ -62,6 +81,8 @@ abstract class Element<T extends Node> implements Node {
       {
         if (showRuntimeType) 'runtimeType': runtimeType,
         'type': type,
+        'start': start.toMap(),
+        'end': end.toMap(),
         if (markers.isNotEmpty || showEmpty)
           'markers': markers.map((e) => e.toMap()).toList(),
         if (children.isNotEmpty || showEmpty)

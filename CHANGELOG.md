@@ -1,3 +1,7 @@
+## 3.0.0-dev
+
+1. Add `start` and `end` locations to AST `Element`.
+
 ## 2.1.3
 
 1. Fix a crash
