@@ -22,7 +22,7 @@ void main() {
   var index = 0;
   for (final str in blns) {
     test('blns string $index', () {
-      final result = markdownToHtml(str);
+      final result = Markdown().parse(str).toHtml();
       expect(result, const TypeMatcher<String>());
     });
     index++;
@@ -31,11 +31,10 @@ void main() {
   index = 0;
   for (final str in blns) {
     test('blns string $index w/ gitHubWeb', () {
-      final result = markdownToHtml(
-        str,
+      final result = Markdown(
         enableHeadingId: true,
         enableTable: true,
-      );
+      ).parse(str).toHtml();
       expect(result, const TypeMatcher<String>());
     });
     index++;

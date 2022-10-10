@@ -18,13 +18,12 @@ String markdownToMarkdown(
   bool enableTaskList = false,
   bool encodeHtml = true,
 }) {
-  final document = Document(
+  final nodes = Markdown(
     extensions: extensions,
     linkResolver: linkResolver,
     imageLinkResolver: imageLinkResolver,
     enableTaskList: enableTaskList,
-  );
-  final nodes = document.parseLines(markdown);
+  ).parse(markdown);
 
   return ReverseRenderer(markdown).render(nodes);
 }

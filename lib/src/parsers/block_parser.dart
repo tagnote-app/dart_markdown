@@ -14,7 +14,7 @@ class BlockParser {
   final List<Line> _lines;
 
   /// The Markdown document this parser is parsing.
-  final Document document;
+  final Markdown document;
 
   /// The enabled block syntaxes.
   ///

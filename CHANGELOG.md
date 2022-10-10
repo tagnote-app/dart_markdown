@@ -2,6 +2,11 @@
 
 1. Add `start` and `end` locations to AST `Element`.
    [PR#50](https://github.com/chenzhiguang/dart_markdown/pull/50).
+2. **BREAKING** Rename `Document` to `Markdown`.
+3. **BREAKING** Rename `Document.parseLines` to `Markdown.parse`.
+4. **BREAKING** Remove `markdownToHtml()`, use `Markdown().parse().toHtml()`
+   instead.
+5. **BREAKING** Remove `HtmlRenderer` from public.
 
 ## 2.1.3
 

@@ -73,7 +73,7 @@ Future<void> main(List<String> args) async {
       break;
   }
 
-  final document = Document(
+  final markdown = Markdown(
     enableFencedCodeBlock: enableFencedCodeBlock,
     enableRawHtml: enableRawHtml,
     enableHeadingId: enableHeadingId,
@@ -86,7 +86,7 @@ Future<void> main(List<String> args) async {
   if (results.rest.length == 1) {
     // Read argument as a file path.
     final input = File(results.rest.first).readAsStringSync();
-    print(renderToHtml(document.parseLines(input), encodeHtml: true));
+    print(markdown.parse(input).toHtml());
     return;
   }
 
@@ -96,7 +96,7 @@ Future<void> main(List<String> args) async {
   while ((line = stdin.readLineSync()) != null) {
     buffer.writeln(line);
   }
-  print(renderToHtml(document.parseLines(buffer.toString()), encodeHtml: true));
+  print(markdown.parse(buffer.toString()).toHtml());
 }
 
 void printUsage(ArgParser parser) {

@@ -1,4 +1,4 @@
-// Copyright (c) 2017, the Dart project authors.  Please see the AUTHORS file
+// Copyright (c) 2022, the Dart project authors.  Please see the AUTHORS file
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
@@ -42,7 +42,7 @@ import 'syntax.dart';
 import 'util.dart';
 
 /// Maintains the context needed to parse a Markdown document.
-class Document {
+class Markdown {
   final _blockSyntaxes = <BlockSyntax>{};
   final _inlineSyntaxes = <InlineSyntax>{};
   final bool hasCustomInlineSyntaxes;
@@ -52,7 +52,7 @@ class Document {
 
   Iterable<InlineSyntax> get inlineSyntaxes => _inlineSyntaxes;
 
-  Document({
+  Markdown({
     bool enableAtxHeading = true,
     bool enableBlankLine = true,
     bool enableHeadingId = false,
@@ -192,7 +192,7 @@ class Document {
   }
 
   /// Parses the given string of Markdown to a series of AST nodes.
-  List<Node> parseLines(String text) {
+  List<Node> parse(String text) {
     final nodes = BlockParser(stringToLines(text), this).parseLines();
     _parseInlineContent(nodes);
     return nodes;

@@ -124,8 +124,7 @@ void validateCore(
   bool enableTaskList = false,
 }) {
   test(description, () {
-    final result = markdownToHtml(
-      markdown,
+    final result = Markdown(
       linkResolver: linkResolver,
       imageLinkResolver: imageLinkResolver,
       enableTable: enableTable,
@@ -137,12 +136,11 @@ void validateCore(
       enableHighlight: enableHighlight,
       enableFootnote: enableFootnote,
       enableKbd: enableKbd,
-      enableTagfilter: enableTagfilter,
       enableRawHtml: enableRawHtml,
       enableHtmlBlock: enableHtmlBlock,
       enableLinkReferenceDefinition: enableLinkReferenceDefinition,
       enableTaskList: enableTaskList,
-    );
+    ).parse(markdown).toHtml(enableTagfilter: enableTagfilter);
 
     markdownPrintOnFailure(markdown, html, result);
 

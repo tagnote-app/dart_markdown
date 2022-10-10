@@ -15,7 +15,7 @@ import 'source_parser.dart';
 /// Markdown.
 class InlineParser extends SourceParser {
   /// The Markdown document this parser is parsing.
-  final Document document;
+  final Markdown document;
 
   final List<InlineSyntax> syntaxes = <InlineSyntax>[];
 
