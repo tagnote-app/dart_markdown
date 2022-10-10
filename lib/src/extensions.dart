@@ -79,6 +79,27 @@ extension SourceLocationExtensions on SourceLocation {
       };
 }
 
+/// Extensions for SourceLocation list.
+extension SourceLocationsExtensions on List<SourceLocation> {
+  /// Sorts this list according to the offset.
+  List<SourceLocation> sortByOffset() =>
+      this..sort((a, b) => a.offset.compareTo(b.offset));
+
+  /// Returns the [SourceLocation] which has the smallest `offset`.
+  SourceLocation smallest() {
+    assert(isNotEmpty);
+    final sorted = [...this]..sortByOffset();
+    return sorted.first;
+  }
+
+  /// Returns the [SourceLocation] which has the largest `offset`.
+  SourceLocation largest() {
+    assert(isNotEmpty);
+    final sorted = [...this]..sortByOffset();
+    return sorted.last;
+  }
+}
+
 extension SourceSpanExtensions on SourceSpan {
   Map<String, dynamic> toMap() => {
         'start': start.toMap(),
