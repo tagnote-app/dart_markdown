@@ -4,9 +4,9 @@
 
 import '../ast.dart';
 import '../charcode.dart';
-import '../document.dart';
 import '../inline_syntaxes/delimiter_syntax.dart';
 import '../inline_syntaxes/link_syntax.dart';
+import '../markdown.dart';
 import '../syntax.dart';
 import 'delimiter_processor.dart';
 import 'source_parser.dart';
@@ -15,7 +15,7 @@ import 'source_parser.dart';
 /// Markdown.
 class InlineParser extends SourceParser {
   /// The Markdown document this parser is parsing.
-  final Document document;
+  final Markdown document;
 
   final List<InlineSyntax> syntaxes = <InlineSyntax>[];
 

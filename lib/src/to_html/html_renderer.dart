@@ -5,150 +5,22 @@
 import 'dart:convert';
 
 import '../ast.dart';
-import '../document.dart';
-import '../syntax.dart';
 import 'html_ast.dart';
 import 'html_transformer.dart';
 
-/// Converts the given string of Markdown to HTML.
-String markdownToHtml(
-  String markdown, {
-  bool enableAtxHeading = true,
-  bool enableHeadingId = false,
-  bool enableBlankLine = true,
-  bool enableBlockquote = true,
-  bool enableIndentedCodeBlock = true,
-  bool enableFencedBlockquote = true,
-  bool enableFencedCodeBlock = true,
-  bool enableList = true,
-  bool enableParagraph = true,
-  bool enableSetextHeading = true,
-  bool enableTable = true,
-  bool enableHtmlBlock = true,
-  bool enableLinkReferenceDefinition = true,
-  bool enableThematicBreak = true,
-  bool enableAutolinkExtension = true,
-  bool enableAutolink = true,
-  bool enableBackslashEscape = true,
-  bool enableCodeSpan = true,
-  bool enableEmoji = true,
-  bool enableEmphasis = true,
-  bool enableHardLineBreak = true,
-  bool enableImage = true,
-  bool enableLink = true,
-  bool enableTagfilter = false,
-  bool enableRawHtml = true,
-  bool enableSoftLineBreak = true,
-  bool enableStrikethrough = true,
-  bool enableKbd = false,
-  bool enableSubscript = false,
-  bool enableSuperscript = false,
-  bool enableHighlight = false,
-  bool enableFootnote = false,
-  bool enableTaskList = false,
-  bool forceTightList = false,
-  Iterable<Syntax> extensions = const [],
-  Resolver? linkResolver,
-  Resolver? imageLinkResolver,
-  bool encodeHtml = true,
-}) {
-  final document = Document(
-    enableAtxHeading: enableAtxHeading,
-    enableHeadingId: enableHeadingId,
-    enableBlankLine: enableBlankLine,
-    enableBlockquote: enableBlockquote,
-    enableIndentedCodeBlock: enableIndentedCodeBlock,
-    enableFencedBlockquote: enableFencedBlockquote,
-    enableFencedCodeBlock: enableFencedCodeBlock,
-    enableList: enableList,
-    enableParagraph: enableParagraph,
-    enableSetextHeading: enableSetextHeading,
-    enableTable: enableTable,
-    enableHtmlBlock: enableHtmlBlock,
-    enableLinkReferenceDefinition: enableLinkReferenceDefinition,
-    enableThematicBreak: enableThematicBreak,
-    enableAutolinkExtension: enableAutolinkExtension,
-    enableAutolink: enableAutolink,
-    enableBackslashEscape: enableBackslashEscape,
-    enableCodeSpan: enableCodeSpan,
-    enableEmoji: enableEmoji,
-    enableEmphasis: enableEmphasis,
-    enableHardLineBreak: enableHardLineBreak,
-    enableImage: enableImage,
-    enableLink: enableLink,
-    enableRawHtml: enableRawHtml,
-    enableSoftLineBreak: enableSoftLineBreak,
-    enableStrikethrough: enableStrikethrough,
-    enableKbd: enableKbd,
-    enableSubscript: enableSubscript,
-    enableSuperscript: enableSuperscript,
-    enableHighlight: enableHighlight,
-    enableFootnote: enableFootnote,
-    enableTaskList: enableTaskList,
-    forceTightList: forceTightList,
-    extensions: extensions,
-    linkResolver: linkResolver,
-    imageLinkResolver: imageLinkResolver,
-  );
-  final nodes = document.parseLines(markdown);
-
-  return renderToHtml(
-    nodes,
-    encodeHtml: encodeHtml,
-    enableTagfilter: enableTagfilter,
-  );
+extension MarkdownNodeListExtensions on List<Node> {
+  /// Outputs a [Node] list as an HTML string.
+  String toHtml({
+    bool encodeHtml = true,
+    bool enableTagfilter = false,
+  }) {
+    final htmlNodes = HtmlTransformer(encodeHtml: encodeHtml).transform(this);
+    return _HtmlRenderer(enableTagfilter: enableTagfilter).render(htmlNodes);
+  }
 }
-
-/// Renders [nodes] to HTML.
-String renderToHtml(
-  List<Node> nodes, {
-  bool encodeHtml = true,
-  bool enableTagfilter = false,
-}) {
-  final htmlNodes = HtmlTransformer(encodeHtml: encodeHtml).transform(nodes);
-  return HtmlRenderer(enableTagfilter: enableTagfilter).render(htmlNodes);
-}
-
-const _blockTags = [
-  'blockquote',
-  'h1',
-  'h2',
-  'h3',
-  'h4',
-  'h5',
-  'h6',
-  'hr',
-  'li',
-  'ol',
-  'p',
-  'pre',
-  'ul',
-  'address',
-  'article',
-  'aside',
-  'details',
-  'dd',
-  'div',
-  'dl',
-  'dt',
-  'figcaption',
-  'figure',
-  'footer',
-  'header',
-  'hgroup',
-  'main',
-  'nav',
-  'section',
-  'table',
-  'thead',
-  'tbody',
-  'th',
-  'tr',
-  'td',
-];
 
 /// Translates a parsed AST to HTML.
-class HtmlRenderer implements HtmlNodeVisitor {
+class _HtmlRenderer implements HtmlNodeVisitor {
   late StringBuffer buffer;
   late Set<String> uniqueIds;
 
@@ -156,7 +28,7 @@ class HtmlRenderer implements HtmlNodeVisitor {
   String? _lastVisitedTag;
   final bool _tagfilterEnabled;
 
-  HtmlRenderer({
+  _HtmlRenderer({
     bool enableTagfilter = false,
   }) : _tagfilterEnabled = enableTagfilter;
 
@@ -283,3 +155,41 @@ class HtmlRenderer implements HtmlNodeVisitor {
       ),
       '&lt;');
 }
+
+const _blockTags = [
+  'blockquote',
+  'h1',
+  'h2',
+  'h3',
+  'h4',
+  'h5',
+  'h6',
+  'hr',
+  'li',
+  'ol',
+  'p',
+  'pre',
+  'ul',
+  'address',
+  'article',
+  'aside',
+  'details',
+  'dd',
+  'div',
+  'dl',
+  'dt',
+  'figcaption',
+  'figure',
+  'footer',
+  'header',
+  'hgroup',
+  'main',
+  'nav',
+  'section',
+  'table',
+  'thead',
+  'tbody',
+  'th',
+  'tr',
+  'td',
+];

@@ -12,8 +12,7 @@ void main() {
     const text = '# Hello **Markdown<em>!</em>**\n***';
 
     test('with no syntaxes', () {
-      final result = markdownToHtml(
-        text,
+      final result = Markdown(
         enableAtxHeading: false,
         enableBlankLine: false,
         enableHeadingId: false,
@@ -39,14 +38,12 @@ void main() {
         enableSoftLineBreak: false,
         enableStrikethrough: false,
         enableHtmlBlock: false,
-        encodeHtml: false,
-      );
+      ).parse(text).toHtml(encodeHtml: false);
       expect(result, equals('# Hello **Markdown<em>!</em>**\n***'));
     });
 
     test('with no default syntaxes but with custom syntaxes', () {
-      final result = markdownToHtml(
-        text,
+      final result = Markdown(
         enableAtxHeading: false,
         enableBlankLine: false,
         enableHeadingId: false,
@@ -72,12 +69,11 @@ void main() {
         enableSoftLineBreak: false,
         enableStrikethrough: false,
         enableHtmlBlock: false,
-        encodeHtml: false,
         extensions: [
           const ThematicBreakSyntax(),
           EmphasisSyntax.asterisk(),
         ],
-      );
+      ).parse(text).toHtml(encodeHtml: false);
 
       expect(
         result,
@@ -86,8 +82,7 @@ void main() {
     });
 
     test('with only block syntaxes', () {
-      final result = markdownToHtml(
-        text,
+      final result = Markdown(
         enableAutolinkExtension: false,
         enableAutolink: false,
         enableBackslashEscape: false,
@@ -100,8 +95,7 @@ void main() {
         enableRawHtml: false,
         enableSoftLineBreak: false,
         enableStrikethrough: false,
-        encodeHtml: false,
-      );
+      ).parse(text).toHtml(encodeHtml: false);
 
       expect(
         result,
@@ -110,8 +104,7 @@ void main() {
     });
 
     test('with only default inline syntaxes', () {
-      final result = markdownToHtml(
-        text,
+      final result = Markdown(
         enableAtxHeading: false,
         enableBlankLine: false,
         enableHeadingId: false,
@@ -125,8 +118,7 @@ void main() {
         enableTable: false,
         enableThematicBreak: false,
         enableHtmlBlock: false,
-        encodeHtml: false,
-      );
+      ).parse(text).toHtml(encodeHtml: false);
 
       expect(
         result,
@@ -135,8 +127,7 @@ void main() {
     });
 
     test('with no default syntaxes but with encodeHtml enabled', () {
-      final result = markdownToHtml(
-        text,
+      final result = Markdown(
         enableAtxHeading: false,
         enableBlankLine: false,
         enableHeadingId: false,
@@ -162,8 +153,7 @@ void main() {
         enableSoftLineBreak: false,
         enableStrikethrough: false,
         enableHtmlBlock: false,
-        encodeHtml: true,
-      );
+      ).parse(text).toHtml(encodeHtml: true);
 
       expect(
         result,
@@ -176,10 +166,7 @@ void main() {
 > Hello
 > Markdown!
 ''';
-      final result = markdownToHtml(
-        text,
-        enableParagraph: false,
-      );
+      final result = Markdown(enableParagraph: false).parse(text).toHtml();
       expect(
         result,
         equals('''
@@ -197,11 +184,10 @@ Foo[^1]
 
   Biz
 ''';
-      final result = markdownToHtml(
-        text,
+      final result = Markdown(
         enableParagraph: false,
         enableFootnote: true,
-      );
+      ).parse(text).toHtml();
       expect(
         result,
         equals('''

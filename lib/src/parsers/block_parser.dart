@@ -4,8 +4,8 @@
 
 import '../ast.dart';
 import '../block_syntaxes/blank_line_syntax.dart';
-import '../document.dart';
 import '../line.dart';
+import '../markdown.dart';
 import '../syntax.dart';
 
 /// Maintains the internal state needed to parse a series of lines into blocks
@@ -14,7 +14,7 @@ class BlockParser {
   final List<Line> _lines;
 
   /// The Markdown document this parser is parsing.
-  final Document document;
+  final Markdown document;
 
   /// The enabled block syntaxes.
   ///

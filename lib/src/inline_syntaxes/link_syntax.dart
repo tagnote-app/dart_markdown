@@ -6,7 +6,7 @@ import 'package:source_span/source_span.dart';
 
 import '../ast.dart';
 import '../charcode.dart';
-import '../document.dart';
+import '../markdown.dart';
 import '../parsers/inline_parser.dart';
 import '../parsers/link_parser.dart';
 import '../util.dart';

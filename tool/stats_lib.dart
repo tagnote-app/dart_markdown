@@ -142,13 +142,11 @@ CompareResult compareResult(
 
   String output;
   try {
-    output = md.markdownToHtml(
-      testCase.markdown,
+    output = md.Markdown(
       enableTable: enableTable,
       enableStrikethrough: enableStrikethrough,
       enableAutolinkExtension: enableAutolinkExtension,
-      enableTagfilter: enableTagfilter,
-    );
+    ).parse(testCase.markdown).toHtml(enableTagfilter: enableTagfilter);
 
     // Add a line feed to each line if it is not an emplty line.
     if (output.isNotEmpty) {

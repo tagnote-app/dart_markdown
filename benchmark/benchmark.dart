@@ -24,7 +24,7 @@ void main() {
     // For a single benchmark, convert the source multiple times.
     late String result;
     for (var j = 0; j < runsPerTrial; j++) {
-      result = markdownToHtml(source);
+      result = Markdown().parse(source).toHtml();
     }
 
     final elapsed =

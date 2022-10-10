@@ -5,7 +5,7 @@
 import 'package:source_span/source_span.dart';
 
 import 'ast.dart';
-import 'document.dart';
+import 'markdown.dart';
 import 'patterns.dart';
 import 'syntax.dart';
 
@@ -18,13 +18,12 @@ String markdownToMarkdown(
   bool enableTaskList = false,
   bool encodeHtml = true,
 }) {
-  final document = Document(
+  final nodes = Markdown(
     extensions: extensions,
     linkResolver: linkResolver,
     imageLinkResolver: imageLinkResolver,
     enableTaskList: enableTaskList,
-  );
-  final nodes = document.parseLines(markdown);
+  ).parse(markdown);
 
   return ReverseRenderer(markdown).render(nodes);
 }

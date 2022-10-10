@@ -1,9 +1,7 @@
 import 'package:dart_markdown/dart_markdown.dart';
 
 void main() {
-  print(markdownToHtml(
-    'Hello **Markdown**!',
-
+  final markdown = Markdown(
     // The options with default value `true`.
     enableAtxHeading: true,
     enableBlankLine: true,
@@ -30,7 +28,6 @@ void main() {
     enableRawHtml: true,
     enableSoftLineBreak: true,
     enableStrikethrough: true,
-    encodeHtml: true,
 
     // The options with default value `false`.
     enableHeadingId: false,
@@ -40,11 +37,20 @@ void main() {
     enableSubscript: false,
     enableSuperscript: false,
     enableKbd: false,
-    enableTagfilter: false,
     forceTightList: false,
 
     // Customised syntaxes.
     extensions: const <Syntax>[],
-  ));
+  );
+
+  // AST nodes.
+  final nodes = markdown.parse('Hello **Markdown**!');
+
+  final html = nodes.toHtml(
+    enableTagfilter: false,
+    encodeHtml: true,
+  );
+
+  print(html);
   //=> <p>Hello <strong>Markdown</strong>!</p>
 }

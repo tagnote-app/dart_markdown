@@ -11,7 +11,7 @@ void main() {
     test('encodeHtml prevents less than and ampersand escaping', () {
       final result = _toSingleHtmlElement(
         '< &',
-        Document(),
+        Markdown(),
         encodeHtml: false,
       ).children!;
       expect(result, hasLength(1));
@@ -26,12 +26,12 @@ void main() {
     });
   });
   group('with encodeHtml enabled', () {
-    final document = Document();
+    final markdown = Markdown();
 
     test('encodes HTML in an inline code snippet', () {
       final codeSnippet = _toSingleHtmlElement(
         '``<p>Hello <em>Markdown</em></p>``',
-        document,
+        markdown,
         encodeHtml: true,
       );
       expect(
@@ -43,7 +43,7 @@ void main() {
     test('encodes HTML in a fenced code block', () {
       final codeBlock = _toSingleHtmlElement(
         '```\n<p>Hello <em>Markdown</em></p>\n```\n',
-        document,
+        markdown,
         encodeHtml: true,
       );
       expect(
@@ -55,7 +55,7 @@ void main() {
     test('encodes HTML in an indented code block', () {
       final codeBlock = _toSingleHtmlElement(
         '    <p>Hello <em>Markdown</em></p>\n',
-        document,
+        markdown,
         encodeHtml: true,
       );
       expect(
@@ -68,16 +68,14 @@ void main() {
       // Example to get a <p> tag rendered before a text node.
       const content = 'Sample\n\n<pre>\n A\n B\n</pre>';
       final lines = stringToLines(content);
-      final nodes = BlockParser(lines, document).parseLines();
-      final htmlNodes = HtmlTransformer(encodeHtml: true).transform(nodes);
-      final result = HtmlRenderer().render(htmlNodes);
+      final result = BlockParser(lines, markdown).parseLines().toHtml();
       expect(result, '<p></p>\n<pre>\n A\n B\n</pre>');
     });
 
     test('encode double quotes, greater than, and less than when escaped', () {
       final result = _toSingleHtmlElement(
         r'\>\"\< Hello',
-        document,
+        markdown,
         encodeHtml: true,
       ).children!;
       expect(result, hasLength(4));
@@ -89,12 +87,12 @@ void main() {
   });
 
   group('with encodeHtml disabled', () {
-    final document = Document();
+    final markdown = Markdown();
 
     test('leaves HTML alone, in a code snippet', () {
       final result = _toSingleHtmlElement(
         '```<p>Hello <em>Markdown</em></p>```',
-        document,
+        markdown,
         encodeHtml: false,
       ).children!;
 
@@ -108,7 +106,7 @@ void main() {
     test('leaves HTML alone, in a fenced code block', () {
       final codeBlock = _toSingleHtmlElement(
         '```\n<p>Hello <em>Markdown</em></p>\n```\n',
-        document,
+        markdown,
         encodeHtml: false,
       );
       expect(
@@ -120,7 +118,7 @@ void main() {
     test('leaves HTML alone, in an indented code block', () {
       final codeBlock = _toSingleHtmlElement(
         '    <p>Hello <em>Markdown</em></p>\n',
-        document,
+        markdown,
         encodeHtml: false,
       );
       expect(
@@ -132,7 +130,7 @@ void main() {
     test('leave double quotes, greater than, and less than when escaped', () {
       final result = _toSingleHtmlElement(
         r'\>\"\< Hello',
-        document,
+        markdown,
         encodeHtml: false,
       ).children!;
       expect(result, hasLength(4));
@@ -145,10 +143,10 @@ void main() {
 }
 
 HtmlElement _toSingleHtmlElement(
-  String markdown,
-  Document document, {
+  String text,
+  Markdown markdown, {
   required bool encodeHtml,
 }) =>
     (HtmlTransformer(encodeHtml: encodeHtml)
-        .transform(document.parseLines(markdown))
+        .transform(markdown.parse(text))
         .single as HtmlElement);
