@@ -8,7 +8,7 @@ import '../ast.dart';
 import 'html_ast.dart';
 import 'html_transformer.dart';
 
-extension MarkdownNodeListExtensions on List<Node> {
+extension NodesToHtmlExtensions on List<Node> {
   /// Outputs a [Node] list as an HTML string.
   String toHtml({
     bool encodeHtml = true,
