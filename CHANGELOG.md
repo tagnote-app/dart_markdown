@@ -1,4 +1,4 @@
-## 3.0.0-dev
+## 3.0.0
 
 [pr51]: (https://github.com/chenzhiguang/dart_markdown/pull/50)
 
