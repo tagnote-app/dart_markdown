@@ -1,0 +1,202 @@
+[
+  {
+    "description": "Disallowed Raw HTML (extension), https://github.github.com/gfm/#example-653",
+    "markdown": "<strong> <title> <style> <em>\n\n<blockquote>\n  <xmp> is disallowed.  <XMP> is also disallowed.\n</blockquote>\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 29,
+          "offset": 29
+        },
+        "children": [
+          {
+            "type": "inlineHtml",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 8,
+              "offset": 8
+            },
+            "children": [
+              {
+                "text": "<strong>",
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 8,
+                  "offset": 8
+                }
+              }
+            ]
+          },
+          {
+            "text": " ",
+            "start": {
+              "line": 0,
+              "column": 8,
+              "offset": 8
+            },
+            "end": {
+              "line": 0,
+              "column": 9,
+              "offset": 9
+            }
+          },
+          {
+            "type": "inlineHtml",
+            "start": {
+              "line": 0,
+              "column": 9,
+              "offset": 9
+            },
+            "end": {
+              "line": 0,
+              "column": 16,
+              "offset": 16
+            },
+            "children": [
+              {
+                "text": "<title>",
+                "start": {
+                  "line": 0,
+                  "column": 9,
+                  "offset": 9
+                },
+                "end": {
+                  "line": 0,
+                  "column": 16,
+                  "offset": 16
+                }
+              }
+            ]
+          },
+          {
+            "text": " ",
+            "start": {
+              "line": 0,
+              "column": 16,
+              "offset": 16
+            },
+            "end": {
+              "line": 0,
+              "column": 17,
+              "offset": 17
+            }
+          },
+          {
+            "type": "inlineHtml",
+            "start": {
+              "line": 0,
+              "column": 17,
+              "offset": 17
+            },
+            "end": {
+              "line": 0,
+              "column": 24,
+              "offset": 24
+            },
+            "children": [
+              {
+                "text": "<style>",
+                "start": {
+                  "line": 0,
+                  "column": 17,
+                  "offset": 17
+                },
+                "end": {
+                  "line": 0,
+                  "column": 24,
+                  "offset": 24
+                }
+              }
+            ]
+          },
+          {
+            "text": " ",
+            "start": {
+              "line": 0,
+              "column": 24,
+              "offset": 24
+            },
+            "end": {
+              "line": 0,
+              "column": 25,
+              "offset": 25
+            }
+          },
+          {
+            "type": "inlineHtml",
+            "start": {
+              "line": 0,
+              "column": 25,
+              "offset": 25
+            },
+            "end": {
+              "line": 0,
+              "column": 29,
+              "offset": 29
+            },
+            "children": [
+              {
+                "text": "<em>",
+                "start": {
+                  "line": 0,
+                  "column": 25,
+                  "offset": 25
+                },
+                "end": {
+                  "line": 0,
+                  "column": 29,
+                  "offset": 29
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "htmlBlock",
+        "start": {
+          "line": 2,
+          "column": 0,
+          "offset": 31
+        },
+        "end": {
+          "line": 4,
+          "column": 13,
+          "offset": 107
+        },
+        "children": [
+          {
+            "text": "<blockquote>\n  <xmp> is disallowed.  <XMP> is also disallowed.\n</blockquote>",
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 31
+            },
+            "end": {
+              "line": 4,
+              "column": 13,
+              "offset": 107
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

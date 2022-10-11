@@ -1,0 +1,112 @@
+[
+  {
+    "description": "Precedence, https://spec.commonmark.org/0.30/#example-42",
+    "markdown": "- `one\n- two`\n",
+    "expected": [
+      {
+        "type": "bulletList",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 6,
+          "offset": 13
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 6,
+              "offset": 6
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "text": "`one",
+                "start": {
+                  "line": 0,
+                  "column": 2,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 0,
+                  "column": 6,
+                  "offset": 6
+                }
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 7
+            },
+            "end": {
+              "line": 1,
+              "column": 6,
+              "offset": 13
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 1,
+                  "column": 0,
+                  "offset": 7
+                },
+                "end": {
+                  "line": 1,
+                  "column": 1,
+                  "offset": 8
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "text": "two`",
+                "start": {
+                  "line": 1,
+                  "column": 2,
+                  "offset": 9
+                },
+                "end": {
+                  "line": 1,
+                  "column": 6,
+                  "offset": 13
+                }
+              }
+            ]
+          }
+        ],
+        "attributes": {
+          "isTight": "true"
+        }
+      }
+    ]
+  }
+]

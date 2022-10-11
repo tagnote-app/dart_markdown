@@ -1,0 +1,96 @@
+[
+  {
+    "description": "Soft line breaks, https://github.github.com/gfm/#example-669",
+    "markdown": "foo\nbaz\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 3,
+          "offset": 7
+        },
+        "children": [
+          {
+            "text": "foo\nbaz",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 3,
+              "offset": 7
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Soft line breaks, https://github.github.com/gfm/#example-670",
+    "markdown": "foo \n baz\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 4,
+          "offset": 9
+        },
+        "children": [
+          {
+            "text": "foo",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            }
+          },
+          {
+            "text": "\n",
+            "start": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "end": {
+              "line": 1,
+              "column": 0,
+              "offset": 5
+            }
+          },
+          {
+            "text": "baz",
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 6
+            },
+            "end": {
+              "line": 1,
+              "column": 4,
+              "offset": 9
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

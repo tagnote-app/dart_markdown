@@ -1,0 +1,104 @@
+[
+  {
+    "description": "Textual content, https://spec.commonmark.org/0.30/#example-650",
+    "markdown": "hello $.;'there\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 15,
+          "offset": 15
+        },
+        "children": [
+          {
+            "text": "hello $.;'there",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 15,
+              "offset": 15
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Textual content, https://spec.commonmark.org/0.30/#example-651",
+    "markdown": "Foo χρῆν\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 8,
+          "offset": 8
+        },
+        "children": [
+          {
+            "text": "Foo χρῆν",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 8,
+              "offset": 8
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Textual content, https://spec.commonmark.org/0.30/#example-652",
+    "markdown": "Multiple     spaces\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 19,
+          "offset": 19
+        },
+        "children": [
+          {
+            "text": "Multiple     spaces",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 19,
+              "offset": 19
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

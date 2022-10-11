@@ -1,0 +1,808 @@
+[
+  {
+    "description": "Tabs, https://github.github.com/gfm/#example-1",
+    "markdown": "\tfoo\tbaz\t\tbim\n",
+    "expected": [
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 0,
+          "column": 1,
+          "offset": 1
+        },
+        "end": {
+          "line": 1,
+          "column": 0,
+          "offset": 14
+        },
+        "children": [
+          {
+            "text": "foo\tbaz\t\tbim\n",
+            "start": {
+              "line": 0,
+              "column": 1,
+              "offset": 1
+            },
+            "end": {
+              "line": 1,
+              "column": 0,
+              "offset": 14
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Tabs, https://github.github.com/gfm/#example-2",
+    "markdown": "  \tfoo\tbaz\t\tbim\n",
+    "expected": [
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 0,
+          "column": 3,
+          "offset": 3
+        },
+        "end": {
+          "line": 1,
+          "column": 0,
+          "offset": 16
+        },
+        "children": [
+          {
+            "text": "foo\tbaz\t\tbim\n",
+            "start": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "end": {
+              "line": 1,
+              "column": 0,
+              "offset": 16
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Tabs, https://github.github.com/gfm/#example-3",
+    "markdown": "    a\ta\n    ὐ\ta\n",
+    "expected": [
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 0,
+          "column": 4,
+          "offset": 4
+        },
+        "end": {
+          "line": 2,
+          "column": 0,
+          "offset": 16
+        },
+        "children": [
+          {
+            "text": "a\ta\n",
+            "start": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "end": {
+              "line": 1,
+              "column": 0,
+              "offset": 8
+            }
+          },
+          {
+            "text": "ὐ\ta\n",
+            "start": {
+              "line": 1,
+              "column": 4,
+              "offset": 12
+            },
+            "end": {
+              "line": 2,
+              "column": 0,
+              "offset": 16
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Tabs, https://github.github.com/gfm/#example-4",
+    "markdown": "  - foo\n\n\tbar\n",
+    "expected": [
+      {
+        "type": "bulletList",
+        "start": {
+          "line": 0,
+          "column": 2,
+          "offset": 2
+        },
+        "end": {
+          "line": 2,
+          "column": 4,
+          "offset": 13
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 0,
+              "column": 2,
+              "offset": 2
+            },
+            "end": {
+              "line": 2,
+              "column": 4,
+              "offset": 13
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 2,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "start": {
+                  "line": 0,
+                  "column": 4,
+                  "offset": 4
+                },
+                "end": {
+                  "line": 0,
+                  "column": 7,
+                  "offset": 7
+                },
+                "children": [
+                  {
+                    "text": "foo",
+                    "start": {
+                      "line": 0,
+                      "column": 4,
+                      "offset": 4
+                    },
+                    "end": {
+                      "line": 0,
+                      "column": 7,
+                      "offset": 7
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "start": {
+                  "line": 2,
+                  "column": 1,
+                  "offset": 10
+                },
+                "end": {
+                  "line": 2,
+                  "column": 4,
+                  "offset": 13
+                },
+                "children": [
+                  {
+                    "text": "bar",
+                    "start": {
+                      "line": 2,
+                      "column": 1,
+                      "offset": 10
+                    },
+                    "end": {
+                      "line": 2,
+                      "column": 4,
+                      "offset": 13
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "attributes": {
+          "isTight": "false"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Tabs, https://github.github.com/gfm/#example-5",
+    "markdown": "- foo\n\n\t\tbar\n",
+    "expected": [
+      {
+        "type": "bulletList",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 0,
+          "offset": 13
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "column": 0,
+              "offset": 13
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "start": {
+                  "line": 0,
+                  "column": 2,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 0,
+                  "column": 5,
+                  "offset": 5
+                },
+                "children": [
+                  {
+                    "text": "foo",
+                    "start": {
+                      "line": 0,
+                      "column": 2,
+                      "offset": 2
+                    },
+                    "end": {
+                      "line": 0,
+                      "column": 5,
+                      "offset": 5
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "codeBlock",
+                "start": {
+                  "line": 2,
+                  "column": 2,
+                  "offset": 9
+                },
+                "end": {
+                  "line": 3,
+                  "column": 0,
+                  "offset": 13
+                },
+                "children": [
+                  {
+                    "text": "bar\n",
+                    "textContent": "  bar\n",
+                    "start": {
+                      "line": 2,
+                      "column": 2,
+                      "offset": 9
+                    },
+                    "end": {
+                      "line": 3,
+                      "column": 0,
+                      "offset": 13
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "attributes": {
+          "isTight": "false"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Tabs, https://github.github.com/gfm/#example-6",
+    "markdown": ">\t\tfoo\n",
+    "expected": [
+      {
+        "type": "blockquote",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 0,
+          "offset": 7
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 1,
+              "offset": 1
+            },
+            "text": ">"
+          }
+        ],
+        "children": [
+          {
+            "type": "codeBlock",
+            "start": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "end": {
+              "line": 1,
+              "column": 0,
+              "offset": 7
+            },
+            "children": [
+              {
+                "text": "foo\n",
+                "textContent": "  foo\n",
+                "start": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                },
+                "end": {
+                  "line": 1,
+                  "column": 0,
+                  "offset": 7
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Tabs, https://github.github.com/gfm/#example-7",
+    "markdown": "-\t\tfoo\n",
+    "expected": [
+      {
+        "type": "bulletList",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 0,
+          "offset": 7
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 0,
+              "offset": 7
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "type": "codeBlock",
+                "start": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                },
+                "end": {
+                  "line": 1,
+                  "column": 0,
+                  "offset": 7
+                },
+                "children": [
+                  {
+                    "text": "foo\n",
+                    "textContent": "  foo\n",
+                    "start": {
+                      "line": 0,
+                      "column": 3,
+                      "offset": 3
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 0,
+                      "offset": 7
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "attributes": {
+          "isTight": "true"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Tabs, https://github.github.com/gfm/#example-8",
+    "markdown": "    foo\n\tbar\n",
+    "expected": [
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 0,
+          "column": 4,
+          "offset": 4
+        },
+        "end": {
+          "line": 2,
+          "column": 0,
+          "offset": 13
+        },
+        "children": [
+          {
+            "text": "foo\n",
+            "start": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "end": {
+              "line": 1,
+              "column": 0,
+              "offset": 8
+            }
+          },
+          {
+            "text": "bar\n",
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 9
+            },
+            "end": {
+              "line": 2,
+              "column": 0,
+              "offset": 13
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Tabs, https://github.github.com/gfm/#example-9",
+    "markdown": " - foo\n   - bar\n\t - baz\n",
+    "expected": [
+      {
+        "type": "bulletList",
+        "start": {
+          "line": 0,
+          "column": 1,
+          "offset": 1
+        },
+        "end": {
+          "line": 2,
+          "column": 7,
+          "offset": 23
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 0,
+              "column": 1,
+              "offset": 1
+            },
+            "end": {
+              "line": 2,
+              "column": 7,
+              "offset": 23
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "end": {
+                  "line": 0,
+                  "column": 2,
+                  "offset": 2
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "text": "foo",
+                "start": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                },
+                "end": {
+                  "line": 0,
+                  "column": 6,
+                  "offset": 6
+                }
+              },
+              {
+                "type": "bulletList",
+                "start": {
+                  "line": 1,
+                  "column": 3,
+                  "offset": 10
+                },
+                "end": {
+                  "line": 2,
+                  "column": 7,
+                  "offset": 23
+                },
+                "children": [
+                  {
+                    "type": "listItem",
+                    "start": {
+                      "line": 1,
+                      "column": 3,
+                      "offset": 10
+                    },
+                    "end": {
+                      "line": 2,
+                      "column": 7,
+                      "offset": 23
+                    },
+                    "markers": [
+                      {
+                        "start": {
+                          "line": 1,
+                          "column": 3,
+                          "offset": 10
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 4,
+                          "offset": 11
+                        },
+                        "text": "-"
+                      }
+                    ],
+                    "children": [
+                      {
+                        "text": "bar",
+                        "start": {
+                          "line": 1,
+                          "column": 5,
+                          "offset": 12
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 8,
+                          "offset": 15
+                        }
+                      },
+                      {
+                        "type": "bulletList",
+                        "start": {
+                          "line": 2,
+                          "column": 2,
+                          "offset": 18
+                        },
+                        "end": {
+                          "line": 2,
+                          "column": 7,
+                          "offset": 23
+                        },
+                        "children": [
+                          {
+                            "type": "listItem",
+                            "start": {
+                              "line": 2,
+                              "column": 2,
+                              "offset": 18
+                            },
+                            "end": {
+                              "line": 2,
+                              "column": 7,
+                              "offset": 23
+                            },
+                            "markers": [
+                              {
+                                "start": {
+                                  "line": 2,
+                                  "column": 2,
+                                  "offset": 18
+                                },
+                                "end": {
+                                  "line": 2,
+                                  "column": 3,
+                                  "offset": 19
+                                },
+                                "text": "-"
+                              }
+                            ],
+                            "children": [
+                              {
+                                "text": "baz",
+                                "start": {
+                                  "line": 2,
+                                  "column": 4,
+                                  "offset": 20
+                                },
+                                "end": {
+                                  "line": 2,
+                                  "column": 7,
+                                  "offset": 23
+                                }
+                              }
+                            ]
+                          }
+                        ],
+                        "attributes": {
+                          "isTight": "true"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "attributes": {
+                  "isTight": "true"
+                }
+              }
+            ]
+          }
+        ],
+        "attributes": {
+          "isTight": "true"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Tabs, https://github.github.com/gfm/#example-10",
+    "markdown": "#\tFoo\n",
+    "expected": [
+      {
+        "type": "headline",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 5,
+          "offset": 5
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 1,
+              "offset": 1
+            },
+            "text": "#"
+          }
+        ],
+        "children": [
+          {
+            "text": "Foo",
+            "start": {
+              "line": 0,
+              "column": 2,
+              "offset": 2
+            },
+            "end": {
+              "line": 0,
+              "column": 5,
+              "offset": 5
+            }
+          }
+        ],
+        "attributes": {
+          "level": "1"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Tabs, https://github.github.com/gfm/#example-11",
+    "markdown": "*\t*\t*\t\n",
+    "expected": [
+      {
+        "type": "thematicBreak",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 5,
+          "offset": 5
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 5,
+              "offset": 5
+            },
+            "text": "*\t*\t*"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,1286 @@
+[
+  {
+    "description": "Autolinks, https://github.github.com/gfm/#example-602",
+    "markdown": "<http://foo.bar.baz>\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 20,
+          "offset": 20
+        },
+        "children": [
+          {
+            "type": "link",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 20,
+              "offset": 20
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "<"
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 19,
+                  "offset": 19
+                },
+                "end": {
+                  "line": 0,
+                  "column": 20,
+                  "offset": 20
+                },
+                "text": ">"
+              }
+            ],
+            "children": [
+              {
+                "text": "http://foo.bar.baz",
+                "start": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "end": {
+                  "line": 0,
+                  "column": 19,
+                  "offset": 19
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "http://foo.bar.baz",
+              "text": "http://foo.bar.baz"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Autolinks, https://github.github.com/gfm/#example-603",
+    "markdown": "<http://foo.bar.baz/test?q=hello&id=22&boolean>\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 47,
+          "offset": 47
+        },
+        "children": [
+          {
+            "type": "link",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 47,
+              "offset": 47
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "<"
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 46,
+                  "offset": 46
+                },
+                "end": {
+                  "line": 0,
+                  "column": 47,
+                  "offset": 47
+                },
+                "text": ">"
+              }
+            ],
+            "children": [
+              {
+                "text": "http://foo.bar.baz/test?q=hello&id=22&boolean",
+                "start": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "end": {
+                  "line": 0,
+                  "column": 46,
+                  "offset": 46
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "http://foo.bar.baz/test?q=hello&amp;id=22&amp;boolean",
+              "text": "http://foo.bar.baz/test?q=hello&amp;id=22&amp;boolean"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Autolinks, https://github.github.com/gfm/#example-604",
+    "markdown": "<irc://foo.bar:2233/baz>\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 24,
+          "offset": 24
+        },
+        "children": [
+          {
+            "type": "link",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 24,
+              "offset": 24
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "<"
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 23,
+                  "offset": 23
+                },
+                "end": {
+                  "line": 0,
+                  "column": 24,
+                  "offset": 24
+                },
+                "text": ">"
+              }
+            ],
+            "children": [
+              {
+                "text": "irc://foo.bar:2233/baz",
+                "start": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "end": {
+                  "line": 0,
+                  "column": 23,
+                  "offset": 23
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "irc://foo.bar:2233/baz",
+              "text": "irc://foo.bar:2233/baz"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Autolinks, https://github.github.com/gfm/#example-605",
+    "markdown": "<MAILTO:FOO@BAR.BAZ>\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 20,
+          "offset": 20
+        },
+        "children": [
+          {
+            "type": "link",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 20,
+              "offset": 20
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "<"
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 19,
+                  "offset": 19
+                },
+                "end": {
+                  "line": 0,
+                  "column": 20,
+                  "offset": 20
+                },
+                "text": ">"
+              }
+            ],
+            "children": [
+              {
+                "text": "MAILTO:FOO@BAR.BAZ",
+                "start": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "end": {
+                  "line": 0,
+                  "column": 19,
+                  "offset": 19
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "MAILTO:FOO@BAR.BAZ",
+              "text": "MAILTO:FOO@BAR.BAZ"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Autolinks, https://github.github.com/gfm/#example-606",
+    "markdown": "<a+b+c:d>\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 9,
+          "offset": 9
+        },
+        "children": [
+          {
+            "type": "link",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 9,
+              "offset": 9
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "<"
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 8,
+                  "offset": 8
+                },
+                "end": {
+                  "line": 0,
+                  "column": 9,
+                  "offset": 9
+                },
+                "text": ">"
+              }
+            ],
+            "children": [
+              {
+                "text": "a+b+c:d",
+                "start": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "end": {
+                  "line": 0,
+                  "column": 8,
+                  "offset": 8
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "a+b+c:d",
+              "text": "a+b+c:d"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Autolinks, https://github.github.com/gfm/#example-607",
+    "markdown": "<made-up-scheme://foo,bar>\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 26,
+          "offset": 26
+        },
+        "children": [
+          {
+            "type": "link",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 26,
+              "offset": 26
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "<"
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 25,
+                  "offset": 25
+                },
+                "end": {
+                  "line": 0,
+                  "column": 26,
+                  "offset": 26
+                },
+                "text": ">"
+              }
+            ],
+            "children": [
+              {
+                "text": "made-up-scheme://foo,bar",
+                "start": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "end": {
+                  "line": 0,
+                  "column": 25,
+                  "offset": 25
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "made-up-scheme://foo,bar",
+              "text": "made-up-scheme://foo,bar"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Autolinks, https://github.github.com/gfm/#example-608",
+    "markdown": "<http://../>\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 12,
+          "offset": 12
+        },
+        "children": [
+          {
+            "type": "link",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 12,
+              "offset": 12
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "<"
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 11,
+                  "offset": 11
+                },
+                "end": {
+                  "line": 0,
+                  "column": 12,
+                  "offset": 12
+                },
+                "text": ">"
+              }
+            ],
+            "children": [
+              {
+                "text": "http://../",
+                "start": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "end": {
+                  "line": 0,
+                  "column": 11,
+                  "offset": 11
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "http://../",
+              "text": "http://../"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Autolinks, https://github.github.com/gfm/#example-609",
+    "markdown": "<localhost:5001/foo>\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 20,
+          "offset": 20
+        },
+        "children": [
+          {
+            "type": "link",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 20,
+              "offset": 20
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "<"
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 19,
+                  "offset": 19
+                },
+                "end": {
+                  "line": 0,
+                  "column": 20,
+                  "offset": 20
+                },
+                "text": ">"
+              }
+            ],
+            "children": [
+              {
+                "text": "localhost:5001/foo",
+                "start": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "end": {
+                  "line": 0,
+                  "column": 19,
+                  "offset": 19
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "localhost:5001/foo",
+              "text": "localhost:5001/foo"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Autolinks, https://github.github.com/gfm/#example-610",
+    "markdown": "<http://foo.bar/baz bim>\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 24,
+          "offset": 24
+        },
+        "children": [
+          {
+            "text": "<http://foo.bar/baz bim>",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 24,
+              "offset": 24
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Autolinks, https://github.github.com/gfm/#example-611",
+    "markdown": "<http://example.com/\\[\\>\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 24,
+          "offset": 24
+        },
+        "children": [
+          {
+            "type": "link",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 24,
+              "offset": 24
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "<"
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 23,
+                  "offset": 23
+                },
+                "end": {
+                  "line": 0,
+                  "column": 24,
+                  "offset": 24
+                },
+                "text": ">"
+              }
+            ],
+            "children": [
+              {
+                "text": "http://example.com/\\[\\",
+                "start": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "end": {
+                  "line": 0,
+                  "column": 23,
+                  "offset": 23
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "http://example.com/%5C%5B%5C",
+              "text": "http://example.com/\\[\\"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Autolinks, https://github.github.com/gfm/#example-612",
+    "markdown": "<foo@bar.example.com>\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 21,
+          "offset": 21
+        },
+        "children": [
+          {
+            "type": "link",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 21,
+              "offset": 21
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "<"
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 20,
+                  "offset": 20
+                },
+                "end": {
+                  "line": 0,
+                  "column": 21,
+                  "offset": 21
+                },
+                "text": ">"
+              }
+            ],
+            "children": [
+              {
+                "text": "foo@bar.example.com",
+                "start": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "end": {
+                  "line": 0,
+                  "column": 20,
+                  "offset": 20
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "mailto:foo@bar.example.com",
+              "text": "foo@bar.example.com"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Autolinks, https://github.github.com/gfm/#example-613",
+    "markdown": "<foo+special@Bar.baz-bar0.com>\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 30,
+          "offset": 30
+        },
+        "children": [
+          {
+            "type": "link",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 30,
+              "offset": 30
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "<"
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 29,
+                  "offset": 29
+                },
+                "end": {
+                  "line": 0,
+                  "column": 30,
+                  "offset": 30
+                },
+                "text": ">"
+              }
+            ],
+            "children": [
+              {
+                "text": "foo+special@Bar.baz-bar0.com",
+                "start": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "end": {
+                  "line": 0,
+                  "column": 29,
+                  "offset": 29
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "mailto:foo+special@Bar.baz-bar0.com",
+              "text": "foo+special@Bar.baz-bar0.com"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Autolinks, https://github.github.com/gfm/#example-614",
+    "markdown": "<foo\\+@bar.example.com>\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 23,
+          "offset": 23
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "end": {
+              "line": 0,
+              "column": 5,
+              "offset": 5
+            },
+            "text": "\\"
+          }
+        ],
+        "children": [
+          {
+            "text": "<foo",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            }
+          },
+          {
+            "text": "+",
+            "start": {
+              "line": 0,
+              "column": 5,
+              "offset": 5
+            },
+            "end": {
+              "line": 0,
+              "column": 6,
+              "offset": 6
+            }
+          },
+          {
+            "text": "@bar.example.com>",
+            "start": {
+              "line": 0,
+              "column": 6,
+              "offset": 6
+            },
+            "end": {
+              "line": 0,
+              "column": 23,
+              "offset": 23
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Autolinks, https://github.github.com/gfm/#example-615",
+    "markdown": "<>\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 2,
+          "offset": 2
+        },
+        "children": [
+          {
+            "text": "<>",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 2,
+              "offset": 2
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Autolinks, https://github.github.com/gfm/#example-616",
+    "markdown": "< http://foo.bar >\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 18,
+          "offset": 18
+        },
+        "children": [
+          {
+            "text": "< ",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 2,
+              "offset": 2
+            }
+          },
+          {
+            "type": "link",
+            "start": {
+              "line": 0,
+              "column": 2,
+              "offset": 2
+            },
+            "end": {
+              "line": 0,
+              "column": 16,
+              "offset": 16
+            },
+            "children": [
+              {
+                "text": "http://foo.bar",
+                "start": {
+                  "line": 0,
+                  "column": 2,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 0,
+                  "column": 16,
+                  "offset": 16
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "http://foo.bar"
+            }
+          },
+          {
+            "text": " >",
+            "start": {
+              "line": 0,
+              "column": 16,
+              "offset": 16
+            },
+            "end": {
+              "line": 0,
+              "column": 18,
+              "offset": 18
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Autolinks, https://github.github.com/gfm/#example-617",
+    "markdown": "<m:abc>\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 7,
+          "offset": 7
+        },
+        "children": [
+          {
+            "text": "<m:abc>",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 7,
+              "offset": 7
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Autolinks, https://github.github.com/gfm/#example-618",
+    "markdown": "<foo.bar.baz>\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 13,
+          "offset": 13
+        },
+        "children": [
+          {
+            "text": "<foo.bar.baz>",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 13,
+              "offset": 13
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Autolinks, https://github.github.com/gfm/#example-619",
+    "markdown": "http://example.com\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 18,
+          "offset": 18
+        },
+        "children": [
+          {
+            "type": "link",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 18,
+              "offset": 18
+            },
+            "children": [
+              {
+                "text": "http://example.com",
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 18,
+                  "offset": 18
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "http://example.com"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Autolinks, https://github.github.com/gfm/#example-620",
+    "markdown": "foo@bar.example.com\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 19,
+          "offset": 19
+        },
+        "children": [
+          {
+            "type": "link",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 19,
+              "offset": 19
+            },
+            "children": [
+              {
+                "text": "foo@bar.example.com",
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 19,
+                  "offset": 19
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "mailto:foo@bar.example.com"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

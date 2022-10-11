@@ -1,0 +1,466 @@
+[
+  {
+    "description": "Paragraphs, https://spec.commonmark.org/0.30/#example-219",
+    "markdown": "aaa\n\nbbb\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 3,
+          "offset": 3
+        },
+        "children": [
+          {
+            "text": "aaa",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 2,
+          "column": 0,
+          "offset": 5
+        },
+        "end": {
+          "line": 2,
+          "column": 3,
+          "offset": 8
+        },
+        "children": [
+          {
+            "text": "bbb",
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 5
+            },
+            "end": {
+              "line": 2,
+              "column": 3,
+              "offset": 8
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Paragraphs, https://spec.commonmark.org/0.30/#example-220",
+    "markdown": "aaa\nbbb\n\nccc\nddd\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 3,
+          "offset": 7
+        },
+        "children": [
+          {
+            "text": "aaa\nbbb",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 3,
+              "offset": 7
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 3,
+          "column": 0,
+          "offset": 9
+        },
+        "end": {
+          "line": 4,
+          "column": 3,
+          "offset": 16
+        },
+        "children": [
+          {
+            "text": "ccc\nddd",
+            "start": {
+              "line": 3,
+              "column": 0,
+              "offset": 9
+            },
+            "end": {
+              "line": 4,
+              "column": 3,
+              "offset": 16
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Paragraphs, https://spec.commonmark.org/0.30/#example-221",
+    "markdown": "aaa\n\n\nbbb\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 3,
+          "offset": 3
+        },
+        "children": [
+          {
+            "text": "aaa",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 3,
+          "column": 0,
+          "offset": 6
+        },
+        "end": {
+          "line": 3,
+          "column": 3,
+          "offset": 9
+        },
+        "children": [
+          {
+            "text": "bbb",
+            "start": {
+              "line": 3,
+              "column": 0,
+              "offset": 6
+            },
+            "end": {
+              "line": 3,
+              "column": 3,
+              "offset": 9
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Paragraphs, https://spec.commonmark.org/0.30/#example-222",
+    "markdown": "  aaa\n bbb\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 2,
+          "offset": 2
+        },
+        "end": {
+          "line": 1,
+          "column": 4,
+          "offset": 10
+        },
+        "children": [
+          {
+            "text": "aaa\n",
+            "start": {
+              "line": 0,
+              "column": 2,
+              "offset": 2
+            },
+            "end": {
+              "line": 1,
+              "column": 0,
+              "offset": 6
+            }
+          },
+          {
+            "text": "bbb",
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 7
+            },
+            "end": {
+              "line": 1,
+              "column": 4,
+              "offset": 10
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Paragraphs, https://spec.commonmark.org/0.30/#example-223",
+    "markdown": "aaa\n             bbb\n                                       ccc\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 2,
+          "column": 42,
+          "offset": 63
+        },
+        "children": [
+          {
+            "text": "aaa\n",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 0,
+              "offset": 4
+            }
+          },
+          {
+            "text": "bbb\n",
+            "start": {
+              "line": 1,
+              "column": 13,
+              "offset": 17
+            },
+            "end": {
+              "line": 2,
+              "column": 0,
+              "offset": 21
+            }
+          },
+          {
+            "text": "ccc",
+            "start": {
+              "line": 2,
+              "column": 39,
+              "offset": 60
+            },
+            "end": {
+              "line": 2,
+              "column": 42,
+              "offset": 63
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Paragraphs, https://spec.commonmark.org/0.30/#example-224",
+    "markdown": "   aaa\nbbb\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 3,
+          "offset": 3
+        },
+        "end": {
+          "line": 1,
+          "column": 3,
+          "offset": 10
+        },
+        "children": [
+          {
+            "text": "aaa\nbbb",
+            "start": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "end": {
+              "line": 1,
+              "column": 3,
+              "offset": 10
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Paragraphs, https://spec.commonmark.org/0.30/#example-225",
+    "markdown": "    aaa\nbbb\n",
+    "expected": [
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 0,
+          "column": 4,
+          "offset": 4
+        },
+        "end": {
+          "line": 1,
+          "column": 0,
+          "offset": 8
+        },
+        "children": [
+          {
+            "text": "aaa\n",
+            "start": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "end": {
+              "line": 1,
+              "column": 0,
+              "offset": 8
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 1,
+          "column": 0,
+          "offset": 8
+        },
+        "end": {
+          "line": 1,
+          "column": 3,
+          "offset": 11
+        },
+        "children": [
+          {
+            "text": "bbb",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 8
+            },
+            "end": {
+              "line": 1,
+              "column": 3,
+              "offset": 11
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Paragraphs, https://spec.commonmark.org/0.30/#example-226",
+    "markdown": "aaa     \nbbb     \n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 3,
+          "offset": 12
+        },
+        "children": [
+          {
+            "text": "aaa",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            }
+          },
+          {
+            "type": "hardLineBreak",
+            "start": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "end": {
+              "line": 0,
+              "column": 8,
+              "offset": 8
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                },
+                "end": {
+                  "line": 0,
+                  "column": 8,
+                  "offset": 8
+                },
+                "text": "     "
+              }
+            ]
+          },
+          {
+            "text": "bbb",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 9
+            },
+            "end": {
+              "line": 1,
+              "column": 3,
+              "offset": 12
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
