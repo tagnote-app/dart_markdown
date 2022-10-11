@@ -24,7 +24,7 @@ https://markdown.tagnote.app
 _Input:_
 
 ```Markdown
-Hello **Markdown**!,
+Hello **Markdown**!
 ```
 
 _Output:_
@@ -33,6 +33,8 @@ _Output:_
 [
   {
     "type": "paragraph",
+    "start": { "line": 0, "column": 0, "offset": 0 },
+    "end": { "line": 0, "column": 19, "offset": 19 },
     "children": [
       {
         "text": "Hello ",
@@ -41,16 +43,18 @@ _Output:_
       },
       {
         "type": "strongEmphasis",
+        "start": { "line": 0, "column": 6, "offset": 6 },
+        "end": { "line": 0, "column": 18, "offset": 18 },
         "markers": [
           {
-            "text": "**",
             "start": { "line": 0, "column": 6, "offset": 6 },
-            "end": { "line": 0, "column": 8, "offset": 8 }
+            "end": { "line": 0, "column": 8, "offset": 8 },
+            "text": "**"
           },
           {
-            "text": "**",
             "start": { "line": 0, "column": 16, "offset": 16 },
-            "end": { "line": 0, "column": 18, "offset": 18 }
+            "end": { "line": 0, "column": 18, "offset": 18 },
+            "text": "**"
           }
         ],
         "children": [
