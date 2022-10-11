@@ -1,0 +1,1245 @@
+[
+  {
+    "description": "Autolinks (extension), https://github.github.com/gfm/#example-621",
+    "markdown": "www.commonmark.org\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 18,
+          "offset": 18
+        },
+        "children": [
+          {
+            "type": "link",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 18,
+              "offset": 18
+            },
+            "children": [
+              {
+                "text": "www.commonmark.org",
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 18,
+                  "offset": 18
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "http://www.commonmark.org"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Autolinks (extension), https://github.github.com/gfm/#example-622",
+    "markdown": "Visit www.commonmark.org/help for more information.\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 51,
+          "offset": 51
+        },
+        "children": [
+          {
+            "text": "Visit ",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 6,
+              "offset": 6
+            }
+          },
+          {
+            "type": "link",
+            "start": {
+              "line": 0,
+              "column": 6,
+              "offset": 6
+            },
+            "end": {
+              "line": 0,
+              "column": 29,
+              "offset": 29
+            },
+            "children": [
+              {
+                "text": "www.commonmark.org/help",
+                "start": {
+                  "line": 0,
+                  "column": 6,
+                  "offset": 6
+                },
+                "end": {
+                  "line": 0,
+                  "column": 29,
+                  "offset": 29
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "http://www.commonmark.org/help"
+            }
+          },
+          {
+            "text": " for more information.",
+            "start": {
+              "line": 0,
+              "column": 29,
+              "offset": 29
+            },
+            "end": {
+              "line": 0,
+              "column": 51,
+              "offset": 51
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Autolinks (extension), https://github.github.com/gfm/#example-623",
+    "markdown": "Visit www.commonmark.org.\n\nVisit www.commonmark.org/a.b.\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 25,
+          "offset": 25
+        },
+        "children": [
+          {
+            "text": "Visit ",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 6,
+              "offset": 6
+            }
+          },
+          {
+            "type": "link",
+            "start": {
+              "line": 0,
+              "column": 6,
+              "offset": 6
+            },
+            "end": {
+              "line": 0,
+              "column": 24,
+              "offset": 24
+            },
+            "children": [
+              {
+                "text": "www.commonmark.org",
+                "start": {
+                  "line": 0,
+                  "column": 6,
+                  "offset": 6
+                },
+                "end": {
+                  "line": 0,
+                  "column": 24,
+                  "offset": 24
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "http://www.commonmark.org"
+            }
+          },
+          {
+            "text": ".",
+            "start": {
+              "line": 0,
+              "column": 24,
+              "offset": 24
+            },
+            "end": {
+              "line": 0,
+              "column": 25,
+              "offset": 25
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 2,
+          "column": 0,
+          "offset": 27
+        },
+        "end": {
+          "line": 2,
+          "column": 29,
+          "offset": 56
+        },
+        "children": [
+          {
+            "text": "Visit ",
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 27
+            },
+            "end": {
+              "line": 2,
+              "column": 6,
+              "offset": 33
+            }
+          },
+          {
+            "type": "link",
+            "start": {
+              "line": 2,
+              "column": 6,
+              "offset": 33
+            },
+            "end": {
+              "line": 2,
+              "column": 28,
+              "offset": 55
+            },
+            "children": [
+              {
+                "text": "www.commonmark.org/a.b",
+                "start": {
+                  "line": 2,
+                  "column": 6,
+                  "offset": 33
+                },
+                "end": {
+                  "line": 2,
+                  "column": 28,
+                  "offset": 55
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "http://www.commonmark.org/a.b"
+            }
+          },
+          {
+            "text": ".",
+            "start": {
+              "line": 2,
+              "column": 28,
+              "offset": 55
+            },
+            "end": {
+              "line": 2,
+              "column": 29,
+              "offset": 56
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Autolinks (extension), https://github.github.com/gfm/#example-624",
+    "markdown": "www.google.com/search?q=Markup+(business)\n\nwww.google.com/search?q=Markup+(business)))\n\n(www.google.com/search?q=Markup+(business))\n\n(www.google.com/search?q=Markup+(business)\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 41,
+          "offset": 41
+        },
+        "children": [
+          {
+            "type": "link",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 41,
+              "offset": 41
+            },
+            "children": [
+              {
+                "text": "www.google.com/search?q=Markup+(business)",
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 41,
+                  "offset": 41
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "http://www.google.com/search?q=Markup+(business)"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 2,
+          "column": 0,
+          "offset": 43
+        },
+        "end": {
+          "line": 2,
+          "column": 43,
+          "offset": 86
+        },
+        "children": [
+          {
+            "type": "link",
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 43
+            },
+            "end": {
+              "line": 2,
+              "column": 41,
+              "offset": 84
+            },
+            "children": [
+              {
+                "text": "www.google.com/search?q=Markup+(business)",
+                "start": {
+                  "line": 2,
+                  "column": 0,
+                  "offset": 43
+                },
+                "end": {
+                  "line": 2,
+                  "column": 41,
+                  "offset": 84
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "http://www.google.com/search?q=Markup+(business)"
+            }
+          },
+          {
+            "text": "))",
+            "start": {
+              "line": 2,
+              "column": 41,
+              "offset": 84
+            },
+            "end": {
+              "line": 2,
+              "column": 43,
+              "offset": 86
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 4,
+          "column": 0,
+          "offset": 88
+        },
+        "end": {
+          "line": 4,
+          "column": 43,
+          "offset": 131
+        },
+        "children": [
+          {
+            "text": "(",
+            "start": {
+              "line": 4,
+              "column": 0,
+              "offset": 88
+            },
+            "end": {
+              "line": 4,
+              "column": 1,
+              "offset": 89
+            }
+          },
+          {
+            "type": "link",
+            "start": {
+              "line": 4,
+              "column": 1,
+              "offset": 89
+            },
+            "end": {
+              "line": 4,
+              "column": 42,
+              "offset": 130
+            },
+            "children": [
+              {
+                "text": "www.google.com/search?q=Markup+(business)",
+                "start": {
+                  "line": 4,
+                  "column": 1,
+                  "offset": 89
+                },
+                "end": {
+                  "line": 4,
+                  "column": 42,
+                  "offset": 130
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "http://www.google.com/search?q=Markup+(business)"
+            }
+          },
+          {
+            "text": ")",
+            "start": {
+              "line": 4,
+              "column": 42,
+              "offset": 130
+            },
+            "end": {
+              "line": 4,
+              "column": 43,
+              "offset": 131
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 6,
+          "column": 0,
+          "offset": 133
+        },
+        "end": {
+          "line": 6,
+          "column": 42,
+          "offset": 175
+        },
+        "children": [
+          {
+            "text": "(",
+            "start": {
+              "line": 6,
+              "column": 0,
+              "offset": 133
+            },
+            "end": {
+              "line": 6,
+              "column": 1,
+              "offset": 134
+            }
+          },
+          {
+            "type": "link",
+            "start": {
+              "line": 6,
+              "column": 1,
+              "offset": 134
+            },
+            "end": {
+              "line": 6,
+              "column": 42,
+              "offset": 175
+            },
+            "children": [
+              {
+                "text": "www.google.com/search?q=Markup+(business)",
+                "start": {
+                  "line": 6,
+                  "column": 1,
+                  "offset": 134
+                },
+                "end": {
+                  "line": 6,
+                  "column": 42,
+                  "offset": 175
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "http://www.google.com/search?q=Markup+(business)"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Autolinks (extension), https://github.github.com/gfm/#example-625",
+    "markdown": "www.google.com/search?q=(business))+ok\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 38,
+          "offset": 38
+        },
+        "children": [
+          {
+            "type": "link",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 38,
+              "offset": 38
+            },
+            "children": [
+              {
+                "text": "www.google.com/search?q=(business))+ok",
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 38,
+                  "offset": 38
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "http://www.google.com/search?q=(business))+ok"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Autolinks (extension), https://github.github.com/gfm/#example-626",
+    "markdown": "www.google.com/search?q=commonmark&hl=en\n\nwww.google.com/search?q=commonmark&hl;\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 40,
+          "offset": 40
+        },
+        "children": [
+          {
+            "type": "link",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 40,
+              "offset": 40
+            },
+            "children": [
+              {
+                "text": "www.google.com/search?q=commonmark&hl=en",
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 40,
+                  "offset": 40
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "http://www.google.com/search?q=commonmark&hl=en"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 2,
+          "column": 0,
+          "offset": 42
+        },
+        "end": {
+          "line": 2,
+          "column": 38,
+          "offset": 80
+        },
+        "children": [
+          {
+            "type": "link",
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 42
+            },
+            "end": {
+              "line": 2,
+              "column": 34,
+              "offset": 76
+            },
+            "children": [
+              {
+                "text": "www.google.com/search?q=commonmark",
+                "start": {
+                  "line": 2,
+                  "column": 0,
+                  "offset": 42
+                },
+                "end": {
+                  "line": 2,
+                  "column": 34,
+                  "offset": 76
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "http://www.google.com/search?q=commonmark"
+            }
+          },
+          {
+            "text": "&hl;",
+            "start": {
+              "line": 2,
+              "column": 34,
+              "offset": 76
+            },
+            "end": {
+              "line": 2,
+              "column": 38,
+              "offset": 80
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Autolinks (extension), https://github.github.com/gfm/#example-627",
+    "markdown": "www.commonmark.org/he<lp\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 24,
+          "offset": 24
+        },
+        "children": [
+          {
+            "type": "link",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 21,
+              "offset": 21
+            },
+            "children": [
+              {
+                "text": "www.commonmark.org/he",
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 21,
+                  "offset": 21
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "http://www.commonmark.org/he"
+            }
+          },
+          {
+            "text": "<lp",
+            "start": {
+              "line": 0,
+              "column": 21,
+              "offset": 21
+            },
+            "end": {
+              "line": 0,
+              "column": 24,
+              "offset": 24
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Autolinks (extension), https://github.github.com/gfm/#example-628",
+    "markdown": "http://commonmark.org\n\n(Visit https://encrypted.google.com/search?q=Markup+(business))\n\nAnonymous FTP is available at ftp://foo.bar.baz.\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 21,
+          "offset": 21
+        },
+        "children": [
+          {
+            "type": "link",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 21,
+              "offset": 21
+            },
+            "children": [
+              {
+                "text": "http://commonmark.org",
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 21,
+                  "offset": 21
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "http://commonmark.org"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 2,
+          "column": 0,
+          "offset": 23
+        },
+        "end": {
+          "line": 2,
+          "column": 63,
+          "offset": 86
+        },
+        "children": [
+          {
+            "text": "(Visit ",
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 23
+            },
+            "end": {
+              "line": 2,
+              "column": 7,
+              "offset": 30
+            }
+          },
+          {
+            "type": "link",
+            "start": {
+              "line": 2,
+              "column": 7,
+              "offset": 30
+            },
+            "end": {
+              "line": 2,
+              "column": 62,
+              "offset": 85
+            },
+            "children": [
+              {
+                "text": "https://encrypted.google.com/search?q=Markup+(business)",
+                "start": {
+                  "line": 2,
+                  "column": 7,
+                  "offset": 30
+                },
+                "end": {
+                  "line": 2,
+                  "column": 62,
+                  "offset": 85
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "https://encrypted.google.com/search?q=Markup+(business)"
+            }
+          },
+          {
+            "text": ")",
+            "start": {
+              "line": 2,
+              "column": 62,
+              "offset": 85
+            },
+            "end": {
+              "line": 2,
+              "column": 63,
+              "offset": 86
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 4,
+          "column": 0,
+          "offset": 88
+        },
+        "end": {
+          "line": 4,
+          "column": 48,
+          "offset": 136
+        },
+        "children": [
+          {
+            "text": "Anonymous FTP is available at ",
+            "start": {
+              "line": 4,
+              "column": 0,
+              "offset": 88
+            },
+            "end": {
+              "line": 4,
+              "column": 30,
+              "offset": 118
+            }
+          },
+          {
+            "type": "link",
+            "start": {
+              "line": 4,
+              "column": 30,
+              "offset": 118
+            },
+            "end": {
+              "line": 4,
+              "column": 47,
+              "offset": 135
+            },
+            "children": [
+              {
+                "text": "ftp://foo.bar.baz",
+                "start": {
+                  "line": 4,
+                  "column": 30,
+                  "offset": 118
+                },
+                "end": {
+                  "line": 4,
+                  "column": 47,
+                  "offset": 135
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "ftp://foo.bar.baz"
+            }
+          },
+          {
+            "text": ".",
+            "start": {
+              "line": 4,
+              "column": 47,
+              "offset": 135
+            },
+            "end": {
+              "line": 4,
+              "column": 48,
+              "offset": 136
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Autolinks (extension), https://github.github.com/gfm/#example-629",
+    "markdown": "foo@bar.baz\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 11,
+          "offset": 11
+        },
+        "children": [
+          {
+            "type": "link",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 11,
+              "offset": 11
+            },
+            "children": [
+              {
+                "text": "foo@bar.baz",
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 11,
+                  "offset": 11
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "mailto:foo@bar.baz"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Autolinks (extension), https://github.github.com/gfm/#example-630",
+    "markdown": "hello@mail+xyz.example isn't valid, but hello+xyz@mail.example is.\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 66,
+          "offset": 66
+        },
+        "children": [
+          {
+            "text": "hello@mail+xyz.example isn't valid, but ",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 40,
+              "offset": 40
+            }
+          },
+          {
+            "type": "link",
+            "start": {
+              "line": 0,
+              "column": 40,
+              "offset": 40
+            },
+            "end": {
+              "line": 0,
+              "column": 62,
+              "offset": 62
+            },
+            "children": [
+              {
+                "text": "hello+xyz@mail.example",
+                "start": {
+                  "line": 0,
+                  "column": 40,
+                  "offset": 40
+                },
+                "end": {
+                  "line": 0,
+                  "column": 62,
+                  "offset": 62
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "mailto:hello+xyz@mail.example"
+            }
+          },
+          {
+            "text": " is.",
+            "start": {
+              "line": 0,
+              "column": 62,
+              "offset": 62
+            },
+            "end": {
+              "line": 0,
+              "column": 66,
+              "offset": 66
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Autolinks (extension), https://github.github.com/gfm/#example-631",
+    "markdown": "a.b-c_d@a.b\n\na.b-c_d@a.b.\n\na.b-c_d@a.b-\n\na.b-c_d@a.b_\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 11,
+          "offset": 11
+        },
+        "children": [
+          {
+            "type": "link",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 11,
+              "offset": 11
+            },
+            "children": [
+              {
+                "text": "a.b-c_d@a.b",
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 11,
+                  "offset": 11
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "mailto:a.b-c_d@a.b"
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 2,
+          "column": 0,
+          "offset": 13
+        },
+        "end": {
+          "line": 2,
+          "column": 12,
+          "offset": 25
+        },
+        "children": [
+          {
+            "type": "link",
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 13
+            },
+            "end": {
+              "line": 2,
+              "column": 11,
+              "offset": 24
+            },
+            "children": [
+              {
+                "text": "a.b-c_d@a.b",
+                "start": {
+                  "line": 2,
+                  "column": 0,
+                  "offset": 13
+                },
+                "end": {
+                  "line": 2,
+                  "column": 11,
+                  "offset": 24
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "mailto:a.b-c_d@a.b"
+            }
+          },
+          {
+            "text": ".",
+            "start": {
+              "line": 2,
+              "column": 11,
+              "offset": 24
+            },
+            "end": {
+              "line": 2,
+              "column": 12,
+              "offset": 25
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 4,
+          "column": 0,
+          "offset": 27
+        },
+        "end": {
+          "line": 4,
+          "column": 12,
+          "offset": 39
+        },
+        "children": [
+          {
+            "text": "a.b-c_d@a.b-",
+            "start": {
+              "line": 4,
+              "column": 0,
+              "offset": 27
+            },
+            "end": {
+              "line": 4,
+              "column": 12,
+              "offset": 39
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 6,
+          "column": 0,
+          "offset": 41
+        },
+        "end": {
+          "line": 6,
+          "column": 12,
+          "offset": 53
+        },
+        "children": [
+          {
+            "text": "a.b-c_d@a.b_",
+            "start": {
+              "line": 6,
+              "column": 0,
+              "offset": 41
+            },
+            "end": {
+              "line": 6,
+              "column": 12,
+              "offset": 53
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

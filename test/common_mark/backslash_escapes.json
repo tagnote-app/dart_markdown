@@ -1,0 +1,2283 @@
+[
+  {
+    "description": "Backslash escapes, https://spec.commonmark.org/0.30/#example-12",
+    "markdown": "\\!\\\"\\#\\$\\%\\&\\'\\(\\)\\*\\+\\,\\-\\.\\/\\:\\;\\<\\=\\>\\?\\@\\[\\\\\\]\\^\\_\\`\\{\\|\\}\\~\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 64,
+          "offset": 64
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 1,
+              "offset": 1
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 2,
+              "offset": 2
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "end": {
+              "line": 0,
+              "column": 5,
+              "offset": 5
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 6,
+              "offset": 6
+            },
+            "end": {
+              "line": 0,
+              "column": 7,
+              "offset": 7
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 8,
+              "offset": 8
+            },
+            "end": {
+              "line": 0,
+              "column": 9,
+              "offset": 9
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 10,
+              "offset": 10
+            },
+            "end": {
+              "line": 0,
+              "column": 11,
+              "offset": 11
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 12,
+              "offset": 12
+            },
+            "end": {
+              "line": 0,
+              "column": 13,
+              "offset": 13
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 14,
+              "offset": 14
+            },
+            "end": {
+              "line": 0,
+              "column": 15,
+              "offset": 15
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 16,
+              "offset": 16
+            },
+            "end": {
+              "line": 0,
+              "column": 17,
+              "offset": 17
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 18,
+              "offset": 18
+            },
+            "end": {
+              "line": 0,
+              "column": 19,
+              "offset": 19
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 20,
+              "offset": 20
+            },
+            "end": {
+              "line": 0,
+              "column": 21,
+              "offset": 21
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 22,
+              "offset": 22
+            },
+            "end": {
+              "line": 0,
+              "column": 23,
+              "offset": 23
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 24,
+              "offset": 24
+            },
+            "end": {
+              "line": 0,
+              "column": 25,
+              "offset": 25
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 26,
+              "offset": 26
+            },
+            "end": {
+              "line": 0,
+              "column": 27,
+              "offset": 27
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 28,
+              "offset": 28
+            },
+            "end": {
+              "line": 0,
+              "column": 29,
+              "offset": 29
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 30,
+              "offset": 30
+            },
+            "end": {
+              "line": 0,
+              "column": 31,
+              "offset": 31
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 32,
+              "offset": 32
+            },
+            "end": {
+              "line": 0,
+              "column": 33,
+              "offset": 33
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 34,
+              "offset": 34
+            },
+            "end": {
+              "line": 0,
+              "column": 35,
+              "offset": 35
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 36,
+              "offset": 36
+            },
+            "end": {
+              "line": 0,
+              "column": 37,
+              "offset": 37
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 38,
+              "offset": 38
+            },
+            "end": {
+              "line": 0,
+              "column": 39,
+              "offset": 39
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 40,
+              "offset": 40
+            },
+            "end": {
+              "line": 0,
+              "column": 41,
+              "offset": 41
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 42,
+              "offset": 42
+            },
+            "end": {
+              "line": 0,
+              "column": 43,
+              "offset": 43
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 44,
+              "offset": 44
+            },
+            "end": {
+              "line": 0,
+              "column": 45,
+              "offset": 45
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 46,
+              "offset": 46
+            },
+            "end": {
+              "line": 0,
+              "column": 47,
+              "offset": 47
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 48,
+              "offset": 48
+            },
+            "end": {
+              "line": 0,
+              "column": 49,
+              "offset": 49
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 50,
+              "offset": 50
+            },
+            "end": {
+              "line": 0,
+              "column": 51,
+              "offset": 51
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 52,
+              "offset": 52
+            },
+            "end": {
+              "line": 0,
+              "column": 53,
+              "offset": 53
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 54,
+              "offset": 54
+            },
+            "end": {
+              "line": 0,
+              "column": 55,
+              "offset": 55
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 56,
+              "offset": 56
+            },
+            "end": {
+              "line": 0,
+              "column": 57,
+              "offset": 57
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 58,
+              "offset": 58
+            },
+            "end": {
+              "line": 0,
+              "column": 59,
+              "offset": 59
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 60,
+              "offset": 60
+            },
+            "end": {
+              "line": 0,
+              "column": 61,
+              "offset": 61
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 62,
+              "offset": 62
+            },
+            "end": {
+              "line": 0,
+              "column": 63,
+              "offset": 63
+            },
+            "text": "\\"
+          }
+        ],
+        "children": [
+          {
+            "text": "!",
+            "start": {
+              "line": 0,
+              "column": 1,
+              "offset": 1
+            },
+            "end": {
+              "line": 0,
+              "column": 2,
+              "offset": 2
+            }
+          },
+          {
+            "text": "\"",
+            "start": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "end": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            }
+          },
+          {
+            "text": "#",
+            "start": {
+              "line": 0,
+              "column": 5,
+              "offset": 5
+            },
+            "end": {
+              "line": 0,
+              "column": 6,
+              "offset": 6
+            }
+          },
+          {
+            "text": "$",
+            "start": {
+              "line": 0,
+              "column": 7,
+              "offset": 7
+            },
+            "end": {
+              "line": 0,
+              "column": 8,
+              "offset": 8
+            }
+          },
+          {
+            "text": "%",
+            "start": {
+              "line": 0,
+              "column": 9,
+              "offset": 9
+            },
+            "end": {
+              "line": 0,
+              "column": 10,
+              "offset": 10
+            }
+          },
+          {
+            "text": "&",
+            "start": {
+              "line": 0,
+              "column": 11,
+              "offset": 11
+            },
+            "end": {
+              "line": 0,
+              "column": 12,
+              "offset": 12
+            }
+          },
+          {
+            "text": "'",
+            "start": {
+              "line": 0,
+              "column": 13,
+              "offset": 13
+            },
+            "end": {
+              "line": 0,
+              "column": 14,
+              "offset": 14
+            }
+          },
+          {
+            "text": "(",
+            "start": {
+              "line": 0,
+              "column": 15,
+              "offset": 15
+            },
+            "end": {
+              "line": 0,
+              "column": 16,
+              "offset": 16
+            }
+          },
+          {
+            "text": ")",
+            "start": {
+              "line": 0,
+              "column": 17,
+              "offset": 17
+            },
+            "end": {
+              "line": 0,
+              "column": 18,
+              "offset": 18
+            }
+          },
+          {
+            "text": "*",
+            "start": {
+              "line": 0,
+              "column": 19,
+              "offset": 19
+            },
+            "end": {
+              "line": 0,
+              "column": 20,
+              "offset": 20
+            }
+          },
+          {
+            "text": "+",
+            "start": {
+              "line": 0,
+              "column": 21,
+              "offset": 21
+            },
+            "end": {
+              "line": 0,
+              "column": 22,
+              "offset": 22
+            }
+          },
+          {
+            "text": ",",
+            "start": {
+              "line": 0,
+              "column": 23,
+              "offset": 23
+            },
+            "end": {
+              "line": 0,
+              "column": 24,
+              "offset": 24
+            }
+          },
+          {
+            "text": "-",
+            "start": {
+              "line": 0,
+              "column": 25,
+              "offset": 25
+            },
+            "end": {
+              "line": 0,
+              "column": 26,
+              "offset": 26
+            }
+          },
+          {
+            "text": ".",
+            "start": {
+              "line": 0,
+              "column": 27,
+              "offset": 27
+            },
+            "end": {
+              "line": 0,
+              "column": 28,
+              "offset": 28
+            }
+          },
+          {
+            "text": "/",
+            "start": {
+              "line": 0,
+              "column": 29,
+              "offset": 29
+            },
+            "end": {
+              "line": 0,
+              "column": 30,
+              "offset": 30
+            }
+          },
+          {
+            "text": ":",
+            "start": {
+              "line": 0,
+              "column": 31,
+              "offset": 31
+            },
+            "end": {
+              "line": 0,
+              "column": 32,
+              "offset": 32
+            }
+          },
+          {
+            "text": ";",
+            "start": {
+              "line": 0,
+              "column": 33,
+              "offset": 33
+            },
+            "end": {
+              "line": 0,
+              "column": 34,
+              "offset": 34
+            }
+          },
+          {
+            "text": "<",
+            "start": {
+              "line": 0,
+              "column": 35,
+              "offset": 35
+            },
+            "end": {
+              "line": 0,
+              "column": 36,
+              "offset": 36
+            }
+          },
+          {
+            "text": "=",
+            "start": {
+              "line": 0,
+              "column": 37,
+              "offset": 37
+            },
+            "end": {
+              "line": 0,
+              "column": 38,
+              "offset": 38
+            }
+          },
+          {
+            "text": ">",
+            "start": {
+              "line": 0,
+              "column": 39,
+              "offset": 39
+            },
+            "end": {
+              "line": 0,
+              "column": 40,
+              "offset": 40
+            }
+          },
+          {
+            "text": "?",
+            "start": {
+              "line": 0,
+              "column": 41,
+              "offset": 41
+            },
+            "end": {
+              "line": 0,
+              "column": 42,
+              "offset": 42
+            }
+          },
+          {
+            "text": "@",
+            "start": {
+              "line": 0,
+              "column": 43,
+              "offset": 43
+            },
+            "end": {
+              "line": 0,
+              "column": 44,
+              "offset": 44
+            }
+          },
+          {
+            "text": "[",
+            "start": {
+              "line": 0,
+              "column": 45,
+              "offset": 45
+            },
+            "end": {
+              "line": 0,
+              "column": 46,
+              "offset": 46
+            }
+          },
+          {
+            "text": "\\",
+            "start": {
+              "line": 0,
+              "column": 47,
+              "offset": 47
+            },
+            "end": {
+              "line": 0,
+              "column": 48,
+              "offset": 48
+            }
+          },
+          {
+            "text": "]",
+            "start": {
+              "line": 0,
+              "column": 49,
+              "offset": 49
+            },
+            "end": {
+              "line": 0,
+              "column": 50,
+              "offset": 50
+            }
+          },
+          {
+            "text": "^",
+            "start": {
+              "line": 0,
+              "column": 51,
+              "offset": 51
+            },
+            "end": {
+              "line": 0,
+              "column": 52,
+              "offset": 52
+            }
+          },
+          {
+            "text": "_",
+            "start": {
+              "line": 0,
+              "column": 53,
+              "offset": 53
+            },
+            "end": {
+              "line": 0,
+              "column": 54,
+              "offset": 54
+            }
+          },
+          {
+            "text": "`",
+            "start": {
+              "line": 0,
+              "column": 55,
+              "offset": 55
+            },
+            "end": {
+              "line": 0,
+              "column": 56,
+              "offset": 56
+            }
+          },
+          {
+            "text": "{",
+            "start": {
+              "line": 0,
+              "column": 57,
+              "offset": 57
+            },
+            "end": {
+              "line": 0,
+              "column": 58,
+              "offset": 58
+            }
+          },
+          {
+            "text": "|",
+            "start": {
+              "line": 0,
+              "column": 59,
+              "offset": 59
+            },
+            "end": {
+              "line": 0,
+              "column": 60,
+              "offset": 60
+            }
+          },
+          {
+            "text": "}",
+            "start": {
+              "line": 0,
+              "column": 61,
+              "offset": 61
+            },
+            "end": {
+              "line": 0,
+              "column": 62,
+              "offset": 62
+            }
+          },
+          {
+            "text": "~",
+            "start": {
+              "line": 0,
+              "column": 63,
+              "offset": 63
+            },
+            "end": {
+              "line": 0,
+              "column": 64,
+              "offset": 64
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Backslash escapes, https://spec.commonmark.org/0.30/#example-13",
+    "markdown": "\\\t\\A\\a\\ \\3\\φ\\«\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 14,
+          "offset": 14
+        },
+        "children": [
+          {
+            "text": "\\\t\\A\\a\\ \\3\\φ\\«",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 14,
+              "offset": 14
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Backslash escapes, https://spec.commonmark.org/0.30/#example-14",
+    "markdown": "\\*not emphasized*\n\\<br/> not a tag\n\\[not a link](/foo)\n\\`not code`\n1\\. not a list\n\\* not a list\n\\# not a heading\n\\[foo]: /url \"not a reference\"\n\\&ouml; not a character entity\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 8,
+          "column": 30,
+          "offset": 174
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 1,
+              "offset": 1
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 18
+            },
+            "end": {
+              "line": 1,
+              "column": 1,
+              "offset": 19
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 35
+            },
+            "end": {
+              "line": 2,
+              "column": 1,
+              "offset": 36
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 3,
+              "column": 0,
+              "offset": 55
+            },
+            "end": {
+              "line": 3,
+              "column": 1,
+              "offset": 56
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 4,
+              "column": 1,
+              "offset": 68
+            },
+            "end": {
+              "line": 4,
+              "column": 2,
+              "offset": 69
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 5,
+              "column": 0,
+              "offset": 82
+            },
+            "end": {
+              "line": 5,
+              "column": 1,
+              "offset": 83
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 6,
+              "column": 0,
+              "offset": 96
+            },
+            "end": {
+              "line": 6,
+              "column": 1,
+              "offset": 97
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 7,
+              "column": 0,
+              "offset": 113
+            },
+            "end": {
+              "line": 7,
+              "column": 1,
+              "offset": 114
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 8,
+              "column": 0,
+              "offset": 144
+            },
+            "end": {
+              "line": 8,
+              "column": 1,
+              "offset": 145
+            },
+            "text": "\\"
+          }
+        ],
+        "children": [
+          {
+            "text": "*",
+            "start": {
+              "line": 0,
+              "column": 1,
+              "offset": 1
+            },
+            "end": {
+              "line": 0,
+              "column": 2,
+              "offset": 2
+            }
+          },
+          {
+            "text": "not emphasized*\n",
+            "start": {
+              "line": 0,
+              "column": 2,
+              "offset": 2
+            },
+            "end": {
+              "line": 1,
+              "column": 0,
+              "offset": 18
+            }
+          },
+          {
+            "text": "<",
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 19
+            },
+            "end": {
+              "line": 1,
+              "column": 2,
+              "offset": 20
+            }
+          },
+          {
+            "text": "br/> not a tag\n",
+            "start": {
+              "line": 1,
+              "column": 2,
+              "offset": 20
+            },
+            "end": {
+              "line": 2,
+              "column": 0,
+              "offset": 35
+            }
+          },
+          {
+            "text": "[",
+            "start": {
+              "line": 2,
+              "column": 1,
+              "offset": 36
+            },
+            "end": {
+              "line": 2,
+              "column": 2,
+              "offset": 37
+            }
+          },
+          {
+            "text": "not a link](/foo)\n",
+            "start": {
+              "line": 2,
+              "column": 2,
+              "offset": 37
+            },
+            "end": {
+              "line": 3,
+              "column": 0,
+              "offset": 55
+            }
+          },
+          {
+            "text": "`",
+            "start": {
+              "line": 3,
+              "column": 1,
+              "offset": 56
+            },
+            "end": {
+              "line": 3,
+              "column": 2,
+              "offset": 57
+            }
+          },
+          {
+            "text": "not code`\n1",
+            "start": {
+              "line": 3,
+              "column": 2,
+              "offset": 57
+            },
+            "end": {
+              "line": 4,
+              "column": 1,
+              "offset": 68
+            }
+          },
+          {
+            "text": ".",
+            "start": {
+              "line": 4,
+              "column": 2,
+              "offset": 69
+            },
+            "end": {
+              "line": 4,
+              "column": 3,
+              "offset": 70
+            }
+          },
+          {
+            "text": " not a list\n",
+            "start": {
+              "line": 4,
+              "column": 3,
+              "offset": 70
+            },
+            "end": {
+              "line": 5,
+              "column": 0,
+              "offset": 82
+            }
+          },
+          {
+            "text": "*",
+            "start": {
+              "line": 5,
+              "column": 1,
+              "offset": 83
+            },
+            "end": {
+              "line": 5,
+              "column": 2,
+              "offset": 84
+            }
+          },
+          {
+            "text": " not a list\n",
+            "start": {
+              "line": 5,
+              "column": 2,
+              "offset": 84
+            },
+            "end": {
+              "line": 6,
+              "column": 0,
+              "offset": 96
+            }
+          },
+          {
+            "text": "#",
+            "start": {
+              "line": 6,
+              "column": 1,
+              "offset": 97
+            },
+            "end": {
+              "line": 6,
+              "column": 2,
+              "offset": 98
+            }
+          },
+          {
+            "text": " not a heading\n",
+            "start": {
+              "line": 6,
+              "column": 2,
+              "offset": 98
+            },
+            "end": {
+              "line": 7,
+              "column": 0,
+              "offset": 113
+            }
+          },
+          {
+            "text": "[",
+            "start": {
+              "line": 7,
+              "column": 1,
+              "offset": 114
+            },
+            "end": {
+              "line": 7,
+              "column": 2,
+              "offset": 115
+            }
+          },
+          {
+            "text": "foo]: /url \"not a reference\"\n",
+            "start": {
+              "line": 7,
+              "column": 2,
+              "offset": 115
+            },
+            "end": {
+              "line": 8,
+              "column": 0,
+              "offset": 144
+            }
+          },
+          {
+            "text": "&",
+            "start": {
+              "line": 8,
+              "column": 1,
+              "offset": 145
+            },
+            "end": {
+              "line": 8,
+              "column": 2,
+              "offset": 146
+            }
+          },
+          {
+            "text": "ouml; not a character entity",
+            "start": {
+              "line": 8,
+              "column": 2,
+              "offset": 146
+            },
+            "end": {
+              "line": 8,
+              "column": 30,
+              "offset": 174
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Backslash escapes, https://spec.commonmark.org/0.30/#example-15",
+    "markdown": "\\\\*emphasis*\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 12,
+          "offset": 12
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 1,
+              "offset": 1
+            },
+            "text": "\\"
+          }
+        ],
+        "children": [
+          {
+            "text": "\\",
+            "start": {
+              "line": 0,
+              "column": 1,
+              "offset": 1
+            },
+            "end": {
+              "line": 0,
+              "column": 2,
+              "offset": 2
+            }
+          },
+          {
+            "type": "emphasis",
+            "start": {
+              "line": 0,
+              "column": 2,
+              "offset": 2
+            },
+            "end": {
+              "line": 0,
+              "column": 12,
+              "offset": 12
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 2,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                },
+                "text": "*"
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 11,
+                  "offset": 11
+                },
+                "end": {
+                  "line": 0,
+                  "column": 12,
+                  "offset": 12
+                },
+                "text": "*"
+              }
+            ],
+            "children": [
+              {
+                "text": "emphasis",
+                "start": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                },
+                "end": {
+                  "line": 0,
+                  "column": 11,
+                  "offset": 11
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Backslash escapes, https://spec.commonmark.org/0.30/#example-16",
+    "markdown": "foo\\\nbar\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 3,
+          "offset": 8
+        },
+        "children": [
+          {
+            "text": "foo",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            }
+          },
+          {
+            "type": "hardLineBreak",
+            "start": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "end": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                },
+                "end": {
+                  "line": 0,
+                  "column": 4,
+                  "offset": 4
+                },
+                "text": "\\"
+              }
+            ]
+          },
+          {
+            "text": "bar",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 5
+            },
+            "end": {
+              "line": 1,
+              "column": 3,
+              "offset": 8
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Backslash escapes, https://spec.commonmark.org/0.30/#example-17",
+    "markdown": "`` \\[\\` ``\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 10,
+          "offset": 10
+        },
+        "children": [
+          {
+            "type": "inlineCode",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 10,
+              "offset": 10
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 2,
+                  "offset": 2
+                },
+                "text": "``"
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 8,
+                  "offset": 8
+                },
+                "end": {
+                  "line": 0,
+                  "column": 10,
+                  "offset": 10
+                },
+                "text": "``"
+              }
+            ],
+            "children": [
+              {
+                "text": "\\[\\`",
+                "start": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                },
+                "end": {
+                  "line": 0,
+                  "column": 7,
+                  "offset": 7
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Backslash escapes, https://spec.commonmark.org/0.30/#example-18",
+    "markdown": "    \\[\\]\n",
+    "expected": [
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 0,
+          "column": 4,
+          "offset": 4
+        },
+        "end": {
+          "line": 1,
+          "column": 0,
+          "offset": 9
+        },
+        "children": [
+          {
+            "text": "\\[\\]\n",
+            "start": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "end": {
+              "line": 1,
+              "column": 0,
+              "offset": 9
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Backslash escapes, https://spec.commonmark.org/0.30/#example-19",
+    "markdown": "~~~\n\\[\\]\n~~~\n",
+    "expected": [
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 2,
+          "column": 3,
+          "offset": 12
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "text": "~~~"
+          },
+          {
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 9
+            },
+            "end": {
+              "line": 2,
+              "column": 3,
+              "offset": 12
+            },
+            "text": "~~~"
+          }
+        ],
+        "children": [
+          {
+            "text": "\\[\\]\n",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 4
+            },
+            "end": {
+              "line": 2,
+              "column": 0,
+              "offset": 9
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Backslash escapes, https://spec.commonmark.org/0.30/#example-20",
+    "markdown": "<http://example.com?find=\\*>\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 28,
+          "offset": 28
+        },
+        "children": [
+          {
+            "type": "link",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 28,
+              "offset": 28
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "<"
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 27,
+                  "offset": 27
+                },
+                "end": {
+                  "line": 0,
+                  "column": 28,
+                  "offset": 28
+                },
+                "text": ">"
+              }
+            ],
+            "children": [
+              {
+                "text": "http://example.com?find=\\*",
+                "start": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "end": {
+                  "line": 0,
+                  "column": 27,
+                  "offset": 27
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "http://example.com?find=%5C*",
+              "text": "http://example.com?find=\\*"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Backslash escapes, https://spec.commonmark.org/0.30/#example-21",
+    "markdown": "<a href=\"/bar\\/)\">\n",
+    "expected": [
+      {
+        "type": "htmlBlock",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 18,
+          "offset": 18
+        },
+        "children": [
+          {
+            "text": "<a href=\"/bar\\/)\">",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 18,
+              "offset": 18
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Backslash escapes, https://spec.commonmark.org/0.30/#example-22",
+    "markdown": "[foo](/bar\\* \"ti\\*tle\")\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 23,
+          "offset": 23
+        },
+        "children": [
+          {
+            "type": "link",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 23,
+              "offset": 23
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "["
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 4,
+                  "offset": 4
+                },
+                "end": {
+                  "line": 0,
+                  "column": 5,
+                  "offset": 5
+                },
+                "text": "]"
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 5,
+                  "offset": 5
+                },
+                "end": {
+                  "line": 0,
+                  "column": 6,
+                  "offset": 6
+                },
+                "text": "("
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 6,
+                  "offset": 6
+                },
+                "end": {
+                  "line": 0,
+                  "column": 12,
+                  "offset": 12
+                },
+                "text": "/bar\\*"
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 10,
+                  "offset": 10
+                },
+                "end": {
+                  "line": 0,
+                  "column": 11,
+                  "offset": 11
+                },
+                "text": "\\"
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 13,
+                  "offset": 13
+                },
+                "end": {
+                  "line": 0,
+                  "column": 14,
+                  "offset": 14
+                },
+                "text": "\""
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 14,
+                  "offset": 14
+                },
+                "end": {
+                  "line": 0,
+                  "column": 21,
+                  "offset": 21
+                },
+                "text": "ti\\*tle"
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 21,
+                  "offset": 21
+                },
+                "end": {
+                  "line": 0,
+                  "column": 22,
+                  "offset": 22
+                },
+                "text": "\""
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 16,
+                  "offset": 16
+                },
+                "end": {
+                  "line": 0,
+                  "column": 17,
+                  "offset": 17
+                },
+                "text": "\\"
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 22,
+                  "offset": 22
+                },
+                "end": {
+                  "line": 0,
+                  "column": 23,
+                  "offset": 23
+                },
+                "text": ")"
+              }
+            ],
+            "children": [
+              {
+                "text": "foo",
+                "start": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "end": {
+                  "line": 0,
+                  "column": 4,
+                  "offset": 4
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "/bar*",
+              "title": "ti*tle"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Backslash escapes, https://spec.commonmark.org/0.30/#example-23",
+    "markdown": "[foo]\n\n[foo]: /bar\\* \"ti\\*tle\"\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 5,
+          "offset": 5
+        },
+        "children": [
+          {
+            "type": "link",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 5,
+              "offset": 5
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "["
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 4,
+                  "offset": 4
+                },
+                "end": {
+                  "line": 0,
+                  "column": 5,
+                  "offset": 5
+                },
+                "text": "]"
+              }
+            ],
+            "children": [
+              {
+                "text": "foo",
+                "start": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "end": {
+                  "line": 0,
+                  "column": 4,
+                  "offset": 4
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "/bar*",
+              "title": "ti*tle"
+            }
+          }
+        ]
+      },
+      {
+        "type": "linkReferenceDefinition",
+        "start": {
+          "line": 2,
+          "column": 0,
+          "offset": 7
+        },
+        "end": {
+          "line": 2,
+          "column": 23,
+          "offset": 30
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 7
+            },
+            "end": {
+              "line": 2,
+              "column": 1,
+              "offset": 8
+            },
+            "text": "["
+          },
+          {
+            "start": {
+              "line": 2,
+              "column": 4,
+              "offset": 11
+            },
+            "end": {
+              "line": 2,
+              "column": 5,
+              "offset": 12
+            },
+            "text": "]"
+          },
+          {
+            "start": {
+              "line": 2,
+              "column": 5,
+              "offset": 12
+            },
+            "end": {
+              "line": 2,
+              "column": 6,
+              "offset": 13
+            },
+            "text": ":"
+          },
+          {
+            "start": {
+              "line": 2,
+              "column": 7,
+              "offset": 14
+            },
+            "end": {
+              "line": 2,
+              "column": 13,
+              "offset": 20
+            },
+            "text": "/bar\\*"
+          },
+          {
+            "start": {
+              "line": 2,
+              "column": 11,
+              "offset": 18
+            },
+            "end": {
+              "line": 2,
+              "column": 12,
+              "offset": 19
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 2,
+              "column": 14,
+              "offset": 21
+            },
+            "end": {
+              "line": 2,
+              "column": 15,
+              "offset": 22
+            },
+            "text": "\""
+          },
+          {
+            "start": {
+              "line": 2,
+              "column": 15,
+              "offset": 22
+            },
+            "end": {
+              "line": 2,
+              "column": 22,
+              "offset": 29
+            },
+            "text": "ti\\*tle"
+          },
+          {
+            "start": {
+              "line": 2,
+              "column": 22,
+              "offset": 29
+            },
+            "end": {
+              "line": 2,
+              "column": 23,
+              "offset": 30
+            },
+            "text": "\""
+          },
+          {
+            "start": {
+              "line": 2,
+              "column": 17,
+              "offset": 24
+            },
+            "end": {
+              "line": 2,
+              "column": 18,
+              "offset": 25
+            },
+            "text": "\\"
+          }
+        ],
+        "children": [
+          {
+            "type": "linkReferenceDefinitionLabel",
+            "start": {
+              "line": 2,
+              "column": 1,
+              "offset": 8
+            },
+            "end": {
+              "line": 2,
+              "column": 4,
+              "offset": 11
+            },
+            "children": [
+              {
+                "text": "foo",
+                "start": {
+                  "line": 2,
+                  "column": 1,
+                  "offset": 8
+                },
+                "end": {
+                  "line": 2,
+                  "column": 4,
+                  "offset": 11
+                }
+              }
+            ]
+          },
+          {
+            "type": "linkReferenceDefinitionDestination",
+            "start": {
+              "line": 2,
+              "column": 7,
+              "offset": 14
+            },
+            "end": {
+              "line": 2,
+              "column": 13,
+              "offset": 20
+            },
+            "children": [
+              {
+                "text": "/bar\\*",
+                "start": {
+                  "line": 2,
+                  "column": 7,
+                  "offset": 14
+                },
+                "end": {
+                  "line": 2,
+                  "column": 13,
+                  "offset": 20
+                }
+              }
+            ]
+          },
+          {
+            "type": "linkReferenceDefinitionTitle",
+            "start": {
+              "line": 2,
+              "column": 15,
+              "offset": 22
+            },
+            "end": {
+              "line": 2,
+              "column": 22,
+              "offset": 29
+            },
+            "children": [
+              {
+                "text": "ti\\*tle",
+                "start": {
+                  "line": 2,
+                  "column": 15,
+                  "offset": 22
+                },
+                "end": {
+                  "line": 2,
+                  "column": 22,
+                  "offset": 29
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Backslash escapes, https://spec.commonmark.org/0.30/#example-24",
+    "markdown": "``` foo\\+bar\nfoo\n```\n",
+    "expected": [
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 2,
+          "column": 3,
+          "offset": 20
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 12,
+              "offset": 12
+            },
+            "text": "``` foo\\+bar"
+          },
+          {
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 17
+            },
+            "end": {
+              "line": 2,
+              "column": 3,
+              "offset": 20
+            },
+            "text": "```"
+          }
+        ],
+        "children": [
+          {
+            "text": "foo\n",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 13
+            },
+            "end": {
+              "line": 2,
+              "column": 0,
+              "offset": 17
+            }
+          }
+        ],
+        "attributes": {
+          "infoString": "foo+bar",
+          "language": "foo+bar"
+        }
+      }
+    ]
+  }
+]

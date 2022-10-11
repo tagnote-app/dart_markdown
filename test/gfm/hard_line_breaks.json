@@ -1,0 +1,1052 @@
+[
+  {
+    "description": "Hard line breaks, https://github.github.com/gfm/#example-654",
+    "markdown": "foo  \nbaz\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 3,
+          "offset": 9
+        },
+        "children": [
+          {
+            "text": "foo",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            }
+          },
+          {
+            "type": "hardLineBreak",
+            "start": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "end": {
+              "line": 0,
+              "column": 5,
+              "offset": 5
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                },
+                "end": {
+                  "line": 0,
+                  "column": 5,
+                  "offset": 5
+                },
+                "text": "  "
+              }
+            ]
+          },
+          {
+            "text": "baz",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 6
+            },
+            "end": {
+              "line": 1,
+              "column": 3,
+              "offset": 9
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Hard line breaks, https://github.github.com/gfm/#example-655",
+    "markdown": "foo\\\nbaz\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 3,
+          "offset": 8
+        },
+        "children": [
+          {
+            "text": "foo",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            }
+          },
+          {
+            "type": "hardLineBreak",
+            "start": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "end": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                },
+                "end": {
+                  "line": 0,
+                  "column": 4,
+                  "offset": 4
+                },
+                "text": "\\"
+              }
+            ]
+          },
+          {
+            "text": "baz",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 5
+            },
+            "end": {
+              "line": 1,
+              "column": 3,
+              "offset": 8
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Hard line breaks, https://github.github.com/gfm/#example-656",
+    "markdown": "foo       \nbaz\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 3,
+          "offset": 14
+        },
+        "children": [
+          {
+            "text": "foo",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            }
+          },
+          {
+            "type": "hardLineBreak",
+            "start": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "end": {
+              "line": 0,
+              "column": 10,
+              "offset": 10
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                },
+                "end": {
+                  "line": 0,
+                  "column": 10,
+                  "offset": 10
+                },
+                "text": "       "
+              }
+            ]
+          },
+          {
+            "text": "baz",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 11
+            },
+            "end": {
+              "line": 1,
+              "column": 3,
+              "offset": 14
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Hard line breaks, https://github.github.com/gfm/#example-657",
+    "markdown": "foo  \n     bar\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 8,
+          "offset": 14
+        },
+        "children": [
+          {
+            "text": "foo",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            }
+          },
+          {
+            "type": "hardLineBreak",
+            "start": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "end": {
+              "line": 0,
+              "column": 5,
+              "offset": 5
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                },
+                "end": {
+                  "line": 0,
+                  "column": 5,
+                  "offset": 5
+                },
+                "text": "  "
+              }
+            ]
+          },
+          {
+            "text": "bar",
+            "start": {
+              "line": 1,
+              "column": 5,
+              "offset": 11
+            },
+            "end": {
+              "line": 1,
+              "column": 8,
+              "offset": 14
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Hard line breaks, https://github.github.com/gfm/#example-658",
+    "markdown": "foo\\\n     bar\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 8,
+          "offset": 13
+        },
+        "children": [
+          {
+            "text": "foo",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            }
+          },
+          {
+            "type": "hardLineBreak",
+            "start": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "end": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                },
+                "end": {
+                  "line": 0,
+                  "column": 4,
+                  "offset": 4
+                },
+                "text": "\\"
+              }
+            ]
+          },
+          {
+            "text": "bar",
+            "start": {
+              "line": 1,
+              "column": 5,
+              "offset": 10
+            },
+            "end": {
+              "line": 1,
+              "column": 8,
+              "offset": 13
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Hard line breaks, https://github.github.com/gfm/#example-659",
+    "markdown": "*foo  \nbar*\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 4,
+          "offset": 11
+        },
+        "children": [
+          {
+            "type": "emphasis",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 4,
+              "offset": 11
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "*"
+              },
+              {
+                "start": {
+                  "line": 1,
+                  "column": 3,
+                  "offset": 10
+                },
+                "end": {
+                  "line": 1,
+                  "column": 4,
+                  "offset": 11
+                },
+                "text": "*"
+              }
+            ],
+            "children": [
+              {
+                "text": "foo",
+                "start": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "end": {
+                  "line": 0,
+                  "column": 4,
+                  "offset": 4
+                }
+              },
+              {
+                "type": "hardLineBreak",
+                "start": {
+                  "line": 0,
+                  "column": 4,
+                  "offset": 4
+                },
+                "end": {
+                  "line": 0,
+                  "column": 6,
+                  "offset": 6
+                },
+                "markers": [
+                  {
+                    "start": {
+                      "line": 0,
+                      "column": 4,
+                      "offset": 4
+                    },
+                    "end": {
+                      "line": 0,
+                      "column": 6,
+                      "offset": 6
+                    },
+                    "text": "  "
+                  }
+                ]
+              },
+              {
+                "text": "bar",
+                "start": {
+                  "line": 1,
+                  "column": 0,
+                  "offset": 7
+                },
+                "end": {
+                  "line": 1,
+                  "column": 3,
+                  "offset": 10
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Hard line breaks, https://github.github.com/gfm/#example-660",
+    "markdown": "*foo\\\nbar*\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 4,
+          "offset": 10
+        },
+        "children": [
+          {
+            "type": "emphasis",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 4,
+              "offset": 10
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "*"
+              },
+              {
+                "start": {
+                  "line": 1,
+                  "column": 3,
+                  "offset": 9
+                },
+                "end": {
+                  "line": 1,
+                  "column": 4,
+                  "offset": 10
+                },
+                "text": "*"
+              }
+            ],
+            "children": [
+              {
+                "text": "foo",
+                "start": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "end": {
+                  "line": 0,
+                  "column": 4,
+                  "offset": 4
+                }
+              },
+              {
+                "type": "hardLineBreak",
+                "start": {
+                  "line": 0,
+                  "column": 4,
+                  "offset": 4
+                },
+                "end": {
+                  "line": 0,
+                  "column": 5,
+                  "offset": 5
+                },
+                "markers": [
+                  {
+                    "start": {
+                      "line": 0,
+                      "column": 4,
+                      "offset": 4
+                    },
+                    "end": {
+                      "line": 0,
+                      "column": 5,
+                      "offset": 5
+                    },
+                    "text": "\\"
+                  }
+                ]
+              },
+              {
+                "text": "bar",
+                "start": {
+                  "line": 1,
+                  "column": 0,
+                  "offset": 6
+                },
+                "end": {
+                  "line": 1,
+                  "column": 3,
+                  "offset": 9
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Hard line breaks, https://github.github.com/gfm/#example-661",
+    "markdown": "`code  \nspan`\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 5,
+          "offset": 13
+        },
+        "children": [
+          {
+            "type": "inlineCode",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 5,
+              "offset": 13
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "`"
+              },
+              {
+                "start": {
+                  "line": 1,
+                  "column": 4,
+                  "offset": 12
+                },
+                "end": {
+                  "line": 1,
+                  "column": 5,
+                  "offset": 13
+                },
+                "text": "`"
+              }
+            ],
+            "children": [
+              {
+                "text": "code  \nspan",
+                "textContent": "code   span",
+                "start": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "end": {
+                  "line": 1,
+                  "column": 4,
+                  "offset": 12
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Hard line breaks, https://github.github.com/gfm/#example-662",
+    "markdown": "`code\\\nspan`\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 5,
+          "offset": 12
+        },
+        "children": [
+          {
+            "type": "inlineCode",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 5,
+              "offset": 12
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "`"
+              },
+              {
+                "start": {
+                  "line": 1,
+                  "column": 4,
+                  "offset": 11
+                },
+                "end": {
+                  "line": 1,
+                  "column": 5,
+                  "offset": 12
+                },
+                "text": "`"
+              }
+            ],
+            "children": [
+              {
+                "text": "code\\\nspan",
+                "textContent": "code\\ span",
+                "start": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "end": {
+                  "line": 1,
+                  "column": 4,
+                  "offset": 11
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Hard line breaks, https://github.github.com/gfm/#example-663",
+    "markdown": "<a href=\"foo  \nbar\">\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 5,
+          "offset": 20
+        },
+        "children": [
+          {
+            "type": "inlineHtml",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 5,
+              "offset": 20
+            },
+            "children": [
+              {
+                "text": "<a href=\"foo  \nbar\">",
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 1,
+                  "column": 5,
+                  "offset": 20
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Hard line breaks, https://github.github.com/gfm/#example-664",
+    "markdown": "<a href=\"foo\\\nbar\">\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 5,
+          "offset": 19
+        },
+        "children": [
+          {
+            "type": "inlineHtml",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 5,
+              "offset": 19
+            },
+            "children": [
+              {
+                "text": "<a href=\"foo\\\nbar\">",
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 1,
+                  "column": 5,
+                  "offset": 19
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Hard line breaks, https://github.github.com/gfm/#example-665",
+    "markdown": "foo\\\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 4,
+          "offset": 4
+        },
+        "children": [
+          {
+            "text": "foo\\",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Hard line breaks, https://github.github.com/gfm/#example-666",
+    "markdown": "foo  \n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 3,
+          "offset": 3
+        },
+        "children": [
+          {
+            "text": "foo",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Hard line breaks, https://github.github.com/gfm/#example-667",
+    "markdown": "### foo\\\n",
+    "expected": [
+      {
+        "type": "headline",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 8,
+          "offset": 8
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "text": "###"
+          }
+        ],
+        "children": [
+          {
+            "text": "foo\\",
+            "start": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "end": {
+              "line": 0,
+              "column": 8,
+              "offset": 8
+            }
+          }
+        ],
+        "attributes": {
+          "level": "3"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Hard line breaks, https://github.github.com/gfm/#example-668",
+    "markdown": "### foo  \n",
+    "expected": [
+      {
+        "type": "headline",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 9,
+          "offset": 9
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "text": "###"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 9,
+              "offset": 9
+            },
+            "end": {
+              "line": 0,
+              "column": 9,
+              "offset": 9
+            },
+            "text": ""
+          }
+        ],
+        "children": [
+          {
+            "text": "foo",
+            "start": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "end": {
+              "line": 0,
+              "column": 7,
+              "offset": 7
+            }
+          }
+        ],
+        "attributes": {
+          "level": "3"
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "description": "Blank lines, https://github.github.com/gfm/#example-197",
+    "markdown": "  \n\naaa\n  \n\n# aaa\n\n  \n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 2,
+          "column": 0,
+          "offset": 4
+        },
+        "end": {
+          "line": 2,
+          "column": 3,
+          "offset": 7
+        },
+        "children": [
+          {
+            "text": "aaa",
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 4
+            },
+            "end": {
+              "line": 2,
+              "column": 3,
+              "offset": 7
+            }
+          }
+        ]
+      },
+      {
+        "type": "headline",
+        "start": {
+          "line": 5,
+          "column": 0,
+          "offset": 12
+        },
+        "end": {
+          "line": 5,
+          "column": 5,
+          "offset": 17
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 5,
+              "column": 0,
+              "offset": 12
+            },
+            "end": {
+              "line": 5,
+              "column": 1,
+              "offset": 13
+            },
+            "text": "#"
+          }
+        ],
+        "children": [
+          {
+            "text": "aaa",
+            "start": {
+              "line": 5,
+              "column": 2,
+              "offset": 14
+            },
+            "end": {
+              "line": 5,
+              "column": 5,
+              "offset": 17
+            }
+          }
+        ],
+        "attributes": {
+          "level": "1"
+        }
+      }
+    ]
+  }
+]

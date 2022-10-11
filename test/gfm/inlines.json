@@ -1,0 +1,92 @@
+[
+  {
+    "description": "Inlines, https://github.github.com/gfm/#example-307",
+    "markdown": "`hi`lo`\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 7,
+          "offset": 7
+        },
+        "children": [
+          {
+            "type": "inlineCode",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "`"
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                },
+                "end": {
+                  "line": 0,
+                  "column": 4,
+                  "offset": 4
+                },
+                "text": "`"
+              }
+            ],
+            "children": [
+              {
+                "text": "hi",
+                "start": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "end": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                }
+              }
+            ]
+          },
+          {
+            "text": "lo`",
+            "start": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "end": {
+              "line": 0,
+              "column": 7,
+              "offset": 7
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

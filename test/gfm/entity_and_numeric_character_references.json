@@ -1,0 +1,1136 @@
+[
+  {
+    "description": "Entity and numeric character references, https://github.github.com/gfm/#example-321",
+    "markdown": "&nbsp; &amp; &copy; &AElig; &Dcaron;\n&frac34; &HilbertSpace; &DifferentialD;\n&ClockwiseContourIntegral; &ngE;\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 2,
+          "column": 32,
+          "offset": 109
+        },
+        "children": [
+          {
+            "text": "&nbsp; &amp; &copy; &AElig; &Dcaron;\n&frac34; &HilbertSpace; &DifferentialD;\n&ClockwiseContourIntegral; &ngE;",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "column": 32,
+              "offset": 109
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Entity and numeric character references, https://github.github.com/gfm/#example-322",
+    "markdown": "&#35; &#1234; &#992; &#0;\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 25,
+          "offset": 25
+        },
+        "children": [
+          {
+            "text": "&#35; &#1234; &#992; &#0;",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 25,
+              "offset": 25
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Entity and numeric character references, https://github.github.com/gfm/#example-323",
+    "markdown": "&#X22; &#XD06; &#xcab;\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 22,
+          "offset": 22
+        },
+        "children": [
+          {
+            "text": "&#X22; &#XD06; &#xcab;",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 22,
+              "offset": 22
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Entity and numeric character references, https://github.github.com/gfm/#example-324",
+    "markdown": "&nbsp &x; &#; &#x;\n&#987654321;\n&#abcdef0;\n&ThisIsNotDefined; &hi?;\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 24,
+          "offset": 67
+        },
+        "children": [
+          {
+            "text": "&nbsp &x; &#; &#x;\n&#987654321;\n&#abcdef0;\n&ThisIsNotDefined; &hi?;",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "column": 24,
+              "offset": 67
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Entity and numeric character references, https://github.github.com/gfm/#example-325",
+    "markdown": "&copy\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 5,
+          "offset": 5
+        },
+        "children": [
+          {
+            "text": "&copy",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 5,
+              "offset": 5
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Entity and numeric character references, https://github.github.com/gfm/#example-326",
+    "markdown": "&MadeUpEntity;\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 14,
+          "offset": 14
+        },
+        "children": [
+          {
+            "text": "&MadeUpEntity;",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 14,
+              "offset": 14
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Entity and numeric character references, https://github.github.com/gfm/#example-327",
+    "markdown": "<a href=\"&ouml;&ouml;.html\">\n",
+    "expected": [
+      {
+        "type": "htmlBlock",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 28,
+          "offset": 28
+        },
+        "children": [
+          {
+            "text": "<a href=\"&ouml;&ouml;.html\">",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 28,
+              "offset": 28
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Entity and numeric character references, https://github.github.com/gfm/#example-328",
+    "markdown": "[foo](/f&ouml;&ouml; \"f&ouml;&ouml;\")\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 37,
+          "offset": 37
+        },
+        "children": [
+          {
+            "type": "link",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 37,
+              "offset": 37
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "["
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 4,
+                  "offset": 4
+                },
+                "end": {
+                  "line": 0,
+                  "column": 5,
+                  "offset": 5
+                },
+                "text": "]"
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 5,
+                  "offset": 5
+                },
+                "end": {
+                  "line": 0,
+                  "column": 6,
+                  "offset": 6
+                },
+                "text": "("
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 6,
+                  "offset": 6
+                },
+                "end": {
+                  "line": 0,
+                  "column": 20,
+                  "offset": 20
+                },
+                "text": "/f&ouml;&ouml;"
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 21,
+                  "offset": 21
+                },
+                "end": {
+                  "line": 0,
+                  "column": 22,
+                  "offset": 22
+                },
+                "text": "\""
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 22,
+                  "offset": 22
+                },
+                "end": {
+                  "line": 0,
+                  "column": 35,
+                  "offset": 35
+                },
+                "text": "f&ouml;&ouml;"
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 35,
+                  "offset": 35
+                },
+                "end": {
+                  "line": 0,
+                  "column": 36,
+                  "offset": 36
+                },
+                "text": "\""
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 36,
+                  "offset": 36
+                },
+                "end": {
+                  "line": 0,
+                  "column": 37,
+                  "offset": 37
+                },
+                "text": ")"
+              }
+            ],
+            "children": [
+              {
+                "text": "foo",
+                "start": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "end": {
+                  "line": 0,
+                  "column": 4,
+                  "offset": 4
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "/f%C3%B6%C3%B6",
+              "title": "föö"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Entity and numeric character references, https://github.github.com/gfm/#example-329",
+    "markdown": "[foo]\n\n[foo]: /f&ouml;&ouml; \"f&ouml;&ouml;\"\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 5,
+          "offset": 5
+        },
+        "children": [
+          {
+            "type": "link",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 5,
+              "offset": 5
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "["
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 4,
+                  "offset": 4
+                },
+                "end": {
+                  "line": 0,
+                  "column": 5,
+                  "offset": 5
+                },
+                "text": "]"
+              }
+            ],
+            "children": [
+              {
+                "text": "foo",
+                "start": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "end": {
+                  "line": 0,
+                  "column": 4,
+                  "offset": 4
+                }
+              }
+            ],
+            "attributes": {
+              "destination": "/f%C3%B6%C3%B6",
+              "title": "föö"
+            }
+          }
+        ]
+      },
+      {
+        "type": "linkReferenceDefinition",
+        "start": {
+          "line": 2,
+          "column": 0,
+          "offset": 7
+        },
+        "end": {
+          "line": 2,
+          "column": 37,
+          "offset": 44
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 7
+            },
+            "end": {
+              "line": 2,
+              "column": 1,
+              "offset": 8
+            },
+            "text": "["
+          },
+          {
+            "start": {
+              "line": 2,
+              "column": 4,
+              "offset": 11
+            },
+            "end": {
+              "line": 2,
+              "column": 5,
+              "offset": 12
+            },
+            "text": "]"
+          },
+          {
+            "start": {
+              "line": 2,
+              "column": 5,
+              "offset": 12
+            },
+            "end": {
+              "line": 2,
+              "column": 6,
+              "offset": 13
+            },
+            "text": ":"
+          },
+          {
+            "start": {
+              "line": 2,
+              "column": 7,
+              "offset": 14
+            },
+            "end": {
+              "line": 2,
+              "column": 21,
+              "offset": 28
+            },
+            "text": "/f&ouml;&ouml;"
+          },
+          {
+            "start": {
+              "line": 2,
+              "column": 22,
+              "offset": 29
+            },
+            "end": {
+              "line": 2,
+              "column": 23,
+              "offset": 30
+            },
+            "text": "\""
+          },
+          {
+            "start": {
+              "line": 2,
+              "column": 23,
+              "offset": 30
+            },
+            "end": {
+              "line": 2,
+              "column": 36,
+              "offset": 43
+            },
+            "text": "f&ouml;&ouml;"
+          },
+          {
+            "start": {
+              "line": 2,
+              "column": 36,
+              "offset": 43
+            },
+            "end": {
+              "line": 2,
+              "column": 37,
+              "offset": 44
+            },
+            "text": "\""
+          }
+        ],
+        "children": [
+          {
+            "type": "linkReferenceDefinitionLabel",
+            "start": {
+              "line": 2,
+              "column": 1,
+              "offset": 8
+            },
+            "end": {
+              "line": 2,
+              "column": 4,
+              "offset": 11
+            },
+            "children": [
+              {
+                "text": "foo",
+                "start": {
+                  "line": 2,
+                  "column": 1,
+                  "offset": 8
+                },
+                "end": {
+                  "line": 2,
+                  "column": 4,
+                  "offset": 11
+                }
+              }
+            ]
+          },
+          {
+            "type": "linkReferenceDefinitionDestination",
+            "start": {
+              "line": 2,
+              "column": 7,
+              "offset": 14
+            },
+            "end": {
+              "line": 2,
+              "column": 21,
+              "offset": 28
+            },
+            "children": [
+              {
+                "text": "/f&ouml;&ouml;",
+                "start": {
+                  "line": 2,
+                  "column": 7,
+                  "offset": 14
+                },
+                "end": {
+                  "line": 2,
+                  "column": 21,
+                  "offset": 28
+                }
+              }
+            ]
+          },
+          {
+            "type": "linkReferenceDefinitionTitle",
+            "start": {
+              "line": 2,
+              "column": 23,
+              "offset": 30
+            },
+            "end": {
+              "line": 2,
+              "column": 36,
+              "offset": 43
+            },
+            "children": [
+              {
+                "text": "f&ouml;&ouml;",
+                "start": {
+                  "line": 2,
+                  "column": 23,
+                  "offset": 30
+                },
+                "end": {
+                  "line": 2,
+                  "column": 36,
+                  "offset": 43
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Entity and numeric character references, https://github.github.com/gfm/#example-330",
+    "markdown": "``` f&ouml;&ouml;\nfoo\n```\n",
+    "expected": [
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 2,
+          "column": 3,
+          "offset": 25
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 17,
+              "offset": 17
+            },
+            "text": "``` f&ouml;&ouml;"
+          },
+          {
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 22
+            },
+            "end": {
+              "line": 2,
+              "column": 3,
+              "offset": 25
+            },
+            "text": "```"
+          }
+        ],
+        "children": [
+          {
+            "text": "foo\n",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 18
+            },
+            "end": {
+              "line": 2,
+              "column": 0,
+              "offset": 22
+            }
+          }
+        ],
+        "attributes": {
+          "infoString": "föö",
+          "language": "föö"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Entity and numeric character references, https://github.github.com/gfm/#example-331",
+    "markdown": "`f&ouml;&ouml;`\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 15,
+          "offset": 15
+        },
+        "children": [
+          {
+            "type": "inlineCode",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 15,
+              "offset": 15
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "`"
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 14,
+                  "offset": 14
+                },
+                "end": {
+                  "line": 0,
+                  "column": 15,
+                  "offset": 15
+                },
+                "text": "`"
+              }
+            ],
+            "children": [
+              {
+                "text": "f&ouml;&ouml;",
+                "start": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "end": {
+                  "line": 0,
+                  "column": 14,
+                  "offset": 14
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Entity and numeric character references, https://github.github.com/gfm/#example-332",
+    "markdown": "    f&ouml;f&ouml;\n",
+    "expected": [
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 0,
+          "column": 4,
+          "offset": 4
+        },
+        "end": {
+          "line": 1,
+          "column": 0,
+          "offset": 19
+        },
+        "children": [
+          {
+            "text": "f&ouml;f&ouml;\n",
+            "start": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "end": {
+              "line": 1,
+              "column": 0,
+              "offset": 19
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Entity and numeric character references, https://github.github.com/gfm/#example-333",
+    "markdown": "&#42;foo&#42;\n*foo*\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 5,
+          "offset": 19
+        },
+        "children": [
+          {
+            "text": "&#42;foo&#42;\n",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 0,
+              "offset": 14
+            }
+          },
+          {
+            "type": "emphasis",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 14
+            },
+            "end": {
+              "line": 1,
+              "column": 5,
+              "offset": 19
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 1,
+                  "column": 0,
+                  "offset": 14
+                },
+                "end": {
+                  "line": 1,
+                  "column": 1,
+                  "offset": 15
+                },
+                "text": "*"
+              },
+              {
+                "start": {
+                  "line": 1,
+                  "column": 4,
+                  "offset": 18
+                },
+                "end": {
+                  "line": 1,
+                  "column": 5,
+                  "offset": 19
+                },
+                "text": "*"
+              }
+            ],
+            "children": [
+              {
+                "text": "foo",
+                "start": {
+                  "line": 1,
+                  "column": 1,
+                  "offset": 15
+                },
+                "end": {
+                  "line": 1,
+                  "column": 4,
+                  "offset": 18
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Entity and numeric character references, https://github.github.com/gfm/#example-334",
+    "markdown": "&#42; foo\n\n* foo\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 9,
+          "offset": 9
+        },
+        "children": [
+          {
+            "text": "&#42; foo",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 9,
+              "offset": 9
+            }
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "start": {
+          "line": 2,
+          "column": 0,
+          "offset": 11
+        },
+        "end": {
+          "line": 2,
+          "column": 5,
+          "offset": 16
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 11
+            },
+            "end": {
+              "line": 2,
+              "column": 5,
+              "offset": 16
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 2,
+                  "column": 0,
+                  "offset": 11
+                },
+                "end": {
+                  "line": 2,
+                  "column": 1,
+                  "offset": 12
+                },
+                "text": "*"
+              }
+            ],
+            "children": [
+              {
+                "text": "foo",
+                "start": {
+                  "line": 2,
+                  "column": 2,
+                  "offset": 13
+                },
+                "end": {
+                  "line": 2,
+                  "column": 5,
+                  "offset": 16
+                }
+              }
+            ]
+          }
+        ],
+        "attributes": {
+          "isTight": "true"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Entity and numeric character references, https://github.github.com/gfm/#example-335",
+    "markdown": "foo&#10;&#10;bar\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 16,
+          "offset": 16
+        },
+        "children": [
+          {
+            "text": "foo&#10;&#10;bar",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 16,
+              "offset": 16
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Entity and numeric character references, https://github.github.com/gfm/#example-336",
+    "markdown": "&#9;foo\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 7,
+          "offset": 7
+        },
+        "children": [
+          {
+            "text": "&#9;foo",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 7,
+              "offset": 7
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Entity and numeric character references, https://github.github.com/gfm/#example-337",
+    "markdown": "[a](url &quot;tit&quot;)\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 24,
+          "offset": 24
+        },
+        "children": [
+          {
+            "text": "[a](url &quot;tit&quot;)",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 24,
+              "offset": 24
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

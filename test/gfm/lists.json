@@ -1,0 +1,5020 @@
+[
+  {
+    "description": "Lists, https://github.github.com/gfm/#example-281",
+    "markdown": "- foo\n- bar\n+ baz\n",
+    "expected": [
+      {
+        "type": "bulletList",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 5,
+          "offset": 11
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 5,
+              "offset": 5
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "text": "foo",
+                "start": {
+                  "line": 0,
+                  "column": 2,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 0,
+                  "column": 5,
+                  "offset": 5
+                }
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 6
+            },
+            "end": {
+              "line": 1,
+              "column": 5,
+              "offset": 11
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 1,
+                  "column": 0,
+                  "offset": 6
+                },
+                "end": {
+                  "line": 1,
+                  "column": 1,
+                  "offset": 7
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "text": "bar",
+                "start": {
+                  "line": 1,
+                  "column": 2,
+                  "offset": 8
+                },
+                "end": {
+                  "line": 1,
+                  "column": 5,
+                  "offset": 11
+                }
+              }
+            ]
+          }
+        ],
+        "attributes": {
+          "isTight": "true"
+        }
+      },
+      {
+        "type": "bulletList",
+        "start": {
+          "line": 2,
+          "column": 0,
+          "offset": 12
+        },
+        "end": {
+          "line": 2,
+          "column": 5,
+          "offset": 17
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 12
+            },
+            "end": {
+              "line": 2,
+              "column": 5,
+              "offset": 17
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 2,
+                  "column": 0,
+                  "offset": 12
+                },
+                "end": {
+                  "line": 2,
+                  "column": 1,
+                  "offset": 13
+                },
+                "text": "+"
+              }
+            ],
+            "children": [
+              {
+                "text": "baz",
+                "start": {
+                  "line": 2,
+                  "column": 2,
+                  "offset": 14
+                },
+                "end": {
+                  "line": 2,
+                  "column": 5,
+                  "offset": 17
+                }
+              }
+            ]
+          }
+        ],
+        "attributes": {
+          "isTight": "true"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Lists, https://github.github.com/gfm/#example-282",
+    "markdown": "1. foo\n2. bar\n3) baz\n",
+    "expected": [
+      {
+        "type": "orderedList",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 6,
+          "offset": 13
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 6,
+              "offset": 6
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 2,
+                  "offset": 2
+                },
+                "text": "1."
+              }
+            ],
+            "children": [
+              {
+                "text": "foo",
+                "start": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                },
+                "end": {
+                  "line": 0,
+                  "column": 6,
+                  "offset": 6
+                }
+              }
+            ],
+            "attributes": {
+              "number": "1"
+            }
+          },
+          {
+            "type": "listItem",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 7
+            },
+            "end": {
+              "line": 1,
+              "column": 6,
+              "offset": 13
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 1,
+                  "column": 0,
+                  "offset": 7
+                },
+                "end": {
+                  "line": 1,
+                  "column": 2,
+                  "offset": 9
+                },
+                "text": "2."
+              }
+            ],
+            "children": [
+              {
+                "text": "bar",
+                "start": {
+                  "line": 1,
+                  "column": 3,
+                  "offset": 10
+                },
+                "end": {
+                  "line": 1,
+                  "column": 6,
+                  "offset": 13
+                }
+              }
+            ],
+            "attributes": {
+              "number": "2"
+            }
+          }
+        ],
+        "attributes": {
+          "isTight": "true"
+        }
+      },
+      {
+        "type": "orderedList",
+        "start": {
+          "line": 2,
+          "column": 0,
+          "offset": 14
+        },
+        "end": {
+          "line": 2,
+          "column": 6,
+          "offset": 20
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 14
+            },
+            "end": {
+              "line": 2,
+              "column": 6,
+              "offset": 20
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 2,
+                  "column": 0,
+                  "offset": 14
+                },
+                "end": {
+                  "line": 2,
+                  "column": 2,
+                  "offset": 16
+                },
+                "text": "3)"
+              }
+            ],
+            "children": [
+              {
+                "text": "baz",
+                "start": {
+                  "line": 2,
+                  "column": 3,
+                  "offset": 17
+                },
+                "end": {
+                  "line": 2,
+                  "column": 6,
+                  "offset": 20
+                }
+              }
+            ],
+            "attributes": {
+              "number": "3"
+            }
+          }
+        ],
+        "attributes": {
+          "isTight": "true",
+          "start": "3"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Lists, https://github.github.com/gfm/#example-283",
+    "markdown": "Foo\n- bar\n- baz\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 3,
+          "offset": 3
+        },
+        "children": [
+          {
+            "text": "Foo",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "start": {
+          "line": 1,
+          "column": 0,
+          "offset": 4
+        },
+        "end": {
+          "line": 2,
+          "column": 5,
+          "offset": 15
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 4
+            },
+            "end": {
+              "line": 1,
+              "column": 5,
+              "offset": 9
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 1,
+                  "column": 0,
+                  "offset": 4
+                },
+                "end": {
+                  "line": 1,
+                  "column": 1,
+                  "offset": 5
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "text": "bar",
+                "start": {
+                  "line": 1,
+                  "column": 2,
+                  "offset": 6
+                },
+                "end": {
+                  "line": 1,
+                  "column": 5,
+                  "offset": 9
+                }
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 10
+            },
+            "end": {
+              "line": 2,
+              "column": 5,
+              "offset": 15
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 2,
+                  "column": 0,
+                  "offset": 10
+                },
+                "end": {
+                  "line": 2,
+                  "column": 1,
+                  "offset": 11
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "text": "baz",
+                "start": {
+                  "line": 2,
+                  "column": 2,
+                  "offset": 12
+                },
+                "end": {
+                  "line": 2,
+                  "column": 5,
+                  "offset": 15
+                }
+              }
+            ]
+          }
+        ],
+        "attributes": {
+          "isTight": "true"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Lists, https://github.github.com/gfm/#example-284",
+    "markdown": "The number of windows in my house is\n14.  The number of doors is 6.\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 30,
+          "offset": 67
+        },
+        "children": [
+          {
+            "text": "The number of windows in my house is\n14.  The number of doors is 6.",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 30,
+              "offset": 67
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Lists, https://github.github.com/gfm/#example-285",
+    "markdown": "The number of windows in my house is\n1.  The number of doors is 6.\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 36,
+          "offset": 36
+        },
+        "children": [
+          {
+            "text": "The number of windows in my house is",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 36,
+              "offset": 36
+            }
+          }
+        ]
+      },
+      {
+        "type": "orderedList",
+        "start": {
+          "line": 1,
+          "column": 0,
+          "offset": 37
+        },
+        "end": {
+          "line": 1,
+          "column": 29,
+          "offset": 66
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 37
+            },
+            "end": {
+              "line": 1,
+              "column": 29,
+              "offset": 66
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 1,
+                  "column": 0,
+                  "offset": 37
+                },
+                "end": {
+                  "line": 1,
+                  "column": 2,
+                  "offset": 39
+                },
+                "text": "1."
+              }
+            ],
+            "children": [
+              {
+                "text": "The number of doors is 6.",
+                "start": {
+                  "line": 1,
+                  "column": 4,
+                  "offset": 41
+                },
+                "end": {
+                  "line": 1,
+                  "column": 29,
+                  "offset": 66
+                }
+              }
+            ],
+            "attributes": {
+              "number": "1"
+            }
+          }
+        ],
+        "attributes": {
+          "isTight": "true"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Lists, https://github.github.com/gfm/#example-286",
+    "markdown": "- foo\n\n- bar\n\n\n- baz\n",
+    "expected": [
+      {
+        "type": "bulletList",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 5,
+          "column": 5,
+          "offset": 20
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 5,
+              "offset": 5
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "start": {
+                  "line": 0,
+                  "column": 2,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 0,
+                  "column": 5,
+                  "offset": 5
+                },
+                "children": [
+                  {
+                    "text": "foo",
+                    "start": {
+                      "line": 0,
+                      "column": 2,
+                      "offset": 2
+                    },
+                    "end": {
+                      "line": 0,
+                      "column": 5,
+                      "offset": 5
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 7
+            },
+            "end": {
+              "line": 2,
+              "column": 5,
+              "offset": 12
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 2,
+                  "column": 0,
+                  "offset": 7
+                },
+                "end": {
+                  "line": 2,
+                  "column": 1,
+                  "offset": 8
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "start": {
+                  "line": 2,
+                  "column": 2,
+                  "offset": 9
+                },
+                "end": {
+                  "line": 2,
+                  "column": 5,
+                  "offset": 12
+                },
+                "children": [
+                  {
+                    "text": "bar",
+                    "start": {
+                      "line": 2,
+                      "column": 2,
+                      "offset": 9
+                    },
+                    "end": {
+                      "line": 2,
+                      "column": 5,
+                      "offset": 12
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "start": {
+              "line": 5,
+              "column": 0,
+              "offset": 15
+            },
+            "end": {
+              "line": 5,
+              "column": 5,
+              "offset": 20
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 5,
+                  "column": 0,
+                  "offset": 15
+                },
+                "end": {
+                  "line": 5,
+                  "column": 1,
+                  "offset": 16
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "start": {
+                  "line": 5,
+                  "column": 2,
+                  "offset": 17
+                },
+                "end": {
+                  "line": 5,
+                  "column": 5,
+                  "offset": 20
+                },
+                "children": [
+                  {
+                    "text": "baz",
+                    "start": {
+                      "line": 5,
+                      "column": 2,
+                      "offset": 17
+                    },
+                    "end": {
+                      "line": 5,
+                      "column": 5,
+                      "offset": 20
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "attributes": {
+          "isTight": "false"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Lists, https://github.github.com/gfm/#example-287",
+    "markdown": "- foo\n  - bar\n    - baz\n\n\n      bim\n",
+    "expected": [
+      {
+        "type": "bulletList",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 5,
+          "column": 9,
+          "offset": 35
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 5,
+              "column": 9,
+              "offset": 35
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "text": "foo",
+                "start": {
+                  "line": 0,
+                  "column": 2,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 0,
+                  "column": 5,
+                  "offset": 5
+                }
+              },
+              {
+                "type": "bulletList",
+                "start": {
+                  "line": 1,
+                  "column": 2,
+                  "offset": 8
+                },
+                "end": {
+                  "line": 5,
+                  "column": 9,
+                  "offset": 35
+                },
+                "children": [
+                  {
+                    "type": "listItem",
+                    "start": {
+                      "line": 1,
+                      "column": 2,
+                      "offset": 8
+                    },
+                    "end": {
+                      "line": 5,
+                      "column": 9,
+                      "offset": 35
+                    },
+                    "markers": [
+                      {
+                        "start": {
+                          "line": 1,
+                          "column": 2,
+                          "offset": 8
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 3,
+                          "offset": 9
+                        },
+                        "text": "-"
+                      }
+                    ],
+                    "children": [
+                      {
+                        "text": "bar",
+                        "start": {
+                          "line": 1,
+                          "column": 4,
+                          "offset": 10
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 7,
+                          "offset": 13
+                        }
+                      },
+                      {
+                        "type": "bulletList",
+                        "start": {
+                          "line": 2,
+                          "column": 4,
+                          "offset": 18
+                        },
+                        "end": {
+                          "line": 5,
+                          "column": 9,
+                          "offset": 35
+                        },
+                        "children": [
+                          {
+                            "type": "listItem",
+                            "start": {
+                              "line": 2,
+                              "column": 4,
+                              "offset": 18
+                            },
+                            "end": {
+                              "line": 5,
+                              "column": 9,
+                              "offset": 35
+                            },
+                            "markers": [
+                              {
+                                "start": {
+                                  "line": 2,
+                                  "column": 4,
+                                  "offset": 18
+                                },
+                                "end": {
+                                  "line": 2,
+                                  "column": 5,
+                                  "offset": 19
+                                },
+                                "text": "-"
+                              }
+                            ],
+                            "children": [
+                              {
+                                "type": "paragraph",
+                                "start": {
+                                  "line": 2,
+                                  "column": 6,
+                                  "offset": 20
+                                },
+                                "end": {
+                                  "line": 2,
+                                  "column": 9,
+                                  "offset": 23
+                                },
+                                "children": [
+                                  {
+                                    "text": "baz",
+                                    "start": {
+                                      "line": 2,
+                                      "column": 6,
+                                      "offset": 20
+                                    },
+                                    "end": {
+                                      "line": 2,
+                                      "column": 9,
+                                      "offset": 23
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "type": "paragraph",
+                                "start": {
+                                  "line": 5,
+                                  "column": 6,
+                                  "offset": 32
+                                },
+                                "end": {
+                                  "line": 5,
+                                  "column": 9,
+                                  "offset": 35
+                                },
+                                "children": [
+                                  {
+                                    "text": "bim",
+                                    "start": {
+                                      "line": 5,
+                                      "column": 6,
+                                      "offset": 32
+                                    },
+                                    "end": {
+                                      "line": 5,
+                                      "column": 9,
+                                      "offset": 35
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ],
+                        "attributes": {
+                          "isTight": "false"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "attributes": {
+                  "isTight": "true"
+                }
+              }
+            ]
+          }
+        ],
+        "attributes": {
+          "isTight": "true"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Lists, https://github.github.com/gfm/#example-288",
+    "markdown": "- foo\n- bar\n\n<!-- -->\n\n- baz\n- bim\n",
+    "expected": [
+      {
+        "type": "bulletList",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 5,
+          "offset": 11
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 5,
+              "offset": 5
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "text": "foo",
+                "start": {
+                  "line": 0,
+                  "column": 2,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 0,
+                  "column": 5,
+                  "offset": 5
+                }
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 6
+            },
+            "end": {
+              "line": 1,
+              "column": 5,
+              "offset": 11
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 1,
+                  "column": 0,
+                  "offset": 6
+                },
+                "end": {
+                  "line": 1,
+                  "column": 1,
+                  "offset": 7
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "text": "bar",
+                "start": {
+                  "line": 1,
+                  "column": 2,
+                  "offset": 8
+                },
+                "end": {
+                  "line": 1,
+                  "column": 5,
+                  "offset": 11
+                }
+              }
+            ]
+          }
+        ],
+        "attributes": {
+          "isTight": "true"
+        }
+      },
+      {
+        "type": "htmlBlock",
+        "start": {
+          "line": 3,
+          "column": 0,
+          "offset": 13
+        },
+        "end": {
+          "line": 3,
+          "column": 8,
+          "offset": 21
+        },
+        "children": [
+          {
+            "text": "<!-- -->",
+            "start": {
+              "line": 3,
+              "column": 0,
+              "offset": 13
+            },
+            "end": {
+              "line": 3,
+              "column": 8,
+              "offset": 21
+            }
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "start": {
+          "line": 5,
+          "column": 0,
+          "offset": 23
+        },
+        "end": {
+          "line": 6,
+          "column": 5,
+          "offset": 34
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 5,
+              "column": 0,
+              "offset": 23
+            },
+            "end": {
+              "line": 5,
+              "column": 5,
+              "offset": 28
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 5,
+                  "column": 0,
+                  "offset": 23
+                },
+                "end": {
+                  "line": 5,
+                  "column": 1,
+                  "offset": 24
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "text": "baz",
+                "start": {
+                  "line": 5,
+                  "column": 2,
+                  "offset": 25
+                },
+                "end": {
+                  "line": 5,
+                  "column": 5,
+                  "offset": 28
+                }
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "start": {
+              "line": 6,
+              "column": 0,
+              "offset": 29
+            },
+            "end": {
+              "line": 6,
+              "column": 5,
+              "offset": 34
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 6,
+                  "column": 0,
+                  "offset": 29
+                },
+                "end": {
+                  "line": 6,
+                  "column": 1,
+                  "offset": 30
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "text": "bim",
+                "start": {
+                  "line": 6,
+                  "column": 2,
+                  "offset": 31
+                },
+                "end": {
+                  "line": 6,
+                  "column": 5,
+                  "offset": 34
+                }
+              }
+            ]
+          }
+        ],
+        "attributes": {
+          "isTight": "true"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Lists, https://github.github.com/gfm/#example-289",
+    "markdown": "-   foo\n\n    notcode\n\n-   foo\n\n<!-- -->\n\n    code\n",
+    "expected": [
+      {
+        "type": "bulletList",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 7,
+          "offset": 29
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "column": 11,
+              "offset": 20
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "start": {
+                  "line": 0,
+                  "column": 4,
+                  "offset": 4
+                },
+                "end": {
+                  "line": 0,
+                  "column": 7,
+                  "offset": 7
+                },
+                "children": [
+                  {
+                    "text": "foo",
+                    "start": {
+                      "line": 0,
+                      "column": 4,
+                      "offset": 4
+                    },
+                    "end": {
+                      "line": 0,
+                      "column": 7,
+                      "offset": 7
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "start": {
+                  "line": 2,
+                  "column": 4,
+                  "offset": 13
+                },
+                "end": {
+                  "line": 2,
+                  "column": 11,
+                  "offset": 20
+                },
+                "children": [
+                  {
+                    "text": "notcode",
+                    "start": {
+                      "line": 2,
+                      "column": 4,
+                      "offset": 13
+                    },
+                    "end": {
+                      "line": 2,
+                      "column": 11,
+                      "offset": 20
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "start": {
+              "line": 4,
+              "column": 0,
+              "offset": 22
+            },
+            "end": {
+              "line": 4,
+              "column": 7,
+              "offset": 29
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 4,
+                  "column": 0,
+                  "offset": 22
+                },
+                "end": {
+                  "line": 4,
+                  "column": 1,
+                  "offset": 23
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "start": {
+                  "line": 4,
+                  "column": 4,
+                  "offset": 26
+                },
+                "end": {
+                  "line": 4,
+                  "column": 7,
+                  "offset": 29
+                },
+                "children": [
+                  {
+                    "text": "foo",
+                    "start": {
+                      "line": 4,
+                      "column": 4,
+                      "offset": 26
+                    },
+                    "end": {
+                      "line": 4,
+                      "column": 7,
+                      "offset": 29
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "attributes": {
+          "isTight": "false"
+        }
+      },
+      {
+        "type": "htmlBlock",
+        "start": {
+          "line": 6,
+          "column": 0,
+          "offset": 31
+        },
+        "end": {
+          "line": 6,
+          "column": 8,
+          "offset": 39
+        },
+        "children": [
+          {
+            "text": "<!-- -->",
+            "start": {
+              "line": 6,
+              "column": 0,
+              "offset": 31
+            },
+            "end": {
+              "line": 6,
+              "column": 8,
+              "offset": 39
+            }
+          }
+        ]
+      },
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 8,
+          "column": 4,
+          "offset": 45
+        },
+        "end": {
+          "line": 9,
+          "column": 0,
+          "offset": 50
+        },
+        "children": [
+          {
+            "text": "code\n",
+            "start": {
+              "line": 8,
+              "column": 4,
+              "offset": 45
+            },
+            "end": {
+              "line": 9,
+              "column": 0,
+              "offset": 50
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Lists, https://github.github.com/gfm/#example-290",
+    "markdown": "- a\n - b\n  - c\n   - d\n  - e\n - f\n- g\n",
+    "expected": [
+      {
+        "type": "bulletList",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 6,
+          "column": 3,
+          "offset": 36
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "text": "a",
+                "start": {
+                  "line": 0,
+                  "column": 2,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                }
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 5
+            },
+            "end": {
+              "line": 1,
+              "column": 4,
+              "offset": 8
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 1,
+                  "column": 1,
+                  "offset": 5
+                },
+                "end": {
+                  "line": 1,
+                  "column": 2,
+                  "offset": 6
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "text": "b",
+                "start": {
+                  "line": 1,
+                  "column": 3,
+                  "offset": 7
+                },
+                "end": {
+                  "line": 1,
+                  "column": 4,
+                  "offset": 8
+                }
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "start": {
+              "line": 2,
+              "column": 2,
+              "offset": 11
+            },
+            "end": {
+              "line": 2,
+              "column": 5,
+              "offset": 14
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 2,
+                  "column": 2,
+                  "offset": 11
+                },
+                "end": {
+                  "line": 2,
+                  "column": 3,
+                  "offset": 12
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "text": "c",
+                "start": {
+                  "line": 2,
+                  "column": 4,
+                  "offset": 13
+                },
+                "end": {
+                  "line": 2,
+                  "column": 5,
+                  "offset": 14
+                }
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "start": {
+              "line": 3,
+              "column": 3,
+              "offset": 18
+            },
+            "end": {
+              "line": 3,
+              "column": 6,
+              "offset": 21
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 3,
+                  "column": 3,
+                  "offset": 18
+                },
+                "end": {
+                  "line": 3,
+                  "column": 4,
+                  "offset": 19
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "text": "d",
+                "start": {
+                  "line": 3,
+                  "column": 5,
+                  "offset": 20
+                },
+                "end": {
+                  "line": 3,
+                  "column": 6,
+                  "offset": 21
+                }
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "start": {
+              "line": 4,
+              "column": 2,
+              "offset": 24
+            },
+            "end": {
+              "line": 4,
+              "column": 5,
+              "offset": 27
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 4,
+                  "column": 2,
+                  "offset": 24
+                },
+                "end": {
+                  "line": 4,
+                  "column": 3,
+                  "offset": 25
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "text": "e",
+                "start": {
+                  "line": 4,
+                  "column": 4,
+                  "offset": 26
+                },
+                "end": {
+                  "line": 4,
+                  "column": 5,
+                  "offset": 27
+                }
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "start": {
+              "line": 5,
+              "column": 1,
+              "offset": 29
+            },
+            "end": {
+              "line": 5,
+              "column": 4,
+              "offset": 32
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 5,
+                  "column": 1,
+                  "offset": 29
+                },
+                "end": {
+                  "line": 5,
+                  "column": 2,
+                  "offset": 30
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "text": "f",
+                "start": {
+                  "line": 5,
+                  "column": 3,
+                  "offset": 31
+                },
+                "end": {
+                  "line": 5,
+                  "column": 4,
+                  "offset": 32
+                }
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "start": {
+              "line": 6,
+              "column": 0,
+              "offset": 33
+            },
+            "end": {
+              "line": 6,
+              "column": 3,
+              "offset": 36
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 6,
+                  "column": 0,
+                  "offset": 33
+                },
+                "end": {
+                  "line": 6,
+                  "column": 1,
+                  "offset": 34
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "text": "g",
+                "start": {
+                  "line": 6,
+                  "column": 2,
+                  "offset": 35
+                },
+                "end": {
+                  "line": 6,
+                  "column": 3,
+                  "offset": 36
+                }
+              }
+            ]
+          }
+        ],
+        "attributes": {
+          "isTight": "true"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Lists, https://github.github.com/gfm/#example-291",
+    "markdown": "1. a\n\n  2. b\n\n   3. c\n",
+    "expected": [
+      {
+        "type": "orderedList",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 7,
+          "offset": 21
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 2,
+                  "offset": 2
+                },
+                "text": "1."
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "start": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                },
+                "end": {
+                  "line": 0,
+                  "column": 4,
+                  "offset": 4
+                },
+                "children": [
+                  {
+                    "text": "a",
+                    "start": {
+                      "line": 0,
+                      "column": 3,
+                      "offset": 3
+                    },
+                    "end": {
+                      "line": 0,
+                      "column": 4,
+                      "offset": 4
+                    }
+                  }
+                ]
+              }
+            ],
+            "attributes": {
+              "number": "1"
+            }
+          },
+          {
+            "type": "listItem",
+            "start": {
+              "line": 2,
+              "column": 2,
+              "offset": 8
+            },
+            "end": {
+              "line": 2,
+              "column": 6,
+              "offset": 12
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 2,
+                  "column": 2,
+                  "offset": 8
+                },
+                "end": {
+                  "line": 2,
+                  "column": 4,
+                  "offset": 10
+                },
+                "text": "2."
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "start": {
+                  "line": 2,
+                  "column": 5,
+                  "offset": 11
+                },
+                "end": {
+                  "line": 2,
+                  "column": 6,
+                  "offset": 12
+                },
+                "children": [
+                  {
+                    "text": "b",
+                    "start": {
+                      "line": 2,
+                      "column": 5,
+                      "offset": 11
+                    },
+                    "end": {
+                      "line": 2,
+                      "column": 6,
+                      "offset": 12
+                    }
+                  }
+                ]
+              }
+            ],
+            "attributes": {
+              "number": "2"
+            }
+          },
+          {
+            "type": "listItem",
+            "start": {
+              "line": 4,
+              "column": 3,
+              "offset": 17
+            },
+            "end": {
+              "line": 4,
+              "column": 7,
+              "offset": 21
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 4,
+                  "column": 3,
+                  "offset": 17
+                },
+                "end": {
+                  "line": 4,
+                  "column": 5,
+                  "offset": 19
+                },
+                "text": "3."
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "start": {
+                  "line": 4,
+                  "column": 6,
+                  "offset": 20
+                },
+                "end": {
+                  "line": 4,
+                  "column": 7,
+                  "offset": 21
+                },
+                "children": [
+                  {
+                    "text": "c",
+                    "start": {
+                      "line": 4,
+                      "column": 6,
+                      "offset": 20
+                    },
+                    "end": {
+                      "line": 4,
+                      "column": 7,
+                      "offset": 21
+                    }
+                  }
+                ]
+              }
+            ],
+            "attributes": {
+              "number": "3"
+            }
+          }
+        ],
+        "attributes": {
+          "isTight": "false"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Lists, https://github.github.com/gfm/#example-292",
+    "markdown": "- a\n - b\n  - c\n   - d\n    - e\n",
+    "expected": [
+      {
+        "type": "bulletList",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 7,
+          "offset": 29
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "text": "a",
+                "start": {
+                  "line": 0,
+                  "column": 2,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                }
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 5
+            },
+            "end": {
+              "line": 1,
+              "column": 4,
+              "offset": 8
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 1,
+                  "column": 1,
+                  "offset": 5
+                },
+                "end": {
+                  "line": 1,
+                  "column": 2,
+                  "offset": 6
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "text": "b",
+                "start": {
+                  "line": 1,
+                  "column": 3,
+                  "offset": 7
+                },
+                "end": {
+                  "line": 1,
+                  "column": 4,
+                  "offset": 8
+                }
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "start": {
+              "line": 2,
+              "column": 2,
+              "offset": 11
+            },
+            "end": {
+              "line": 2,
+              "column": 5,
+              "offset": 14
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 2,
+                  "column": 2,
+                  "offset": 11
+                },
+                "end": {
+                  "line": 2,
+                  "column": 3,
+                  "offset": 12
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "text": "c",
+                "start": {
+                  "line": 2,
+                  "column": 4,
+                  "offset": 13
+                },
+                "end": {
+                  "line": 2,
+                  "column": 5,
+                  "offset": 14
+                }
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "start": {
+              "line": 3,
+              "column": 3,
+              "offset": 18
+            },
+            "end": {
+              "line": 4,
+              "column": 7,
+              "offset": 29
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 3,
+                  "column": 3,
+                  "offset": 18
+                },
+                "end": {
+                  "line": 3,
+                  "column": 4,
+                  "offset": 19
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "text": "d\n",
+                "start": {
+                  "line": 3,
+                  "column": 5,
+                  "offset": 20
+                },
+                "end": {
+                  "line": 4,
+                  "column": 0,
+                  "offset": 22
+                }
+              },
+              {
+                "text": "- e",
+                "start": {
+                  "line": 4,
+                  "column": 4,
+                  "offset": 26
+                },
+                "end": {
+                  "line": 4,
+                  "column": 7,
+                  "offset": 29
+                }
+              }
+            ]
+          }
+        ],
+        "attributes": {
+          "isTight": "true"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Lists, https://github.github.com/gfm/#example-293",
+    "markdown": "1. a\n\n  2. b\n\n    3. c\n",
+    "expected": [
+      {
+        "type": "orderedList",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 2,
+          "column": 6,
+          "offset": 12
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 2,
+                  "offset": 2
+                },
+                "text": "1."
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "start": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                },
+                "end": {
+                  "line": 0,
+                  "column": 4,
+                  "offset": 4
+                },
+                "children": [
+                  {
+                    "text": "a",
+                    "start": {
+                      "line": 0,
+                      "column": 3,
+                      "offset": 3
+                    },
+                    "end": {
+                      "line": 0,
+                      "column": 4,
+                      "offset": 4
+                    }
+                  }
+                ]
+              }
+            ],
+            "attributes": {
+              "number": "1"
+            }
+          },
+          {
+            "type": "listItem",
+            "start": {
+              "line": 2,
+              "column": 2,
+              "offset": 8
+            },
+            "end": {
+              "line": 2,
+              "column": 6,
+              "offset": 12
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 2,
+                  "column": 2,
+                  "offset": 8
+                },
+                "end": {
+                  "line": 2,
+                  "column": 4,
+                  "offset": 10
+                },
+                "text": "2."
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "start": {
+                  "line": 2,
+                  "column": 5,
+                  "offset": 11
+                },
+                "end": {
+                  "line": 2,
+                  "column": 6,
+                  "offset": 12
+                },
+                "children": [
+                  {
+                    "text": "b",
+                    "start": {
+                      "line": 2,
+                      "column": 5,
+                      "offset": 11
+                    },
+                    "end": {
+                      "line": 2,
+                      "column": 6,
+                      "offset": 12
+                    }
+                  }
+                ]
+              }
+            ],
+            "attributes": {
+              "number": "2"
+            }
+          }
+        ],
+        "attributes": {
+          "isTight": "false"
+        }
+      },
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 4,
+          "column": 4,
+          "offset": 18
+        },
+        "end": {
+          "line": 5,
+          "column": 0,
+          "offset": 23
+        },
+        "children": [
+          {
+            "text": "3. c\n",
+            "start": {
+              "line": 4,
+              "column": 4,
+              "offset": 18
+            },
+            "end": {
+              "line": 5,
+              "column": 0,
+              "offset": 23
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Lists, https://github.github.com/gfm/#example-294",
+    "markdown": "- a\n- b\n\n- c\n",
+    "expected": [
+      {
+        "type": "bulletList",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 3,
+          "offset": 12
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "start": {
+                  "line": 0,
+                  "column": 2,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                },
+                "children": [
+                  {
+                    "text": "a",
+                    "start": {
+                      "line": 0,
+                      "column": 2,
+                      "offset": 2
+                    },
+                    "end": {
+                      "line": 0,
+                      "column": 3,
+                      "offset": 3
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 4
+            },
+            "end": {
+              "line": 1,
+              "column": 3,
+              "offset": 7
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 1,
+                  "column": 0,
+                  "offset": 4
+                },
+                "end": {
+                  "line": 1,
+                  "column": 1,
+                  "offset": 5
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "start": {
+                  "line": 1,
+                  "column": 2,
+                  "offset": 6
+                },
+                "end": {
+                  "line": 1,
+                  "column": 3,
+                  "offset": 7
+                },
+                "children": [
+                  {
+                    "text": "b",
+                    "start": {
+                      "line": 1,
+                      "column": 2,
+                      "offset": 6
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 3,
+                      "offset": 7
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "start": {
+              "line": 3,
+              "column": 0,
+              "offset": 9
+            },
+            "end": {
+              "line": 3,
+              "column": 3,
+              "offset": 12
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 3,
+                  "column": 0,
+                  "offset": 9
+                },
+                "end": {
+                  "line": 3,
+                  "column": 1,
+                  "offset": 10
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "start": {
+                  "line": 3,
+                  "column": 2,
+                  "offset": 11
+                },
+                "end": {
+                  "line": 3,
+                  "column": 3,
+                  "offset": 12
+                },
+                "children": [
+                  {
+                    "text": "c",
+                    "start": {
+                      "line": 3,
+                      "column": 2,
+                      "offset": 11
+                    },
+                    "end": {
+                      "line": 3,
+                      "column": 3,
+                      "offset": 12
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "attributes": {
+          "isTight": "false"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Lists, https://github.github.com/gfm/#example-295",
+    "markdown": "* a\n*\n\n* c\n",
+    "expected": [
+      {
+        "type": "bulletList",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 3,
+          "offset": 10
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "*"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "start": {
+                  "line": 0,
+                  "column": 2,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                },
+                "children": [
+                  {
+                    "text": "a",
+                    "start": {
+                      "line": 0,
+                      "column": 2,
+                      "offset": 2
+                    },
+                    "end": {
+                      "line": 0,
+                      "column": 3,
+                      "offset": 3
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 4
+            },
+            "end": {
+              "line": 1,
+              "column": 1,
+              "offset": 5
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 1,
+                  "column": 0,
+                  "offset": 4
+                },
+                "end": {
+                  "line": 1,
+                  "column": 1,
+                  "offset": 5
+                },
+                "text": "*"
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "start": {
+              "line": 3,
+              "column": 0,
+              "offset": 7
+            },
+            "end": {
+              "line": 3,
+              "column": 3,
+              "offset": 10
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 3,
+                  "column": 0,
+                  "offset": 7
+                },
+                "end": {
+                  "line": 3,
+                  "column": 1,
+                  "offset": 8
+                },
+                "text": "*"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "start": {
+                  "line": 3,
+                  "column": 2,
+                  "offset": 9
+                },
+                "end": {
+                  "line": 3,
+                  "column": 3,
+                  "offset": 10
+                },
+                "children": [
+                  {
+                    "text": "c",
+                    "start": {
+                      "line": 3,
+                      "column": 2,
+                      "offset": 9
+                    },
+                    "end": {
+                      "line": 3,
+                      "column": 3,
+                      "offset": 10
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "attributes": {
+          "isTight": "false"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Lists, https://github.github.com/gfm/#example-296",
+    "markdown": "- a\n- b\n\n  c\n- d\n",
+    "expected": [
+      {
+        "type": "bulletList",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 3,
+          "offset": 16
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "start": {
+                  "line": 0,
+                  "column": 2,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                },
+                "children": [
+                  {
+                    "text": "a",
+                    "start": {
+                      "line": 0,
+                      "column": 2,
+                      "offset": 2
+                    },
+                    "end": {
+                      "line": 0,
+                      "column": 3,
+                      "offset": 3
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 4
+            },
+            "end": {
+              "line": 3,
+              "column": 3,
+              "offset": 12
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 1,
+                  "column": 0,
+                  "offset": 4
+                },
+                "end": {
+                  "line": 1,
+                  "column": 1,
+                  "offset": 5
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "start": {
+                  "line": 1,
+                  "column": 2,
+                  "offset": 6
+                },
+                "end": {
+                  "line": 1,
+                  "column": 3,
+                  "offset": 7
+                },
+                "children": [
+                  {
+                    "text": "b",
+                    "start": {
+                      "line": 1,
+                      "column": 2,
+                      "offset": 6
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 3,
+                      "offset": 7
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "start": {
+                  "line": 3,
+                  "column": 2,
+                  "offset": 11
+                },
+                "end": {
+                  "line": 3,
+                  "column": 3,
+                  "offset": 12
+                },
+                "children": [
+                  {
+                    "text": "c",
+                    "start": {
+                      "line": 3,
+                      "column": 2,
+                      "offset": 11
+                    },
+                    "end": {
+                      "line": 3,
+                      "column": 3,
+                      "offset": 12
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "start": {
+              "line": 4,
+              "column": 0,
+              "offset": 13
+            },
+            "end": {
+              "line": 4,
+              "column": 3,
+              "offset": 16
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 4,
+                  "column": 0,
+                  "offset": 13
+                },
+                "end": {
+                  "line": 4,
+                  "column": 1,
+                  "offset": 14
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "start": {
+                  "line": 4,
+                  "column": 2,
+                  "offset": 15
+                },
+                "end": {
+                  "line": 4,
+                  "column": 3,
+                  "offset": 16
+                },
+                "children": [
+                  {
+                    "text": "d",
+                    "start": {
+                      "line": 4,
+                      "column": 2,
+                      "offset": 15
+                    },
+                    "end": {
+                      "line": 4,
+                      "column": 3,
+                      "offset": 16
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "attributes": {
+          "isTight": "false"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Lists, https://github.github.com/gfm/#example-297",
+    "markdown": "- a\n- b\n\n  [ref]: /url\n- d\n",
+    "expected": [
+      {
+        "type": "bulletList",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 3,
+          "offset": 26
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "start": {
+                  "line": 0,
+                  "column": 2,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                },
+                "children": [
+                  {
+                    "text": "a",
+                    "start": {
+                      "line": 0,
+                      "column": 2,
+                      "offset": 2
+                    },
+                    "end": {
+                      "line": 0,
+                      "column": 3,
+                      "offset": 3
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 4
+            },
+            "end": {
+              "line": 3,
+              "column": 13,
+              "offset": 22
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 1,
+                  "column": 0,
+                  "offset": 4
+                },
+                "end": {
+                  "line": 1,
+                  "column": 1,
+                  "offset": 5
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "start": {
+                  "line": 1,
+                  "column": 2,
+                  "offset": 6
+                },
+                "end": {
+                  "line": 1,
+                  "column": 3,
+                  "offset": 7
+                },
+                "children": [
+                  {
+                    "text": "b",
+                    "start": {
+                      "line": 1,
+                      "column": 2,
+                      "offset": 6
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 3,
+                      "offset": 7
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "linkReferenceDefinition",
+                "start": {
+                  "line": 3,
+                  "column": 2,
+                  "offset": 11
+                },
+                "end": {
+                  "line": 3,
+                  "column": 13,
+                  "offset": 22
+                },
+                "markers": [
+                  {
+                    "start": {
+                      "line": 3,
+                      "column": 2,
+                      "offset": 11
+                    },
+                    "end": {
+                      "line": 3,
+                      "column": 3,
+                      "offset": 12
+                    },
+                    "text": "["
+                  },
+                  {
+                    "start": {
+                      "line": 3,
+                      "column": 6,
+                      "offset": 15
+                    },
+                    "end": {
+                      "line": 3,
+                      "column": 7,
+                      "offset": 16
+                    },
+                    "text": "]"
+                  },
+                  {
+                    "start": {
+                      "line": 3,
+                      "column": 7,
+                      "offset": 16
+                    },
+                    "end": {
+                      "line": 3,
+                      "column": 8,
+                      "offset": 17
+                    },
+                    "text": ":"
+                  },
+                  {
+                    "start": {
+                      "line": 3,
+                      "column": 9,
+                      "offset": 18
+                    },
+                    "end": {
+                      "line": 3,
+                      "column": 13,
+                      "offset": 22
+                    },
+                    "text": "/url"
+                  }
+                ],
+                "children": [
+                  {
+                    "type": "linkReferenceDefinitionLabel",
+                    "start": {
+                      "line": 3,
+                      "column": 3,
+                      "offset": 12
+                    },
+                    "end": {
+                      "line": 3,
+                      "column": 6,
+                      "offset": 15
+                    },
+                    "children": [
+                      {
+                        "text": "ref",
+                        "start": {
+                          "line": 3,
+                          "column": 3,
+                          "offset": 12
+                        },
+                        "end": {
+                          "line": 3,
+                          "column": 6,
+                          "offset": 15
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "linkReferenceDefinitionDestination",
+                    "start": {
+                      "line": 3,
+                      "column": 9,
+                      "offset": 18
+                    },
+                    "end": {
+                      "line": 3,
+                      "column": 13,
+                      "offset": 22
+                    },
+                    "children": [
+                      {
+                        "text": "/url",
+                        "start": {
+                          "line": 3,
+                          "column": 9,
+                          "offset": 18
+                        },
+                        "end": {
+                          "line": 3,
+                          "column": 13,
+                          "offset": 22
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "start": {
+              "line": 4,
+              "column": 0,
+              "offset": 23
+            },
+            "end": {
+              "line": 4,
+              "column": 3,
+              "offset": 26
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 4,
+                  "column": 0,
+                  "offset": 23
+                },
+                "end": {
+                  "line": 4,
+                  "column": 1,
+                  "offset": 24
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "start": {
+                  "line": 4,
+                  "column": 2,
+                  "offset": 25
+                },
+                "end": {
+                  "line": 4,
+                  "column": 3,
+                  "offset": 26
+                },
+                "children": [
+                  {
+                    "text": "d",
+                    "start": {
+                      "line": 4,
+                      "column": 2,
+                      "offset": 25
+                    },
+                    "end": {
+                      "line": 4,
+                      "column": 3,
+                      "offset": 26
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "attributes": {
+          "isTight": "false"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Lists, https://github.github.com/gfm/#example-298",
+    "markdown": "- a\n- ```\n  b\n\n\n  ```\n- c\n",
+    "expected": [
+      {
+        "type": "bulletList",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 6,
+          "column": 3,
+          "offset": 25
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "text": "a",
+                "start": {
+                  "line": 0,
+                  "column": 2,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                }
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 4
+            },
+            "end": {
+              "line": 5,
+              "column": 5,
+              "offset": 21
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 1,
+                  "column": 0,
+                  "offset": 4
+                },
+                "end": {
+                  "line": 1,
+                  "column": 1,
+                  "offset": 5
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "type": "codeBlock",
+                "start": {
+                  "line": 1,
+                  "column": 2,
+                  "offset": 6
+                },
+                "end": {
+                  "line": 5,
+                  "column": 5,
+                  "offset": 21
+                },
+                "markers": [
+                  {
+                    "start": {
+                      "line": 1,
+                      "column": 2,
+                      "offset": 6
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 5,
+                      "offset": 9
+                    },
+                    "text": "```"
+                  },
+                  {
+                    "start": {
+                      "line": 5,
+                      "column": 2,
+                      "offset": 18
+                    },
+                    "end": {
+                      "line": 5,
+                      "column": 5,
+                      "offset": 21
+                    },
+                    "text": "```"
+                  }
+                ],
+                "children": [
+                  {
+                    "text": "b\n\n\n",
+                    "start": {
+                      "line": 2,
+                      "column": 2,
+                      "offset": 12
+                    },
+                    "end": {
+                      "line": 5,
+                      "column": 0,
+                      "offset": 16
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "start": {
+              "line": 6,
+              "column": 0,
+              "offset": 22
+            },
+            "end": {
+              "line": 6,
+              "column": 3,
+              "offset": 25
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 6,
+                  "column": 0,
+                  "offset": 22
+                },
+                "end": {
+                  "line": 6,
+                  "column": 1,
+                  "offset": 23
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "text": "c",
+                "start": {
+                  "line": 6,
+                  "column": 2,
+                  "offset": 24
+                },
+                "end": {
+                  "line": 6,
+                  "column": 3,
+                  "offset": 25
+                }
+              }
+            ]
+          }
+        ],
+        "attributes": {
+          "isTight": "true"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Lists, https://github.github.com/gfm/#example-299",
+    "markdown": "- a\n  - b\n\n    c\n- d\n",
+    "expected": [
+      {
+        "type": "bulletList",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 3,
+          "offset": 20
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "column": 5,
+              "offset": 16
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "text": "a",
+                "start": {
+                  "line": 0,
+                  "column": 2,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                }
+              },
+              {
+                "type": "bulletList",
+                "start": {
+                  "line": 1,
+                  "column": 2,
+                  "offset": 6
+                },
+                "end": {
+                  "line": 3,
+                  "column": 5,
+                  "offset": 16
+                },
+                "children": [
+                  {
+                    "type": "listItem",
+                    "start": {
+                      "line": 1,
+                      "column": 2,
+                      "offset": 6
+                    },
+                    "end": {
+                      "line": 3,
+                      "column": 5,
+                      "offset": 16
+                    },
+                    "markers": [
+                      {
+                        "start": {
+                          "line": 1,
+                          "column": 2,
+                          "offset": 6
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 3,
+                          "offset": 7
+                        },
+                        "text": "-"
+                      }
+                    ],
+                    "children": [
+                      {
+                        "type": "paragraph",
+                        "start": {
+                          "line": 1,
+                          "column": 4,
+                          "offset": 8
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 5,
+                          "offset": 9
+                        },
+                        "children": [
+                          {
+                            "text": "b",
+                            "start": {
+                              "line": 1,
+                              "column": 4,
+                              "offset": 8
+                            },
+                            "end": {
+                              "line": 1,
+                              "column": 5,
+                              "offset": 9
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "paragraph",
+                        "start": {
+                          "line": 3,
+                          "column": 4,
+                          "offset": 15
+                        },
+                        "end": {
+                          "line": 3,
+                          "column": 5,
+                          "offset": 16
+                        },
+                        "children": [
+                          {
+                            "text": "c",
+                            "start": {
+                              "line": 3,
+                              "column": 4,
+                              "offset": 15
+                            },
+                            "end": {
+                              "line": 3,
+                              "column": 5,
+                              "offset": 16
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "attributes": {
+                  "isTight": "false"
+                }
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "start": {
+              "line": 4,
+              "column": 0,
+              "offset": 17
+            },
+            "end": {
+              "line": 4,
+              "column": 3,
+              "offset": 20
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 4,
+                  "column": 0,
+                  "offset": 17
+                },
+                "end": {
+                  "line": 4,
+                  "column": 1,
+                  "offset": 18
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "text": "d",
+                "start": {
+                  "line": 4,
+                  "column": 2,
+                  "offset": 19
+                },
+                "end": {
+                  "line": 4,
+                  "column": 3,
+                  "offset": 20
+                }
+              }
+            ]
+          }
+        ],
+        "attributes": {
+          "isTight": "true"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Lists, https://github.github.com/gfm/#example-300",
+    "markdown": "* a\n  > b\n  >\n* c\n",
+    "expected": [
+      {
+        "type": "bulletList",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 3,
+          "offset": 17
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "column": 3,
+              "offset": 13
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "*"
+              }
+            ],
+            "children": [
+              {
+                "text": "a",
+                "start": {
+                  "line": 0,
+                  "column": 2,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                }
+              },
+              {
+                "type": "blockquote",
+                "start": {
+                  "line": 1,
+                  "column": 2,
+                  "offset": 6
+                },
+                "end": {
+                  "line": 2,
+                  "column": 3,
+                  "offset": 13
+                },
+                "markers": [
+                  {
+                    "start": {
+                      "line": 1,
+                      "column": 2,
+                      "offset": 6
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 3,
+                      "offset": 7
+                    },
+                    "text": ">"
+                  },
+                  {
+                    "start": {
+                      "line": 2,
+                      "column": 2,
+                      "offset": 12
+                    },
+                    "end": {
+                      "line": 2,
+                      "column": 3,
+                      "offset": 13
+                    },
+                    "text": ">"
+                  }
+                ],
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "start": {
+                      "line": 1,
+                      "column": 4,
+                      "offset": 8
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 5,
+                      "offset": 9
+                    },
+                    "children": [
+                      {
+                        "text": "b",
+                        "start": {
+                          "line": 1,
+                          "column": 4,
+                          "offset": 8
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 5,
+                          "offset": 9
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "start": {
+              "line": 3,
+              "column": 0,
+              "offset": 14
+            },
+            "end": {
+              "line": 3,
+              "column": 3,
+              "offset": 17
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 3,
+                  "column": 0,
+                  "offset": 14
+                },
+                "end": {
+                  "line": 3,
+                  "column": 1,
+                  "offset": 15
+                },
+                "text": "*"
+              }
+            ],
+            "children": [
+              {
+                "text": "c",
+                "start": {
+                  "line": 3,
+                  "column": 2,
+                  "offset": 16
+                },
+                "end": {
+                  "line": 3,
+                  "column": 3,
+                  "offset": 17
+                }
+              }
+            ]
+          }
+        ],
+        "attributes": {
+          "isTight": "true"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Lists, https://github.github.com/gfm/#example-301",
+    "markdown": "- a\n  > b\n  ```\n  c\n  ```\n- d\n",
+    "expected": [
+      {
+        "type": "bulletList",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 5,
+          "column": 3,
+          "offset": 29
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 4,
+              "column": 5,
+              "offset": 25
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "text": "a",
+                "start": {
+                  "line": 0,
+                  "column": 2,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                }
+              },
+              {
+                "type": "blockquote",
+                "start": {
+                  "line": 1,
+                  "column": 2,
+                  "offset": 6
+                },
+                "end": {
+                  "line": 1,
+                  "column": 5,
+                  "offset": 9
+                },
+                "markers": [
+                  {
+                    "start": {
+                      "line": 1,
+                      "column": 2,
+                      "offset": 6
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 3,
+                      "offset": 7
+                    },
+                    "text": ">"
+                  }
+                ],
+                "children": [
+                  {
+                    "type": "paragraph",
+                    "start": {
+                      "line": 1,
+                      "column": 4,
+                      "offset": 8
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 5,
+                      "offset": 9
+                    },
+                    "children": [
+                      {
+                        "text": "b",
+                        "start": {
+                          "line": 1,
+                          "column": 4,
+                          "offset": 8
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 5,
+                          "offset": 9
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "codeBlock",
+                "start": {
+                  "line": 2,
+                  "column": 2,
+                  "offset": 12
+                },
+                "end": {
+                  "line": 4,
+                  "column": 5,
+                  "offset": 25
+                },
+                "markers": [
+                  {
+                    "start": {
+                      "line": 2,
+                      "column": 2,
+                      "offset": 12
+                    },
+                    "end": {
+                      "line": 2,
+                      "column": 5,
+                      "offset": 15
+                    },
+                    "text": "```"
+                  },
+                  {
+                    "start": {
+                      "line": 4,
+                      "column": 2,
+                      "offset": 22
+                    },
+                    "end": {
+                      "line": 4,
+                      "column": 5,
+                      "offset": 25
+                    },
+                    "text": "```"
+                  }
+                ],
+                "children": [
+                  {
+                    "text": "c\n",
+                    "start": {
+                      "line": 3,
+                      "column": 2,
+                      "offset": 18
+                    },
+                    "end": {
+                      "line": 4,
+                      "column": 0,
+                      "offset": 20
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "start": {
+              "line": 5,
+              "column": 0,
+              "offset": 26
+            },
+            "end": {
+              "line": 5,
+              "column": 3,
+              "offset": 29
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 5,
+                  "column": 0,
+                  "offset": 26
+                },
+                "end": {
+                  "line": 5,
+                  "column": 1,
+                  "offset": 27
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "text": "d",
+                "start": {
+                  "line": 5,
+                  "column": 2,
+                  "offset": 28
+                },
+                "end": {
+                  "line": 5,
+                  "column": 3,
+                  "offset": 29
+                }
+              }
+            ]
+          }
+        ],
+        "attributes": {
+          "isTight": "true"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Lists, https://github.github.com/gfm/#example-302",
+    "markdown": "- a\n",
+    "expected": [
+      {
+        "type": "bulletList",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 3,
+          "offset": 3
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "text": "a",
+                "start": {
+                  "line": 0,
+                  "column": 2,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                }
+              }
+            ]
+          }
+        ],
+        "attributes": {
+          "isTight": "true"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Lists, https://github.github.com/gfm/#example-303",
+    "markdown": "- a\n  - b\n",
+    "expected": [
+      {
+        "type": "bulletList",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 5,
+          "offset": 9
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 5,
+              "offset": 9
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "text": "a",
+                "start": {
+                  "line": 0,
+                  "column": 2,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                }
+              },
+              {
+                "type": "bulletList",
+                "start": {
+                  "line": 1,
+                  "column": 2,
+                  "offset": 6
+                },
+                "end": {
+                  "line": 1,
+                  "column": 5,
+                  "offset": 9
+                },
+                "children": [
+                  {
+                    "type": "listItem",
+                    "start": {
+                      "line": 1,
+                      "column": 2,
+                      "offset": 6
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 5,
+                      "offset": 9
+                    },
+                    "markers": [
+                      {
+                        "start": {
+                          "line": 1,
+                          "column": 2,
+                          "offset": 6
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 3,
+                          "offset": 7
+                        },
+                        "text": "-"
+                      }
+                    ],
+                    "children": [
+                      {
+                        "text": "b",
+                        "start": {
+                          "line": 1,
+                          "column": 4,
+                          "offset": 8
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 5,
+                          "offset": 9
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "attributes": {
+                  "isTight": "true"
+                }
+              }
+            ]
+          }
+        ],
+        "attributes": {
+          "isTight": "true"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Lists, https://github.github.com/gfm/#example-304",
+    "markdown": "1. ```\n   foo\n   ```\n\n   bar\n",
+    "expected": [
+      {
+        "type": "orderedList",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 6,
+          "offset": 28
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 4,
+              "column": 6,
+              "offset": 28
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 2,
+                  "offset": 2
+                },
+                "text": "1."
+              }
+            ],
+            "children": [
+              {
+                "type": "codeBlock",
+                "start": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                },
+                "end": {
+                  "line": 2,
+                  "column": 6,
+                  "offset": 20
+                },
+                "markers": [
+                  {
+                    "start": {
+                      "line": 0,
+                      "column": 3,
+                      "offset": 3
+                    },
+                    "end": {
+                      "line": 0,
+                      "column": 6,
+                      "offset": 6
+                    },
+                    "text": "```"
+                  },
+                  {
+                    "start": {
+                      "line": 2,
+                      "column": 3,
+                      "offset": 17
+                    },
+                    "end": {
+                      "line": 2,
+                      "column": 6,
+                      "offset": 20
+                    },
+                    "text": "```"
+                  }
+                ],
+                "children": [
+                  {
+                    "text": "foo\n",
+                    "start": {
+                      "line": 1,
+                      "column": 3,
+                      "offset": 10
+                    },
+                    "end": {
+                      "line": 2,
+                      "column": 0,
+                      "offset": 14
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "start": {
+                  "line": 4,
+                  "column": 3,
+                  "offset": 25
+                },
+                "end": {
+                  "line": 4,
+                  "column": 6,
+                  "offset": 28
+                },
+                "children": [
+                  {
+                    "text": "bar",
+                    "start": {
+                      "line": 4,
+                      "column": 3,
+                      "offset": 25
+                    },
+                    "end": {
+                      "line": 4,
+                      "column": 6,
+                      "offset": 28
+                    }
+                  }
+                ]
+              }
+            ],
+            "attributes": {
+              "number": "1"
+            }
+          }
+        ],
+        "attributes": {
+          "isTight": "false"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Lists, https://github.github.com/gfm/#example-305",
+    "markdown": "* foo\n  * bar\n\n  baz\n",
+    "expected": [
+      {
+        "type": "bulletList",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 5,
+          "offset": 20
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "column": 5,
+              "offset": 20
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "*"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "start": {
+                  "line": 0,
+                  "column": 2,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 0,
+                  "column": 5,
+                  "offset": 5
+                },
+                "children": [
+                  {
+                    "text": "foo",
+                    "start": {
+                      "line": 0,
+                      "column": 2,
+                      "offset": 2
+                    },
+                    "end": {
+                      "line": 0,
+                      "column": 5,
+                      "offset": 5
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "bulletList",
+                "start": {
+                  "line": 1,
+                  "column": 2,
+                  "offset": 8
+                },
+                "end": {
+                  "line": 1,
+                  "column": 7,
+                  "offset": 13
+                },
+                "children": [
+                  {
+                    "type": "listItem",
+                    "start": {
+                      "line": 1,
+                      "column": 2,
+                      "offset": 8
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 7,
+                      "offset": 13
+                    },
+                    "markers": [
+                      {
+                        "start": {
+                          "line": 1,
+                          "column": 2,
+                          "offset": 8
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 3,
+                          "offset": 9
+                        },
+                        "text": "*"
+                      }
+                    ],
+                    "children": [
+                      {
+                        "text": "bar",
+                        "start": {
+                          "line": 1,
+                          "column": 4,
+                          "offset": 10
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 7,
+                          "offset": 13
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "attributes": {
+                  "isTight": "true"
+                }
+              },
+              {
+                "type": "paragraph",
+                "start": {
+                  "line": 3,
+                  "column": 2,
+                  "offset": 17
+                },
+                "end": {
+                  "line": 3,
+                  "column": 5,
+                  "offset": 20
+                },
+                "children": [
+                  {
+                    "text": "baz",
+                    "start": {
+                      "line": 3,
+                      "column": 2,
+                      "offset": 17
+                    },
+                    "end": {
+                      "line": 3,
+                      "column": 5,
+                      "offset": 20
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "attributes": {
+          "isTight": "false"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Lists, https://github.github.com/gfm/#example-306",
+    "markdown": "- a\n  - b\n  - c\n\n- d\n  - e\n  - f\n",
+    "expected": [
+      {
+        "type": "bulletList",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 6,
+          "column": 5,
+          "offset": 32
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "column": 5,
+              "offset": 15
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "start": {
+                  "line": 0,
+                  "column": 2,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                },
+                "children": [
+                  {
+                    "text": "a",
+                    "start": {
+                      "line": 0,
+                      "column": 2,
+                      "offset": 2
+                    },
+                    "end": {
+                      "line": 0,
+                      "column": 3,
+                      "offset": 3
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "bulletList",
+                "start": {
+                  "line": 1,
+                  "column": 2,
+                  "offset": 6
+                },
+                "end": {
+                  "line": 2,
+                  "column": 5,
+                  "offset": 15
+                },
+                "children": [
+                  {
+                    "type": "listItem",
+                    "start": {
+                      "line": 1,
+                      "column": 2,
+                      "offset": 6
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 5,
+                      "offset": 9
+                    },
+                    "markers": [
+                      {
+                        "start": {
+                          "line": 1,
+                          "column": 2,
+                          "offset": 6
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 3,
+                          "offset": 7
+                        },
+                        "text": "-"
+                      }
+                    ],
+                    "children": [
+                      {
+                        "text": "b",
+                        "start": {
+                          "line": 1,
+                          "column": 4,
+                          "offset": 8
+                        },
+                        "end": {
+                          "line": 1,
+                          "column": 5,
+                          "offset": 9
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "start": {
+                      "line": 2,
+                      "column": 2,
+                      "offset": 12
+                    },
+                    "end": {
+                      "line": 2,
+                      "column": 5,
+                      "offset": 15
+                    },
+                    "markers": [
+                      {
+                        "start": {
+                          "line": 2,
+                          "column": 2,
+                          "offset": 12
+                        },
+                        "end": {
+                          "line": 2,
+                          "column": 3,
+                          "offset": 13
+                        },
+                        "text": "-"
+                      }
+                    ],
+                    "children": [
+                      {
+                        "text": "c",
+                        "start": {
+                          "line": 2,
+                          "column": 4,
+                          "offset": 14
+                        },
+                        "end": {
+                          "line": 2,
+                          "column": 5,
+                          "offset": 15
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "attributes": {
+                  "isTight": "true"
+                }
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "start": {
+              "line": 4,
+              "column": 0,
+              "offset": 17
+            },
+            "end": {
+              "line": 6,
+              "column": 5,
+              "offset": 32
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 4,
+                  "column": 0,
+                  "offset": 17
+                },
+                "end": {
+                  "line": 4,
+                  "column": 1,
+                  "offset": 18
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "type": "paragraph",
+                "start": {
+                  "line": 4,
+                  "column": 2,
+                  "offset": 19
+                },
+                "end": {
+                  "line": 4,
+                  "column": 3,
+                  "offset": 20
+                },
+                "children": [
+                  {
+                    "text": "d",
+                    "start": {
+                      "line": 4,
+                      "column": 2,
+                      "offset": 19
+                    },
+                    "end": {
+                      "line": 4,
+                      "column": 3,
+                      "offset": 20
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "bulletList",
+                "start": {
+                  "line": 5,
+                  "column": 2,
+                  "offset": 23
+                },
+                "end": {
+                  "line": 6,
+                  "column": 5,
+                  "offset": 32
+                },
+                "children": [
+                  {
+                    "type": "listItem",
+                    "start": {
+                      "line": 5,
+                      "column": 2,
+                      "offset": 23
+                    },
+                    "end": {
+                      "line": 5,
+                      "column": 5,
+                      "offset": 26
+                    },
+                    "markers": [
+                      {
+                        "start": {
+                          "line": 5,
+                          "column": 2,
+                          "offset": 23
+                        },
+                        "end": {
+                          "line": 5,
+                          "column": 3,
+                          "offset": 24
+                        },
+                        "text": "-"
+                      }
+                    ],
+                    "children": [
+                      {
+                        "text": "e",
+                        "start": {
+                          "line": 5,
+                          "column": 4,
+                          "offset": 25
+                        },
+                        "end": {
+                          "line": 5,
+                          "column": 5,
+                          "offset": 26
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "listItem",
+                    "start": {
+                      "line": 6,
+                      "column": 2,
+                      "offset": 29
+                    },
+                    "end": {
+                      "line": 6,
+                      "column": 5,
+                      "offset": 32
+                    },
+                    "markers": [
+                      {
+                        "start": {
+                          "line": 6,
+                          "column": 2,
+                          "offset": 29
+                        },
+                        "end": {
+                          "line": 6,
+                          "column": 3,
+                          "offset": 30
+                        },
+                        "text": "-"
+                      }
+                    ],
+                    "children": [
+                      {
+                        "text": "f",
+                        "start": {
+                          "line": 6,
+                          "column": 4,
+                          "offset": 31
+                        },
+                        "end": {
+                          "line": 6,
+                          "column": 5,
+                          "offset": 32
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "attributes": {
+                  "isTight": "true"
+                }
+              }
+            ]
+          }
+        ],
+        "attributes": {
+          "isTight": "false"
+        }
+      }
+    ]
+  }
+]

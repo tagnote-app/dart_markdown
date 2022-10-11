@@ -1,0 +1,1309 @@
+[
+  {
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-13",
+    "markdown": "***\n---\n___\n",
+    "expected": [
+      {
+        "type": "thematicBreak",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 3,
+          "offset": 3
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "text": "***"
+          }
+        ]
+      },
+      {
+        "type": "thematicBreak",
+        "start": {
+          "line": 1,
+          "column": 0,
+          "offset": 4
+        },
+        "end": {
+          "line": 1,
+          "column": 3,
+          "offset": 7
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 4
+            },
+            "end": {
+              "line": 1,
+              "column": 3,
+              "offset": 7
+            },
+            "text": "---"
+          }
+        ]
+      },
+      {
+        "type": "thematicBreak",
+        "start": {
+          "line": 2,
+          "column": 0,
+          "offset": 8
+        },
+        "end": {
+          "line": 2,
+          "column": 3,
+          "offset": 11
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 8
+            },
+            "end": {
+              "line": 2,
+              "column": 3,
+              "offset": 11
+            },
+            "text": "___"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-14",
+    "markdown": "+++\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 3,
+          "offset": 3
+        },
+        "children": [
+          {
+            "text": "+++",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-15",
+    "markdown": "===\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 3,
+          "offset": 3
+        },
+        "children": [
+          {
+            "text": "===",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-16",
+    "markdown": "--\n**\n__\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 2,
+          "column": 2,
+          "offset": 8
+        },
+        "children": [
+          {
+            "text": "--\n**\n__",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "column": 2,
+              "offset": 8
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-17",
+    "markdown": " ***\n  ***\n   ***\n",
+    "expected": [
+      {
+        "type": "thematicBreak",
+        "start": {
+          "line": 0,
+          "column": 1,
+          "offset": 1
+        },
+        "end": {
+          "line": 0,
+          "column": 4,
+          "offset": 4
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 1,
+              "offset": 1
+            },
+            "end": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "text": "***"
+          }
+        ]
+      },
+      {
+        "type": "thematicBreak",
+        "start": {
+          "line": 1,
+          "column": 2,
+          "offset": 7
+        },
+        "end": {
+          "line": 1,
+          "column": 5,
+          "offset": 10
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 1,
+              "column": 2,
+              "offset": 7
+            },
+            "end": {
+              "line": 1,
+              "column": 5,
+              "offset": 10
+            },
+            "text": "***"
+          }
+        ]
+      },
+      {
+        "type": "thematicBreak",
+        "start": {
+          "line": 2,
+          "column": 3,
+          "offset": 14
+        },
+        "end": {
+          "line": 2,
+          "column": 6,
+          "offset": 17
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 2,
+              "column": 3,
+              "offset": 14
+            },
+            "end": {
+              "line": 2,
+              "column": 6,
+              "offset": 17
+            },
+            "text": "***"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-18",
+    "markdown": "    ***\n",
+    "expected": [
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 0,
+          "column": 4,
+          "offset": 4
+        },
+        "end": {
+          "line": 1,
+          "column": 0,
+          "offset": 8
+        },
+        "children": [
+          {
+            "text": "***\n",
+            "start": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "end": {
+              "line": 1,
+              "column": 0,
+              "offset": 8
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-19",
+    "markdown": "Foo\n    ***\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 7,
+          "offset": 11
+        },
+        "children": [
+          {
+            "text": "Foo\n",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 0,
+              "offset": 4
+            }
+          },
+          {
+            "text": "***",
+            "start": {
+              "line": 1,
+              "column": 4,
+              "offset": 8
+            },
+            "end": {
+              "line": 1,
+              "column": 7,
+              "offset": 11
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-20",
+    "markdown": "_____________________________________\n",
+    "expected": [
+      {
+        "type": "thematicBreak",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 37,
+          "offset": 37
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 37,
+              "offset": 37
+            },
+            "text": "_____________________________________"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-21",
+    "markdown": " - - -\n",
+    "expected": [
+      {
+        "type": "thematicBreak",
+        "start": {
+          "line": 0,
+          "column": 1,
+          "offset": 1
+        },
+        "end": {
+          "line": 0,
+          "column": 6,
+          "offset": 6
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 1,
+              "offset": 1
+            },
+            "end": {
+              "line": 0,
+              "column": 6,
+              "offset": 6
+            },
+            "text": "- - -"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-22",
+    "markdown": " **  * ** * ** * **\n",
+    "expected": [
+      {
+        "type": "thematicBreak",
+        "start": {
+          "line": 0,
+          "column": 1,
+          "offset": 1
+        },
+        "end": {
+          "line": 0,
+          "column": 19,
+          "offset": 19
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 1,
+              "offset": 1
+            },
+            "end": {
+              "line": 0,
+              "column": 19,
+              "offset": 19
+            },
+            "text": "**  * ** * ** * **"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-23",
+    "markdown": "-     -      -      -\n",
+    "expected": [
+      {
+        "type": "thematicBreak",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 21,
+          "offset": 21
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 21,
+              "offset": 21
+            },
+            "text": "-     -      -      -"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-24",
+    "markdown": "- - - -    \n",
+    "expected": [
+      {
+        "type": "thematicBreak",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 7,
+          "offset": 7
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 7,
+              "offset": 7
+            },
+            "text": "- - - -"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-25",
+    "markdown": "_ _ _ _ a\n\na------\n\n---a---\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 9,
+          "offset": 9
+        },
+        "children": [
+          {
+            "text": "_ _ _ _ a",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 9,
+              "offset": 9
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 2,
+          "column": 0,
+          "offset": 11
+        },
+        "end": {
+          "line": 2,
+          "column": 7,
+          "offset": 18
+        },
+        "children": [
+          {
+            "text": "a------",
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 11
+            },
+            "end": {
+              "line": 2,
+              "column": 7,
+              "offset": 18
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 4,
+          "column": 0,
+          "offset": 20
+        },
+        "end": {
+          "line": 4,
+          "column": 7,
+          "offset": 27
+        },
+        "children": [
+          {
+            "text": "---a---",
+            "start": {
+              "line": 4,
+              "column": 0,
+              "offset": 20
+            },
+            "end": {
+              "line": 4,
+              "column": 7,
+              "offset": 27
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-26",
+    "markdown": " *-*\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 1,
+          "offset": 1
+        },
+        "end": {
+          "line": 0,
+          "column": 4,
+          "offset": 4
+        },
+        "children": [
+          {
+            "type": "emphasis",
+            "start": {
+              "line": 0,
+              "column": 1,
+              "offset": 1
+            },
+            "end": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "end": {
+                  "line": 0,
+                  "column": 2,
+                  "offset": 2
+                },
+                "text": "*"
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                },
+                "end": {
+                  "line": 0,
+                  "column": 4,
+                  "offset": 4
+                },
+                "text": "*"
+              }
+            ],
+            "children": [
+              {
+                "text": "-",
+                "start": {
+                  "line": 0,
+                  "column": 2,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-27",
+    "markdown": "- foo\n***\n- bar\n",
+    "expected": [
+      {
+        "type": "bulletList",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 5,
+          "offset": 5
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 5,
+              "offset": 5
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "text": "foo",
+                "start": {
+                  "line": 0,
+                  "column": 2,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 0,
+                  "column": 5,
+                  "offset": 5
+                }
+              }
+            ]
+          }
+        ],
+        "attributes": {
+          "isTight": "true"
+        }
+      },
+      {
+        "type": "thematicBreak",
+        "start": {
+          "line": 1,
+          "column": 0,
+          "offset": 6
+        },
+        "end": {
+          "line": 1,
+          "column": 3,
+          "offset": 9
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 6
+            },
+            "end": {
+              "line": 1,
+              "column": 3,
+              "offset": 9
+            },
+            "text": "***"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "start": {
+          "line": 2,
+          "column": 0,
+          "offset": 10
+        },
+        "end": {
+          "line": 2,
+          "column": 5,
+          "offset": 15
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 10
+            },
+            "end": {
+              "line": 2,
+              "column": 5,
+              "offset": 15
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 2,
+                  "column": 0,
+                  "offset": 10
+                },
+                "end": {
+                  "line": 2,
+                  "column": 1,
+                  "offset": 11
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "text": "bar",
+                "start": {
+                  "line": 2,
+                  "column": 2,
+                  "offset": 12
+                },
+                "end": {
+                  "line": 2,
+                  "column": 5,
+                  "offset": 15
+                }
+              }
+            ]
+          }
+        ],
+        "attributes": {
+          "isTight": "true"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-28",
+    "markdown": "Foo\n***\nbar\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 3,
+          "offset": 3
+        },
+        "children": [
+          {
+            "text": "Foo",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "thematicBreak",
+        "start": {
+          "line": 1,
+          "column": 0,
+          "offset": 4
+        },
+        "end": {
+          "line": 1,
+          "column": 3,
+          "offset": 7
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 4
+            },
+            "end": {
+              "line": 1,
+              "column": 3,
+              "offset": 7
+            },
+            "text": "***"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 2,
+          "column": 0,
+          "offset": 8
+        },
+        "end": {
+          "line": 2,
+          "column": 3,
+          "offset": 11
+        },
+        "children": [
+          {
+            "text": "bar",
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 8
+            },
+            "end": {
+              "line": 2,
+              "column": 3,
+              "offset": 11
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-29",
+    "markdown": "Foo\n---\nbar\n",
+    "expected": [
+      {
+        "type": "headline",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 3,
+          "offset": 7
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 4
+            },
+            "end": {
+              "line": 1,
+              "column": 3,
+              "offset": 7
+            },
+            "text": "---"
+          }
+        ],
+        "children": [
+          {
+            "text": "Foo",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            }
+          }
+        ],
+        "attributes": {
+          "level": "2"
+        }
+      },
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 2,
+          "column": 0,
+          "offset": 8
+        },
+        "end": {
+          "line": 2,
+          "column": 3,
+          "offset": 11
+        },
+        "children": [
+          {
+            "text": "bar",
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 8
+            },
+            "end": {
+              "line": 2,
+              "column": 3,
+              "offset": 11
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-30",
+    "markdown": "* Foo\n* * *\n* Bar\n",
+    "expected": [
+      {
+        "type": "bulletList",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 5,
+          "offset": 5
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 5,
+              "offset": 5
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "*"
+              }
+            ],
+            "children": [
+              {
+                "text": "Foo",
+                "start": {
+                  "line": 0,
+                  "column": 2,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 0,
+                  "column": 5,
+                  "offset": 5
+                }
+              }
+            ]
+          }
+        ],
+        "attributes": {
+          "isTight": "true"
+        }
+      },
+      {
+        "type": "thematicBreak",
+        "start": {
+          "line": 1,
+          "column": 0,
+          "offset": 6
+        },
+        "end": {
+          "line": 1,
+          "column": 5,
+          "offset": 11
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 6
+            },
+            "end": {
+              "line": 1,
+              "column": 5,
+              "offset": 11
+            },
+            "text": "* * *"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "start": {
+          "line": 2,
+          "column": 0,
+          "offset": 12
+        },
+        "end": {
+          "line": 2,
+          "column": 5,
+          "offset": 17
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 12
+            },
+            "end": {
+              "line": 2,
+              "column": 5,
+              "offset": 17
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 2,
+                  "column": 0,
+                  "offset": 12
+                },
+                "end": {
+                  "line": 2,
+                  "column": 1,
+                  "offset": 13
+                },
+                "text": "*"
+              }
+            ],
+            "children": [
+              {
+                "text": "Bar",
+                "start": {
+                  "line": 2,
+                  "column": 2,
+                  "offset": 14
+                },
+                "end": {
+                  "line": 2,
+                  "column": 5,
+                  "offset": 17
+                }
+              }
+            ]
+          }
+        ],
+        "attributes": {
+          "isTight": "true"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Thematic breaks, https://github.github.com/gfm/#example-31",
+    "markdown": "- Foo\n- * * *\n",
+    "expected": [
+      {
+        "type": "bulletList",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 7,
+          "offset": 13
+        },
+        "children": [
+          {
+            "type": "listItem",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 5,
+              "offset": 5
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 1,
+                  "offset": 1
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "text": "Foo",
+                "start": {
+                  "line": 0,
+                  "column": 2,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 0,
+                  "column": 5,
+                  "offset": 5
+                }
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 6
+            },
+            "end": {
+              "line": 1,
+              "column": 7,
+              "offset": 13
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 1,
+                  "column": 0,
+                  "offset": 6
+                },
+                "end": {
+                  "line": 1,
+                  "column": 1,
+                  "offset": 7
+                },
+                "text": "-"
+              }
+            ],
+            "children": [
+              {
+                "type": "thematicBreak",
+                "start": {
+                  "line": 1,
+                  "column": 2,
+                  "offset": 8
+                },
+                "end": {
+                  "line": 1,
+                  "column": 7,
+                  "offset": 13
+                },
+                "markers": [
+                  {
+                    "start": {
+                      "line": 1,
+                      "column": 2,
+                      "offset": 8
+                    },
+                    "end": {
+                      "line": 1,
+                      "column": 7,
+                      "offset": 13
+                    },
+                    "text": "* * *"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "attributes": {
+          "isTight": "true"
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,1196 @@
+[
+  {
+    "description": "Raw HTML, https://spec.commonmark.org/0.30/#example-612",
+    "markdown": "<a><bab><c2c>\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 13,
+          "offset": 13
+        },
+        "children": [
+          {
+            "type": "inlineHtml",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "children": [
+              {
+                "text": "<a>",
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                }
+              }
+            ]
+          },
+          {
+            "type": "inlineHtml",
+            "start": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "end": {
+              "line": 0,
+              "column": 8,
+              "offset": 8
+            },
+            "children": [
+              {
+                "text": "<bab>",
+                "start": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                },
+                "end": {
+                  "line": 0,
+                  "column": 8,
+                  "offset": 8
+                }
+              }
+            ]
+          },
+          {
+            "type": "inlineHtml",
+            "start": {
+              "line": 0,
+              "column": 8,
+              "offset": 8
+            },
+            "end": {
+              "line": 0,
+              "column": 13,
+              "offset": 13
+            },
+            "children": [
+              {
+                "text": "<c2c>",
+                "start": {
+                  "line": 0,
+                  "column": 8,
+                  "offset": 8
+                },
+                "end": {
+                  "line": 0,
+                  "column": 13,
+                  "offset": 13
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Raw HTML, https://spec.commonmark.org/0.30/#example-613",
+    "markdown": "<a/><b2/>\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 9,
+          "offset": 9
+        },
+        "children": [
+          {
+            "type": "inlineHtml",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "children": [
+              {
+                "text": "<a/>",
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 4,
+                  "offset": 4
+                }
+              }
+            ]
+          },
+          {
+            "type": "inlineHtml",
+            "start": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "end": {
+              "line": 0,
+              "column": 9,
+              "offset": 9
+            },
+            "children": [
+              {
+                "text": "<b2/>",
+                "start": {
+                  "line": 0,
+                  "column": 4,
+                  "offset": 4
+                },
+                "end": {
+                  "line": 0,
+                  "column": 9,
+                  "offset": 9
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Raw HTML, https://spec.commonmark.org/0.30/#example-614",
+    "markdown": "<a  /><b2\ndata=\"foo\" >\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 12,
+          "offset": 22
+        },
+        "children": [
+          {
+            "type": "inlineHtml",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 6,
+              "offset": 6
+            },
+            "children": [
+              {
+                "text": "<a  />",
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 6,
+                  "offset": 6
+                }
+              }
+            ]
+          },
+          {
+            "type": "inlineHtml",
+            "start": {
+              "line": 0,
+              "column": 6,
+              "offset": 6
+            },
+            "end": {
+              "line": 1,
+              "column": 12,
+              "offset": 22
+            },
+            "children": [
+              {
+                "text": "<b2\ndata=\"foo\" >",
+                "start": {
+                  "line": 0,
+                  "column": 6,
+                  "offset": 6
+                },
+                "end": {
+                  "line": 1,
+                  "column": 12,
+                  "offset": 22
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Raw HTML, https://spec.commonmark.org/0.30/#example-615",
+    "markdown": "<a foo=\"bar\" bam = 'baz <em>\"</em>'\n_boolean zoop:33=zoop:33 />\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 27,
+          "offset": 63
+        },
+        "children": [
+          {
+            "type": "inlineHtml",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 27,
+              "offset": 63
+            },
+            "children": [
+              {
+                "text": "<a foo=\"bar\" bam = 'baz <em>\"</em>'\n_boolean zoop:33=zoop:33 />",
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 1,
+                  "column": 27,
+                  "offset": 63
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Raw HTML, https://spec.commonmark.org/0.30/#example-616",
+    "markdown": "Foo <responsive-image src=\"foo.jpg\" />\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 38,
+          "offset": 38
+        },
+        "children": [
+          {
+            "text": "Foo ",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            }
+          },
+          {
+            "type": "inlineHtml",
+            "start": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "end": {
+              "line": 0,
+              "column": 38,
+              "offset": 38
+            },
+            "children": [
+              {
+                "text": "<responsive-image src=\"foo.jpg\" />",
+                "start": {
+                  "line": 0,
+                  "column": 4,
+                  "offset": 4
+                },
+                "end": {
+                  "line": 0,
+                  "column": 38,
+                  "offset": 38
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Raw HTML, https://spec.commonmark.org/0.30/#example-617",
+    "markdown": "<33> <__>\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 9,
+          "offset": 9
+        },
+        "children": [
+          {
+            "text": "<33> <__>",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 9,
+              "offset": 9
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Raw HTML, https://spec.commonmark.org/0.30/#example-618",
+    "markdown": "<a h*#ref=\"hi\">\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 15,
+          "offset": 15
+        },
+        "children": [
+          {
+            "text": "<a h*#ref=\"hi\">",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 15,
+              "offset": 15
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Raw HTML, https://spec.commonmark.org/0.30/#example-619",
+    "markdown": "<a href=\"hi'> <a href=hi'>\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 26,
+          "offset": 26
+        },
+        "children": [
+          {
+            "text": "<a href=\"hi'> <a href=hi'>",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 26,
+              "offset": 26
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Raw HTML, https://spec.commonmark.org/0.30/#example-620",
+    "markdown": "< a><\nfoo><bar/ >\n<foo bar=baz\nbim!bop />\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 10,
+          "offset": 41
+        },
+        "children": [
+          {
+            "text": "< a><\nfoo><bar/ >\n<foo bar=baz\nbim!bop />",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 3,
+              "column": 10,
+              "offset": 41
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Raw HTML, https://spec.commonmark.org/0.30/#example-621",
+    "markdown": "<a href='bar'title=title>\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 25,
+          "offset": 25
+        },
+        "children": [
+          {
+            "text": "<a href='bar'title=title>",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 25,
+              "offset": 25
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Raw HTML, https://spec.commonmark.org/0.30/#example-622",
+    "markdown": "</a></foo >\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 11,
+          "offset": 11
+        },
+        "children": [
+          {
+            "type": "inlineHtml",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "children": [
+              {
+                "text": "</a>",
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 4,
+                  "offset": 4
+                }
+              }
+            ]
+          },
+          {
+            "type": "inlineHtml",
+            "start": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "end": {
+              "line": 0,
+              "column": 11,
+              "offset": 11
+            },
+            "children": [
+              {
+                "text": "</foo >",
+                "start": {
+                  "line": 0,
+                  "column": 4,
+                  "offset": 4
+                },
+                "end": {
+                  "line": 0,
+                  "column": 11,
+                  "offset": 11
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Raw HTML, https://spec.commonmark.org/0.30/#example-623",
+    "markdown": "</a href=\"foo\">\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 15,
+          "offset": 15
+        },
+        "children": [
+          {
+            "text": "</a href=\"foo\">",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 15,
+              "offset": 15
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Raw HTML, https://spec.commonmark.org/0.30/#example-624",
+    "markdown": "foo <!-- this is a\ncomment - with hyphen -->\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 25,
+          "offset": 44
+        },
+        "children": [
+          {
+            "text": "foo ",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            }
+          },
+          {
+            "type": "inlineHtml",
+            "start": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "end": {
+              "line": 1,
+              "column": 25,
+              "offset": 44
+            },
+            "children": [
+              {
+                "text": "<!-- this is a\ncomment - with hyphen -->",
+                "start": {
+                  "line": 0,
+                  "column": 4,
+                  "offset": 4
+                },
+                "end": {
+                  "line": 1,
+                  "column": 25,
+                  "offset": 44
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Raw HTML, https://spec.commonmark.org/0.30/#example-625",
+    "markdown": "foo <!-- not a comment -- two hyphens -->\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 41,
+          "offset": 41
+        },
+        "children": [
+          {
+            "text": "foo <!-- not a comment -- two hyphens -->",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 41,
+              "offset": 41
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Raw HTML, https://spec.commonmark.org/0.30/#example-626",
+    "markdown": "foo <!--> foo -->\n\nfoo <!-- foo--->\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 17,
+          "offset": 17
+        },
+        "children": [
+          {
+            "text": "foo <!--> foo -->",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 17,
+              "offset": 17
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 2,
+          "column": 0,
+          "offset": 19
+        },
+        "end": {
+          "line": 2,
+          "column": 16,
+          "offset": 35
+        },
+        "children": [
+          {
+            "text": "foo <!-- foo--->",
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 19
+            },
+            "end": {
+              "line": 2,
+              "column": 16,
+              "offset": 35
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Raw HTML, https://spec.commonmark.org/0.30/#example-627",
+    "markdown": "foo <?php echo $a; ?>\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 21,
+          "offset": 21
+        },
+        "children": [
+          {
+            "text": "foo ",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            }
+          },
+          {
+            "type": "inlineHtml",
+            "start": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "end": {
+              "line": 0,
+              "column": 21,
+              "offset": 21
+            },
+            "children": [
+              {
+                "text": "<?php echo $a; ?>",
+                "start": {
+                  "line": 0,
+                  "column": 4,
+                  "offset": 4
+                },
+                "end": {
+                  "line": 0,
+                  "column": 21,
+                  "offset": 21
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Raw HTML, https://spec.commonmark.org/0.30/#example-628",
+    "markdown": "foo <!ELEMENT br EMPTY>\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 23,
+          "offset": 23
+        },
+        "children": [
+          {
+            "text": "foo ",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            }
+          },
+          {
+            "type": "inlineHtml",
+            "start": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "end": {
+              "line": 0,
+              "column": 23,
+              "offset": 23
+            },
+            "children": [
+              {
+                "text": "<!ELEMENT br EMPTY>",
+                "start": {
+                  "line": 0,
+                  "column": 4,
+                  "offset": 4
+                },
+                "end": {
+                  "line": 0,
+                  "column": 23,
+                  "offset": 23
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Raw HTML, https://spec.commonmark.org/0.30/#example-629",
+    "markdown": "foo <![CDATA[>&<]]>\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 19,
+          "offset": 19
+        },
+        "children": [
+          {
+            "text": "foo ",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            }
+          },
+          {
+            "type": "inlineHtml",
+            "start": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "end": {
+              "line": 0,
+              "column": 19,
+              "offset": 19
+            },
+            "children": [
+              {
+                "text": "<![CDATA[>&<]]>",
+                "start": {
+                  "line": 0,
+                  "column": 4,
+                  "offset": 4
+                },
+                "end": {
+                  "line": 0,
+                  "column": 19,
+                  "offset": 19
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Raw HTML, https://spec.commonmark.org/0.30/#example-630",
+    "markdown": "foo <a href=\"&ouml;\">\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 21,
+          "offset": 21
+        },
+        "children": [
+          {
+            "text": "foo ",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            }
+          },
+          {
+            "type": "inlineHtml",
+            "start": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "end": {
+              "line": 0,
+              "column": 21,
+              "offset": 21
+            },
+            "children": [
+              {
+                "text": "<a href=\"&ouml;\">",
+                "start": {
+                  "line": 0,
+                  "column": 4,
+                  "offset": 4
+                },
+                "end": {
+                  "line": 0,
+                  "column": 21,
+                  "offset": 21
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Raw HTML, https://spec.commonmark.org/0.30/#example-631",
+    "markdown": "foo <a href=\"\\*\">\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 17,
+          "offset": 17
+        },
+        "children": [
+          {
+            "text": "foo ",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            }
+          },
+          {
+            "type": "inlineHtml",
+            "start": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "end": {
+              "line": 0,
+              "column": 17,
+              "offset": 17
+            },
+            "children": [
+              {
+                "text": "<a href=\"\\*\">",
+                "start": {
+                  "line": 0,
+                  "column": 4,
+                  "offset": 4
+                },
+                "end": {
+                  "line": 0,
+                  "column": 17,
+                  "offset": 17
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Raw HTML, https://spec.commonmark.org/0.30/#example-632",
+    "markdown": "<a href=\"\\\"\">\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 13,
+          "offset": 13
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 9,
+              "offset": 9
+            },
+            "end": {
+              "line": 0,
+              "column": 10,
+              "offset": 10
+            },
+            "text": "\\"
+          }
+        ],
+        "children": [
+          {
+            "text": "<a href=\"",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 9,
+              "offset": 9
+            }
+          },
+          {
+            "text": "\"",
+            "start": {
+              "line": 0,
+              "column": 10,
+              "offset": 10
+            },
+            "end": {
+              "line": 0,
+              "column": 11,
+              "offset": 11
+            }
+          },
+          {
+            "text": "\">",
+            "start": {
+              "line": 0,
+              "column": 11,
+              "offset": 11
+            },
+            "end": {
+              "line": 0,
+              "column": 13,
+              "offset": 13
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

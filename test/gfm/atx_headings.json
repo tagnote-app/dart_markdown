@@ -1,0 +1,1911 @@
+[
+  {
+    "description": "ATX headings, https://github.github.com/gfm/#example-32",
+    "markdown": "# foo\n## foo\n### foo\n#### foo\n##### foo\n###### foo\n",
+    "expected": [
+      {
+        "type": "headline",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 5,
+          "offset": 5
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 1,
+              "offset": 1
+            },
+            "text": "#"
+          }
+        ],
+        "children": [
+          {
+            "text": "foo",
+            "start": {
+              "line": 0,
+              "column": 2,
+              "offset": 2
+            },
+            "end": {
+              "line": 0,
+              "column": 5,
+              "offset": 5
+            }
+          }
+        ],
+        "attributes": {
+          "level": "1"
+        }
+      },
+      {
+        "type": "headline",
+        "start": {
+          "line": 1,
+          "column": 0,
+          "offset": 6
+        },
+        "end": {
+          "line": 1,
+          "column": 6,
+          "offset": 12
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 6
+            },
+            "end": {
+              "line": 1,
+              "column": 2,
+              "offset": 8
+            },
+            "text": "##"
+          }
+        ],
+        "children": [
+          {
+            "text": "foo",
+            "start": {
+              "line": 1,
+              "column": 3,
+              "offset": 9
+            },
+            "end": {
+              "line": 1,
+              "column": 6,
+              "offset": 12
+            }
+          }
+        ],
+        "attributes": {
+          "level": "2"
+        }
+      },
+      {
+        "type": "headline",
+        "start": {
+          "line": 2,
+          "column": 0,
+          "offset": 13
+        },
+        "end": {
+          "line": 2,
+          "column": 7,
+          "offset": 20
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 13
+            },
+            "end": {
+              "line": 2,
+              "column": 3,
+              "offset": 16
+            },
+            "text": "###"
+          }
+        ],
+        "children": [
+          {
+            "text": "foo",
+            "start": {
+              "line": 2,
+              "column": 4,
+              "offset": 17
+            },
+            "end": {
+              "line": 2,
+              "column": 7,
+              "offset": 20
+            }
+          }
+        ],
+        "attributes": {
+          "level": "3"
+        }
+      },
+      {
+        "type": "headline",
+        "start": {
+          "line": 3,
+          "column": 0,
+          "offset": 21
+        },
+        "end": {
+          "line": 3,
+          "column": 8,
+          "offset": 29
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 3,
+              "column": 0,
+              "offset": 21
+            },
+            "end": {
+              "line": 3,
+              "column": 4,
+              "offset": 25
+            },
+            "text": "####"
+          }
+        ],
+        "children": [
+          {
+            "text": "foo",
+            "start": {
+              "line": 3,
+              "column": 5,
+              "offset": 26
+            },
+            "end": {
+              "line": 3,
+              "column": 8,
+              "offset": 29
+            }
+          }
+        ],
+        "attributes": {
+          "level": "4"
+        }
+      },
+      {
+        "type": "headline",
+        "start": {
+          "line": 4,
+          "column": 0,
+          "offset": 30
+        },
+        "end": {
+          "line": 4,
+          "column": 9,
+          "offset": 39
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 4,
+              "column": 0,
+              "offset": 30
+            },
+            "end": {
+              "line": 4,
+              "column": 5,
+              "offset": 35
+            },
+            "text": "#####"
+          }
+        ],
+        "children": [
+          {
+            "text": "foo",
+            "start": {
+              "line": 4,
+              "column": 6,
+              "offset": 36
+            },
+            "end": {
+              "line": 4,
+              "column": 9,
+              "offset": 39
+            }
+          }
+        ],
+        "attributes": {
+          "level": "5"
+        }
+      },
+      {
+        "type": "headline",
+        "start": {
+          "line": 5,
+          "column": 0,
+          "offset": 40
+        },
+        "end": {
+          "line": 5,
+          "column": 10,
+          "offset": 50
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 5,
+              "column": 0,
+              "offset": 40
+            },
+            "end": {
+              "line": 5,
+              "column": 6,
+              "offset": 46
+            },
+            "text": "######"
+          }
+        ],
+        "children": [
+          {
+            "text": "foo",
+            "start": {
+              "line": 5,
+              "column": 7,
+              "offset": 47
+            },
+            "end": {
+              "line": 5,
+              "column": 10,
+              "offset": 50
+            }
+          }
+        ],
+        "attributes": {
+          "level": "6"
+        }
+      }
+    ]
+  },
+  {
+    "description": "ATX headings, https://github.github.com/gfm/#example-33",
+    "markdown": "####### foo\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 11,
+          "offset": 11
+        },
+        "children": [
+          {
+            "text": "####### foo",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 11,
+              "offset": 11
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "ATX headings, https://github.github.com/gfm/#example-34",
+    "markdown": "#5 bolt\n\n#hashtag\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 7,
+          "offset": 7
+        },
+        "children": [
+          {
+            "text": "#5 bolt",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 7,
+              "offset": 7
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 2,
+          "column": 0,
+          "offset": 9
+        },
+        "end": {
+          "line": 2,
+          "column": 8,
+          "offset": 17
+        },
+        "children": [
+          {
+            "text": "#hashtag",
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 9
+            },
+            "end": {
+              "line": 2,
+              "column": 8,
+              "offset": 17
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "ATX headings, https://github.github.com/gfm/#example-35",
+    "markdown": "\\## foo\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 7,
+          "offset": 7
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 1,
+              "offset": 1
+            },
+            "text": "\\"
+          }
+        ],
+        "children": [
+          {
+            "text": "#",
+            "start": {
+              "line": 0,
+              "column": 1,
+              "offset": 1
+            },
+            "end": {
+              "line": 0,
+              "column": 2,
+              "offset": 2
+            }
+          },
+          {
+            "text": "# foo",
+            "start": {
+              "line": 0,
+              "column": 2,
+              "offset": 2
+            },
+            "end": {
+              "line": 0,
+              "column": 7,
+              "offset": 7
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "ATX headings, https://github.github.com/gfm/#example-36",
+    "markdown": "# foo *bar* \\*baz\\*\n",
+    "expected": [
+      {
+        "type": "headline",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 19,
+          "offset": 19
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 1,
+              "offset": 1
+            },
+            "text": "#"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 12,
+              "offset": 12
+            },
+            "end": {
+              "line": 0,
+              "column": 13,
+              "offset": 13
+            },
+            "text": "\\"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 17,
+              "offset": 17
+            },
+            "end": {
+              "line": 0,
+              "column": 18,
+              "offset": 18
+            },
+            "text": "\\"
+          }
+        ],
+        "children": [
+          {
+            "text": "foo ",
+            "start": {
+              "line": 0,
+              "column": 2,
+              "offset": 2
+            },
+            "end": {
+              "line": 0,
+              "column": 6,
+              "offset": 6
+            }
+          },
+          {
+            "type": "emphasis",
+            "start": {
+              "line": 0,
+              "column": 6,
+              "offset": 6
+            },
+            "end": {
+              "line": 0,
+              "column": 11,
+              "offset": 11
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 6,
+                  "offset": 6
+                },
+                "end": {
+                  "line": 0,
+                  "column": 7,
+                  "offset": 7
+                },
+                "text": "*"
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 10,
+                  "offset": 10
+                },
+                "end": {
+                  "line": 0,
+                  "column": 11,
+                  "offset": 11
+                },
+                "text": "*"
+              }
+            ],
+            "children": [
+              {
+                "text": "bar",
+                "start": {
+                  "line": 0,
+                  "column": 7,
+                  "offset": 7
+                },
+                "end": {
+                  "line": 0,
+                  "column": 10,
+                  "offset": 10
+                }
+              }
+            ]
+          },
+          {
+            "text": " ",
+            "start": {
+              "line": 0,
+              "column": 11,
+              "offset": 11
+            },
+            "end": {
+              "line": 0,
+              "column": 12,
+              "offset": 12
+            }
+          },
+          {
+            "text": "*",
+            "start": {
+              "line": 0,
+              "column": 13,
+              "offset": 13
+            },
+            "end": {
+              "line": 0,
+              "column": 14,
+              "offset": 14
+            }
+          },
+          {
+            "text": "baz",
+            "start": {
+              "line": 0,
+              "column": 14,
+              "offset": 14
+            },
+            "end": {
+              "line": 0,
+              "column": 17,
+              "offset": 17
+            }
+          },
+          {
+            "text": "*",
+            "start": {
+              "line": 0,
+              "column": 18,
+              "offset": 18
+            },
+            "end": {
+              "line": 0,
+              "column": 19,
+              "offset": 19
+            }
+          }
+        ],
+        "attributes": {
+          "level": "1"
+        }
+      }
+    ]
+  },
+  {
+    "description": "ATX headings, https://github.github.com/gfm/#example-37",
+    "markdown": "#                  foo                     \n",
+    "expected": [
+      {
+        "type": "headline",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 43,
+          "offset": 43
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 1,
+              "offset": 1
+            },
+            "text": "#"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 43,
+              "offset": 43
+            },
+            "end": {
+              "line": 0,
+              "column": 43,
+              "offset": 43
+            },
+            "text": ""
+          }
+        ],
+        "children": [
+          {
+            "text": "foo",
+            "start": {
+              "line": 0,
+              "column": 19,
+              "offset": 19
+            },
+            "end": {
+              "line": 0,
+              "column": 22,
+              "offset": 22
+            }
+          }
+        ],
+        "attributes": {
+          "level": "1"
+        }
+      }
+    ]
+  },
+  {
+    "description": "ATX headings, https://github.github.com/gfm/#example-38",
+    "markdown": " ### foo\n  ## foo\n   # foo\n",
+    "expected": [
+      {
+        "type": "headline",
+        "start": {
+          "line": 0,
+          "column": 1,
+          "offset": 1
+        },
+        "end": {
+          "line": 0,
+          "column": 8,
+          "offset": 8
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 1,
+              "offset": 1
+            },
+            "end": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "text": "###"
+          }
+        ],
+        "children": [
+          {
+            "text": "foo",
+            "start": {
+              "line": 0,
+              "column": 5,
+              "offset": 5
+            },
+            "end": {
+              "line": 0,
+              "column": 8,
+              "offset": 8
+            }
+          }
+        ],
+        "attributes": {
+          "level": "3"
+        }
+      },
+      {
+        "type": "headline",
+        "start": {
+          "line": 1,
+          "column": 2,
+          "offset": 11
+        },
+        "end": {
+          "line": 1,
+          "column": 8,
+          "offset": 17
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 1,
+              "column": 2,
+              "offset": 11
+            },
+            "end": {
+              "line": 1,
+              "column": 4,
+              "offset": 13
+            },
+            "text": "##"
+          }
+        ],
+        "children": [
+          {
+            "text": "foo",
+            "start": {
+              "line": 1,
+              "column": 5,
+              "offset": 14
+            },
+            "end": {
+              "line": 1,
+              "column": 8,
+              "offset": 17
+            }
+          }
+        ],
+        "attributes": {
+          "level": "2"
+        }
+      },
+      {
+        "type": "headline",
+        "start": {
+          "line": 2,
+          "column": 3,
+          "offset": 21
+        },
+        "end": {
+          "line": 2,
+          "column": 8,
+          "offset": 26
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 2,
+              "column": 3,
+              "offset": 21
+            },
+            "end": {
+              "line": 2,
+              "column": 4,
+              "offset": 22
+            },
+            "text": "#"
+          }
+        ],
+        "children": [
+          {
+            "text": "foo",
+            "start": {
+              "line": 2,
+              "column": 5,
+              "offset": 23
+            },
+            "end": {
+              "line": 2,
+              "column": 8,
+              "offset": 26
+            }
+          }
+        ],
+        "attributes": {
+          "level": "1"
+        }
+      }
+    ]
+  },
+  {
+    "description": "ATX headings, https://github.github.com/gfm/#example-39",
+    "markdown": "    # foo\n",
+    "expected": [
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 0,
+          "column": 4,
+          "offset": 4
+        },
+        "end": {
+          "line": 1,
+          "column": 0,
+          "offset": 10
+        },
+        "children": [
+          {
+            "text": "# foo\n",
+            "start": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "end": {
+              "line": 1,
+              "column": 0,
+              "offset": 10
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "ATX headings, https://github.github.com/gfm/#example-40",
+    "markdown": "foo\n    # bar\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 9,
+          "offset": 13
+        },
+        "children": [
+          {
+            "text": "foo\n",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 0,
+              "offset": 4
+            }
+          },
+          {
+            "text": "# bar",
+            "start": {
+              "line": 1,
+              "column": 4,
+              "offset": 8
+            },
+            "end": {
+              "line": 1,
+              "column": 9,
+              "offset": 13
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "ATX headings, https://github.github.com/gfm/#example-41",
+    "markdown": "## foo ##\n  ###   bar    ###\n",
+    "expected": [
+      {
+        "type": "headline",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 9,
+          "offset": 9
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 2,
+              "offset": 2
+            },
+            "text": "##"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 7,
+              "offset": 7
+            },
+            "end": {
+              "line": 0,
+              "column": 9,
+              "offset": 9
+            },
+            "text": "##"
+          }
+        ],
+        "children": [
+          {
+            "text": "foo",
+            "start": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "end": {
+              "line": 0,
+              "column": 6,
+              "offset": 6
+            }
+          }
+        ],
+        "attributes": {
+          "level": "2"
+        }
+      },
+      {
+        "type": "headline",
+        "start": {
+          "line": 1,
+          "column": 2,
+          "offset": 12
+        },
+        "end": {
+          "line": 1,
+          "column": 18,
+          "offset": 28
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 1,
+              "column": 2,
+              "offset": 12
+            },
+            "end": {
+              "line": 1,
+              "column": 5,
+              "offset": 15
+            },
+            "text": "###"
+          },
+          {
+            "start": {
+              "line": 1,
+              "column": 15,
+              "offset": 25
+            },
+            "end": {
+              "line": 1,
+              "column": 18,
+              "offset": 28
+            },
+            "text": "###"
+          }
+        ],
+        "children": [
+          {
+            "text": "bar",
+            "start": {
+              "line": 1,
+              "column": 8,
+              "offset": 18
+            },
+            "end": {
+              "line": 1,
+              "column": 11,
+              "offset": 21
+            }
+          }
+        ],
+        "attributes": {
+          "level": "3"
+        }
+      }
+    ]
+  },
+  {
+    "description": "ATX headings, https://github.github.com/gfm/#example-42",
+    "markdown": "# foo ##################################\n##### foo ##\n",
+    "expected": [
+      {
+        "type": "headline",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 40,
+          "offset": 40
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 1,
+              "offset": 1
+            },
+            "text": "#"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 6,
+              "offset": 6
+            },
+            "end": {
+              "line": 0,
+              "column": 40,
+              "offset": 40
+            },
+            "text": "##################################"
+          }
+        ],
+        "children": [
+          {
+            "text": "foo",
+            "start": {
+              "line": 0,
+              "column": 2,
+              "offset": 2
+            },
+            "end": {
+              "line": 0,
+              "column": 5,
+              "offset": 5
+            }
+          }
+        ],
+        "attributes": {
+          "level": "1"
+        }
+      },
+      {
+        "type": "headline",
+        "start": {
+          "line": 1,
+          "column": 0,
+          "offset": 41
+        },
+        "end": {
+          "line": 1,
+          "column": 12,
+          "offset": 53
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 41
+            },
+            "end": {
+              "line": 1,
+              "column": 5,
+              "offset": 46
+            },
+            "text": "#####"
+          },
+          {
+            "start": {
+              "line": 1,
+              "column": 10,
+              "offset": 51
+            },
+            "end": {
+              "line": 1,
+              "column": 12,
+              "offset": 53
+            },
+            "text": "##"
+          }
+        ],
+        "children": [
+          {
+            "text": "foo",
+            "start": {
+              "line": 1,
+              "column": 6,
+              "offset": 47
+            },
+            "end": {
+              "line": 1,
+              "column": 9,
+              "offset": 50
+            }
+          }
+        ],
+        "attributes": {
+          "level": "5"
+        }
+      }
+    ]
+  },
+  {
+    "description": "ATX headings, https://github.github.com/gfm/#example-43",
+    "markdown": "### foo ###     \n",
+    "expected": [
+      {
+        "type": "headline",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 16,
+          "offset": 16
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "text": "###"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 8,
+              "offset": 8
+            },
+            "end": {
+              "line": 0,
+              "column": 16,
+              "offset": 16
+            },
+            "text": "###     "
+          }
+        ],
+        "children": [
+          {
+            "text": "foo",
+            "start": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "end": {
+              "line": 0,
+              "column": 7,
+              "offset": 7
+            }
+          }
+        ],
+        "attributes": {
+          "level": "3"
+        }
+      }
+    ]
+  },
+  {
+    "description": "ATX headings, https://github.github.com/gfm/#example-44",
+    "markdown": "### foo ### b\n",
+    "expected": [
+      {
+        "type": "headline",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 13,
+          "offset": 13
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "text": "###"
+          }
+        ],
+        "children": [
+          {
+            "text": "foo ### b",
+            "start": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "end": {
+              "line": 0,
+              "column": 13,
+              "offset": 13
+            }
+          }
+        ],
+        "attributes": {
+          "level": "3"
+        }
+      }
+    ]
+  },
+  {
+    "description": "ATX headings, https://github.github.com/gfm/#example-45",
+    "markdown": "# foo#\n",
+    "expected": [
+      {
+        "type": "headline",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 6,
+          "offset": 6
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 1,
+              "offset": 1
+            },
+            "text": "#"
+          }
+        ],
+        "children": [
+          {
+            "text": "foo#",
+            "start": {
+              "line": 0,
+              "column": 2,
+              "offset": 2
+            },
+            "end": {
+              "line": 0,
+              "column": 6,
+              "offset": 6
+            }
+          }
+        ],
+        "attributes": {
+          "level": "1"
+        }
+      }
+    ]
+  },
+  {
+    "description": "ATX headings, https://github.github.com/gfm/#example-46",
+    "markdown": "### foo \\###\n## foo #\\##\n# foo \\#\n",
+    "expected": [
+      {
+        "type": "headline",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 12,
+          "offset": 12
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "text": "###"
+          },
+          {
+            "start": {
+              "line": 0,
+              "column": 8,
+              "offset": 8
+            },
+            "end": {
+              "line": 0,
+              "column": 9,
+              "offset": 9
+            },
+            "text": "\\"
+          }
+        ],
+        "children": [
+          {
+            "text": "foo ",
+            "start": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "end": {
+              "line": 0,
+              "column": 8,
+              "offset": 8
+            }
+          },
+          {
+            "text": "#",
+            "start": {
+              "line": 0,
+              "column": 9,
+              "offset": 9
+            },
+            "end": {
+              "line": 0,
+              "column": 10,
+              "offset": 10
+            }
+          },
+          {
+            "text": "##",
+            "start": {
+              "line": 0,
+              "column": 10,
+              "offset": 10
+            },
+            "end": {
+              "line": 0,
+              "column": 12,
+              "offset": 12
+            }
+          }
+        ],
+        "attributes": {
+          "level": "3"
+        }
+      },
+      {
+        "type": "headline",
+        "start": {
+          "line": 1,
+          "column": 0,
+          "offset": 13
+        },
+        "end": {
+          "line": 1,
+          "column": 11,
+          "offset": 24
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 13
+            },
+            "end": {
+              "line": 1,
+              "column": 2,
+              "offset": 15
+            },
+            "text": "##"
+          },
+          {
+            "start": {
+              "line": 1,
+              "column": 8,
+              "offset": 21
+            },
+            "end": {
+              "line": 1,
+              "column": 9,
+              "offset": 22
+            },
+            "text": "\\"
+          }
+        ],
+        "children": [
+          {
+            "text": "foo #",
+            "start": {
+              "line": 1,
+              "column": 3,
+              "offset": 16
+            },
+            "end": {
+              "line": 1,
+              "column": 8,
+              "offset": 21
+            }
+          },
+          {
+            "text": "#",
+            "start": {
+              "line": 1,
+              "column": 9,
+              "offset": 22
+            },
+            "end": {
+              "line": 1,
+              "column": 10,
+              "offset": 23
+            }
+          },
+          {
+            "text": "#",
+            "start": {
+              "line": 1,
+              "column": 10,
+              "offset": 23
+            },
+            "end": {
+              "line": 1,
+              "column": 11,
+              "offset": 24
+            }
+          }
+        ],
+        "attributes": {
+          "level": "2"
+        }
+      },
+      {
+        "type": "headline",
+        "start": {
+          "line": 2,
+          "column": 0,
+          "offset": 25
+        },
+        "end": {
+          "line": 2,
+          "column": 8,
+          "offset": 33
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 25
+            },
+            "end": {
+              "line": 2,
+              "column": 1,
+              "offset": 26
+            },
+            "text": "#"
+          },
+          {
+            "start": {
+              "line": 2,
+              "column": 6,
+              "offset": 31
+            },
+            "end": {
+              "line": 2,
+              "column": 7,
+              "offset": 32
+            },
+            "text": "\\"
+          }
+        ],
+        "children": [
+          {
+            "text": "foo ",
+            "start": {
+              "line": 2,
+              "column": 2,
+              "offset": 27
+            },
+            "end": {
+              "line": 2,
+              "column": 6,
+              "offset": 31
+            }
+          },
+          {
+            "text": "#",
+            "start": {
+              "line": 2,
+              "column": 7,
+              "offset": 32
+            },
+            "end": {
+              "line": 2,
+              "column": 8,
+              "offset": 33
+            }
+          }
+        ],
+        "attributes": {
+          "level": "1"
+        }
+      }
+    ]
+  },
+  {
+    "description": "ATX headings, https://github.github.com/gfm/#example-47",
+    "markdown": "****\n## foo\n****\n",
+    "expected": [
+      {
+        "type": "thematicBreak",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 4,
+          "offset": 4
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "text": "****"
+          }
+        ]
+      },
+      {
+        "type": "headline",
+        "start": {
+          "line": 1,
+          "column": 0,
+          "offset": 5
+        },
+        "end": {
+          "line": 1,
+          "column": 6,
+          "offset": 11
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 5
+            },
+            "end": {
+              "line": 1,
+              "column": 2,
+              "offset": 7
+            },
+            "text": "##"
+          }
+        ],
+        "children": [
+          {
+            "text": "foo",
+            "start": {
+              "line": 1,
+              "column": 3,
+              "offset": 8
+            },
+            "end": {
+              "line": 1,
+              "column": 6,
+              "offset": 11
+            }
+          }
+        ],
+        "attributes": {
+          "level": "2"
+        }
+      },
+      {
+        "type": "thematicBreak",
+        "start": {
+          "line": 2,
+          "column": 0,
+          "offset": 12
+        },
+        "end": {
+          "line": 2,
+          "column": 4,
+          "offset": 16
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 12
+            },
+            "end": {
+              "line": 2,
+              "column": 4,
+              "offset": 16
+            },
+            "text": "****"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "ATX headings, https://github.github.com/gfm/#example-48",
+    "markdown": "Foo bar\n# baz\nBar foo\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 7,
+          "offset": 7
+        },
+        "children": [
+          {
+            "text": "Foo bar",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 7,
+              "offset": 7
+            }
+          }
+        ]
+      },
+      {
+        "type": "headline",
+        "start": {
+          "line": 1,
+          "column": 0,
+          "offset": 8
+        },
+        "end": {
+          "line": 1,
+          "column": 5,
+          "offset": 13
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 8
+            },
+            "end": {
+              "line": 1,
+              "column": 1,
+              "offset": 9
+            },
+            "text": "#"
+          }
+        ],
+        "children": [
+          {
+            "text": "baz",
+            "start": {
+              "line": 1,
+              "column": 2,
+              "offset": 10
+            },
+            "end": {
+              "line": 1,
+              "column": 5,
+              "offset": 13
+            }
+          }
+        ],
+        "attributes": {
+          "level": "1"
+        }
+      },
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 2,
+          "column": 0,
+          "offset": 14
+        },
+        "end": {
+          "line": 2,
+          "column": 7,
+          "offset": 21
+        },
+        "children": [
+          {
+            "text": "Bar foo",
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 14
+            },
+            "end": {
+              "line": 2,
+              "column": 7,
+              "offset": 21
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "ATX headings, https://github.github.com/gfm/#example-49",
+    "markdown": "## \n#\n### ###\n",
+    "expected": [
+      {
+        "type": "headline",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 2,
+          "offset": 2
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 2,
+              "offset": 2
+            },
+            "text": "##"
+          }
+        ],
+        "attributes": {
+          "level": "2"
+        }
+      },
+      {
+        "type": "headline",
+        "start": {
+          "line": 1,
+          "column": 0,
+          "offset": 4
+        },
+        "end": {
+          "line": 1,
+          "column": 1,
+          "offset": 5
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 4
+            },
+            "end": {
+              "line": 1,
+              "column": 1,
+              "offset": 5
+            },
+            "text": "#"
+          }
+        ],
+        "attributes": {
+          "level": "1"
+        }
+      },
+      {
+        "type": "headline",
+        "start": {
+          "line": 2,
+          "column": 0,
+          "offset": 6
+        },
+        "end": {
+          "line": 2,
+          "column": 7,
+          "offset": 13
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 6
+            },
+            "end": {
+              "line": 2,
+              "column": 3,
+              "offset": 9
+            },
+            "text": "###"
+          },
+          {
+            "start": {
+              "line": 2,
+              "column": 4,
+              "offset": 10
+            },
+            "end": {
+              "line": 2,
+              "column": 7,
+              "offset": 13
+            },
+            "text": "###"
+          }
+        ],
+        "attributes": {
+          "level": "3"
+        }
+      }
+    ]
+  }
+]

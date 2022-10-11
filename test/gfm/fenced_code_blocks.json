@@ -1,0 +1,2033 @@
+[
+  {
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-89",
+    "markdown": "```\n<\n >\n```\n",
+    "expected": [
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 3,
+          "offset": 12
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "text": "```"
+          },
+          {
+            "start": {
+              "line": 3,
+              "column": 0,
+              "offset": 9
+            },
+            "end": {
+              "line": 3,
+              "column": 3,
+              "offset": 12
+            },
+            "text": "```"
+          }
+        ],
+        "children": [
+          {
+            "text": "<\n >\n",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 4
+            },
+            "end": {
+              "line": 3,
+              "column": 0,
+              "offset": 9
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-90",
+    "markdown": "~~~\n<\n >\n~~~\n",
+    "expected": [
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 3,
+          "offset": 12
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "text": "~~~"
+          },
+          {
+            "start": {
+              "line": 3,
+              "column": 0,
+              "offset": 9
+            },
+            "end": {
+              "line": 3,
+              "column": 3,
+              "offset": 12
+            },
+            "text": "~~~"
+          }
+        ],
+        "children": [
+          {
+            "text": "<\n >\n",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 4
+            },
+            "end": {
+              "line": 3,
+              "column": 0,
+              "offset": 9
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-91",
+    "markdown": "``\nfoo\n``\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 2,
+          "column": 2,
+          "offset": 9
+        },
+        "children": [
+          {
+            "type": "inlineCode",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 2,
+              "column": 2,
+              "offset": 9
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 2,
+                  "offset": 2
+                },
+                "text": "``"
+              },
+              {
+                "start": {
+                  "line": 2,
+                  "column": 0,
+                  "offset": 7
+                },
+                "end": {
+                  "line": 2,
+                  "column": 2,
+                  "offset": 9
+                },
+                "text": "``"
+              }
+            ],
+            "children": [
+              {
+                "text": "foo",
+                "start": {
+                  "line": 1,
+                  "column": 0,
+                  "offset": 3
+                },
+                "end": {
+                  "line": 1,
+                  "column": 3,
+                  "offset": 6
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-92",
+    "markdown": "```\naaa\n~~~\n```\n",
+    "expected": [
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 3,
+          "offset": 15
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "text": "```"
+          },
+          {
+            "start": {
+              "line": 3,
+              "column": 0,
+              "offset": 12
+            },
+            "end": {
+              "line": 3,
+              "column": 3,
+              "offset": 15
+            },
+            "text": "```"
+          }
+        ],
+        "children": [
+          {
+            "text": "aaa\n~~~\n",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 4
+            },
+            "end": {
+              "line": 3,
+              "column": 0,
+              "offset": 12
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-93",
+    "markdown": "~~~\naaa\n```\n~~~\n",
+    "expected": [
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 3,
+          "offset": 15
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "text": "~~~"
+          },
+          {
+            "start": {
+              "line": 3,
+              "column": 0,
+              "offset": 12
+            },
+            "end": {
+              "line": 3,
+              "column": 3,
+              "offset": 15
+            },
+            "text": "~~~"
+          }
+        ],
+        "children": [
+          {
+            "text": "aaa\n```\n",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 4
+            },
+            "end": {
+              "line": 3,
+              "column": 0,
+              "offset": 12
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-94",
+    "markdown": "````\naaa\n```\n``````\n",
+    "expected": [
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 6,
+          "offset": 19
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "text": "````"
+          },
+          {
+            "start": {
+              "line": 3,
+              "column": 0,
+              "offset": 13
+            },
+            "end": {
+              "line": 3,
+              "column": 6,
+              "offset": 19
+            },
+            "text": "``````"
+          }
+        ],
+        "children": [
+          {
+            "text": "aaa\n```\n",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 5
+            },
+            "end": {
+              "line": 3,
+              "column": 0,
+              "offset": 13
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-95",
+    "markdown": "~~~~\naaa\n~~~\n~~~~\n",
+    "expected": [
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 4,
+          "offset": 17
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "text": "~~~~"
+          },
+          {
+            "start": {
+              "line": 3,
+              "column": 0,
+              "offset": 13
+            },
+            "end": {
+              "line": 3,
+              "column": 4,
+              "offset": 17
+            },
+            "text": "~~~~"
+          }
+        ],
+        "children": [
+          {
+            "text": "aaa\n~~~\n",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 5
+            },
+            "end": {
+              "line": 3,
+              "column": 0,
+              "offset": 13
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-96",
+    "markdown": "```\n",
+    "expected": [
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 3,
+          "offset": 3
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "text": "```"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-97",
+    "markdown": "`````\n\n```\naaa\n",
+    "expected": [
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 0,
+          "offset": 15
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 5,
+              "offset": 5
+            },
+            "text": "`````"
+          }
+        ],
+        "children": [
+          {
+            "text": "\n```\naaa\n",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 6
+            },
+            "end": {
+              "line": 4,
+              "column": 0,
+              "offset": 15
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-98",
+    "markdown": "> ```\n> aaa\n\nbbb\n",
+    "expected": [
+      {
+        "type": "blockquote",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 2,
+          "column": 0,
+          "offset": 12
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 1,
+              "offset": 1
+            },
+            "text": ">"
+          },
+          {
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 6
+            },
+            "end": {
+              "line": 1,
+              "column": 1,
+              "offset": 7
+            },
+            "text": ">"
+          }
+        ],
+        "children": [
+          {
+            "type": "codeBlock",
+            "start": {
+              "line": 0,
+              "column": 2,
+              "offset": 2
+            },
+            "end": {
+              "line": 2,
+              "column": 0,
+              "offset": 12
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 2,
+                  "offset": 2
+                },
+                "end": {
+                  "line": 0,
+                  "column": 5,
+                  "offset": 5
+                },
+                "text": "```"
+              }
+            ],
+            "children": [
+              {
+                "text": "aaa\n",
+                "start": {
+                  "line": 1,
+                  "column": 2,
+                  "offset": 8
+                },
+                "end": {
+                  "line": 2,
+                  "column": 0,
+                  "offset": 12
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 3,
+          "column": 0,
+          "offset": 13
+        },
+        "end": {
+          "line": 3,
+          "column": 3,
+          "offset": 16
+        },
+        "children": [
+          {
+            "text": "bbb",
+            "start": {
+              "line": 3,
+              "column": 0,
+              "offset": 13
+            },
+            "end": {
+              "line": 3,
+              "column": 3,
+              "offset": 16
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-99",
+    "markdown": "```\n\n  \n```\n",
+    "expected": [
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 3,
+          "offset": 11
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "text": "```"
+          },
+          {
+            "start": {
+              "line": 3,
+              "column": 0,
+              "offset": 8
+            },
+            "end": {
+              "line": 3,
+              "column": 3,
+              "offset": 11
+            },
+            "text": "```"
+          }
+        ],
+        "children": [
+          {
+            "text": "\n  \n",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 4
+            },
+            "end": {
+              "line": 3,
+              "column": 0,
+              "offset": 8
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-100",
+    "markdown": "```\n```\n",
+    "expected": [
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 3,
+          "offset": 7
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "text": "```"
+          },
+          {
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 4
+            },
+            "end": {
+              "line": 1,
+              "column": 3,
+              "offset": 7
+            },
+            "text": "```"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-101",
+    "markdown": " ```\n aaa\naaa\n```\n",
+    "expected": [
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 3,
+          "offset": 17
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "text": " ```"
+          },
+          {
+            "start": {
+              "line": 3,
+              "column": 0,
+              "offset": 14
+            },
+            "end": {
+              "line": 3,
+              "column": 3,
+              "offset": 17
+            },
+            "text": "```"
+          }
+        ],
+        "children": [
+          {
+            "text": "aaa\naaa\n",
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 6
+            },
+            "end": {
+              "line": 3,
+              "column": 0,
+              "offset": 14
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-102",
+    "markdown": "  ```\naaa\n  aaa\naaa\n  ```\n",
+    "expected": [
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 5,
+          "offset": 25
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 5,
+              "offset": 5
+            },
+            "text": "  ```"
+          },
+          {
+            "start": {
+              "line": 4,
+              "column": 0,
+              "offset": 20
+            },
+            "end": {
+              "line": 4,
+              "column": 5,
+              "offset": 25
+            },
+            "text": "  ```"
+          }
+        ],
+        "children": [
+          {
+            "text": "aaa\n",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 6
+            },
+            "end": {
+              "line": 2,
+              "column": 0,
+              "offset": 10
+            }
+          },
+          {
+            "text": "aaa\naaa\n",
+            "start": {
+              "line": 2,
+              "column": 2,
+              "offset": 12
+            },
+            "end": {
+              "line": 4,
+              "column": 0,
+              "offset": 20
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-103",
+    "markdown": "   ```\n   aaa\n    aaa\n  aaa\n   ```\n",
+    "expected": [
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 6,
+          "offset": 34
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 6,
+              "offset": 6
+            },
+            "text": "   ```"
+          },
+          {
+            "start": {
+              "line": 4,
+              "column": 0,
+              "offset": 28
+            },
+            "end": {
+              "line": 4,
+              "column": 6,
+              "offset": 34
+            },
+            "text": "   ```"
+          }
+        ],
+        "children": [
+          {
+            "text": "aaa\n",
+            "start": {
+              "line": 1,
+              "column": 3,
+              "offset": 10
+            },
+            "end": {
+              "line": 2,
+              "column": 0,
+              "offset": 14
+            }
+          },
+          {
+            "text": " aaa\n",
+            "start": {
+              "line": 2,
+              "column": 3,
+              "offset": 17
+            },
+            "end": {
+              "line": 3,
+              "column": 0,
+              "offset": 22
+            }
+          },
+          {
+            "text": "aaa\n",
+            "start": {
+              "line": 3,
+              "column": 2,
+              "offset": 24
+            },
+            "end": {
+              "line": 4,
+              "column": 0,
+              "offset": 28
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-104",
+    "markdown": "    ```\n    aaa\n    ```\n",
+    "expected": [
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 0,
+          "column": 4,
+          "offset": 4
+        },
+        "end": {
+          "line": 3,
+          "column": 0,
+          "offset": 24
+        },
+        "children": [
+          {
+            "text": "```\n",
+            "start": {
+              "line": 0,
+              "column": 4,
+              "offset": 4
+            },
+            "end": {
+              "line": 1,
+              "column": 0,
+              "offset": 8
+            }
+          },
+          {
+            "text": "aaa\n",
+            "start": {
+              "line": 1,
+              "column": 4,
+              "offset": 12
+            },
+            "end": {
+              "line": 2,
+              "column": 0,
+              "offset": 16
+            }
+          },
+          {
+            "text": "```\n",
+            "start": {
+              "line": 2,
+              "column": 4,
+              "offset": 20
+            },
+            "end": {
+              "line": 3,
+              "column": 0,
+              "offset": 24
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-105",
+    "markdown": "```\naaa\n  ```\n",
+    "expected": [
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 2,
+          "column": 5,
+          "offset": 13
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "text": "```"
+          },
+          {
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 8
+            },
+            "end": {
+              "line": 2,
+              "column": 5,
+              "offset": 13
+            },
+            "text": "  ```"
+          }
+        ],
+        "children": [
+          {
+            "text": "aaa\n",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 4
+            },
+            "end": {
+              "line": 2,
+              "column": 0,
+              "offset": 8
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-106",
+    "markdown": "   ```\naaa\n  ```\n",
+    "expected": [
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 2,
+          "column": 5,
+          "offset": 16
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 6,
+              "offset": 6
+            },
+            "text": "   ```"
+          },
+          {
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 11
+            },
+            "end": {
+              "line": 2,
+              "column": 5,
+              "offset": 16
+            },
+            "text": "  ```"
+          }
+        ],
+        "children": [
+          {
+            "text": "aaa\n",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 7
+            },
+            "end": {
+              "line": 2,
+              "column": 0,
+              "offset": 11
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-107",
+    "markdown": "```\naaa\n    ```\n",
+    "expected": [
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 0,
+          "offset": 16
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "text": "```"
+          }
+        ],
+        "children": [
+          {
+            "text": "aaa\n    ```\n",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 4
+            },
+            "end": {
+              "line": 3,
+              "column": 0,
+              "offset": 16
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-108",
+    "markdown": "``` ```\naaa\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 3,
+          "offset": 11
+        },
+        "children": [
+          {
+            "type": "inlineCode",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 7,
+              "offset": 7
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                },
+                "text": "```"
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 4,
+                  "offset": 4
+                },
+                "end": {
+                  "line": 0,
+                  "column": 7,
+                  "offset": 7
+                },
+                "text": "```"
+              }
+            ],
+            "children": [
+              {
+                "text": " ",
+                "start": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                },
+                "end": {
+                  "line": 0,
+                  "column": 4,
+                  "offset": 4
+                }
+              }
+            ]
+          },
+          {
+            "text": "\naaa",
+            "start": {
+              "line": 0,
+              "column": 7,
+              "offset": 7
+            },
+            "end": {
+              "line": 1,
+              "column": 3,
+              "offset": 11
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-109",
+    "markdown": "~~~~~~\naaa\n~~~ ~~\n",
+    "expected": [
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 0,
+          "offset": 18
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 6,
+              "offset": 6
+            },
+            "text": "~~~~~~"
+          }
+        ],
+        "children": [
+          {
+            "text": "aaa\n~~~ ~~\n",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 7
+            },
+            "end": {
+              "line": 3,
+              "column": 0,
+              "offset": 18
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-110",
+    "markdown": "foo\n```\nbar\n```\nbaz\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 0,
+          "column": 3,
+          "offset": 3
+        },
+        "children": [
+          {
+            "text": "foo",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            }
+          }
+        ]
+      },
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 1,
+          "column": 0,
+          "offset": 4
+        },
+        "end": {
+          "line": 3,
+          "column": 3,
+          "offset": 15
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 4
+            },
+            "end": {
+              "line": 1,
+              "column": 3,
+              "offset": 7
+            },
+            "text": "```"
+          },
+          {
+            "start": {
+              "line": 3,
+              "column": 0,
+              "offset": 12
+            },
+            "end": {
+              "line": 3,
+              "column": 3,
+              "offset": 15
+            },
+            "text": "```"
+          }
+        ],
+        "children": [
+          {
+            "text": "bar\n",
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 8
+            },
+            "end": {
+              "line": 3,
+              "column": 0,
+              "offset": 12
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 4,
+          "column": 0,
+          "offset": 16
+        },
+        "end": {
+          "line": 4,
+          "column": 3,
+          "offset": 19
+        },
+        "children": [
+          {
+            "text": "baz",
+            "start": {
+              "line": 4,
+              "column": 0,
+              "offset": 16
+            },
+            "end": {
+              "line": 4,
+              "column": 3,
+              "offset": 19
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-111",
+    "markdown": "foo\n---\n~~~\nbar\n~~~\n# baz\n",
+    "expected": [
+      {
+        "type": "headline",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 3,
+          "offset": 7
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 4
+            },
+            "end": {
+              "line": 1,
+              "column": 3,
+              "offset": 7
+            },
+            "text": "---"
+          }
+        ],
+        "children": [
+          {
+            "text": "foo",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            }
+          }
+        ],
+        "attributes": {
+          "level": "2"
+        }
+      },
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 2,
+          "column": 0,
+          "offset": 8
+        },
+        "end": {
+          "line": 4,
+          "column": 3,
+          "offset": 19
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 8
+            },
+            "end": {
+              "line": 2,
+              "column": 3,
+              "offset": 11
+            },
+            "text": "~~~"
+          },
+          {
+            "start": {
+              "line": 4,
+              "column": 0,
+              "offset": 16
+            },
+            "end": {
+              "line": 4,
+              "column": 3,
+              "offset": 19
+            },
+            "text": "~~~"
+          }
+        ],
+        "children": [
+          {
+            "text": "bar\n",
+            "start": {
+              "line": 3,
+              "column": 0,
+              "offset": 12
+            },
+            "end": {
+              "line": 4,
+              "column": 0,
+              "offset": 16
+            }
+          }
+        ]
+      },
+      {
+        "type": "headline",
+        "start": {
+          "line": 5,
+          "column": 0,
+          "offset": 20
+        },
+        "end": {
+          "line": 5,
+          "column": 5,
+          "offset": 25
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 5,
+              "column": 0,
+              "offset": 20
+            },
+            "end": {
+              "line": 5,
+              "column": 1,
+              "offset": 21
+            },
+            "text": "#"
+          }
+        ],
+        "children": [
+          {
+            "text": "baz",
+            "start": {
+              "line": 5,
+              "column": 2,
+              "offset": 22
+            },
+            "end": {
+              "line": 5,
+              "column": 5,
+              "offset": 25
+            }
+          }
+        ],
+        "attributes": {
+          "level": "1"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-112",
+    "markdown": "```ruby\ndef foo(x)\n  return 3\nend\n```\n",
+    "expected": [
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 3,
+          "offset": 37
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 7,
+              "offset": 7
+            },
+            "text": "```ruby"
+          },
+          {
+            "start": {
+              "line": 4,
+              "column": 0,
+              "offset": 34
+            },
+            "end": {
+              "line": 4,
+              "column": 3,
+              "offset": 37
+            },
+            "text": "```"
+          }
+        ],
+        "children": [
+          {
+            "text": "def foo(x)\n  return 3\nend\n",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 8
+            },
+            "end": {
+              "line": 4,
+              "column": 0,
+              "offset": 34
+            }
+          }
+        ],
+        "attributes": {
+          "infoString": "ruby",
+          "language": "ruby"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-113",
+    "markdown": "~~~~    ruby startline=3 $%@#$\ndef foo(x)\n  return 3\nend\n~~~~~~~\n",
+    "expected": [
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 7,
+          "offset": 64
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 30,
+              "offset": 30
+            },
+            "text": "~~~~    ruby startline=3 $%@#$"
+          },
+          {
+            "start": {
+              "line": 4,
+              "column": 0,
+              "offset": 57
+            },
+            "end": {
+              "line": 4,
+              "column": 7,
+              "offset": 64
+            },
+            "text": "~~~~~~~"
+          }
+        ],
+        "children": [
+          {
+            "text": "def foo(x)\n  return 3\nend\n",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 31
+            },
+            "end": {
+              "line": 4,
+              "column": 0,
+              "offset": 57
+            }
+          }
+        ],
+        "attributes": {
+          "infoString": "ruby startline=3 $%@#$",
+          "language": "ruby"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-114",
+    "markdown": "````;\n````\n",
+    "expected": [
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 4,
+          "offset": 10
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 5,
+              "offset": 5
+            },
+            "text": "````;"
+          },
+          {
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 6
+            },
+            "end": {
+              "line": 1,
+              "column": 4,
+              "offset": 10
+            },
+            "text": "````"
+          }
+        ],
+        "attributes": {
+          "infoString": ";",
+          "language": ";"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-115",
+    "markdown": "``` aa ```\nfoo\n",
+    "expected": [
+      {
+        "type": "paragraph",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 3,
+          "offset": 14
+        },
+        "children": [
+          {
+            "type": "inlineCode",
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 10,
+              "offset": 10
+            },
+            "markers": [
+              {
+                "start": {
+                  "line": 0,
+                  "column": 0,
+                  "offset": 0
+                },
+                "end": {
+                  "line": 0,
+                  "column": 3,
+                  "offset": 3
+                },
+                "text": "```"
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 7,
+                  "offset": 7
+                },
+                "end": {
+                  "line": 0,
+                  "column": 10,
+                  "offset": 10
+                },
+                "text": "```"
+              }
+            ],
+            "children": [
+              {
+                "text": "aa",
+                "start": {
+                  "line": 0,
+                  "column": 4,
+                  "offset": 4
+                },
+                "end": {
+                  "line": 0,
+                  "column": 6,
+                  "offset": 6
+                }
+              }
+            ]
+          },
+          {
+            "text": "\nfoo",
+            "start": {
+              "line": 0,
+              "column": 10,
+              "offset": 10
+            },
+            "end": {
+              "line": 1,
+              "column": 3,
+              "offset": 14
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-116",
+    "markdown": "~~~ aa ``` ~~~\nfoo\n~~~\n",
+    "expected": [
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 2,
+          "column": 3,
+          "offset": 22
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 14,
+              "offset": 14
+            },
+            "text": "~~~ aa ``` ~~~"
+          },
+          {
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 19
+            },
+            "end": {
+              "line": 2,
+              "column": 3,
+              "offset": 22
+            },
+            "text": "~~~"
+          }
+        ],
+        "children": [
+          {
+            "text": "foo\n",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 15
+            },
+            "end": {
+              "line": 2,
+              "column": 0,
+              "offset": 19
+            }
+          }
+        ],
+        "attributes": {
+          "infoString": "aa ``` ~~~",
+          "language": "aa"
+        }
+      }
+    ]
+  },
+  {
+    "description": "Fenced code blocks, https://github.github.com/gfm/#example-117",
+    "markdown": "```\n``` aaa\n```\n",
+    "expected": [
+      {
+        "type": "codeBlock",
+        "start": {
+          "line": 0,
+          "column": 0,
+          "offset": 0
+        },
+        "end": {
+          "line": 2,
+          "column": 3,
+          "offset": 15
+        },
+        "markers": [
+          {
+            "start": {
+              "line": 0,
+              "column": 0,
+              "offset": 0
+            },
+            "end": {
+              "line": 0,
+              "column": 3,
+              "offset": 3
+            },
+            "text": "```"
+          },
+          {
+            "start": {
+              "line": 2,
+              "column": 0,
+              "offset": 12
+            },
+            "end": {
+              "line": 2,
+              "column": 3,
+              "offset": 15
+            },
+            "text": "```"
+          }
+        ],
+        "children": [
+          {
+            "text": "``` aaa\n",
+            "start": {
+              "line": 1,
+              "column": 0,
+              "offset": 4
+            },
+            "end": {
+              "line": 2,
+              "column": 0,
+              "offset": 12
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
