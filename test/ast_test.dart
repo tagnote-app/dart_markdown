@@ -4,16 +4,20 @@
 
 import 'dart:convert';
 import 'dart:io';
-import 'dart:isolate';
 
+import 'package:dart_markdown/dart_markdown.dart';
 import 'package:dart_markdown/src/reverse_renderer.dart';
 import 'package:path/path.dart' as p;
 import 'package:test/expect.dart';
 import 'package:test/scaffolding.dart';
 
+import 'util.dart';
+
 void main() async {
-  await testCases('common_mark');
-  await testCases('gfm');
+  await simpleTest('common_mark');
+  await simpleTest('gfm');
+  await strictTest('common_mark');
+  await strictTest('gfm');
 
   group('test task list', () {
     test('nested', () {
@@ -39,7 +43,7 @@ void main() async {
   });
 }
 
-Future<void> testCases(String name) async {
+Future<void> simpleTest(String name) async {
   final fileName = {
     'common_mark': 'tool/common_mark_tests.json',
     'gfm': 'tool/gfm_tests.json'
@@ -50,9 +54,7 @@ Future<void> testCases(String name) async {
     'gfm': 'https://github.github.com/gfm'
   }[name];
 
-  final packageUri = Uri.parse('package:dart_markdown/dart_markdown.dart');
-  final isolateUri = await Isolate.resolvePackageUri(packageUri);
-  final rootDir = p.dirname(p.dirname(isolateUri!.toFilePath()));
+  final rootDir = await markdownPackageRoot;
   final file = File('$rootDir/$fileName');
   final json = file.readAsStringSync();
   final testCases = List<Map<String, dynamic>>.from(jsonDecode(json) as List);
@@ -65,5 +67,29 @@ Future<void> testCases(String name) async {
 
       expect(output, input);
     });
+  }
+}
+
+Future<void> strictTest(String name) async {
+  final rootDir = await markdownPackageRoot;
+  final directory = p.joinAll([rootDir, 'test', name]);
+  final entries = Directory(directory).listSync(followLinks: false);
+  for (final entry in entries) {
+    if (!entry.path.endsWith('json')) {
+      continue;
+    }
+    final testCases = List<Map<String, dynamic>>.from(
+      jsonDecode(File(entry.path).readAsStringSync()) as List,
+    );
+    for (final testCase in testCases) {
+      test('${testCase['description']}', () {
+        final result = Markdown()
+            .parse(testCase['markdown'] as String)
+            .map((e) => e.toMap())
+            .toList();
+
+        expect(result, testCase['expected']);
+      });
+    }
   }
 }
