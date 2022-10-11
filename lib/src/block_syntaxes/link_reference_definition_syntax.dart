@@ -72,6 +72,9 @@ class LinkReferenceDefinitionSyntax extends BlockSyntax {
       ),
     );
 
+    final destinationChildren =
+        destination.map((span) => Text.fromSpan(span)).toList();
+
     return BlockElement(
       'linkReferenceDefinition',
       markers: linkParser.markers,
@@ -80,10 +83,11 @@ class LinkReferenceDefinitionSyntax extends BlockSyntax {
           'linkReferenceDefinitionLabel',
           children: label.map((span) => Text.fromSpan(span)).toList(),
         ),
-        InlineElement(
-          'linkReferenceDefinitionDestination',
-          children: destination.map((span) => Text.fromSpan(span)).toList(),
-        ),
+        if (destinationChildren.isNotEmpty)
+          InlineElement(
+            'linkReferenceDefinitionDestination',
+            children: destinationChildren,
+          ),
         if (title != null)
           InlineElement(
             'linkReferenceDefinitionTitle',
