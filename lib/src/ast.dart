@@ -15,10 +15,10 @@ abstract class Node {
   void accept(NodeVisitor visitor);
 
   /// The start location of this node.
-  SourceLocation get start;
+  SourceLocation? get start;
 
   /// The end location of this node.
-  SourceLocation get end;
+  SourceLocation? get end;
 
   /// Outputs the attributes as a `Map`.
   Map<String, dynamic> toMap();
@@ -41,16 +41,28 @@ abstract class Element<T extends Node> implements Node {
   }
 
   @override
-  SourceLocation get start => [
-        ...markers.map((e) => e.start),
-        ...children.map((e) => e.start),
-      ].smallest();
+  SourceLocation? get start {
+    final childLocations = List<SourceLocation>.from(
+        children.map((e) => e.start).toList()..removeWhere((e) => e == null));
+    final locations = [
+      ...markers.map((e) => e.start),
+      ...childLocations,
+    ];
+
+    return locations.isNotEmpty ? locations.smallest() : null;
+  }
 
   @override
-  SourceLocation get end => [
-        ...markers.map((e) => e.end),
-        ...children.map((e) => e.end),
-      ].largest();
+  SourceLocation? get end {
+    final childLocations = List<SourceLocation>.from(
+        children.map((e) => e.end).toList()..removeWhere((e) => e == null));
+    final locations = [
+      ...markers.map((e) => e.end),
+      ...childLocations,
+    ];
+
+    return locations.isNotEmpty ? locations.largest() : null;
+  }
 
   const Element(
     this.type, {
@@ -81,8 +93,8 @@ abstract class Element<T extends Node> implements Node {
       {
         if (showRuntimeType) 'runtimeType': runtimeType,
         'type': type,
-        'start': start.toMap(),
-        'end': end.toMap(),
+        if (start != null) 'start': start!.toMap(),
+        if (end != null) 'end': end!.toMap(),
         if (markers.isNotEmpty || showEmpty)
           'markers': markers.map((e) => e.toMap()).toList(),
         if (children.isNotEmpty || showEmpty)
