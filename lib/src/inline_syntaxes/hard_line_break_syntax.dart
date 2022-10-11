@@ -19,7 +19,7 @@ class HardLineBreakSyntax extends InlineSyntax {
 
     return InlineElement(
       'hardLineBreak',
-      markers: [if (marker.text == r'\') marker],
+      markers: [marker],
     );
   }
 }
