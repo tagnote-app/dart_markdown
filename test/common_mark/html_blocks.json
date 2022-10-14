@@ -2243,7 +2243,7 @@
         ]
       },
       {
-        "type": "codeBlock",
+        "type": "indentedCodeBlock",
         "start": {
           "line": 2,
           "column": 4,
@@ -2305,7 +2305,7 @@
         ]
       },
       {
-        "type": "codeBlock",
+        "type": "indentedCodeBlock",
         "start": {
           "line": 2,
           "column": 4,
@@ -2817,7 +2817,7 @@
         ]
       },
       {
-        "type": "codeBlock",
+        "type": "indentedCodeBlock",
         "start": {
           "line": 4,
           "column": 4,

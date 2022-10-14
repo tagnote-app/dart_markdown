@@ -1524,7 +1524,7 @@
     "markdown": "    \\[\\]\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "type": "indentedCodeBlock",
         "start": {
           "line": 0,
           "column": 4,
@@ -1558,7 +1558,7 @@
     "markdown": "~~~\n\\[\\]\n~~~\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "type": "fencedCodeBlock",
         "start": {
           "line": 0,
           "column": 0,
@@ -2219,7 +2219,7 @@
     "markdown": "``` foo\\+bar\nfoo\n```\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "type": "fencedCodeBlock",
         "start": {
           "line": 0,
           "column": 0,

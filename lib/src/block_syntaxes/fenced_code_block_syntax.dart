@@ -81,7 +81,7 @@ class FencedCodeBlockSyntax extends BlockSyntax {
     }
 
     return BlockElement(
-      'codeBlock',
+      'fencedCodeBlock',
       children: codeLines,
       attributes: attributes,
       markers: childSource.markers,

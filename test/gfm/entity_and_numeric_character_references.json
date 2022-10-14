@@ -674,7 +674,7 @@
     "markdown": "``` f&ouml;&ouml;\nfoo\n```\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "type": "fencedCodeBlock",
         "start": {
           "line": 0,
           "column": 0,
@@ -817,7 +817,7 @@
     "markdown": "    f&ouml;f&ouml;\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "type": "indentedCodeBlock",
         "start": {
           "line": 0,
           "column": 4,

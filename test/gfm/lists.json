@@ -1488,7 +1488,7 @@
         ]
       },
       {
-        "type": "codeBlock",
+        "type": "indentedCodeBlock",
         "start": {
           "line": 8,
           "column": 4,
@@ -2403,7 +2403,7 @@
         }
       },
       {
-        "type": "codeBlock",
+        "type": "indentedCodeBlock",
         "start": {
           "line": 4,
           "column": 4,
@@ -3436,7 +3436,7 @@
             ],
             "children": [
               {
-                "type": "codeBlock",
+                "type": "fencedCodeBlock",
                 "start": {
                   "line": 1,
                   "column": 2,
@@ -4055,7 +4055,7 @@
                 ]
               },
               {
-                "type": "codeBlock",
+                "type": "fencedCodeBlock",
                 "start": {
                   "line": 2,
                   "column": 2,
@@ -4403,7 +4403,7 @@
             ],
             "children": [
               {
-                "type": "codeBlock",
+                "type": "fencedCodeBlock",
                 "start": {
                   "line": 0,
                   "column": 3,

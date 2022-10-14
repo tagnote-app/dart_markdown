@@ -672,7 +672,7 @@
     "markdown": "    Foo\n    ---\n\n    Foo\n---\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "type": "indentedCodeBlock",
         "start": {
           "line": 0,
           "column": 4,
@@ -1868,7 +1868,7 @@
     "markdown": "    foo\n---\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "type": "indentedCodeBlock",
         "start": {
           "line": 0,
           "column": 4,

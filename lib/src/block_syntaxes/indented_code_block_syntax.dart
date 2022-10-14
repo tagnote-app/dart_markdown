@@ -82,7 +82,7 @@ class IndentedCodeBlockSyntax extends BlockSyntax {
     }).toList();
 
     return BlockElement(
-      'codeBlock',
+      'indentedCodeBlock',
       children: codeLines,
     );
   }

@@ -451,7 +451,7 @@
     "markdown": "    > # Foo\n    > bar\n    > baz\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "type": "indentedCodeBlock",
         "start": {
           "line": 0,
           "column": 4,
@@ -1002,7 +1002,7 @@
         ],
         "children": [
           {
-            "type": "codeBlock",
+            "type": "indentedCodeBlock",
             "start": {
               "line": 0,
               "column": 6,
@@ -1032,7 +1032,7 @@
         ]
       },
       {
-        "type": "codeBlock",
+        "type": "indentedCodeBlock",
         "start": {
           "line": 1,
           "column": 4,
@@ -1094,7 +1094,7 @@
         ],
         "children": [
           {
-            "type": "codeBlock",
+            "type": "fencedCodeBlock",
             "start": {
               "line": 0,
               "column": 2,
@@ -1152,7 +1152,7 @@
         ]
       },
       {
-        "type": "codeBlock",
+        "type": "fencedCodeBlock",
         "start": {
           "line": 2,
           "column": 0,
@@ -2621,7 +2621,7 @@
         ],
         "children": [
           {
-            "type": "codeBlock",
+            "type": "indentedCodeBlock",
             "start": {
               "line": 0,
               "column": 6,

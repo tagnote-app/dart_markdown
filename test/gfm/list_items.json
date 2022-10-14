@@ -32,7 +32,7 @@
         ]
       },
       {
-        "type": "codeBlock",
+        "type": "indentedCodeBlock",
         "start": {
           "line": 3,
           "column": 4,
@@ -206,7 +206,7 @@
                 ]
               },
               {
-                "type": "codeBlock",
+                "type": "indentedCodeBlock",
                 "start": {
                   "line": 3,
                   "column": 8,
@@ -574,7 +574,7 @@
         }
       },
       {
-        "type": "codeBlock",
+        "type": "indentedCodeBlock",
         "start": {
           "line": 2,
           "column": 4,
@@ -1391,7 +1391,7 @@
                 ]
               },
               {
-                "type": "codeBlock",
+                "type": "fencedCodeBlock",
                 "start": {
                   "line": 2,
                   "column": 4,
@@ -1618,7 +1618,7 @@
                 ]
               },
               {
-                "type": "codeBlock",
+                "type": "indentedCodeBlock",
                 "start": {
                   "line": 2,
                   "column": 6,
@@ -2048,7 +2048,7 @@
                 ]
               },
               {
-                "type": "codeBlock",
+                "type": "indentedCodeBlock",
                 "start": {
                   "line": 2,
                   "column": 6,
@@ -2158,7 +2158,7 @@
                 ]
               },
               {
-                "type": "codeBlock",
+                "type": "indentedCodeBlock",
                 "start": {
                   "line": 2,
                   "column": 11,
@@ -2203,7 +2203,7 @@
     "markdown": "    indented code\n\nparagraph\n\n    more code\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "type": "indentedCodeBlock",
         "start": {
           "line": 0,
           "column": 4,
@@ -2259,7 +2259,7 @@
         ]
       },
       {
-        "type": "codeBlock",
+        "type": "indentedCodeBlock",
         "start": {
           "line": 4,
           "column": 4,
@@ -2334,7 +2334,7 @@
             ],
             "children": [
               {
-                "type": "codeBlock",
+                "type": "indentedCodeBlock",
                 "start": {
                   "line": 0,
                   "column": 7,
@@ -2390,7 +2390,7 @@
                 ]
               },
               {
-                "type": "codeBlock",
+                "type": "indentedCodeBlock",
                 "start": {
                   "line": 4,
                   "column": 7,
@@ -2475,7 +2475,7 @@
             ],
             "children": [
               {
-                "type": "codeBlock",
+                "type": "indentedCodeBlock",
                 "start": {
                   "line": 0,
                   "column": 7,
@@ -2531,7 +2531,7 @@
                 ]
               },
               {
-                "type": "codeBlock",
+                "type": "indentedCodeBlock",
                 "start": {
                   "line": 4,
                   "column": 7,
@@ -2926,7 +2926,7 @@
             ],
             "children": [
               {
-                "type": "codeBlock",
+                "type": "fencedCodeBlock",
                 "start": {
                   "line": 3,
                   "column": 2,
@@ -3012,7 +3012,7 @@
             ],
             "children": [
               {
-                "type": "codeBlock",
+                "type": "indentedCodeBlock",
                 "start": {
                   "line": 7,
                   "column": 6,
@@ -3819,7 +3819,7 @@
                 ]
               },
               {
-                "type": "codeBlock",
+                "type": "indentedCodeBlock",
                 "start": {
                   "line": 3,
                   "column": 9,
@@ -4003,7 +4003,7 @@
                 ]
               },
               {
-                "type": "codeBlock",
+                "type": "indentedCodeBlock",
                 "start": {
                   "line": 3,
                   "column": 10,
@@ -4187,7 +4187,7 @@
                 ]
               },
               {
-                "type": "codeBlock",
+                "type": "indentedCodeBlock",
                 "start": {
                   "line": 3,
                   "column": 11,
@@ -4289,7 +4289,7 @@
     "markdown": "    1.  A paragraph\n        with two lines.\n\n            indented code\n\n        > A block quote.\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "type": "indentedCodeBlock",
         "start": {
           "line": 0,
           "column": 4,
@@ -4457,7 +4457,7 @@
                 ]
               },
               {
-                "type": "codeBlock",
+                "type": "indentedCodeBlock",
                 "start": {
                   "line": 3,
                   "column": 10,
