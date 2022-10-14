@@ -4,7 +4,7 @@
     "markdown": "    a simple\n      indented code block\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "type": "indentedCodeBlock",
         "start": {
           "line": 0,
           "column": 4,
@@ -307,7 +307,7 @@
     "markdown": "    <a/>\n    *hi*\n\n    - one\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "type": "indentedCodeBlock",
         "start": {
           "line": 0,
           "column": 4,
@@ -380,7 +380,7 @@
     "markdown": "    chunk1\n\n    chunk2\n  \n \n \n    chunk3\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "type": "indentedCodeBlock",
         "start": {
           "line": 0,
           "column": 4,
@@ -492,7 +492,7 @@
     "markdown": "    chunk1\n      \n      chunk2\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "type": "indentedCodeBlock",
         "start": {
           "line": 0,
           "column": 4,
@@ -599,7 +599,7 @@
     "markdown": "    foo\nbar\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "type": "indentedCodeBlock",
         "start": {
           "line": 0,
           "column": 4,
@@ -707,7 +707,7 @@
         }
       },
       {
-        "type": "codeBlock",
+        "type": "indentedCodeBlock",
         "start": {
           "line": 1,
           "column": 4,
@@ -781,7 +781,7 @@
         }
       },
       {
-        "type": "codeBlock",
+        "type": "indentedCodeBlock",
         "start": {
           "line": 4,
           "column": 4,
@@ -843,7 +843,7 @@
     "markdown": "        foo\n    bar\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "type": "indentedCodeBlock",
         "start": {
           "line": 0,
           "column": 4,
@@ -890,7 +890,7 @@
     "markdown": "\n    \n    foo\n    \n\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "type": "indentedCodeBlock",
         "start": {
           "line": 2,
           "column": 4,
@@ -924,7 +924,7 @@
     "markdown": "    foo  \n",
     "expected": [
       {
-        "type": "codeBlock",
+        "type": "indentedCodeBlock",
         "start": {
           "line": 0,
           "column": 4,

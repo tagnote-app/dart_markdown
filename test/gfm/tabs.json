@@ -4,7 +4,7 @@
     "markdown": "\tfoo\tbaz\t\tbim\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "type": "indentedCodeBlock",
         "start": {
           "line": 0,
           "column": 1,
@@ -38,7 +38,7 @@
     "markdown": "  \tfoo\tbaz\t\tbim\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "type": "indentedCodeBlock",
         "start": {
           "line": 0,
           "column": 3,
@@ -72,7 +72,7 @@
     "markdown": "    a\ta\n    ὐ\ta\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "type": "indentedCodeBlock",
         "start": {
           "line": 0,
           "column": 4,
@@ -298,7 +298,7 @@
                 ]
               },
               {
-                "type": "codeBlock",
+                "type": "indentedCodeBlock",
                 "start": {
                   "line": 2,
                   "column": 2,
@@ -368,7 +368,7 @@
         ],
         "children": [
           {
-            "type": "codeBlock",
+            "type": "indentedCodeBlock",
             "start": {
               "line": 0,
               "column": 3,
@@ -446,7 +446,7 @@
             ],
             "children": [
               {
-                "type": "codeBlock",
+                "type": "indentedCodeBlock",
                 "start": {
                   "line": 0,
                   "column": 3,
@@ -488,7 +488,7 @@
     "markdown": "    foo\n\tbar\n",
     "expected": [
       {
-        "type": "codeBlock",
+        "type": "indentedCodeBlock",
         "start": {
           "line": 0,
           "column": 4,

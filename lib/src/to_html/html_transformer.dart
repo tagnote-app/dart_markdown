@@ -89,10 +89,10 @@ class HtmlTransformer implements NodeVisitor {
 
     HtmlElement node;
 
-    if (type == 'codeBlock') {
+    if (_isCodeBlock(type)) {
       final code = HtmlElement('code', current.children);
 
-      if (type == 'codeBlock' && attributes['language'] != null) {
+      if (attributes['language'] != null) {
         var language = attributes['language']!;
         if (encodeHtml) {
           language = language.toHtmlText();
@@ -197,7 +197,7 @@ class HtmlTransformer implements NodeVisitor {
     final parent = _tree.last;
     final parentType = parent.element?.type;
     final decodeHtmlCharacter =
-        parentType != 'inlineCode' && parentType != 'codeBlock';
+        parentType != 'inlineCode' && !_isCodeBlock(parentType);
 
     var content = !encodeHtml
         ? text.textContent
@@ -213,6 +213,9 @@ class HtmlTransformer implements NodeVisitor {
 
     _lastVisitElement = null;
   }
+
+  bool _isCodeBlock(String? type) =>
+      type == 'indentedCodeBlock' || type == 'fencedCodeBlock';
 
   bool _isSelfClosing(Element element) =>
       [

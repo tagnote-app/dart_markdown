@@ -1,3 +1,9 @@
+## 3.1.0-dev
+
+1. Use dedicated name `fencedCodeBlock` for fenced code blocks and
+   `indentedCodeBlock` for indented code blocks
+   [PR#60](https://github.com/chenzhiguang/dart_markdown/pull/60).
+
 ## 3.0.0
 
 1. Add `start` and `end` locations to AST `Element`.
