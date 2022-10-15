@@ -1,8 +1,11 @@
 ## 3.1.0-dev
 
-1. Use dedicated name `fencedCodeBlock` for fenced code blocks and
+1. **BREAKING** Use dedicated name `fencedCodeBlock` for fenced code blocks and
    `indentedCodeBlock` for indented code blocks
    [PR#60](https://github.com/chenzhiguang/dart_markdown/pull/60).
+2. **BREAKING** Use dedicated name `atxHeading` for ATX headings and
+   `setextHeading` for Setext headings
+   [PR#63](https://github.com/chenzhiguang/dart_markdown/pull/63).
 
 ## 3.0.0
 
