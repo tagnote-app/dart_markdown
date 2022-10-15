@@ -11,6 +11,8 @@
 4. **BREAKING** Use dedicated type `autolinkExtension` for autolink extension
    and `autolink` for autolinks
    [PR#66](https://github.com/chenzhiguang/dart_markdown/pull/66).
+5. **BREAKING** Change type `inlineHtml` to `rawHtml`
+   [PR#67](https://github.com/chenzhiguang/dart_markdown/pull/67).
 
 ## 3.0.0
 
