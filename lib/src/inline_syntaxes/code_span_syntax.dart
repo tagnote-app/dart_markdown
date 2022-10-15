@@ -62,7 +62,7 @@ class CodeSpanSyntax extends InlineSyntax {
     markers.add(parser.consumeBy(markerLength).first);
 
     return InlineElement(
-      'inlineCode',
+      'codeSpan',
       children: contentSpans
           .map((span) => Text.fromSpan(span, lineEndingToWhitespace: true))
           .toList(),

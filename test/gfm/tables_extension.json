@@ -830,7 +830,7 @@
                         }
                       },
                       {
-                        "type": "inlineCode",
+                        "type": "codeSpan",
                         "start": {
                           "line": 2,
                           "column": 4,
