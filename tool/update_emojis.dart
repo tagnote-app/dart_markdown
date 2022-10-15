@@ -2,6 +2,8 @@
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
+// ignore_for_file: avoid_dynamic_calls
+
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
@@ -11,14 +13,14 @@ import 'dart:io';
 // same.
 const _emojisJsonRawUrl =
     'https://raw.githubusercontent.com/muan/emojilib/v2.4.0/emojis.json';
-const _emojisFilePath = 'lib/assets/emojis.dart';
+const _emojisFilePath = 'lib/src/assets/emojis.dart';
 
 Future<void> main() async {
   final client = HttpClient();
   final request = await client.getUrl(Uri.parse(_emojisJsonRawUrl));
   final response = await request.close();
   final json = jsonDecode(
-          await response.cast<List<int>>().transform(utf8.decoder).join(''))
+          await response.cast<List<int>>().transform(utf8.decoder).join())
       .map((String alias, dynamic info) =>
           MapEntry(alias, info.cast<String, dynamic>()))
       .cast<String, Map<String, dynamic>>();

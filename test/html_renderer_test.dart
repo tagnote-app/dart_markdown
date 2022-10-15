@@ -15,7 +15,6 @@ void main() {
       final result = Markdown(
         enableAtxHeading: false,
         enableBlankLine: false,
-        enableHeadingId: false,
         enableBlockquote: false,
         enableIndentedCodeBlock: false,
         enableFencedBlockquote: false,
@@ -46,7 +45,6 @@ void main() {
       final result = Markdown(
         enableAtxHeading: false,
         enableBlankLine: false,
-        enableHeadingId: false,
         enableBlockquote: false,
         enableIndentedCodeBlock: false,
         enableFencedBlockquote: false,
@@ -107,7 +105,6 @@ void main() {
       final result = Markdown(
         enableAtxHeading: false,
         enableBlankLine: false,
-        enableHeadingId: false,
         enableBlockquote: false,
         enableIndentedCodeBlock: false,
         enableFencedBlockquote: false,
@@ -130,7 +127,6 @@ void main() {
       final result = Markdown(
         enableAtxHeading: false,
         enableBlankLine: false,
-        enableHeadingId: false,
         enableBlockquote: false,
         enableIndentedCodeBlock: false,
         enableFencedBlockquote: false,
@@ -153,7 +149,7 @@ void main() {
         enableSoftLineBreak: false,
         enableStrikethrough: false,
         enableHtmlBlock: false,
-      ).parse(text).toHtml(encodeHtml: true);
+      ).parse(text).toHtml();
 
       expect(
         result,

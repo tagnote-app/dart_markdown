@@ -166,9 +166,7 @@ class TableSyntax extends BlockSyntax {
           segments.last = segments.last.trimRight();
         }
         cells.add(
-          segments
-              .map<InlineObject>((span) => UnparsedContent.fromSpan(span))
-              .toList(),
+          segments.map<InlineObject>(UnparsedContent.fromSpan).toList(),
         );
         segments.clear();
         if (!isLastChar) {
@@ -201,7 +199,7 @@ class TableSyntax extends BlockSyntax {
     if (!inTableHead) {
       while (rowChildren.length < expectedColumns) {
         // Insert synthetic empty cells.
-        rowChildren.add(InlineElement('tableBodyCell'));
+        rowChildren.add(const InlineElement('tableBodyCell'));
       }
     }
 

@@ -120,8 +120,8 @@ class Markdown {
       if (enableHtmlBlock) const HtmlBlockSyntax(),
       if (enableFootnote)
         FootnoteReferenceSyntax(enableParagraph: enableParagraph),
-      if (enableLinkReferenceDefinition) LinkReferenceDefinitionSyntax(),
-      ParagraphSyntax(),
+      if (enableLinkReferenceDefinition) const LinkReferenceDefinitionSyntax(),
+      const ParagraphSyntax(),
     ]);
 
     _inlineSyntaxes.addAll([

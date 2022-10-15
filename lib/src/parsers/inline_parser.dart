@@ -35,7 +35,7 @@ class InlineParser extends SourceParser {
   List<InlineObject> parse() {
     _delimiterProcessor = DelimiterProcessor(this, _tree);
     final neverMatch = <InlineSyntax>[];
-    final hasLinkSyntax = (syntaxes.any(((e) => e is LinkSyntax)));
+    final hasLinkSyntax = syntaxes.any((e) => e is LinkSyntax);
     int? dirtyPosition;
 
     while (!isDone) {
@@ -142,9 +142,7 @@ class InlineParser extends SourceParser {
     if (position == _textStart) {
       return;
     }
-    _tree.addAll(subspan(_textStart, position).map(
-      (span) => Text.fromSpan(span),
-    ));
+    _tree.addAll(subspan(_textStart, position).map(Text.fromSpan));
     _textStart = position;
   }
 

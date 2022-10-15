@@ -121,10 +121,10 @@ CompareResult compareResult(
   bool verboseLooseMatch = false,
   List<String>? extensions,
 }) {
-  bool enableTable = false;
-  bool enableStrikethrough = false;
-  bool enableAutolinkExtension = false;
-  bool enableTagfilter = false;
+  var enableTable = false;
+  var enableStrikethrough = false;
+  var enableAutolinkExtension = false;
+  var enableTagfilter = false;
 
   if (extensions != null && extensions.isNotEmpty) {
     for (final extension in extensions) {

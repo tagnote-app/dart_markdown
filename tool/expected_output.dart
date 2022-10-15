@@ -35,14 +35,14 @@ Iterable<DataCase> dataCasesInFile({
       description = 'line ${i + 1}: $description';
     }
 
-    var input = '';
+    final input = StringBuffer();
     while (!lines[i].startsWith('<<<')) {
-      input += '${lines[i++]}\n';
+      input.writeln(lines[i++]);
     }
 
-    var expectedOutput = '';
+    final expectedOutput = StringBuffer();
     while (++i < lines.length && !lines[i].startsWith('>>>')) {
-      expectedOutput += '${lines[i]}\n';
+      expectedOutput.writeln(lines[i]);
     }
 
     final dataCase = DataCase(
@@ -51,8 +51,8 @@ Iterable<DataCase> dataCasesInFile({
       front_matter: frontMatter.toString(),
       description: description,
       skip: skip,
-      input: input,
-      expectedOutput: expectedOutput,
+      input: input.toString(),
+      expectedOutput: expectedOutput.toString(),
     );
     yield dataCase;
   }

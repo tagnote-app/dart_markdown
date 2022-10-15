@@ -223,7 +223,7 @@ class _Coordinate {
 
   /// checks if the current position is at [other].
   @override
-  bool operator ==(other) =>
+  bool operator ==(Object other) =>
       other is _Coordinate && other.index == index && other.offset == offset;
 
   @override

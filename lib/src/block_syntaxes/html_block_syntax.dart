@@ -81,7 +81,7 @@ class HtmlBlockSyntax extends BlockSyntax {
     final childSource = parseChildLines(parser);
 
     final content = childSource.lines.toNodes(
-      (span) => Text.fromSpan(span),
+      Text.fromSpan,
       popLineEnding: true,
     );
 
