@@ -954,7 +954,7 @@
             }
           },
           {
-            "type": "inlineHtml",
+            "type": "rawHtml",
             "start": {
               "line": 0,
               "column": 7,
@@ -1249,7 +1249,7 @@
             }
           },
           {
-            "type": "inlineHtml",
+            "type": "rawHtml",
             "start": {
               "line": 2,
               "column": 4,
@@ -5830,7 +5830,7 @@
             }
           },
           {
-            "type": "inlineHtml",
+            "type": "rawHtml",
             "start": {
               "line": 0,
               "column": 5,
@@ -9013,7 +9013,7 @@
             }
           },
           {
-            "type": "inlineHtml",
+            "type": "rawHtml",
             "start": {
               "line": 0,
               "column": 5,

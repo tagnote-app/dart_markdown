@@ -784,7 +784,7 @@
         },
         "children": [
           {
-            "type": "inlineHtml",
+            "type": "rawHtml",
             "start": {
               "line": 0,
               "column": 0,
@@ -833,7 +833,7 @@
         },
         "children": [
           {
-            "type": "inlineHtml",
+            "type": "rawHtml",
             "start": {
               "line": 0,
               "column": 0,

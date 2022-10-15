@@ -66,7 +66,7 @@ class HtmlTransformer implements NodeVisitor {
       }
       _tree.last.children.add(HtmlText(text));
       return false;
-    } else if (element.type == 'inlineHtml') {
+    } else if (element.type == 'rawHtml') {
       _tree.last.children.add(
         HtmlText(element.children.map((e) => (e as Text).text).join()),
       );
