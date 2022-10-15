@@ -142,7 +142,7 @@ class HtmlTransformer implements NodeVisitor {
           if (attributes['textAlign'] != null) {
             node.attributes['align'] = attributes['textAlign']!;
           }
-        } else if (type == 'link') {
+        } else if (_isLink(type)) {
           node.attributes.addAll({
             if (attributes['destination'] != null)
               'href': attributes['destination']!,
@@ -217,6 +217,9 @@ class HtmlTransformer implements NodeVisitor {
   bool _isCodeBlock(String? type) =>
       type == 'indentedCodeBlock' || type == 'fencedCodeBlock';
 
+  bool _isLink(String? type) =>
+      type == 'autolinkExtension' || type == 'autolink' || type == 'link';
+
   bool _isHealine(String? type) =>
       type == 'setextHeading' || type == 'atxHeading';
 
@@ -253,6 +256,8 @@ const _htmlTagMap = {
   'strongEmphasis': 'strong',
   'strikethrough': 'del',
   'link': 'a',
+  'autolinkExtension': 'a',
+  'autolink': 'a',
   'image': 'img',
   'subscript': 'sub',
   'superscript': 'sup',

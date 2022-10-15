@@ -17,7 +17,7 @@
         },
         "children": [
           {
-            "type": "link",
+            "type": "autolinkExtension",
             "start": {
               "line": 0,
               "column": 0,
@@ -82,7 +82,7 @@
             }
           },
           {
-            "type": "link",
+            "type": "autolinkExtension",
             "start": {
               "line": 0,
               "column": 6,
@@ -160,7 +160,7 @@
             }
           },
           {
-            "type": "link",
+            "type": "autolinkExtension",
             "start": {
               "line": 0,
               "column": 6,
@@ -232,7 +232,7 @@
             }
           },
           {
-            "type": "link",
+            "type": "autolinkExtension",
             "start": {
               "line": 2,
               "column": 6,
@@ -297,7 +297,7 @@
         },
         "children": [
           {
-            "type": "link",
+            "type": "autolinkExtension",
             "start": {
               "line": 0,
               "column": 0,
@@ -343,7 +343,7 @@
         },
         "children": [
           {
-            "type": "link",
+            "type": "autolinkExtension",
             "start": {
               "line": 2,
               "column": 0,
@@ -415,7 +415,7 @@
             }
           },
           {
-            "type": "link",
+            "type": "autolinkExtension",
             "start": {
               "line": 4,
               "column": 1,
@@ -487,7 +487,7 @@
             }
           },
           {
-            "type": "link",
+            "type": "autolinkExtension",
             "start": {
               "line": 6,
               "column": 1,
@@ -539,7 +539,7 @@
         },
         "children": [
           {
-            "type": "link",
+            "type": "autolinkExtension",
             "start": {
               "line": 0,
               "column": 0,
@@ -591,7 +591,7 @@
         },
         "children": [
           {
-            "type": "link",
+            "type": "autolinkExtension",
             "start": {
               "line": 0,
               "column": 0,
@@ -637,7 +637,7 @@
         },
         "children": [
           {
-            "type": "link",
+            "type": "autolinkExtension",
             "start": {
               "line": 2,
               "column": 0,
@@ -702,7 +702,7 @@
         },
         "children": [
           {
-            "type": "link",
+            "type": "autolinkExtension",
             "start": {
               "line": 0,
               "column": 0,
@@ -767,7 +767,7 @@
         },
         "children": [
           {
-            "type": "link",
+            "type": "autolinkExtension",
             "start": {
               "line": 0,
               "column": 0,
@@ -826,7 +826,7 @@
             }
           },
           {
-            "type": "link",
+            "type": "autolinkExtension",
             "start": {
               "line": 2,
               "column": 7,
@@ -898,7 +898,7 @@
             }
           },
           {
-            "type": "link",
+            "type": "autolinkExtension",
             "start": {
               "line": 4,
               "column": 30,
@@ -963,7 +963,7 @@
         },
         "children": [
           {
-            "type": "link",
+            "type": "autolinkExtension",
             "start": {
               "line": 0,
               "column": 0,
@@ -1028,7 +1028,7 @@
             }
           },
           {
-            "type": "link",
+            "type": "autolinkExtension",
             "start": {
               "line": 0,
               "column": 40,
@@ -1093,7 +1093,7 @@
         },
         "children": [
           {
-            "type": "link",
+            "type": "autolinkExtension",
             "start": {
               "line": 0,
               "column": 0,
@@ -1139,7 +1139,7 @@
         },
         "children": [
           {
-            "type": "link",
+            "type": "autolinkExtension",
             "start": {
               "line": 2,
               "column": 0,

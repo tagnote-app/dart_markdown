@@ -12151,7 +12151,7 @@
             }
           },
           {
-            "type": "link",
+            "type": "autolink",
             "start": {
               "line": 0,
               "column": 3,
@@ -12245,7 +12245,7 @@
             }
           },
           {
-            "type": "link",
+            "type": "autolink",
             "start": {
               "line": 0,
               "column": 3,

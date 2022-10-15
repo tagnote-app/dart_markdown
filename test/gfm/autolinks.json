@@ -17,7 +17,7 @@
         },
         "children": [
           {
-            "type": "link",
+            "type": "autolink",
             "start": {
               "line": 0,
               "column": 0,
@@ -98,7 +98,7 @@
         },
         "children": [
           {
-            "type": "link",
+            "type": "autolink",
             "start": {
               "line": 0,
               "column": 0,
@@ -179,7 +179,7 @@
         },
         "children": [
           {
-            "type": "link",
+            "type": "autolink",
             "start": {
               "line": 0,
               "column": 0,
@@ -260,7 +260,7 @@
         },
         "children": [
           {
-            "type": "link",
+            "type": "autolink",
             "start": {
               "line": 0,
               "column": 0,
@@ -341,7 +341,7 @@
         },
         "children": [
           {
-            "type": "link",
+            "type": "autolink",
             "start": {
               "line": 0,
               "column": 0,
@@ -422,7 +422,7 @@
         },
         "children": [
           {
-            "type": "link",
+            "type": "autolink",
             "start": {
               "line": 0,
               "column": 0,
@@ -503,7 +503,7 @@
         },
         "children": [
           {
-            "type": "link",
+            "type": "autolink",
             "start": {
               "line": 0,
               "column": 0,
@@ -584,7 +584,7 @@
         },
         "children": [
           {
-            "type": "link",
+            "type": "autolink",
             "start": {
               "line": 0,
               "column": 0,
@@ -699,7 +699,7 @@
         },
         "children": [
           {
-            "type": "link",
+            "type": "autolink",
             "start": {
               "line": 0,
               "column": 0,
@@ -780,7 +780,7 @@
         },
         "children": [
           {
-            "type": "link",
+            "type": "autolink",
             "start": {
               "line": 0,
               "column": 0,
@@ -861,7 +861,7 @@
         },
         "children": [
           {
-            "type": "link",
+            "type": "autolink",
             "start": {
               "line": 0,
               "column": 0,
@@ -1064,7 +1064,7 @@
             }
           },
           {
-            "type": "link",
+            "type": "autolinkExtension",
             "start": {
               "line": 0,
               "column": 2,
@@ -1197,7 +1197,7 @@
         },
         "children": [
           {
-            "type": "link",
+            "type": "autolinkExtension",
             "start": {
               "line": 0,
               "column": 0,
@@ -1249,7 +1249,7 @@
         },
         "children": [
           {
-            "type": "link",
+            "type": "autolinkExtension",
             "start": {
               "line": 0,
               "column": 0,

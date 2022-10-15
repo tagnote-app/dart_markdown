@@ -8,6 +8,9 @@
    [PR#63](https://github.com/chenzhiguang/dart_markdown/pull/63).
 3. **BREAKING** Use dedicated name `fencedBlockquote` for fenced blockquote
    [PR#65](https://github.com/chenzhiguang/dart_markdown/pull/65).
+4. **BREAKING** Use dedicated name `autolinkExtension` for autolink extension
+   and `autolink` for autolinks
+   [PR#66](https://github.com/chenzhiguang/dart_markdown/pull/66).
 
 ## 3.0.0
 

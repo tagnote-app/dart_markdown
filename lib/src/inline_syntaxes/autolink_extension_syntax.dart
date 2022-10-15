@@ -75,7 +75,7 @@ class AutolinkExtensionSyntax extends InlineSyntax {
     }
 
     return InlineElement(
-      'link',
+      'autolinkExtension',
       children: [Text.fromSpan(span)],
       attributes: {'destination': destination},
     );
