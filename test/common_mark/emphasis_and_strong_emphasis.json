@@ -11926,7 +11926,7 @@
                 }
               },
               {
-                "type": "inlineCode",
+                "type": "codeSpan",
                 "start": {
                   "line": 0,
                   "column": 3,
@@ -12059,7 +12059,7 @@
                 }
               },
               {
-                "type": "inlineCode",
+                "type": "codeSpan",
                 "start": {
                   "line": 0,
                   "column": 3,

@@ -197,7 +197,7 @@ class HtmlTransformer implements NodeVisitor {
     final parent = _tree.last;
     final parentType = parent.element?.type;
     final decodeHtmlCharacter =
-        parentType != 'inlineCode' && !_isCodeBlock(parentType);
+        parentType != 'codeSpan' && !_isCodeBlock(parentType);
 
     var content = !encodeHtml
         ? text.textContent
@@ -250,7 +250,7 @@ const _htmlTagMap = {
   'tableBody': 'tbody',
   'tableHeadCell': 'th',
   'tableBodyCell': 'td',
-  'inlineCode': 'code',
+  'codeSpan': 'code',
   'hardLineBreak': 'br',
   'emphasis': 'em',
   'strongEmphasis': 'strong',

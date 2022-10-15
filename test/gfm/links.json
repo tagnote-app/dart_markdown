@@ -4405,7 +4405,7 @@
                     }
                   },
                   {
-                    "type": "inlineCode",
+                    "type": "codeSpan",
                     "start": {
                       "line": 0,
                       "column": 19,
@@ -5663,7 +5663,7 @@
             }
           },
           {
-            "type": "inlineCode",
+            "type": "codeSpan",
             "start": {
               "line": 0,
               "column": 4,
@@ -6967,7 +6967,7 @@
                     }
                   },
                   {
-                    "type": "inlineCode",
+                    "type": "codeSpan",
                     "start": {
                       "line": 0,
                       "column": 19,
@@ -8958,7 +8958,7 @@
             }
           },
           {
-            "type": "inlineCode",
+            "type": "codeSpan",
             "start": {
               "line": 0,
               "column": 4,

@@ -628,7 +628,7 @@
         },
         "children": [
           {
-            "type": "inlineCode",
+            "type": "codeSpan",
             "start": {
               "line": 0,
               "column": 0,
@@ -706,7 +706,7 @@
         },
         "children": [
           {
-            "type": "inlineCode",
+            "type": "codeSpan",
             "start": {
               "line": 0,
               "column": 0,

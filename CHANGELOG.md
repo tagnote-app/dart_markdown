@@ -13,6 +13,8 @@
    [PR#66](https://github.com/chenzhiguang/dart_markdown/pull/66).
 5. **BREAKING** Change type `inlineHtml` to `rawHtml`
    [PR#67](https://github.com/chenzhiguang/dart_markdown/pull/67).
+6. **BREAKING** Change type `inlineCode` to `codeSpan`
+   [PR#68](https://github.com/chenzhiguang/dart_markdown/pull/68).
 
 ## 3.0.0
 
