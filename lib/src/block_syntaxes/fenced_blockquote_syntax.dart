@@ -50,7 +50,7 @@ class FencedBlockquoteSyntax extends BlockSyntax {
     ).parseLines();
 
     return BlockElement(
-      'blockquote',
+      'fencedBlockquote',
       children: children,
       markers: childSource.markers,
     );

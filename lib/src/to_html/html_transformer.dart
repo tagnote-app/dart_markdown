@@ -259,4 +259,5 @@ const _htmlTagMap = {
   'highlight': 'mark',
   'footnote': 'sup',
   'footnoteReference': 'li',
+  'fencedBlockquote': 'blockquote',
 };
