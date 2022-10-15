@@ -15,6 +15,8 @@
    [PR#67](https://github.com/tagnote-app/dart_markdown/pull/67).
 6. **BREAKING** Change type `inlineCode` to `codeSpan`
    [PR#68](https://github.com/tagnote-app/dart_markdown/pull/68).
+7. Change where table markers are saved.
+   [PR#70](https://github.com/tagnote-app/dart_markdown/pull/70).
 
 ## 3.0.0
 
