@@ -51,8 +51,7 @@ class TableSyntax extends BlockSyntax {
       return null;
     }
 
-    markers.insertAll(0, parsedRow.markers);
-    final head = BlockElement('tableHead', children: [parsedRow.row]);
+    final head = BlockElement('tableHead', children: [parsedRow]);
     parser.advance();
 
     // Advance past the divider of hyphens.
@@ -66,8 +65,7 @@ class TableSyntax extends BlockSyntax {
         expectedColumns: columnCount,
         inTableHead: false,
       );
-      markers.addAll(parsedRow!.markers);
-      rows.add(parsedRow.row);
+      rows.add(parsedRow!);
       parser.advance();
     }
 
@@ -99,7 +97,7 @@ class TableSyntax extends BlockSyntax {
 
   /// Parses a table row at the current line into a table row element, with
   /// parsed table cells.
-  _RowElements? _parseRow(
+  BlockElement? _parseRow(
     SourceSpan content, {
     required bool inTableHead,
     required int expectedColumns,
@@ -192,6 +190,7 @@ class TableSyntax extends BlockSyntax {
       rowChildren.add(InlineElement(
         inTableHead ? 'tableHeadCell' : 'tableBodyCell',
         children: cells[i],
+        markers: markers,
         attributes: textAlign == null ? {} : {'textAlign': textAlign},
       ));
     }
@@ -203,15 +202,6 @@ class TableSyntax extends BlockSyntax {
       }
     }
 
-    return _RowElements(
-      BlockElement('tableRow', children: rowChildren),
-      markers,
-    );
+    return BlockElement('tableRow', children: rowChildren);
   }
-}
-
-class _RowElements {
-  final BlockElement row;
-  final List<SourceSpan> markers;
-  _RowElements(this.row, this.markers);
 }
