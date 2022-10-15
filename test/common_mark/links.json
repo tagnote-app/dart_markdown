@@ -5982,7 +5982,7 @@
             }
           },
           {
-            "type": "link",
+            "type": "autolink",
             "start": {
               "line": 0,
               "column": 4,
@@ -9415,7 +9415,7 @@
             }
           },
           {
-            "type": "link",
+            "type": "autolink",
             "start": {
               "line": 0,
               "column": 4,

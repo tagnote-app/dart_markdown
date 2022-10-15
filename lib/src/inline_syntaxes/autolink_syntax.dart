@@ -46,7 +46,7 @@ class AutolinkSyntax extends InlineSyntax {
     }
 
     return InlineElement(
-      'link',
+      'autolink',
       children: [Text.fromSpan(span)],
       markers: markers,
       attributes: {

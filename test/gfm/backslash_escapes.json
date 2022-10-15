@@ -1633,7 +1633,7 @@
         },
         "children": [
           {
-            "type": "link",
+            "type": "autolink",
             "start": {
               "line": 0,
               "column": 0,
