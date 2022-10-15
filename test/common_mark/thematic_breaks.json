@@ -950,7 +950,7 @@
     "markdown": "Foo\n---\nbar\n",
     "expected": [
       {
-        "type": "headline",
+        "type": "setextHeading",
         "start": {
           "line": 0,
           "column": 0,

@@ -4262,7 +4262,7 @@
     "markdown": "# [Foo]\n[foo]: /url\n> bar\n",
     "expected": [
       {
-        "type": "headline",
+        "type": "atxHeading",
         "start": {
           "line": 0,
           "column": 0,
@@ -4668,7 +4668,7 @@
         ]
       },
       {
-        "type": "headline",
+        "type": "setextHeading",
         "start": {
           "line": 1,
           "column": 0,

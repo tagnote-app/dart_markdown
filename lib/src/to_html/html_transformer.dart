@@ -104,7 +104,7 @@ class HtmlTransformer implements NodeVisitor {
     } else {
       var tag = _htmlTagMap[type] ?? type;
 
-      if (type == 'headline') {
+      if (_isHealine(type)) {
         tag = 'h${attributes['level']}';
       }
 
@@ -122,7 +122,7 @@ class HtmlTransformer implements NodeVisitor {
       } else {
         node = HtmlElement(tag, current.children);
 
-        if (type == 'headline') {
+        if (_isHealine(type)) {
           node.generatedId = attributes['generatedId'];
         } else if (type == 'orderedList' && attributes['start'] != null) {
           node.attributes['start'] = attributes['start']!;
@@ -216,6 +216,9 @@ class HtmlTransformer implements NodeVisitor {
 
   bool _isCodeBlock(String? type) =>
       type == 'indentedCodeBlock' || type == 'fencedCodeBlock';
+
+  bool _isHealine(String? type) =>
+      type == 'setextHeading' || type == 'atxHeading';
 
   bool _isSelfClosing(Element element) =>
       [

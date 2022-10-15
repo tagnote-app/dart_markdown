@@ -1480,7 +1480,7 @@
     "markdown": "foo\n---\n~~~\nbar\n~~~\n# baz\n",
     "expected": [
       {
-        "type": "headline",
+        "type": "setextHeading",
         "start": {
           "line": 0,
           "column": 0,
@@ -1582,7 +1582,7 @@
         ]
       },
       {
-        "type": "headline",
+        "type": "atxHeading",
         "start": {
           "line": 5,
           "column": 0,
