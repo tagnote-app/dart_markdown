@@ -69,9 +69,9 @@ class FencedCodeBlockSyntax extends BlockSyntax {
       BackslashParser.parseString(parser.current.content.text),
     )!);
     final childSource = parseChildLines(parser, match.marker, match.indent);
-    final codeLines = childSource.lines.toNodes((e) => Text.fromSpan(e)).nodes;
+    final codeLines = childSource.lines.toNodes(Text.fromSpan).nodes;
 
-    final Map<String, String> attributes = {};
+    final attributes = <String, String>{};
 
     if (match.info.isNotEmpty) {
       attributes.addAll({

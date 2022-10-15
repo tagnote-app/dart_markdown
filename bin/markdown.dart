@@ -42,13 +42,13 @@ Future<void> main(List<String> args) async {
     return;
   }
 
-  bool enableFencedCodeBlock = false;
-  bool enableRawHtml = false;
-  bool enableHeadingId = false;
-  bool enableTable = false;
-  bool enableStrikethrough = false;
-  bool enableEmoji = false;
-  bool enableAutolinkExtension = false;
+  var enableFencedCodeBlock = false;
+  var enableRawHtml = false;
+  var enableHeadingId = false;
+  var enableTable = false;
+  var enableStrikethrough = false;
+  var enableEmoji = false;
+  var enableAutolinkExtension = false;
 
   switch (results['extension-set']) {
     case 'commonMark':

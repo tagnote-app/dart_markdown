@@ -26,7 +26,7 @@ class BlockquoteSyntax extends BlockSyntax {
     final childLines = <Line>[];
     final markers = <SourceSpan>[];
 
-    bool lazyEnding = false;
+    var lazyEnding = false;
     while (!parser.isDone) {
       final currentLine = parser.current;
       final match = currentLine.firstMatch(pattern);

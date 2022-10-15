@@ -24,7 +24,7 @@ class ParagraphSyntax extends BlockSyntax {
 
   @override
   BlockElement? parse(BlockParser parser) {
-    final List<Line> lines = [parser.current];
+    final lines = <Line>[parser.current];
     parser.advance();
 
     var hitSetextHeading = false;
@@ -46,7 +46,7 @@ class ParagraphSyntax extends BlockSyntax {
     }
 
     final content = lines.toNodes(
-      (span) => UnparsedContent.fromSpan(span),
+      UnparsedContent.fromSpan,
       trimTrailing: true,
       trimLeft: true,
       popLineEnding: true,

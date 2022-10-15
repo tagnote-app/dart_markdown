@@ -23,7 +23,7 @@ class LinkReferenceDefinitionSyntax extends BlockSyntax {
   @override
   BlockElement? parse(BlockParser parser) {
     final position = parser.position;
-    final List<Line> lines = [parser.current];
+    final lines = <Line>[parser.current];
     parser.advance();
 
     while (!shouldEnd(parser)) {
@@ -78,16 +78,16 @@ class LinkReferenceDefinitionSyntax extends BlockSyntax {
       children: [
         InlineElement(
           'linkReferenceDefinitionLabel',
-          children: label.map((span) => Text.fromSpan(span)).toList(),
+          children: label.map(Text.fromSpan).toList(),
         ),
         InlineElement(
           'linkReferenceDefinitionDestination',
-          children: destination.map((span) => Text.fromSpan(span)).toList(),
+          children: destination.map(Text.fromSpan).toList(),
         ),
         if (title != null)
           InlineElement(
             'linkReferenceDefinitionTitle',
-            children: title.map((span) => Text.fromSpan(span)).toList(),
+            children: title.map(Text.fromSpan).toList(),
           ),
       ],
     );

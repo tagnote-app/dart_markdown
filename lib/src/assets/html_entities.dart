@@ -1,6 +1,6 @@
 // Generated file. do not edit.
 //
-// Source: tool/entities.json (https://html.spec.whatwg.org/entities.json)
+// Source: tool/entities.json
 // Script: tool/update_entities.dart
 // ignore_for_file: prefer_single_quotes
 

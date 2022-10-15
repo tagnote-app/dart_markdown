@@ -365,7 +365,7 @@ class LinkParser extends SourceParser {
       formatted.destination = text;
     } else if (attribute == 'title') {
       text = decodeHtmlCharacters(text);
-      text = HtmlEscape(HtmlEscapeMode.attribute).convert(text);
+      text = const HtmlEscape(HtmlEscapeMode.attribute).convert(text);
       formatted.title = text;
     }
   }

@@ -13,7 +13,7 @@ Future<void> main() async {
     final request = await client.getUrl(Uri.parse(_blnsJsonRawUrl));
     final response = await request.close();
     final source =
-        await response.cast<List<int>>().transform(utf8.decoder).join('');
+        await response.cast<List<int>>().transform(utf8.decoder).join();
     json = (jsonDecode(source) as List).cast<String>();
   } finally {
     client.close();

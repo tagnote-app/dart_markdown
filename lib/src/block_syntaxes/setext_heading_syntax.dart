@@ -44,7 +44,7 @@ class SetextHeadingSyntax extends BlockSyntax {
     final marker = parser.current.content.trim();
     final level = (marker.text[0] == '=') ? '1' : '2';
     final content = lines.toNodes(
-      ((e) => UnparsedContent.fromSpan(e)),
+      UnparsedContent.fromSpan,
       trimLeading: true,
       trimTrailing: true,
       popLineEnding: true,

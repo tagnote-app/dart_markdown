@@ -147,6 +147,6 @@ HtmlElement _toSingleHtmlElement(
   Markdown markdown, {
   required bool encodeHtml,
 }) =>
-    (HtmlTransformer(encodeHtml: encodeHtml)
+    HtmlTransformer(encodeHtml: encodeHtml)
         .transform(markdown.parse(text))
-        .single as HtmlElement);
+        .single as HtmlElement;

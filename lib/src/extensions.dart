@@ -49,7 +49,7 @@ extension StringExtensions on String {
 
 /// Converts [object] to a JSON [String] with a 2 whitespace indent.
 String _toPrettyString(Object object) =>
-    JsonEncoder.withIndent('  ').convert(object);
+    const JsonEncoder.withIndent('  ').convert(object);
 
 extension ListExtensions on List<dynamic> {
   void addIfNotNull<T>(T item) {
@@ -134,7 +134,7 @@ extension SourceSpanExtensions on SourceSpan {
     var start = 0;
     final whitespaces = whitespaceMatch?[0];
     if (whitespaces != null) {
-      int indentLength = 0;
+      var indentLength = 0;
       for (start; start < whitespaces.length; start++) {
         final isTab = whitespaces[start] == '\t';
         if (isTab) {
@@ -179,7 +179,7 @@ extension SourceFileExtensions on SourceFile {
 
 extension SourceSpanListExtensions on List<SourceSpan> {
   List<SourceSpan> concatWhilePossible() {
-    final List<SourceSpan> spans = [];
+    final spans = <SourceSpan>[];
 
     for (var i = 0; i < length; i++) {
       final current = this[i];

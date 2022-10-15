@@ -167,7 +167,7 @@ class TableSyntax extends BlockSyntax {
         }
         cells.add(
           segments
-              .map<InlineObject>((span) => UnparsedContent.fromSpan(span))
+              .map<InlineObject>(UnparsedContent.fromSpan)
               .toList(),
         );
         segments.clear();
@@ -201,7 +201,7 @@ class TableSyntax extends BlockSyntax {
     if (!inTableHead) {
       while (rowChildren.length < expectedColumns) {
         // Insert synthetic empty cells.
-        rowChildren.add(InlineElement('tableBodyCell'));
+        rowChildren.add(const InlineElement('tableBodyCell'));
       }
     }
 

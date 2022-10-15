@@ -33,7 +33,6 @@ void main() {
     test('blns string $index w/ gitHubWeb', () {
       final result = Markdown(
         enableHeadingId: true,
-        enableTable: true,
       ).parse(str).toHtml();
       expect(result, const TypeMatcher<String>());
     });

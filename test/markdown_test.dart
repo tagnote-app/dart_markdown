@@ -106,7 +106,7 @@ void main() async {
   group('Resolver', () {
     InlineObject? nyanResolver(String text, [_]) => text.isEmpty
         ? null
-        : Text.fromSpan(SourceFile.fromString(('~=[,,_${text}_,,]:3')).span(0));
+        : Text.fromSpan(SourceFile.fromString('~=[,,_${text}_,,]:3').span(0));
     validateCore(
         'simple link resolver',
         '''
