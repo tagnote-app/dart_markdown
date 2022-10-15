@@ -57,7 +57,7 @@ class HtmlElement implements HtmlNode {
 
   @override
   String get textContent {
-    return (children ?? []).map((child) => child.textContent).join('');
+    return (children ?? []).map((child) => child.textContent).join();
   }
 }
 

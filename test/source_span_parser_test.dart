@@ -137,6 +137,7 @@ fg
     });
 
     group('stringAt()', () {
+      // ignore: unnecessary_parenthesis
       test('get a char from a position', (() {
         expect(parser.stringAt(0), ' ');
         expect(parser.stringAt(3), ' ');
@@ -206,14 +207,14 @@ fg
     });
 
     group('getText()', () {
-      test('same index for start and end', (() {
+      test('same index for start and end', () {
         final segments = parser.subspan(6, 7);
 
         expect(segments.length, 1);
         expect(segments.first.text, '8');
-      }));
+      });
 
-      test('end is at the beginning', (() {
+      test('end is at the beginning', () {
         final segments = parser.subspan(6, 8);
 
         expect(segments.length, 1);
@@ -222,16 +223,16 @@ fg
           'end': {'line': 3, 'column': 4, 'offset': 22},
           'text': '89'
         });
-      }));
+      });
 
-      test('no end position specified', (() {
+      test('no end position specified', () {
         final segments = parser.subspan(6);
 
         expect(segments.length, 4);
         expect(segments.map((e) => e.text).join(), '89  abc de \nfg   \n\n');
-      }));
+      });
 
-      test('across several segments but actually are in the same line', (() {
+      test('across several segments but actually are in the same line', () {
         final segments = parser.subspan(6, 15);
 
         expect(segments[0].toMap(), {
@@ -253,9 +254,9 @@ fg
         });
 
         expect(segments.map((e) => e.text).join(), '89  abc d');
-      }));
+      });
 
-      test('from a segment which has a multiple line text', (() {
+      test('from a segment which has a multiple line text', () {
         final segments = parser.subspan(14, 21);
 
         expect(segments[0].toMap(), {
@@ -263,7 +264,7 @@ fg
           'end': {'line': 6, 'column': 3, 'offset': 39},
           'text': 'de \nfg '
         });
-      }));
+      });
     });
   });
 }

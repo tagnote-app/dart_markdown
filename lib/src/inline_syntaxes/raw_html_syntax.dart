@@ -25,7 +25,7 @@ class RawHtmlSyntax extends InlineSyntax {
 
     return InlineElement(
       'inlineHtml',
-      children: spans.map((span) => Text.fromSpan(span)).toList(),
+      children: spans.map(Text.fromSpan).toList(),
     );
   }
 }

@@ -156,7 +156,7 @@ class FootnoteReferenceSyntax extends BlockSyntax {
 
   List<Node> _toUnparsedContent(List<Line> lines) => lines
       .toNodes(
-        (e) => UnparsedContent.fromSpan(e),
+        UnparsedContent.fromSpan,
         trimLeft: true,
         trimTrailing: true,
         popLineEnding: true,

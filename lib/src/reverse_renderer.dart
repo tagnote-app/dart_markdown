@@ -43,15 +43,15 @@ class ReverseRenderer implements NodeVisitor {
   }
 
   @override
-  void visitText(text) {
+  void visitText(Text text) {
     _write(text);
   }
 
   @override
-  bool visitElementBefore(element) => true;
+  bool visitElementBefore(Element element) => true;
 
   @override
-  void visitElementAfter(element) {
+  void visitElementAfter(Element element) {
     element.markers.forEach(_write);
   }
 

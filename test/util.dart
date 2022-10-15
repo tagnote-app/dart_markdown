@@ -20,10 +20,10 @@ Future<void> testDirectory(String name) async {
   await for (final dataCase in dataCasesUnder(testDirectory: name)) {
     final description =
         '${dataCase.directory}/${dataCase.file}.unit ${dataCase.description}';
-    bool enableTable = false;
-    bool enableStrikethrough = false;
-    bool enableAutolinkExtension = false;
-    bool enableTagfilter = false;
+    var enableTable = false;
+    var enableStrikethrough = false;
+    var enableAutolinkExtension = false;
+    var enableTagfilter = false;
 
     if (dataCase.file.endsWith('_extension')) {
       final syntaxName = dataCase.file.substring(
@@ -75,9 +75,9 @@ void testFile(
   bool enableHtmlBlock = true,
   bool enableLinkReferenceDefinition = true,
   bool enableTaskList = false,
-}) async {
-  final directory = p.join(await markdownPackageRoot, 'test');
-  for (final dataCase in dataCasesInFile(path: p.join(directory, file))) {
+}) {
+  for (final dataCase
+      in dataCasesInFile(path: p.join(p.current, 'test', file))) {
     final description =
         '${dataCase.directory}/${dataCase.file}.unit ${dataCase.description}';
     validateCore(

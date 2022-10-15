@@ -102,7 +102,7 @@ class HtmlTransformer implements NodeVisitor {
 
       node = HtmlElement('pre', [code]);
     } else {
-      String tag = _htmlTagMap[type] ?? type;
+      var tag = _htmlTagMap[type] ?? type;
 
       if (type == 'headline') {
         tag = 'h${attributes['level']}';
