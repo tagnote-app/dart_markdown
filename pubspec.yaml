@@ -3,7 +3,7 @@ version: 3.0.0-dev
 
 description: A portable Markdown library written in Dart that can parse
   Markdown into AST and HTML.
-repository: https://github.com/chenzhiguang/dart_markdown
+repository: https://github.com/tagnote-app/dart_markdown
 
 environment:
   sdk: '>=2.17.0 <3.0.0'

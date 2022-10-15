@@ -11,7 +11,7 @@ import '../patterns.dart';
 import '../syntax.dart';
 
 // See
-// https://github.com/chenzhiguang/dart_markdown/wiki/footnote-reference-specification
+// https://github.com/tagnote-app/dart_markdown/wiki/footnote-reference-specification
 class FootnoteReferenceSyntax extends BlockSyntax {
   @override
   RegExp get pattern => footnoteReferencePattern;
