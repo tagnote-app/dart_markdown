@@ -5994,7 +5994,7 @@
             ],
             "children": [
               {
-                "type": "headline",
+                "type": "atxHeading",
                 "start": {
                   "line": 0,
                   "column": 2,
@@ -6070,7 +6070,7 @@
             ],
             "children": [
               {
-                "type": "headline",
+                "type": "setextHeading",
                 "start": {
                   "line": 1,
                   "column": 2,

@@ -65,7 +65,7 @@ class AtxHeadingSyntax extends BlockSyntax {
         : null);
 
     return BlockElement(
-      'headline',
+      'atxHeading',
       markers: markers,
       children: children,
       attributes: {

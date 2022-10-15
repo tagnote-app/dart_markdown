@@ -53,7 +53,7 @@ class SetextHeadingSyntax extends BlockSyntax {
     parser.advance();
 
     return BlockElement(
-      'headline',
+      'setextHeading',
       children: content.nodes,
       attributes: {
         'level': level,

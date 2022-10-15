@@ -937,7 +937,7 @@
     "markdown": "### foo\\\n",
     "expected": [
       {
-        "type": "headline",
+        "type": "atxHeading",
         "start": {
           "line": 0,
           "column": 0,
@@ -989,7 +989,7 @@
     "markdown": "### foo  \n",
     "expected": [
       {
-        "type": "headline",
+        "type": "atxHeading",
         "start": {
           "line": 0,
           "column": 0,

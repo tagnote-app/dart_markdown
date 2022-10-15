@@ -724,7 +724,7 @@
     "markdown": "#\tFoo\n",
     "expected": [
       {
-        "type": "headline",
+        "type": "atxHeading",
         "start": {
           "line": 0,
           "column": 0,

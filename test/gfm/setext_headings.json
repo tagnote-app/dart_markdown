@@ -4,7 +4,7 @@
     "markdown": "Foo *bar*\n=========\n\nFoo *bar*\n---------\n",
     "expected": [
       {
-        "type": "headline",
+        "type": "setextHeading",
         "start": {
           "line": 0,
           "column": 0,
@@ -106,7 +106,7 @@
         }
       },
       {
-        "type": "headline",
+        "type": "setextHeading",
         "start": {
           "line": 3,
           "column": 0,
@@ -214,7 +214,7 @@
     "markdown": "Foo *bar\nbaz*\n====\n",
     "expected": [
       {
-        "type": "headline",
+        "type": "setextHeading",
         "start": {
           "line": 0,
           "column": 0,
@@ -322,7 +322,7 @@
     "markdown": "  Foo *bar\nbaz*\t\n====\n",
     "expected": [
       {
-        "type": "headline",
+        "type": "setextHeading",
         "start": {
           "line": 0,
           "column": 2,
@@ -430,7 +430,7 @@
     "markdown": "Foo\n-------------------------\n\nFoo\n=\n",
     "expected": [
       {
-        "type": "headline",
+        "type": "setextHeading",
         "start": {
           "line": 0,
           "column": 0,
@@ -476,7 +476,7 @@
         }
       },
       {
-        "type": "headline",
+        "type": "setextHeading",
         "start": {
           "line": 3,
           "column": 0,
@@ -528,7 +528,7 @@
     "markdown": "   Foo\n---\n\n  Foo\n-----\n\n  Foo\n  ===\n",
     "expected": [
       {
-        "type": "headline",
+        "type": "setextHeading",
         "start": {
           "line": 0,
           "column": 3,
@@ -574,7 +574,7 @@
         }
       },
       {
-        "type": "headline",
+        "type": "setextHeading",
         "start": {
           "line": 3,
           "column": 2,
@@ -620,7 +620,7 @@
         }
       },
       {
-        "type": "headline",
+        "type": "setextHeading",
         "start": {
           "line": 6,
           "column": 2,
@@ -773,7 +773,7 @@
     "markdown": "Foo\n   ----      \n",
     "expected": [
       {
-        "type": "headline",
+        "type": "setextHeading",
         "start": {
           "line": 0,
           "column": 0,
@@ -962,7 +962,7 @@
     "markdown": "Foo  \n-----\n",
     "expected": [
       {
-        "type": "headline",
+        "type": "setextHeading",
         "start": {
           "line": 0,
           "column": 0,
@@ -1014,7 +1014,7 @@
     "markdown": "Foo\\\n----\n",
     "expected": [
       {
-        "type": "headline",
+        "type": "setextHeading",
         "start": {
           "line": 0,
           "column": 0,
@@ -1066,7 +1066,7 @@
     "markdown": "`Foo\n----\n`\n\n<a title=\"a lot\n---\nof dashes\"/>\n",
     "expected": [
       {
-        "type": "headline",
+        "type": "setextHeading",
         "start": {
           "line": 0,
           "column": 0,
@@ -1140,7 +1140,7 @@
         ]
       },
       {
-        "type": "headline",
+        "type": "setextHeading",
         "start": {
           "line": 4,
           "column": 0,
@@ -1471,7 +1471,7 @@
     "markdown": "Foo\nBar\n---\n",
     "expected": [
       {
-        "type": "headline",
+        "type": "setextHeading",
         "start": {
           "line": 0,
           "column": 0,
@@ -1551,7 +1551,7 @@
         ]
       },
       {
-        "type": "headline",
+        "type": "setextHeading",
         "start": {
           "line": 1,
           "column": 0,
@@ -1597,7 +1597,7 @@
         }
       },
       {
-        "type": "headline",
+        "type": "setextHeading",
         "start": {
           "line": 3,
           "column": 0,
@@ -2022,7 +2022,7 @@
     "markdown": "\\> foo\n------\n",
     "expected": [
       {
-        "type": "headline",
+        "type": "setextHeading",
         "start": {
           "line": 0,
           "column": 0,
@@ -2128,7 +2128,7 @@
         ]
       },
       {
-        "type": "headline",
+        "type": "setextHeading",
         "start": {
           "line": 2,
           "column": 0,

@@ -58,7 +58,7 @@
         ],
         "children": [
           {
-            "type": "headline",
+            "type": "atxHeading",
             "start": {
               "line": 0,
               "column": 2,
@@ -207,7 +207,7 @@
         ],
         "children": [
           {
-            "type": "headline",
+            "type": "atxHeading",
             "start": {
               "line": 0,
               "column": 1,
@@ -356,7 +356,7 @@
         ],
         "children": [
           {
-            "type": "headline",
+            "type": "atxHeading",
             "start": {
               "line": 0,
               "column": 5,
@@ -552,7 +552,7 @@
         ],
         "children": [
           {
-            "type": "headline",
+            "type": "atxHeading",
             "start": {
               "line": 0,
               "column": 2,

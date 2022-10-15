@@ -661,7 +661,7 @@
     "markdown": "# Heading\n    foo\nHeading\n------\n    foo\n----\n",
     "expected": [
       {
-        "type": "headline",
+        "type": "atxHeading",
         "start": {
           "line": 0,
           "column": 0,
@@ -735,7 +735,7 @@
         ]
       },
       {
-        "type": "headline",
+        "type": "setextHeading",
         "start": {
           "line": 2,
           "column": 0,

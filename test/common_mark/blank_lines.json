@@ -32,7 +32,7 @@
         ]
       },
       {
-        "type": "headline",
+        "type": "atxHeading",
         "start": {
           "line": 5,
           "column": 0,
