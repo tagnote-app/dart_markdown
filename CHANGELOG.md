@@ -6,6 +6,8 @@
 2. **BREAKING** Use dedicated name `atxHeading` for ATX headings and
    `setextHeading` for Setext headings
    [PR#63](https://github.com/chenzhiguang/dart_markdown/pull/63).
+3. **BREAKING** Use dedicated name `fencedBlockquote` for fenced blockquote
+   [PR#65](https://github.com/chenzhiguang/dart_markdown/pull/65).
 
 ## 3.0.0
 
