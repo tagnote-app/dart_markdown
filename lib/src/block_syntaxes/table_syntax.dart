@@ -104,7 +104,7 @@ class TableSyntax extends BlockSyntax {
     required List<String?> alignments,
   }) {
     final markers = <SourceSpan>[];
-    final cells = <List<InlineObject>>[];
+    final cells = <_TableCell>[];
     final spanParser = SourceParser([content.trimRight()]);
 
     /// Walks through the opening pipe and any whitespace that surrounds it.
@@ -115,7 +115,9 @@ class TableSyntax extends BlockSyntax {
     }
 
     var cellStart = spanParser.position;
-    final segments = <SourceSpan>[];
+    final cellChildren = <SourceSpan>[];
+    final cellMarkers = <SourceSpan>[];
+
     while (!spanParser.isDone) {
       if (cells.length == expectedColumns) {
         if (inTableHead) {
@@ -139,14 +141,13 @@ class TableSyntax extends BlockSyntax {
       // GitHub does in practice.
       // See https://github.github.com/gfm/#example-200.
       if (char == $backslash && !isLastChar) {
-        segments.addAll(spanParser.subspan(cellStart, spanParser.position));
+        cellChildren.addAll(spanParser.subspan(cellStart, spanParser.position));
+        cellMarkers.add(spanParser.spanAt());
 
-        // Save "\" as a marker.
-        markers.add(spanParser.spanAt());
         spanParser.advance();
-
         cellStart = spanParser.position;
         spanParser.advance();
+
         continue;
       }
 
@@ -154,19 +155,25 @@ class TableSyntax extends BlockSyntax {
         if (char == $pipe) {
           markers.add(spanParser.spanAt());
         }
-        segments.addAll(spanParser.subspan(
+        cellChildren.addAll(spanParser.subspan(
           cellStart,
           (isLastChar && char != $pipe) ? null : spanParser.position,
         ));
 
-        if (segments.isNotEmpty) {
-          segments.first = segments.first.trimLeft();
-          segments.last = segments.last.trimRight();
+        if (cellChildren.isNotEmpty) {
+          cellChildren.first = cellChildren.first.trimLeft();
+          cellChildren.last = cellChildren.last.trimRight();
         }
-        cells.add(
-          segments.map<InlineObject>(UnparsedContent.fromSpan).toList(),
-        );
-        segments.clear();
+
+        cells.add(_TableCell(
+          children:
+              cellChildren.map<InlineObject>(UnparsedContent.fromSpan).toList(),
+          markers: [...cellMarkers],
+        ));
+
+        cellChildren.clear();
+        cellMarkers.clear();
+
         if (!isLastChar) {
           spanParser.advance();
           cellStart = spanParser.position;
@@ -189,7 +196,8 @@ class TableSyntax extends BlockSyntax {
 
       rowChildren.add(InlineElement(
         inTableHead ? 'tableHeadCell' : 'tableBodyCell',
-        children: cells[i],
+        children: cells[i].children,
+        markers: cells[i].markers,
         attributes: textAlign == null ? {} : {'textAlign': textAlign},
       ));
     }
@@ -207,4 +215,14 @@ class TableSyntax extends BlockSyntax {
       markers: markers,
     );
   }
+}
+
+class _TableCell {
+  const _TableCell({
+    required this.children,
+    required this.markers,
+  });
+
+  final List<InlineObject> children;
+  final List<SourceSpan> markers;
 }
