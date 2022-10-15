@@ -24,7 +24,7 @@ class RawHtmlSyntax extends InlineSyntax {
     final spans = parser.consumeBy(match[0]!.length);
 
     return InlineElement(
-      'inlineHtml',
+      'rawHtml',
       children: spans.map(Text.fromSpan).toList(),
     );
   }

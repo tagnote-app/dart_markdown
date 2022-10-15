@@ -11699,7 +11699,7 @@
             }
           },
           {
-            "type": "inlineHtml",
+            "type": "rawHtml",
             "start": {
               "line": 0,
               "column": 1,
@@ -11761,7 +11761,7 @@
             }
           },
           {
-            "type": "inlineHtml",
+            "type": "rawHtml",
             "start": {
               "line": 0,
               "column": 2,
@@ -11823,7 +11823,7 @@
             }
           },
           {
-            "type": "inlineHtml",
+            "type": "rawHtml",
             "start": {
               "line": 0,
               "column": 2,

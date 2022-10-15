@@ -2179,7 +2179,7 @@
             }
           },
           {
-            "type": "inlineHtml",
+            "type": "rawHtml",
             "start": {
               "line": 0,
               "column": 7,
