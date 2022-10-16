@@ -639,19 +639,6 @@
                   {
                     "start": {
                       "line": 0,
-                      "column": 3,
-                      "offset": 3
-                    },
-                    "end": {
-                      "line": 0,
-                      "column": 4,
-                      "offset": 4
-                    },
-                    "text": "\\"
-                  },
-                  {
-                    "start": {
-                      "line": 0,
                       "column": 9,
                       "offset": 9
                     },
@@ -676,6 +663,21 @@
                       "column": 7,
                       "offset": 7
                     },
+                    "markers": [
+                      {
+                        "start": {
+                          "line": 0,
+                          "column": 3,
+                          "offset": 3
+                        },
+                        "end": {
+                          "line": 0,
+                          "column": 4,
+                          "offset": 4
+                        },
+                        "text": "\\"
+                      }
+                    ],
                     "children": [
                       {
                         "text": "f",
@@ -751,19 +753,6 @@
                   {
                     "start": {
                       "line": 2,
-                      "column": 5,
-                      "offset": 27
-                    },
-                    "end": {
-                      "line": 2,
-                      "column": 6,
-                      "offset": 28
-                    },
-                    "text": "\\"
-                  },
-                  {
-                    "start": {
-                      "line": 2,
                       "column": 12,
                       "offset": 34
                     },
@@ -788,6 +777,21 @@
                       "column": 11,
                       "offset": 33
                     },
+                    "markers": [
+                      {
+                        "start": {
+                          "line": 2,
+                          "column": 5,
+                          "offset": 27
+                        },
+                        "end": {
+                          "line": 2,
+                          "column": 6,
+                          "offset": 28
+                        },
+                        "text": "\\"
+                      }
+                    ],
                     "children": [
                       {
                         "text": "b ",
@@ -904,19 +908,6 @@
                   {
                     "start": {
                       "line": 3,
-                      "column": 6,
-                      "offset": 42
-                    },
-                    "end": {
-                      "line": 3,
-                      "column": 7,
-                      "offset": 43
-                    },
-                    "text": "\\"
-                  },
-                  {
-                    "start": {
-                      "line": 3,
                       "column": 14,
                       "offset": 50
                     },
@@ -941,6 +932,21 @@
                       "column": 13,
                       "offset": 49
                     },
+                    "markers": [
+                      {
+                        "start": {
+                          "line": 3,
+                          "column": 6,
+                          "offset": 42
+                        },
+                        "end": {
+                          "line": 3,
+                          "column": 7,
+                          "offset": 43
+                        },
+                        "text": "\\"
+                      }
+                    ],
                     "children": [
                       {
                         "text": "b ",
