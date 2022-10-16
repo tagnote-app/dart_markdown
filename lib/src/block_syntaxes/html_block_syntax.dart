@@ -88,6 +88,8 @@ class HtmlBlockSyntax extends BlockSyntax {
     return BlockElement(
       'htmlBlock',
       children: content.nodes,
+      start: content.nodes.first.start,
+      end: content.nodes.last.end,
     );
   }
 }

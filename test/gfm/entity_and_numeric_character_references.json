@@ -530,19 +530,6 @@
           {
             "start": {
               "line": 2,
-              "column": 7,
-              "offset": 14
-            },
-            "end": {
-              "line": 2,
-              "column": 21,
-              "offset": 28
-            },
-            "text": "/f&ouml;&ouml;"
-          },
-          {
-            "start": {
-              "line": 2,
               "column": 22,
               "offset": 29
             },
@@ -552,19 +539,6 @@
               "offset": 30
             },
             "text": "\""
-          },
-          {
-            "start": {
-              "line": 2,
-              "column": 23,
-              "offset": 30
-            },
-            "end": {
-              "line": 2,
-              "column": 36,
-              "offset": 43
-            },
-            "text": "f&ouml;&ouml;"
           },
           {
             "start": {

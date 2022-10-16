@@ -54,11 +54,14 @@ class FootnoteReferenceSyntax extends BlockSyntax {
       indention + labelString.length + 4,
     );
 
+    final children = _parseChildren(lines);
     final element = BlockElement(
       'footnoteReference',
       markers: [marker],
       attributes: {'label': labelString},
       children: _parseChildren(lines),
+      start: marker.start,
+      end: children.last.end,
     );
     parser.document.addFootnoteReference(labelString, element);
     return element;
@@ -129,12 +132,15 @@ class FootnoteReferenceSyntax extends BlockSyntax {
       if (paragraphLines.isEmpty) {
         return;
       }
-      paragraphs.add(
-        BlockElement(
-          'paragraph',
-          children: _toUnparsedContent(paragraphLines),
-        ),
-      );
+
+      final children = _toUnparsedContent(paragraphLines);
+      paragraphs.add(BlockElement(
+        'paragraph',
+        children: children,
+        start: children.first.start,
+        end: children.last.end,
+      ));
+
       paragraphLines.clear();
     }
 

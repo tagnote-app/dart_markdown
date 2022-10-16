@@ -84,6 +84,8 @@ class IndentedCodeBlockSyntax extends BlockSyntax {
     return BlockElement(
       'indentedCodeBlock',
       children: codeLines,
+      start: codeLines.first.start,
+      end: codeLines.last.end,
     );
   }
 }

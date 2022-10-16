@@ -31,6 +31,8 @@ class BackslashEscapeSyntax extends InlineSyntax {
       '_backslashEscape',
       children: [text],
       markers: markers,
+      start: markers.single.start,
+      end: text.end,
     );
   }
 }

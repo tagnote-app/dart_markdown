@@ -223,6 +223,9 @@ extension SourceSpanListExtensions on List<SourceSpan> {
     }
     return true;
   }
+
+  List<SourceSpan> sortByLocation() =>
+      this..sort((a, b) => a.start.compareTo(b.start));
 }
 
 class IndentedSourceSpan {

@@ -1854,19 +1854,6 @@
               {
                 "start": {
                   "line": 0,
-                  "column": 21,
-                  "offset": 21
-                },
-                "end": {
-                  "line": 0,
-                  "column": 22,
-                  "offset": 22
-                },
-                "text": "\""
-              },
-              {
-                "start": {
-                  "line": 0,
                   "column": 16,
                   "offset": 16
                 },
@@ -1876,6 +1863,19 @@
                   "offset": 17
                 },
                 "text": "\\"
+              },
+              {
+                "start": {
+                  "line": 0,
+                  "column": 21,
+                  "offset": 21
+                },
+                "end": {
+                  "line": 0,
+                  "column": 22,
+                  "offset": 22
+                },
+                "text": "\""
               },
               {
                 "start": {
@@ -2049,19 +2049,6 @@
           {
             "start": {
               "line": 2,
-              "column": 7,
-              "offset": 14
-            },
-            "end": {
-              "line": 2,
-              "column": 13,
-              "offset": 20
-            },
-            "text": "/bar\\*"
-          },
-          {
-            "start": {
-              "line": 2,
               "column": 11,
               "offset": 18
             },
@@ -2088,15 +2075,15 @@
           {
             "start": {
               "line": 2,
-              "column": 15,
-              "offset": 22
+              "column": 17,
+              "offset": 24
             },
             "end": {
               "line": 2,
-              "column": 22,
-              "offset": 29
+              "column": 18,
+              "offset": 25
             },
-            "text": "ti\\*tle"
+            "text": "\\"
           },
           {
             "start": {
@@ -2110,19 +2097,6 @@
               "offset": 30
             },
             "text": "\""
-          },
-          {
-            "start": {
-              "line": 2,
-              "column": 17,
-              "offset": 24
-            },
-            "end": {
-              "line": 2,
-              "column": 18,
-              "offset": 25
-            },
-            "text": "\\"
           }
         ],
         "children": [

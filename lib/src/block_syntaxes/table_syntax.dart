@@ -51,7 +51,12 @@ class TableSyntax extends BlockSyntax {
       return null;
     }
 
-    final head = BlockElement('tableHead', children: [parsedRow]);
+    final head = BlockElement(
+      'tableHead',
+      children: [parsedRow],
+      start: parsedRow.start,
+      end: parsedRow.end,
+    );
     parser.advance();
 
     // Advance past the divider of hyphens.
@@ -71,12 +76,20 @@ class TableSyntax extends BlockSyntax {
 
     BlockElement? body;
     if (rows.isNotEmpty) {
-      body = BlockElement('tableBody', children: rows);
+      body = BlockElement(
+        'tableBody',
+        children: rows,
+        start: rows.first.start,
+        end: rows.last.end,
+      );
     }
+    final children = [head, if (body != null) body];
     return BlockElement(
       'table',
-      children: [head, if (body != null) body],
+      children: children,
       markers: markers,
+      start: children.first.start,
+      end: children.length > 1 ? children.last.end : markers.last.end,
     );
   }
 
@@ -188,24 +201,41 @@ class TableSyntax extends BlockSyntax {
     }
 
     final rowChildren = <InlineElement>[];
+
+    SourceLocation? lastCellEnd;
     for (var i = 0; i < cells.length; i++) {
       String? textAlign;
       if (i < alignments.length && alignments[i] != null) {
         textAlign = '${alignments[i]}';
       }
 
-      rowChildren.add(InlineElement(
-        inTableHead ? 'tableHeadCell' : 'tableBodyCell',
-        children: cells[i].children,
-        markers: cells[i].markers,
-        attributes: textAlign == null ? {} : {'textAlign': textAlign},
-      ));
+      lastCellEnd = [
+        ...cells[i].children.map((e) => e.end),
+        ...cells[i].markers.map((e) => e.end),
+      ].largest();
+      rowChildren.add(
+        InlineElement(
+          inTableHead ? 'tableHeadCell' : 'tableBodyCell',
+          children: cells[i].children,
+          markers: cells[i].markers,
+          attributes: textAlign == null ? {} : {'textAlign': textAlign},
+          start: [
+            ...cells[i].children.map((e) => e.start),
+            ...cells[i].markers.map((e) => e.start),
+          ].smallest(),
+          end: lastCellEnd,
+        ),
+      );
     }
 
     if (!inTableHead) {
       while (rowChildren.length < expectedColumns) {
         // Insert synthetic empty cells.
-        rowChildren.add(const InlineElement('tableBodyCell'));
+        rowChildren.add(InlineElement(
+          'tableBodyCell',
+          start: lastCellEnd!,
+          end: lastCellEnd,
+        ));
       }
     }
 
@@ -213,6 +243,14 @@ class TableSyntax extends BlockSyntax {
       'tableRow',
       children: rowChildren,
       markers: markers,
+      start: [
+        ...rowChildren.map((e) => e.start),
+        ...markers.map((e) => e.start),
+      ].smallest(),
+      end: [
+        ...rowChildren.map((e) => e.end),
+        ...markers.map((e) => e.end),
+      ].largest(),
     );
   }
 }

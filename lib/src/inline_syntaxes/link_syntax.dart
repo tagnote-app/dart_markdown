@@ -221,6 +221,8 @@ class LinkSyntax extends DelimiterSyntax {
       children: children,
       attributes: attributes,
       markers: markers,
+      start: markers.first.start,
+      end: markers.last.end,
     );
   }
 }

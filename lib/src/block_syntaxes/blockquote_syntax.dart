@@ -104,10 +104,17 @@ class BlockquoteSyntax extends BlockSyntax {
       fromSyntax: this,
     );
 
+    final markers = childSource.markers;
+
     return BlockElement(
       'blockquote',
       children: children,
-      markers: childSource.markers,
+      markers: markers,
+      start: markers.first.start,
+      end: [
+        ...markers.map((e) => e.end),
+        ...children.map((e) => e.end),
+      ].largest(),
     );
   }
 }

@@ -35,6 +35,8 @@ class KbdSyntax extends InlineSyntax {
       'kbd',
       markers: markers,
       children: contentSpans.map<InlineObject>(Text.fromSpan).toList(),
+      start: markers.first.start,
+      end: markers.last.end,
     );
   }
 }

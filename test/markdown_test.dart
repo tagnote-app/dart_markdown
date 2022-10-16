@@ -161,14 +161,17 @@ resolve [[]] thing
       'dart custom links',
       'links [are<foo>] awesome',
       '<p>links <a>are&lt;foo&gt;</a> awesome</p>',
-      linkResolver: (String text, [String? _]) => InlineElement(
-        'link',
-        children: [
-          Text.fromSpan(
-            SourceFile.fromString(text.replaceAll('<', '&lt;')).span(0),
-          ),
-        ],
-      ),
+      linkResolver: (String text, [String? _]) {
+        final content = Text.fromSpan(
+          SourceFile.fromString(text.replaceAll('<', '&lt;')).span(0),
+        );
+        return InlineElement(
+          'link',
+          children: [content],
+          start: content.start,
+          end: content.end,
+        );
+      },
     );
 
     // TODO(amouravski): need more tests here for custom syntaxes, as some

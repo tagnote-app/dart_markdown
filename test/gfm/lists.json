@@ -3206,19 +3206,6 @@
                       "offset": 17
                     },
                     "text": ":"
-                  },
-                  {
-                    "start": {
-                      "line": 3,
-                      "column": 9,
-                      "offset": 18
-                    },
-                    "end": {
-                      "line": 3,
-                      "column": 13,
-                      "offset": 22
-                    },
-                    "text": "/url"
                   }
                 ],
                 "children": [

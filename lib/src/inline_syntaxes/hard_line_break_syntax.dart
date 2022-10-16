@@ -20,6 +20,8 @@ class HardLineBreakSyntax extends InlineSyntax {
     return InlineElement(
       'hardLineBreak',
       markers: [marker],
+      start: marker.start,
+      end: marker.end,
     );
   }
 }

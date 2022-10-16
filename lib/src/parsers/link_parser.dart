@@ -28,7 +28,10 @@ class LinkParser extends SourceParser {
   final formatted = _FormattedAttributes();
 
   ///
-  final markers = <SourceSpan>[];
+  final _markers = <SourceSpan>[];
+
+  // The backslash might have messed up the markers.
+  List<SourceSpan> get markers => _markers..sortByLocation();
 
   LinkParser(super.source);
 
@@ -39,7 +42,7 @@ class LinkParser extends SourceParser {
     }
 
     // Add `:` to markers.
-    markers.add(spanAt());
+    _markers.add(spanAt());
 
     advance();
     if (!_parseDestination()) {
@@ -95,7 +98,7 @@ class LinkParser extends SourceParser {
   /// Parses [source] to a inline link.
   void parseInlineLink() {
     // Add `(` to markers.
-    markers.add(spanAt());
+    _markers.add(spanAt());
 
     // Walk past the opening `(`.
     advance();
@@ -112,7 +115,7 @@ class LinkParser extends SourceParser {
     // Hit the ending `)`, no title, valid.
     if (charAt() == $rparen) {
       // Add `)` to markers.
-      markers.add(spanAt());
+      _markers.add(spanAt());
       valid = true;
       return;
     }
@@ -123,7 +126,7 @@ class LinkParser extends SourceParser {
     }
 
     // The title is invalid which makes the entire link invalid.
-    if (!_parseTitle()) {
+    if (!_parseTitle(isInlineLink: true)) {
       return;
     }
     moveThroughWhitespace(multiLine: true);
@@ -134,7 +137,7 @@ class LinkParser extends SourceParser {
     }
 
     // Add `)` to markers.
-    markers.add(spanAt());
+    _markers.add(spanAt());
     valid = true;
   }
 
@@ -150,7 +153,7 @@ class LinkParser extends SourceParser {
     }
 
     // Add `[` to markers.
-    markers.add(spanAt());
+    _markers.add(spanAt());
 
     // Advance past the opening `[`.
     advance();
@@ -183,7 +186,7 @@ class LinkParser extends SourceParser {
     }
 
     // Add `]` to markers.
-    markers.add(spanAt());
+    _markers.add(spanAt());
 
     // Advance past the closing `]`.
     advance();
@@ -222,7 +225,7 @@ class LinkParser extends SourceParser {
   /// Returns `true` if there is a valid link destination found.
   bool _parseInlineBracketedLink() {
     // Add `<` to markers.
-    markers.add(spanAt());
+    _markers.add(spanAt());
 
     // Walk past the opening `<`.
     advance();
@@ -245,10 +248,10 @@ class LinkParser extends SourceParser {
 
     final spans = subspan(start, position);
 
-    markers.addAll(spans);
+    _markers.addAll(spans);
 
     // Add `>` to markers.
-    markers.add(spanAt());
+    _markers.add(spanAt());
 
     // Advance past the closing `>`.
     advance();
@@ -293,13 +296,19 @@ class LinkParser extends SourceParser {
     }
 
     destination.addAll(subspan(start, position));
-    markers.addAll(destination);
+
+    // Only add destination as a maker when it is an inlinelink.
+    if (isInlineLink) {
+      _markers.addAll(destination);
+    }
     return true;
   }
 
   /// Parses the **optional** link title, returns `true` if there is a valid
   /// link title found.
-  bool _parseTitle() {
+  bool _parseTitle({
+    bool isInlineLink = false,
+  }) {
     // See: https://spec.commonmark.org/0.30/#link-title
     // The whitespace should be followed by a title delimiter.
     final delimiter = charAt();
@@ -310,7 +319,7 @@ class LinkParser extends SourceParser {
     }
 
     final closeDelimiter = delimiter == $lparen ? $rparen : delimiter;
-    markers.add(spanAt());
+    _markers.add(spanAt());
     advance();
     if (isDone) {
       return false;
@@ -336,9 +345,13 @@ class LinkParser extends SourceParser {
     }
 
     title = subspan(start, position);
-    markers
-      ..addAll(title!)
-      ..add(spanAt());
+
+    // Only add title as a maker when it is an inlinelink.
+    if (isInlineLink) {
+      _markers.addAll(title!);
+    }
+
+    _markers.add(spanAt());
     // Advance past the closing delimiter.
     advance();
     _formatAttribute('title', title!);
@@ -350,7 +363,7 @@ class LinkParser extends SourceParser {
     List<SourceSpan> spans,
   ) {
     final backslashParser = BackslashParser(spans);
-    markers.addAll(backslashParser.markers);
+    _markers.addAll(backslashParser.markers);
     var text = backslashParser.text;
 
     if (attribute == 'destination') {

@@ -67,6 +67,8 @@ class CodeSpanSyntax extends InlineSyntax {
           .map((span) => Text.fromSpan(span, lineEndingToWhitespace: true))
           .toList(),
       markers: markers,
+      start: markers.first.start,
+      end: markers.last.end,
     );
   }
 

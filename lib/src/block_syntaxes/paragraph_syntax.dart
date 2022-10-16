@@ -58,6 +58,8 @@ class ParagraphSyntax extends BlockSyntax {
       // Add an empty modifiable markers here, in case a paragraph has
       // `_backslashEscape` children.
       markers: [],
+      start: content.nodes.first.start,
+      end: content.nodes.last.end,
     );
   }
 }

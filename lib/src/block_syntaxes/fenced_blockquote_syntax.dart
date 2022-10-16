@@ -49,10 +49,16 @@ class FencedBlockquoteSyntax extends BlockSyntax {
       parser.document,
     ).parseLines();
 
+    final markers = childSource.markers;
+
     return BlockElement(
       'fencedBlockquote',
       children: children,
-      markers: childSource.markers,
+      markers: markers,
+      start: markers.first.start,
+      end: markers.length > 1
+          ? markers.last.end
+          : (children.isNotEmpty ? children.last.end : markers.single.end),
     );
   }
 }

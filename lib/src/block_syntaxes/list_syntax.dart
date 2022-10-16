@@ -249,6 +249,8 @@ class ListSyntax extends BlockSyntax {
         'listItem',
         children: children,
         markers: item.markers,
+        start: item.markers.first.start,
+        end: children.isNotEmpty ? children.last.end : item.markers.last.end,
         attributes: {
           if (ordered) 'number': (startNumber! + i).toString(),
           if (item.markers.length == 2)
@@ -284,6 +286,8 @@ class ListSyntax extends BlockSyntax {
     return BlockElement(
       ordered ? 'orderedList' : 'bulletList',
       children: itemNodes,
+      start: itemNodes.first.start,
+      end: itemNodes.last.end,
       attributes: {
         'isTight': listIsTight ? 'true' : 'false',
         if (ordered && startNumber != 1) 'start': '$startNumber',
