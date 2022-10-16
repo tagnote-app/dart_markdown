@@ -1,4 +1,4 @@
-## 3.1.0-dev
+## 3.1.0
 
 1. **BREAKING** Use dedicated type `fencedCodeBlock` for fenced code blocks and
    `indentedCodeBlock` for indented code blocks
