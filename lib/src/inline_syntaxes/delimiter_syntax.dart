@@ -100,12 +100,16 @@ class DelimiterSyntax extends InlineSyntax {
     required SourceSpan openMarker,
     required SourceSpan closeMarker,
     required List<InlineObject> Function() getChildren,
-  }) =>
-      InlineElement(
-        type,
-        children: getChildren(),
-        markers: [openMarker, closeMarker],
-      );
+  }) {
+    final children = getChildren();
+    return InlineElement(
+      type,
+      children: children,
+      markers: [openMarker, closeMarker],
+      start: openMarker.start,
+      end: [closeMarker.end, ...children.map((e) => e.end)].largest(),
+    );
+  }
 }
 
 class DelimiterTag {

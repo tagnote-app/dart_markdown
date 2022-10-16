@@ -50,6 +50,8 @@ class ImageSyntax extends LinkSyntax {
       'image',
       attributes: attributes,
       markers: markers,
+      start: markers.first.start,
+      end: markers.last.end,
     );
   }
 }

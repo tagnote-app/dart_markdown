@@ -80,11 +80,17 @@ class FencedCodeBlockSyntax extends BlockSyntax {
       });
     }
 
+    final markers = childSource.markers;
+
     return BlockElement(
       'fencedCodeBlock',
       children: codeLines,
       attributes: attributes,
       markers: childSource.markers,
+      start: markers.first.start,
+      end: markers.length > 1
+          ? markers.last.end
+          : (codeLines.isNotEmpty ? codeLines.last.end : markers.single.end),
     );
   }
 }

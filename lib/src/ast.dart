@@ -15,10 +15,10 @@ abstract class Node {
   void accept(NodeVisitor visitor);
 
   /// The start location of this node.
-  SourceLocation? get start;
+  SourceLocation get start;
 
   /// The end location of this node.
-  SourceLocation? get end;
+  SourceLocation get end;
 
   /// Outputs the attributes as a `Map`.
   Map<String, dynamic> toMap();
@@ -40,36 +40,14 @@ abstract class Element<T extends Node> implements Node {
     return children.map((child) => child.textContent).join();
   }
 
-  @override
-  SourceLocation? get start {
-    final childLocations = List<SourceLocation>.from(
-        children.map((e) => e.start).toList()..removeWhere((e) => e == null));
-    final locations = [
-      ...markers.map((e) => e.start),
-      ...childLocations,
-    ];
-
-    return locations.isNotEmpty ? locations.smallest() : null;
-  }
-
-  @override
-  SourceLocation? get end {
-    final childLocations = List<SourceLocation>.from(
-        children.map((e) => e.end).toList()..removeWhere((e) => e == null));
-    final locations = [
-      ...markers.map((e) => e.end),
-      ...childLocations,
-    ];
-
-    return locations.isNotEmpty ? locations.largest() : null;
-  }
-
   const Element(
     this.type, {
     required this.isBlock,
     required this.markers,
     required this.children,
     required this.attributes,
+    required this.start,
+    required this.end,
   });
 
   @override
@@ -85,6 +63,12 @@ abstract class Element<T extends Node> implements Node {
   }
 
   @override
+  final SourceLocation start;
+
+  @override
+  final SourceLocation end;
+
+  @override
   Map<String, dynamic> toMap({
     bool showNull = false,
     bool showEmpty = false,
@@ -93,8 +77,8 @@ abstract class Element<T extends Node> implements Node {
       {
         if (showRuntimeType) 'runtimeType': runtimeType,
         'type': type,
-        if (start != null) 'start': start!.toMap(),
-        if (end != null) 'end': end!.toMap(),
+        'start': start.toMap(),
+        'end': end.toMap(),
         if (markers.isNotEmpty || showEmpty)
           'markers': markers.map((e) => e.toMap()).toList(),
         if (children.isNotEmpty || showEmpty)
@@ -113,6 +97,8 @@ class BlockElement extends Element {
     super.markers = const [],
     super.children = const [],
     super.attributes = const {},
+    required super.end,
+    required super.start,
   }) : super(isBlock: true);
 }
 
@@ -126,6 +112,8 @@ class InlineElement extends Element<InlineObject> implements InlineObject {
     super.markers = const [],
     super.children = const [],
     super.attributes = const {},
+    required super.end,
+    required super.start,
   }) : super(isBlock: false);
 }
 

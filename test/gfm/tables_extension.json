@@ -1714,7 +1714,17 @@
                     ]
                   },
                   {
-                    "type": "tableBodyCell"
+                    "type": "tableBodyCell",
+                    "start": {
+                      "line": 3,
+                      "column": 3,
+                      "offset": 45
+                    },
+                    "end": {
+                      "line": 3,
+                      "column": 3,
+                      "offset": 45
+                    }
                   }
                 ]
               }
@@ -2028,7 +2038,17 @@
                     ]
                   },
                   {
-                    "type": "tableBodyCell"
+                    "type": "tableBodyCell",
+                    "start": {
+                      "line": 2,
+                      "column": 5,
+                      "offset": 33
+                    },
+                    "end": {
+                      "line": 2,
+                      "column": 5,
+                      "offset": 33
+                    }
                   }
                 ]
               },

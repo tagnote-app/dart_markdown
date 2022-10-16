@@ -37,6 +37,8 @@ class EmojiSyntax extends InlineSyntax {
       'emoji',
       markers: markers,
       attributes: {'emoji': emoji},
+      start: markers.single.start,
+      end: markers.single.end,
     );
   }
 }

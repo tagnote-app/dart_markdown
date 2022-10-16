@@ -74,9 +74,12 @@ class AutolinkExtensionSyntax extends InlineSyntax {
       destination = 'http://$destination';
     }
 
+    final content = Text.fromSpan(span);
     return InlineElement(
       'autolinkExtension',
-      children: [Text.fromSpan(span)],
+      children: [content],
+      start: content.start,
+      end: content.end,
       attributes: {'destination': destination},
     );
   }

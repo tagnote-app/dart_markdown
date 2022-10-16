@@ -60,6 +60,8 @@ class SetextHeadingSyntax extends BlockSyntax {
         if (_headingIdEnabled) 'generatedId': generateAnchorHash(content.nodes),
       },
       markers: [marker],
+      start: content.nodes.first.start,
+      end: marker.end,
     );
   }
 }

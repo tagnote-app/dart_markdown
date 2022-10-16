@@ -3,6 +3,7 @@
 // BSD-style license that can be found in the LICENSE file.
 
 import '../ast.dart';
+import '../extensions.dart';
 import '../line.dart';
 import '../markdown.dart';
 import '../parsers/block_parser.dart';
@@ -72,24 +73,44 @@ class LinkReferenceDefinitionSyntax extends BlockSyntax {
       ),
     );
 
+    final labelChildren = label.map(Text.fromSpan).toList();
+    final destinationChildren = destination.map(Text.fromSpan).toList();
+    final titleChildren = title?.map(Text.fromSpan).toList();
+    final definitionLabel = InlineElement(
+      'linkReferenceDefinitionLabel',
+      children: labelChildren,
+      start: labelChildren.first.start,
+      end: labelChildren.last.end,
+    );
+    final definitionDestination = InlineElement(
+      'linkReferenceDefinitionDestination',
+      children: destinationChildren,
+      start: destinationChildren.isNotEmpty
+          ? destinationChildren.first.start
+          : definitionLabel.end,
+      end: destinationChildren.isNotEmpty
+          ? destinationChildren.last.end
+          : definitionLabel.end,
+    );
+
+    final children = [
+      definitionLabel,
+      definitionDestination,
+      if (titleChildren != null)
+        InlineElement(
+          'linkReferenceDefinitionTitle',
+          children: titleChildren,
+          start: titleChildren.first.start,
+          end: titleChildren.last.end,
+        ),
+    ];
+
     return BlockElement(
       'linkReferenceDefinition',
       markers: linkParser.markers,
-      children: [
-        InlineElement(
-          'linkReferenceDefinitionLabel',
-          children: label.map(Text.fromSpan).toList(),
-        ),
-        InlineElement(
-          'linkReferenceDefinitionDestination',
-          children: destination.map(Text.fromSpan).toList(),
-        ),
-        if (title != null)
-          InlineElement(
-            'linkReferenceDefinitionTitle',
-            children: title.map(Text.fromSpan).toList(),
-          ),
-      ],
+      children: children,
+      start: linkParser.markers.first.start,
+      end: [children.last.end, linkParser.markers.last.end].largest(),
     );
   }
 }

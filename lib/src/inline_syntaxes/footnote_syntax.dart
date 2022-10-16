@@ -33,10 +33,13 @@ class FootnoteSyntax extends InlineSyntax {
       markerLength -= 1;
     }
 
+    final marker = parser.consumeBy(markerLength).single;
     return InlineElement(
       'footnote',
-      markers: [parser.consumeBy(markerLength).single],
+      markers: [marker],
       attributes: {'number': number, 'label': label},
+      start: marker.start,
+      end: marker.end,
     );
   }
 }

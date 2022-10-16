@@ -49,6 +49,8 @@ class AutolinkSyntax extends InlineSyntax {
       'autolink',
       children: [Text.fromSpan(span)],
       markers: markers,
+      start: markers.first.start,
+      end: markers.last.end,
       attributes: {
         'destination': destination,
         'text': span.text.toHtmlText(),

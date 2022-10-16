@@ -18,6 +18,8 @@
 7. Change where table markers are saved.
    [PR#71](https://github.com/tagnote-app/dart_markdown/pull/71) &
    [PR#72](https://github.com/tagnote-app/dart_markdown/pull/72).
+8. Change `start` and `end` locations of `Element` to required
+   [PR#73](https://github.com/tagnote-app/dart_markdown/pull/73).
 
 ## 3.0.0
 

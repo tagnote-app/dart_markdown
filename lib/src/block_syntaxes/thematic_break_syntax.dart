@@ -21,9 +21,12 @@ class ThematicBreakSyntax extends BlockSyntax {
 
     parser.advance();
 
+    final finalMarker = marker.trim();
     return BlockElement(
       'thematicBreak',
-      markers: [marker.trim()],
+      markers: [finalMarker],
+      start: finalMarker.start,
+      end: finalMarker.end,
     );
   }
 }
