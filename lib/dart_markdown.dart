@@ -7,6 +7,7 @@ library dart_markdown;
 import 'src/version.dart';
 
 export 'src/ast.dart';
+export 'src/extensions/which_element.dart';
 export 'src/line.dart';
 export 'src/markdown.dart';
 export 'src/parsers/block_parser.dart';
