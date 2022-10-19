@@ -1,4 +1,4 @@
-## 3.1.1-dev
+## 3.1.1
 
 1. Add a `whichElement` extension for `List<Node>`
    [PR#76](https://github.com/tagnote-app/dart_markdown/pull/76).
