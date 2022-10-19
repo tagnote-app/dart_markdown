@@ -5,7 +5,7 @@
 import 'package:source_span/source_span.dart';
 
 import '../ast.dart';
-import '../extensions.dart';
+import '../helpers/extensions.dart';
 import '../parsers/inline_parser.dart';
 import '../patterns.dart';
 import '../syntax.dart';

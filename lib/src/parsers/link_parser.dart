@@ -6,8 +6,8 @@ import 'dart:convert';
 import 'package:source_span/source_span.dart';
 
 import '../charcode.dart';
-import '../extensions.dart';
-import '../util.dart';
+import '../helpers/extensions.dart';
+import '../helpers/util.dart';
 import 'backslash_parser.dart';
 import 'source_parser.dart';
 

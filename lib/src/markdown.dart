@@ -18,7 +18,8 @@ import 'block_syntaxes/setext_heading_syntax.dart';
 import 'block_syntaxes/table_syntax.dart';
 import 'block_syntaxes/thematic_break_syntax.dart';
 import 'charcode.dart';
-import 'extensions.dart';
+import 'helpers/extensions.dart';
+import 'helpers/util.dart';
 import 'inline_syntaxes/autolink_extension_syntax.dart';
 import 'inline_syntaxes/autolink_syntax.dart';
 import 'inline_syntaxes/backslash_escape_syntax.dart';
@@ -39,7 +40,6 @@ import 'inline_syntaxes/tilde_syntax.dart';
 import 'parsers/block_parser.dart';
 import 'parsers/inline_parser.dart';
 import 'syntax.dart';
-import 'util.dart';
 
 /// Maintains the context needed to parse a Markdown document.
 class Markdown {

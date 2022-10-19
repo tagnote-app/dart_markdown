@@ -3,7 +3,7 @@
 // BSD-style license that can be found in the LICENSE file.
 
 import 'package:dart_markdown/dart_markdown.dart';
-import 'package:dart_markdown/src/util.dart';
+import 'package:dart_markdown/src/helpers/util.dart';
 import 'package:test/test.dart';
 
 void main() {

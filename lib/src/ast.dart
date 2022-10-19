@@ -4,7 +4,7 @@
 
 import 'package:source_span/source_span.dart';
 
-import 'extensions.dart';
+import 'helpers/extensions.dart';
 
 typedef Resolver = InlineObject? Function(String name, [String? title]);
 

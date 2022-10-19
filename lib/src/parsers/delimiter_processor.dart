@@ -4,7 +4,7 @@
 
 import '../ast.dart';
 import '../charcode.dart';
-import '../extensions.dart';
+import '../helpers/extensions.dart';
 import '../inline_syntaxes/delimiter_syntax.dart';
 import '../inline_syntaxes/link_syntax.dart';
 import 'inline_parser.dart';

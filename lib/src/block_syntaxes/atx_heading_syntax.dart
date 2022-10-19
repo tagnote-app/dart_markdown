@@ -5,11 +5,11 @@
 import 'package:source_span/source_span.dart';
 
 import '../ast.dart';
-import '../extensions.dart';
+import '../helpers/extensions.dart';
+import '../helpers/util.dart';
 import '../parsers/block_parser.dart';
 import '../patterns.dart';
 import '../syntax.dart';
-import '../util.dart';
 
 /// Parses atx-style headers: `## Header ##`.
 class AtxHeadingSyntax extends BlockSyntax {

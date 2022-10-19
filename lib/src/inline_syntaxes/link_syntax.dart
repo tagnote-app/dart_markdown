@@ -6,10 +6,10 @@ import 'package:source_span/source_span.dart';
 
 import '../ast.dart';
 import '../charcode.dart';
+import '../helpers/util.dart';
 import '../markdown.dart';
 import '../parsers/inline_parser.dart';
 import '../parsers/link_parser.dart';
-import '../util.dart';
 import 'delimiter_syntax.dart';
 
 /// Matches links like `[blah][label]` and `[blah](url)`.

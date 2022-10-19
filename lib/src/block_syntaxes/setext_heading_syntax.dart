@@ -3,12 +3,12 @@
 // BSD-style license that can be found in the LICENSE file.
 
 import '../ast.dart';
-import '../extensions.dart';
+import '../helpers/extensions.dart';
+import '../helpers/util.dart';
 import '../line.dart';
 import '../parsers/block_parser.dart';
 import '../patterns.dart';
 import '../syntax.dart';
-import '../util.dart';
 import 'paragraph_syntax.dart';
 
 /// Parses setext-style headers.

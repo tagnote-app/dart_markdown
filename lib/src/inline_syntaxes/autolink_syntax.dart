@@ -4,7 +4,7 @@
 
 import '../ast.dart';
 import '../charcode.dart';
-import '../extensions.dart';
+import '../helpers/extensions.dart';
 import '../parsers/inline_parser.dart';
 import '../syntax.dart';
 

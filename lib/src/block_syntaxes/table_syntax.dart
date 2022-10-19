@@ -6,7 +6,7 @@ import 'package:source_span/source_span.dart';
 
 import '../ast.dart';
 import '../charcode.dart';
-import '../extensions.dart';
+import '../helpers/extensions.dart';
 import '../parsers/block_parser.dart';
 import '../parsers/source_parser.dart';
 import '../patterns.dart';
