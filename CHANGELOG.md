@@ -1,3 +1,8 @@
+## 3.1.1-dev
+
+1. Add a `whichElement` extension for `List<Node>`
+   [PR#76](https://github.com/tagnote-app/dart_markdown/pull/76).
+
 ## 3.1.0
 
 1. **BREAKING** Use dedicated type `fencedCodeBlock` for fenced code blocks and
