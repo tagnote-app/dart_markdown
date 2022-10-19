@@ -5,12 +5,12 @@
 import 'package:source_span/source_span.dart';
 
 import '../ast.dart';
+import '../helpers/util.dart';
 import '../line.dart';
 import '../parsers/backslash_parser.dart';
 import '../parsers/block_parser.dart';
 import '../patterns.dart';
 import '../syntax.dart';
-import '../util.dart';
 
 /// Parses preformatted code blocks between two ~~~ or ``` sequences.
 ///

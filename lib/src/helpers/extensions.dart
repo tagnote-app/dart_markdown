@@ -5,7 +5,7 @@
 import 'dart:convert';
 
 import 'package:source_span/source_span.dart';
-import './charcode.dart';
+import '../charcode.dart';
 import 'util.dart';
 
 extension MatchExtensions on Match {

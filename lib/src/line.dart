@@ -5,7 +5,7 @@
 import 'package:source_span/source_span.dart';
 
 import 'ast.dart';
-import 'extensions.dart';
+import 'helpers/extensions.dart';
 import 'patterns.dart';
 
 // A line is a sequence of zero or more characters other than line feed

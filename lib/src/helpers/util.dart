@@ -3,10 +3,10 @@
 // BSD-style license that can be found in the LICENSE file.
 
 import 'package:source_span/source_span.dart';
-import 'assets/case_folding.dart';
-import 'assets/html_entities.dart';
-import 'ast.dart';
-import 'line.dart';
+import '../assets/case_folding.dart';
+import '../assets/html_entities.dart';
+import '../ast.dart';
+import '../line.dart';
 
 /// One or more whitespace, for compressing.
 final _oneOrMoreWhitespacePattern = RegExp('[ \n\r\t]+');

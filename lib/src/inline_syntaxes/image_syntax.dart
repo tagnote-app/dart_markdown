@@ -6,7 +6,7 @@ import 'package:source_span/source_span.dart';
 
 import '../ast.dart';
 import '../charcode.dart';
-import '../extensions.dart';
+import '../helpers/extensions.dart';
 import 'link_syntax.dart';
 
 /// Matches images like `![alternate text](url "optional title")` and

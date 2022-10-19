@@ -3,7 +3,7 @@
 // BSD-style license that can be found in the LICENSE file.
 
 import '../ast.dart';
-import '../extensions.dart';
+import '../helpers/extensions.dart';
 import '../parsers/inline_parser.dart';
 import '../syntax.dart';
 
