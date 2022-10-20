@@ -472,6 +472,54 @@ void main() {
       });
     }
   });
+
+  group('blockquote with a empty line', () {
+    const text = '> a\n>';
+    final nodes = toAst(text);
+    final matchers = {
+      0: const _Matcher(
+        path: ['blockquote'],
+        text: null,
+        marker: '>',
+      ),
+      1: const _Matcher(
+        path: ['blockquote'],
+        text: null,
+        marker: null,
+      ),
+      2: const _Matcher(
+        path: ['blockquote', 'paragraph'],
+        text: 'a',
+        marker: null,
+      ),
+      3: const _Matcher(
+        path: ['blockquote'],
+        text: null,
+        marker: null,
+      ),
+      4: const _Matcher(
+        path: ['blockquote'],
+        text: null,
+        marker: '>',
+      ),
+      5: const _Matcher(
+        path: [],
+        text: null,
+        marker: null,
+      ),
+    };
+
+    for (var i = 0; i < text.length + 1; i++) {
+      test('offset is $i', () {
+        final whichElement = nodes.whichElement(i, text);
+        final matcher = matchers[i]!;
+
+        expect(whichElement.pathTypes, matcher.path);
+        expect(whichElement.text?.text, matcher.text);
+        expect(whichElement.marker?.text, matcher.marker);
+      });
+    }
+  });
 }
 
 List<Node> toAst(String text) => Markdown().parse(text);
