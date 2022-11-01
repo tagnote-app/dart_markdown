@@ -25,3 +25,15 @@
 </tr>
 </tbody>
 </table>
+>>> issue #84 tables_extension
+|Foo||
+| -- | -- |
+<<<
+<table>
+<thead>
+<tr>
+<th>Foo</th>
+<th></th>
+</tr>
+</thead>
+</table>
