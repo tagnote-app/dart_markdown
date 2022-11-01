@@ -209,20 +209,25 @@ class TableSyntax extends BlockSyntax {
         textAlign = '${alignments[i]}';
       }
 
-      lastCellEnd = [
+      final startLocations = [
+        ...cells[i].children.map((e) => e.start),
+        ...cells[i].markers.map((e) => e.start),
+      ];
+      final endLocations = [
         ...cells[i].children.map((e) => e.end),
         ...cells[i].markers.map((e) => e.end),
-      ].largest();
+      ];
+      lastCellEnd =
+          endLocations.isNotEmpty ? endLocations.largest() : markers.last.end;
       rowChildren.add(
         InlineElement(
           inTableHead ? 'tableHeadCell' : 'tableBodyCell',
           children: cells[i].children,
           markers: cells[i].markers,
           attributes: textAlign == null ? {} : {'textAlign': textAlign},
-          start: [
-            ...cells[i].children.map((e) => e.start),
-            ...cells[i].markers.map((e) => e.start),
-          ].smallest(),
+          start: startLocations.isNotEmpty
+              ? startLocations.smallest()
+              : markers.last.start,
           end: lastCellEnd,
         ),
       );
