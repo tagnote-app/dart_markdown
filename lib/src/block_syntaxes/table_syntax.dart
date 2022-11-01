@@ -230,11 +230,12 @@ class TableSyntax extends BlockSyntax {
 
     if (!inTableHead) {
       while (rowChildren.length < expectedColumns) {
+        final location = lastCellEnd ?? markers.last.end;
         // Insert synthetic empty cells.
         rowChildren.add(InlineElement(
           'tableBodyCell',
-          start: lastCellEnd!,
-          end: lastCellEnd,
+          start: location,
+          end: location,
         ));
       }
     }
