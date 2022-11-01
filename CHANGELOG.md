@@ -1,3 +1,8 @@
+## 3.1.2
+
+1. Fix a table issue
+   [Issue#80](https://github.com/tagnote-app/dart_markdown/issues/80).
+
 ## 3.1.1
 
 1. Add a `whichElement` extension for `List<Node>`
