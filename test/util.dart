@@ -25,20 +25,26 @@ Future<void> testDirectory(String name) async {
     var enableAutolinkExtension = false;
     var enableTagfilter = false;
 
+    String? extensionContext;
     if (dataCase.file.endsWith('_extension')) {
-      final syntaxName = dataCase.file.substring(
-        0,
-        dataCase.file.lastIndexOf('_extension'),
-      );
-      if (syntaxName == 'tables') {
-        enableTable = true;
-      } else if (syntaxName == 'strikethrough') {
-        enableStrikethrough = true;
-      } else if (syntaxName == 'autolinks') {
-        enableAutolinkExtension = true;
-      } else if (syntaxName == 'disallowed_raw_html') {
-        enableTagfilter = true;
-      }
+      extensionContext = dataCase.file;
+    } else if (dataCase.description.endsWith('_extension')) {
+      extensionContext = dataCase.description.split(' ').last;
+    }
+
+    final extension = extensionContext?.substring(
+      0,
+      extensionContext.lastIndexOf('_extension'),
+    );
+
+    if (extension == 'tables') {
+      enableTable = true;
+    } else if (extension == 'strikethrough') {
+      enableStrikethrough = true;
+    } else if (extension == 'autolinks') {
+      enableAutolinkExtension = true;
+    } else if (extension == 'disallowed_raw_html') {
+      enableTagfilter = true;
     }
 
     validateCore(

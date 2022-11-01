@@ -8,3 +8,20 @@
 <li>[ ] list item
 <code>dart var a = 1; </code></li>
 </ul>
+>>> issue #80 tables_extension
+| Foo |
+| -- |
+|
+<<<
+<table>
+<thead>
+<tr>
+<th>Foo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
