@@ -1,3 +1,8 @@
+## 3.1.3
+
+1. Fix a table issue
+   [Issue#84](https://github.com/tagnote-app/dart_markdown/issues/84).
+
 ## 3.1.2
 
 1. Fix a table issue
