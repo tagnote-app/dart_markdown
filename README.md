@@ -1,7 +1,7 @@
 _This library is refactored from
 [dart-lang/markdown(5.0)](https://pub.dev/packages/markdown/versions/5.0.0)_
 
-[![Build Status](https://github.com/tagnote-app/dart_markdown/actions/workflows/test-package.yml/badge.svg)](https://github.com/tagnote-app/dart_markdown/actions/workflows/test-package.yml)
+[![Dart CI](https://github.com/tagnote-app/dart_markdown/actions/workflows/dart-ci.yml/badge.svg)](https://github.com/tagnote-app/dart_markdown/actions/workflows/dart-ci.yml)
 [![Pub](https://img.shields.io/pub/v/dart_markdown.svg)](https://pub.dev/packages/dart_markdown)
 
 ## About
