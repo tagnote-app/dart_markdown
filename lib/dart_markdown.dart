@@ -16,5 +16,6 @@ export 'src/syntax.dart';
 export 'src/to_html/html_ast.dart';
 export 'src/to_html/html_renderer.dart';
 export 'src/to_html/html_transformer.dart';
+export 'src/to_plaintext/to_plaintext.dart';
 
 const version = packageVersion;
