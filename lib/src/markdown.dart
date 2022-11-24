@@ -17,7 +17,6 @@ import 'block_syntaxes/paragraph_syntax.dart';
 import 'block_syntaxes/setext_heading_syntax.dart';
 import 'block_syntaxes/table_syntax.dart';
 import 'block_syntaxes/thematic_break_syntax.dart';
-import 'charcode.dart';
 import 'helpers/extensions.dart';
 import 'helpers/util.dart';
 import 'inline_syntaxes/autolink_extension_syntax.dart';
@@ -139,11 +138,6 @@ class Markdown {
       if (enableHardLineBreak) HardLineBreakSyntax(),
       if (enableSoftLineBreak) SoftLineBreakSyntax(),
       if (enableBackslashEscape) BackslashEscapeSyntax(),
-      // "*" surrounded by spaces is left alone.
-      TextSyntax(r' \* ', startCharacter: $space),
-
-      // "_" surrounded by spaces is left alone.
-      TextSyntax(' _ ', startCharacter: $space),
       if (enableEmphasis) ...[
         // Parse "**strong**" and "*emphasis*" tags.
         EmphasisSyntax.asterisk(),
