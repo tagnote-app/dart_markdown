@@ -38,9 +38,15 @@ class BlockquoteSyntax extends BlockSyntax {
         // https://spec.commonmark.org/0.30/#block-quote-marker.
         final markerStart = match.match.indexOf('>');
         if (currentLine.content.length > 1) {
-          final nextChar = currentLine.content.text.codeUnitAt(markerStart + 1);
-          isTabIndentation = nextChar == $tab;
-          final hasSpace = isTabIndentation || nextChar == $space;
+          var hasSpace = false;
+          // Check if there is a following space if the marker is not at the end
+          // of this line.
+          if (markerStart < currentLine.content.length - 1) {
+            final nextChar =
+                currentLine.content.text.codeUnitAt(markerStart + 1);
+            isTabIndentation = nextChar == $tab;
+            hasSpace = isTabIndentation || nextChar == $space;
+          }
           markerEnd = markerStart + (hasSpace ? 2 : 1);
         } else {
           markerEnd = markerStart + 1;
