@@ -1,3 +1,8 @@
+## 3.1.4
+
+1. Fix a blockquote issue
+   [Issue92](https://github.com/tagnote-app/dart_markdown/issues/92).
+
 ## 3.1.3
 
 1. Fix a table issue
