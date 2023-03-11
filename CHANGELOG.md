@@ -1,3 +1,7 @@
+## 3.1.5
+
+1. Some minor chagnes.
+
 ## 3.1.4
 
 1. Fix a blockquote issue
