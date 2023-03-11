@@ -58,3 +58,8 @@ three
 <<<
 <pre><code>&lt;&amp;&gt;
 </code></pre>
+>>> Do not escape
+    'foo'
+<<<
+<pre><code>'foo'
+</code></pre>

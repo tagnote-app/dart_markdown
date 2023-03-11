@@ -81,3 +81,7 @@ before `` tick ``` after
 
 <<<
 <p>before `` tick ``` after</p>
+>>> Do not escape
+`'foo'`
+<<<
+<p><code>'foo'</code></p>
