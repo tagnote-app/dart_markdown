@@ -47,3 +47,8 @@ text</p>
 <p>quote</p>
 </blockquote>
 <hr />
+>>> empty blockquote
+  >
+<<<
+<blockquote>
+</blockquote>

@@ -72,7 +72,8 @@ class AtxHeadingSyntax extends BlockSyntax {
       end: markers.length > 1 ? markers.last.end : children.last.end,
       attributes: {
         'level': '$level',
-        if (_headingIdEnabled) 'generatedId': generateAnchorHash(children),
+        if (_headingIdEnabled && children.isNotEmpty)
+          'generatedId': generateAnchorHash(children),
       },
     );
   }

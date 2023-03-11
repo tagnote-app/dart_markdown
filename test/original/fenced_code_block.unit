@@ -1,0 +1,7 @@
+>>> Do not escape
+```
+'foo'
+```
+<<<
+<pre><code>'foo'
+</code></pre>
