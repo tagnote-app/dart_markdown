@@ -52,7 +52,7 @@ final tablePattern = RegExp(
 final dummyPattern = RegExp('');
 
 /// A line starts with `[`.
-final linkReferenceDefinitionPattern = RegExp(r'[ ]{0,3}\[');
+final linkReferenceDefinitionPattern = RegExp(r'^[ ]{0,3}\[');
 
 /// A pattern matches a footnote reference.
 final footnoteReferencePattern = RegExp(r'([ ]{0,3})\[\^([^\s\]]+?)\]:\s?');

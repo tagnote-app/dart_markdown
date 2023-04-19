@@ -328,3 +328,11 @@ too | many | cells | here
 </tr>
 </tbody>
 </table>
+>>> when an invalid table head contains an invalid link reference definition
+| A | [B](url) | C |
+|---|---|
+|  a | b | c |
+<<<
+<p>| A | <a href="url">B</a> | C |
+|---|---|
+|  a | b | c |</p>
