@@ -1,3 +1,10 @@
+## 3.1.6
+
+1. Fix linkReferenceDefinitionPattern
+   [PR#98](https://github.com/tagnote-app/dart_markdown/pull/98).
+2. Fix delimiter row matching pattern for tables
+   [PR#99](https://github.com/tagnote-app/dart_markdown/pull/99).
+
 ## 3.1.5
 
 1. Some minor chagnes.
