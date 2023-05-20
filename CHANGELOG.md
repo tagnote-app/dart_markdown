@@ -1,3 +1,8 @@
+## 3.1.7
+
+1. Make table be able to interrupt other blocks
+   [PR#102](https://github.com/tagnote-app/dart_markdown/pull/102).
+
 ## 3.1.6
 
 1. Fix linkReferenceDefinitionPattern
