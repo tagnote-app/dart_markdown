@@ -15,7 +15,7 @@ import '../syntax.dart';
 /// Parses tables.
 class TableSyntax extends BlockSyntax {
   @override
-  bool canInterrupt(BlockParser parser) => false;
+  bool canInterrupt(BlockParser parser) => true;
 
   @override
   RegExp get pattern => dummyPattern;

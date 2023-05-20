@@ -336,3 +336,24 @@ too | many | cells | here
 <p>| A | <a href="url">B</a> | C |
 |---|---|
 |  a | b | c |</p>
+>>> can interrupt a paragraph
+paragraph
+foo | bar
+--- | ---
+baz | bim
+<<<
+<p>paragraph</p>
+<table>
+<thead>
+<tr>
+<th>foo</th>
+<th>bar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>baz</td>
+<td>bim</td>
+</tr>
+</tbody>
+</table>
